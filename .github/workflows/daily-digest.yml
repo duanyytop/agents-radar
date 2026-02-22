@@ -1,0 +1,49 @@
+name: Daily Claude Code Digest
+
+on:
+  schedule:
+    # 每天 01:00 UTC = 09:00 CST (UTC+8)
+    - cron: "0 1 * * *"
+  workflow_dispatch:  # 支持手动触发
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily digest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DIGEST_REPO: ${{ github.repository }}
+        run: python scripts/daily_digest.py
+
+      - name: Commit digest file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add digests/
+          if git diff --cached --quiet; then
+            echo "No new digest file to commit"
+          else
+            DATE=$(date -u +%Y-%m-%d)
+            git commit -m "digest: ${DATE} daily digest"
+            git push
+          fi
