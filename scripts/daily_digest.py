@@ -1,23 +1,29 @@
 #!/usr/bin/env python3
 """
 Daily digest for anthropics/claude-code GitHub repository.
-Fetches recent issues and PRs, summarizes with Claude API,
+Fetches recent issues and PRs, summarizes with an LLM,
 then creates a GitHub issue with the digest.
+
+Supported LLM providers (via LLM_PROVIDER env var):
+  - "kimi"      : Moonshot Kimi API (default if KIMI_API_KEY is set)
+  - "anthropic" : Anthropic Claude API
 """
 
 import os
 import sys
-import json
 from datetime import datetime, timedelta, timezone
 from typing import Any
 
-import anthropic
 import requests
 
 GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
-ANTHROPIC_API_KEY = os.environ["ANTHROPIC_API_KEY"]
 DIGEST_REPO = os.environ.get("DIGEST_REPO", "")  # owner/repo where digest issues are posted
 TARGET_REPO = "anthropics/claude-code"
+
+# LLM provider selection: prefer Kimi if key is present, fall back to Anthropic
+_kimi_key = os.environ.get("KIMI_API_KEY", "")
+_anthropic_key = os.environ.get("ANTHROPIC_API_KEY", "")
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "kimi" if _kimi_key else "anthropic")
 
 GITHUB_HEADERS = {
     "Authorization": f"Bearer {GITHUB_TOKEN}",
@@ -115,8 +121,33 @@ def build_prompt(issues: list, prs: list, releases: list, date_str: str) -> str:
 """
 
 
-def call_claude(prompt: str) -> str:
-    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+def call_llm(prompt: str) -> str:
+    if LLM_PROVIDER == "kimi":
+        return _call_kimi(prompt)
+    return _call_anthropic(prompt)
+
+
+def _call_kimi(prompt: str) -> str:
+    """Call Moonshot Kimi API (OpenAI-compatible)."""
+    resp = requests.post(
+        "https://api.moonshot.cn/v1/chat/completions",
+        headers={"Authorization": f"Bearer {_kimi_key}", "Content-Type": "application/json"},
+        json={
+            "model": "moonshot-v1-128k",
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": 4096,
+            "temperature": 0.3,
+        },
+        timeout=120,
+    )
+    resp.raise_for_status()
+    return resp.json()["choices"][0]["message"]["content"]
+
+
+def _call_anthropic(prompt: str) -> str:
+    """Call Anthropic Claude API."""
+    import anthropic as _anthropic
+    client = _anthropic.Anthropic(api_key=_anthropic_key)
     message = client.messages.create(
         model="claude-opus-4-6",
         max_tokens=4096,
@@ -168,14 +199,14 @@ def main():
         print("过去24小时无新动态，跳过生成。")
         sys.exit(0)
 
-    # Build prompt and call Claude
+    # Build prompt and call LLM
     prompt = build_prompt(issues, prs, releases, date_str)
-    print("  调用 Claude API 生成摘要...")
-    summary = call_claude(prompt)
+    print(f"  调用 {LLM_PROVIDER} API 生成摘要...")
+    summary = call_llm(prompt)
 
     # Build full digest document
     digest_header = f"# Claude Code 社区日报 {date_str}\n\n> 数据来源: [{TARGET_REPO}](https://github.com/{TARGET_REPO}) | 生成时间: {now.strftime('%Y-%m-%d %H:%M')} UTC\n\n"
-    digest_footer = f"\n\n---\n*本日报由 [claude-code-digest](https://github.com/{DIGEST_REPO}) 自动生成，使用 Claude API 分析。*"
+    digest_footer = f"\n\n---\n*本日报由 [claude-code-digest](https://github.com/{DIGEST_REPO}) 自动生成，使用 {LLM_PROVIDER} API 分析。*"
     full_digest = digest_header + summary + digest_footer
 
     # Save to file

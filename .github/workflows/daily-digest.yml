@@ -31,6 +31,10 @@ jobs:
       - name: Run daily digest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 使用 Kimi：配置 KIMI_API_KEY
+          # 使用 Anthropic：配置 ANTHROPIC_API_KEY
+          # 两者都配置时，Kimi 优先；可用 LLM_PROVIDER=anthropic 手动指定
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           DIGEST_REPO: ${{ github.repository }}
         run: python scripts/daily_digest.py

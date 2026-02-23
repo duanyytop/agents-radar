@@ -1,2 +1,6 @@
-anthropic>=0.40.0
 requests>=2.32.0
+
+# 按需安装其中一个：
+# Kimi 用 requests 直接调用，无需额外包
+# 如果使用 Anthropic，取消注释：
+# anthropic>=0.40.0
