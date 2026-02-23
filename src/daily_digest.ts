@@ -85,16 +85,24 @@ async function githubGet<T>(url: string, params: Record<string, string> = {}): P
 }
 
 async function fetchRecentItems(itemType: "issues" | "pulls", since: Date): Promise<GitHubItem[]> {
-  return githubGet<GitHubItem[]>(
+  const params: Record<string, string> = {
+    state: "all",
+    sort: "updated",
+    direction: "desc",
+    per_page: "50",
+  };
+  // The /pulls endpoint does not support `since`; filter client-side instead.
+  // The /issues endpoint supports `since` natively.
+  if (itemType === "issues") params["since"] = since.toISOString();
+
+  const items = await githubGet<GitHubItem[]>(
     `https://api.github.com/repos/${TARGET_REPO}/${itemType}`,
-    {
-      state: "all",
-      sort: "updated",
-      direction: "desc",
-      per_page: "50",
-      since: since.toISOString(),
-    },
+    params,
   );
+
+  return itemType === "pulls"
+    ? items.filter((i) => new Date(i.updated_at) >= since)
+    : items;
 }
 
 async function fetchRecentReleases(since: Date): Promise<GitHubRelease[]> {
@@ -105,7 +113,21 @@ async function fetchRecentReleases(since: Date): Promise<GitHubRelease[]> {
   return releases.filter((r) => new Date(r.published_at) >= since);
 }
 
+async function ensureLabel(name: string, color: string): Promise<void> {
+  const url = `https://api.github.com/repos/${DIGEST_REPO}/labels`;
+  const resp = await fetch(url, {
+    method: "POST",
+    headers: { ...GITHUB_HEADERS, "Content-Type": "application/json" },
+    body: JSON.stringify({ name, color }),
+  });
+  // 422 means the label already exists — that's fine.
+  if (!resp.ok && resp.status !== 422) {
+    throw new Error(`Failed to create label "${name}": ${await resp.text()}`);
+  }
+}
+
 async function createGitHubIssue(title: string, body: string): Promise<string> {
+  await ensureLabel("digest", "0075ca");
   const resp = await fetch(`https://api.github.com/repos/${DIGEST_REPO}/issues`, {
     method: "POST",
     headers: { ...GITHUB_HEADERS, "Content-Type": "application/json" },
