@@ -1,10 +1,10 @@
 {
-  "name": "ai-cli-radar",
+  "name": "agents-radar",
   "version": "1.0.0",
   "type": "module",
   "packageManager": "pnpm@9.15.9",
   "scripts": {
-    "start": "tsx src/daily_digest.ts",
+    "start": "tsx src/index.ts",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

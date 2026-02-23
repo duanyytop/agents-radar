@@ -1,4 +1,4 @@
-# ai-cli-radar
+# agents-radar
 
 A GitHub Actions workflow that runs every morning at 09:00 CST, fetches the latest issues, pull requests, and releases from six major AI CLI tool repositories, and publishes Chinese-language daily digests as a GitHub Issue and committed Markdown files.
 
@@ -51,9 +51,9 @@ npm install
 export GITHUB_TOKEN=ghp_xxxxx
 export ANTHROPIC_BASE_URL=https://api.kimi.com/coding/
 export ANTHROPIC_API_KEY=sk-kimi-xxxxxxxx
-export DIGEST_REPO=your-username/ai-cli-radar  # optional; omit to only write the file
+export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write the file
 
-npm start
+pnpm start
 ```
 
 ## Output format
@@ -68,7 +68,8 @@ Files are written to `digests/YYYY-MM-DD/`:
 | `kimi-cli.md` | Kimi Code CLI individual digest |
 | `opencode.md` | OpenCode individual digest |
 | `qwen-code.md` | Qwen Code individual digest |
-| `index.md` | Cross-tool comparative analysis |
+| `openclaw.md` | OpenClaw project digest |
+| `comparison.md` | Cross-tool comparative analysis |
 
 Each per-tool digest (written in Chinese):
 ```
