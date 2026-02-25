@@ -78,14 +78,30 @@ ${prsText}
 `;
 }
 
+/** Max items forwarded to the LLM for high-volume repos. */
+const OPENCLAW_ISSUE_LIMIT = 50;
+const OPENCLAW_PR_LIMIT    = 30;
+
+/** Sort by comment count desc, take top N. */
+function topN(items: GitHubItem[], n: number): GitHubItem[] {
+  return [...items].sort((a, b) => b.comments - a.comments).slice(0, n);
+}
+
 export function buildOpenclawPrompt(
   issues: GitHubItem[],
   prs: GitHubItem[],
   releases: GitHubRelease[],
   dateStr: string,
 ): string {
-  const issuesText   = issues.map(formatItem).join("\n") || "无";
-  const prsText      = prs.map(formatItem).join("\n") || "无";
+  const totalIssues = issues.length;
+  const totalPrs    = prs.length;
+
+  // Cap items sent to the LLM; keep stats over the full fetched set
+  const sampledIssues = topN(issues, OPENCLAW_ISSUE_LIMIT);
+  const sampledPrs    = topN(prs,    OPENCLAW_PR_LIMIT);
+
+  const issuesText   = sampledIssues.map(formatItem).join("\n") || "无";
+  const prsText      = sampledPrs.map(formatItem).join("\n") || "无";
   const releasesText = releases.length
     ? releases.map((r) => `- ${r.tag_name}: ${r.name}\n  ${(r.body ?? "").slice(0, 300)}`).join("\n")
     : "无";
@@ -95,21 +111,28 @@ export function buildOpenclawPrompt(
   const openPrs      = prs.filter((p) => p.state === "open").length;
   const mergedPrs    = prs.filter((p) => p.state === "closed").length;
 
+  const issueSampleNote = totalIssues > OPENCLAW_ISSUE_LIMIT
+    ? `（共 ${totalIssues} 条，以下展示评论数最多的 ${sampledIssues.length} 条）`
+    : `（共 ${totalIssues} 条）`;
+  const prSampleNote = totalPrs > OPENCLAW_PR_LIMIT
+    ? `（共 ${totalPrs} 条，以下展示评论数最多的 ${sampledPrs.length} 条）`
+    : `（共 ${totalPrs} 条）`;
+
   return `你是一位资深开源项目分析师，专注于跟踪大型开源项目的社区动态和项目进展。
 请根据以下来自 OpenClaw (github.com/openclaw/openclaw) 的 GitHub 数据，生成 ${dateStr} 的项目动态日报。
 
 # 数据概览
-- 过去24小时 Issues 更新：${issues.length} 条（新开/活跃: ${openIssues}，已关闭: ${closedIssues}）
-- 过去24小时 PR 更新：${prs.length} 条（待合并: ${openPrs}，已合并/关闭: ${mergedPrs}）
+- 过去24小时 Issues 更新：${totalIssues} 条（新开/活跃: ${openIssues}，已关闭: ${closedIssues}）
+- 过去24小时 PR 更新：${totalPrs} 条（待合并: ${openPrs}，已合并/关闭: ${mergedPrs}）
 - 新版本发布：${releases.length} 个
 
 ## 最新 Releases
 ${releasesText}
 
-## 最新 Issues（过去24小时内更新，共${issues.length}条）
+## 最新 Issues ${issueSampleNote}
 ${issuesText}
 
-## 最新 Pull Requests（过去24小时内更新，共${prs.length}条）
+## 最新 Pull Requests ${prSampleNote}
 ${prsText}
 
 ---
