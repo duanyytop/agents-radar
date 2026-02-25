@@ -1,8 +1,10 @@
 # agents-radar
 
-A GitHub Actions workflow that runs every morning at 09:00 CST, fetches the latest issues, pull requests, and releases from six major AI CLI tool repositories, and publishes Chinese-language daily digests as a GitHub Issue and committed Markdown files.
+A GitHub Actions workflow that runs every morning at 08:00 CST, fetches the latest issues, pull requests, and releases from major AI CLI tool repositories, and publishes Chinese-language daily digests as a GitHub Issue and committed Markdown files.
 
 ## Tracked repositories
+
+### AI CLI tools
 
 | Tool | Repository |
 |------|-----------|
@@ -13,9 +15,18 @@ A GitHub Actions workflow that runs every morning at 09:00 CST, fetches the late
 | OpenCode | [anomalyco/opencode](https://github.com/anomalyco/opencode) |
 | Qwen Code | [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) |
 
+### Claude Code Skills
+
+| Source | Repository |
+|--------|-----------|
+| Claude Code Skills | [anthropics/skills](https://github.com/anthropics/skills) |
+
+The official Claude Code Skills collection. PRs and issues are fetched without a date filter and sorted by popularity (comment count), so the report always reflects the most actively discussed skills rather than just recent activity.
+
 ## Features
 
-- Fetches issues, pull requests, and releases updated in the last 24 hours across all repos
+- Fetches issues, pull requests, and releases updated in the last 24 hours across all CLI repos
+- Tracks trending Claude Code Skills (anthropics/skills) — sorted by community engagement, not recency
 - Generates a per-tool summary for each repository
 - Generates a cross-tool comparative analysis covering trends, feature overlap, and ecosystem positioning
 - Publishes a single GitHub Issue with the comparative report and links to individual digests
@@ -71,8 +82,11 @@ Files are written to `digests/YYYY-MM-DD/`:
   生态全景 / 活跃度对比表 / 共同需求 / 差异定位 / 趋势信号
 
 ## 各工具详细报告
-  <details> Claude Code    — 今日速览 / 热点 Issues / PR 进展 / 趋势
-  <details> OpenAI Codex   — ...
+  <details> Claude Code    — [Claude Code Skills 社区热点]
+                             热门 Skills 排行 / 社区需求趋势 / 高潜力待合并 Skills
+                             ---
+                             今日速览 / 热点 Issues / PR 进展 / 趋势
+  <details> OpenAI Codex   — 今日速览 / 热点 Issues / PR 进展 / 趋势
   <details> Gemini CLI     — ...
   <details> Kimi Code CLI  — ...
   <details> OpenCode       — ...
@@ -83,7 +97,7 @@ Historical digests are stored in [`digests/`](./digests/). Published issues are 
 
 ## Schedule
 
-Default cron `"0 1 * * *"` = **01:00 UTC = 09:00 CST**.
+Default cron `"0 0 * * *"` = **00:00 UTC = 08:00 CST**.
 
 To change the time, edit the cron expression in `.github/workflows/daily-digest.yml`:
 
