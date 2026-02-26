@@ -1,10 +1,10 @@
 # agents-radar
 
-A GitHub Actions workflow that runs every morning at 08:00 CST, fetches the latest issues, pull requests, and releases from major AI CLI tool repositories, and publishes Chinese-language daily digests as a GitHub Issue and committed Markdown files.
+A GitHub Actions workflow that runs every morning at 08:00 CST. It tracks GitHub activity from major AI CLI tool repositories **and** scrapes official news, blog posts, research, and documentation from Anthropic and OpenAI, then publishes Chinese-language daily digests as GitHub Issues and committed Markdown files.
 
-## Tracked repositories
+## Tracked sources
 
-### AI CLI tools
+### AI CLI tools (GitHub)
 
 | Tool | Repository |
 |------|-----------|
@@ -15,22 +15,31 @@ A GitHub Actions workflow that runs every morning at 08:00 CST, fetches the late
 | OpenCode | [anomalyco/opencode](https://github.com/anomalyco/opencode) |
 | Qwen Code | [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) |
 
-### Claude Code Skills
+### Claude Code Skills (GitHub)
 
 | Source | Repository |
 |--------|-----------|
 | Claude Code Skills | [anthropics/skills](https://github.com/anthropics/skills) |
 
-The official Claude Code Skills collection. PRs and issues are fetched without a date filter and sorted by popularity (comment count), so the report always reflects the most actively discussed skills rather than just recent activity.
+PRs and issues are fetched without a date filter and sorted by popularity (comment count), so the report always reflects the most actively discussed skills — not just the newest.
+
+### Official web content (sitemap-based)
+
+| Organization | Site | Tracked sections |
+|---|---|---|
+| Anthropic | [anthropic.com](https://www.anthropic.com) | `/news/`, `/research/`, `/engineering/`, `/learn/` |
+| OpenAI | [openai.com](https://openai.com) | research, publication, release, company, engineering, milestone, learn-guides, safety, product |
+
+New articles are detected by comparing sitemap `lastmod` timestamps against a persisted state file (`digests/web-state.json`). On the **first run**, up to 25 recent articles per site are fetched and a comprehensive overview report is generated. On subsequent runs, only new or updated URLs trigger a report; if nothing changed, the web report step is skipped entirely.
 
 ## Features
 
 - Fetches issues, pull requests, and releases updated in the last 24 hours across all CLI repos
-- Tracks trending Claude Code Skills (anthropics/skills) — sorted by community engagement, not recency
-- Generates a per-tool summary for each repository
+- Tracks trending Claude Code Skills — sorted by community engagement, not recency
+- Generates a per-tool GitHub summary for each CLI repository
 - Generates a cross-tool comparative analysis covering trends, feature overlap, and ecosystem positioning
-- Publishes a single GitHub Issue with the comparative report and links to individual digests
-- Commits all Markdown files to `digests/YYYY-MM-DD/`
+- Scrapes official Anthropic and OpenAI web content via sitemaps; detects new articles incrementally
+- Publishes GitHub Issues for each report type; commits Markdown files to `digests/YYYY-MM-DD/`
 - Runs on a daily schedule via GitHub Actions; supports manual triggering
 
 ## Setup
@@ -52,17 +61,19 @@ Go to **Settings → Secrets and variables → Actions** and add:
 
 Confirm the workflow is enabled in the **Actions** tab.
 
-To test immediately, go to **Actions → Daily Claude Code Digest → Run workflow**.
+To test immediately, go to **Actions → Daily Agents Radar → Run workflow**.
+
+> **First run note**: The web content step will fetch up to 50 articles (25 per site) and may take a few extra minutes. Subsequent runs are fast — only new articles are processed.
 
 ## Running locally
 
 ```bash
-npm install
+pnpm install
 
 export GITHUB_TOKEN=ghp_xxxxx
 export ANTHROPIC_BASE_URL=https://api.kimi.com/coding/
 export ANTHROPIC_API_KEY=sk-kimi-xxxxxxxx
-export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write the file
+export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write files
 
 pnpm start
 ```
@@ -71,10 +82,15 @@ pnpm start
 
 Files are written to `digests/YYYY-MM-DD/`:
 
-| File | Content |
-|------|---------|
-| `ai-cli.md` | Full CLI digest — cross-tool comparison + per-tool details (collapsible) |
-| `openclaw.md` | OpenClaw project digest (standalone) |
+| File | Content | GitHub Issue label |
+|------|---------|-------------------|
+| `ai-cli.md` | CLI digest — cross-tool comparison + per-tool details | `digest` |
+| `openclaw.md` | OpenClaw project digest | `openclaw` |
+| `ai-web.md` | Official web content report (only written when new content exists) | `web` |
+
+A shared state file `digests/web-state.json` tracks which web URLs have been seen; it is committed alongside the daily digests.
+
+---
 
 `ai-cli.md` structure (written in Chinese):
 ```
@@ -93,7 +109,19 @@ Files are written to `digests/YYYY-MM-DD/`:
   <details> Qwen Code      — ...
 ```
 
-Historical digests are stored in [`digests/`](./digests/). Published issues are tagged [`digest`](../../issues?label=digest).
+`ai-web.md` structure (written in Chinese):
+```
+数据来源: anthropic.com (N 篇) + openai.com (N 篇)
+
+今日速览
+Anthropic/Claude 内容精选  (news / research / engineering / learn)
+OpenAI 内容精选            (research / release / company / safety / ...)
+战略信号解读
+值得关注的细节
+[首次全量时额外包含: 内容格局总览]
+```
+
+Historical digests are stored in [`digests/`](./digests/). Published issues are tagged by type: [`digest`](../../issues?label=digest) · [`openclaw`](../../issues?label=openclaw) · [`web`](../../issues?label=web).
 
 ## Schedule
 

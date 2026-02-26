@@ -13,7 +13,9 @@ permissions:
 jobs:
   digest:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # Web content fetching adds ~60-120 s of HTTP requests on incremental runs;
+    # the first-ever run (fetching 50 articles) may need up to 20 min.
+    timeout-minutes: 25
 
     steps:
       - name: Checkout
@@ -39,13 +41,13 @@ jobs:
           DIGEST_REPO: ${{ github.repository }}
         run: pnpm start
 
-      - name: Commit digest file
+      - name: Commit digest files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add digests/
           if git diff --cached --quiet; then
-            echo "No new digest file to commit"
+            echo "No new digest files to commit"
           else
             DATE=$(date -u +%Y-%m-%d)
             git commit -m "digest: ${DATE} daily digest"
