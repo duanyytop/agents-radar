@@ -19,7 +19,6 @@ import {
 import {
   type RepoDigest,
   buildCliPrompt,
-  buildOpenclawPrompt,
   buildPeerPrompt,
   buildComparisonPrompt,
   buildPeersComparisonPrompt,
@@ -164,7 +163,7 @@ async function main(): Promise<void> {
       }
       console.log(`  [openclaw] Calling LLM for OpenClaw report...`);
       try {
-        return await callLlm(buildOpenclawPrompt(issues, prs, releases, dateStr));
+        return await callLlm(buildPeerPrompt(cfg, issues, prs, releases, dateStr, 50, 30));
       } catch (err) {
         console.error(`  [openclaw] LLM call failed: ${err}`);
         return "⚠️ 摘要生成失败。";
