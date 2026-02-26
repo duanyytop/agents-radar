@@ -254,23 +254,15 @@ async function main(): Promise<void> {
 
   console.log(`  Saved ${saveFile(digestContent, dateStr, "ai-cli.md")}`);
 
-  // ── 5. Save OpenClaw report ────────────────────────────────────────────────
+  // ── 5. Save merged OpenClaw + peers report ────────────────────────────────
 
   const { issues: ocIssues, prs: ocPrs, releases: ocReleases } = fetchedOpenclaw;
-  const openclawContent =
-    `# OpenClaw 项目动态日报 ${dateStr}\n\n` +
-    `> 数据来源: [openclaw/openclaw](https://github.com/openclaw/openclaw) | ` +
-    `Issues: ${ocIssues.length} | PRs: ${ocPrs.length} | 生成时间: ${utcStr} UTC\n\n` +
-    openclawSummary + footer;
-  console.log(`  Saved ${saveFile(openclawContent, dateStr, "openclaw.md")}`);
-
-  // ── 5b. Save OpenClaw peers comparison report ──────────────────────────────
 
   const peersRepoLinks =
     `- [OpenClaw](https://github.com/${OPENCLAW.repo})\n` +
     OPENCLAW_PEERS.map((p) => `- [${p.name}](https://github.com/${p.repo})`).join("\n");
 
-  const peersToolSections = [openclawDigest, ...peerDigests]
+  const peerDetailSections = peerDigests
     .map((d) =>
       [
         `<details>`,
@@ -283,19 +275,22 @@ async function main(): Promise<void> {
     )
     .join("\n\n");
 
-  const peersContent =
-    `# AI 智能体生态对比日报 ${dateStr}\n\n` +
-    `> 生成时间: ${utcStr} UTC | 覆盖项目: ${1 + OPENCLAW_PEERS.length} 个（含 OpenClaw）\n\n` +
+  const openclawContent =
+    `# OpenClaw 生态日报 ${dateStr}\n\n` +
+    `> Issues: ${ocIssues.length} | PRs: ${ocPrs.length} | 覆盖项目: ${1 + OPENCLAW_PEERS.length} 个 | 生成时间: ${utcStr} UTC\n\n` +
     `${peersRepoLinks}\n\n` +
     `---\n\n` +
-    `## 横向对比\n\n` +
+    `## OpenClaw 项目深度报告\n\n` +
+    openclawSummary +
+    `\n\n---\n\n` +
+    `## 横向生态对比\n\n` +
     peersComparison +
     `\n\n---\n\n` +
-    `## 各项目详细报告\n\n` +
-    peersToolSections +
+    `## 同赛道项目详细报告\n\n` +
+    peerDetailSections +
     footer;
 
-  console.log(`  Saved ${saveFile(peersContent, dateStr, "openclaw-peers.md")}`);
+  console.log(`  Saved ${saveFile(openclawContent, dateStr, "openclaw.md")}`);
 
   // ── 6. Web report ──────────────────────────────────────────────────────────
 
@@ -352,11 +347,8 @@ async function main(): Promise<void> {
     const cliUrl = await createGitHubIssue(`📊 AI CLI 工具社区动态日报 ${dateStr}`, digestContent, "digest");
     console.log(`  Created CLI issue: ${cliUrl}`);
 
-    const openclawUrl = await createGitHubIssue(`🦞 OpenClaw 项目动态日报 ${dateStr}`, openclawContent, "openclaw");
+    const openclawUrl = await createGitHubIssue(`🦞 OpenClaw 生态日报 ${dateStr}`, openclawContent, "openclaw");
     console.log(`  Created OpenClaw issue: ${openclawUrl}`);
-
-    const peersUrl = await createGitHubIssue(`🤖 AI 智能体生态对比日报 ${dateStr}`, peersContent, "peers");
-    console.log(`  Created peers issue: ${peersUrl}`);
   }
 
   console.log("Done!");
