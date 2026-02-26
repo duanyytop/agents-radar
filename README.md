@@ -102,7 +102,7 @@ Files are written to `digests/YYYY-MM-DD/`:
 | File | Content | GitHub Issue label |
 |------|---------|-------------------|
 | `ai-cli.md` | CLI digest — cross-tool comparison + per-tool details | `digest` |
-| `openclaw.md` | OpenClaw deep report + cross-ecosystem comparison + 9 peer details | `openclaw` |
+| `ai-agents.md` | OpenClaw deep report + cross-ecosystem comparison + 9 peer details | `openclaw` |
 | `ai-web.md` | Official web content report (only written when new content exists) | `web` |
 
 A shared state file `digests/web-state.json` tracks which web URLs have been seen; it is committed alongside the daily digests.
@@ -126,7 +126,7 @@ A shared state file `digests/web-state.json` tracks which web URLs have been see
   <details> Qwen Code      — ...
 ```
 
-`openclaw.md` structure (written in Chinese):
+`ai-agents.md` structure (written in Chinese):
 ```
 Issues: N | PRs: N | 覆盖项目: 10 个
 

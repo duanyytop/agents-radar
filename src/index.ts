@@ -289,7 +289,7 @@ async function main(): Promise<void> {
     peerDetailSections +
     footer;
 
-  console.log(`  Saved ${saveFile(openclawContent, dateStr, "openclaw.md")}`);
+  console.log(`  Saved ${saveFile(openclawContent, dateStr, "ai-agents.md")}`);
 
   // ── 6. Web report ──────────────────────────────────────────────────────────
 
