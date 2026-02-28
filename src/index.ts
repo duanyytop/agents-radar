@@ -24,9 +24,11 @@ import {
   buildPeersComparisonPrompt,
   buildSkillsPrompt,
   buildWebReportPrompt,
+  buildTrendingPrompt,
 } from "./prompts.ts";
 import { callLlm, saveFile, autoGenFooter } from "./report.ts";
 import { loadWebState, saveWebState, fetchSiteContent, type WebFetchResult } from "./web.ts";
+import { fetchTrendingData, type TrendingData } from "./trending.ts";
 
 // ---------------------------------------------------------------------------
 // Repo config
@@ -100,7 +102,7 @@ async function main(): Promise<void> {
 
   const webState = loadWebState();
 
-  const [fetched, skillsData, webResults] = await Promise.all([
+  const [fetched, skillsData, webResults, trendingData] = await Promise.all([
     Promise.all(
       allConfigs.map(async (cfg) => {
         const [issuesRaw, prs, releases] = await Promise.all([
@@ -127,6 +129,9 @@ async function main(): Promise<void> {
         return { site: "openai", siteName: "OpenAI", isFirstRun: false, newItems: [], totalDiscovered: 0 };
       }),
     ]),
+    fetchTrendingData(since).catch((): TrendingData => ({
+      trendingRepos: [], searchRepos: [], trendingFetchSuccess: false,
+    })),
   ]);
 
   const peerIds         = new Set(OPENCLAW_PEERS.map((p) => p.id));
@@ -136,7 +141,7 @@ async function main(): Promise<void> {
 
   // ── 2. Generate CLI summaries + OpenClaw summary + Skills summary + Peer summaries in parallel
 
-  const [cliDigests, openclawSummary, skillsSummary, peerDigests] = await Promise.all([
+  const [cliDigests, openclawSummary, skillsSummary, peerDigests, trendingSummary] = await Promise.all([
     Promise.all(
       fetchedCli.map(async ({ cfg, issues, prs, releases }): Promise<RepoDigest> => {
         const hasData = issues.length || prs.length || releases.length;
@@ -195,6 +200,17 @@ async function main(): Promise<void> {
         }
       }),
     ),
+    (async () => {
+      const hasData = trendingData.trendingRepos.length > 0 || trendingData.searchRepos.length > 0;
+      if (!hasData) return "⚠️ 今日趋势数据获取失败，无法生成报告。";
+      console.log("  [trending] Calling LLM for trending report...");
+      try {
+        return await callLlm(buildTrendingPrompt(trendingData, dateStr), 6144);
+      } catch (err) {
+        console.error(`  [trending] LLM call failed: ${err}`);
+        return "⚠️ 趋势报告生成失败。";
+      }
+    })(),
   ]);
 
   // Build openclawDigest for peers comparison (reuses openclawSummary — zero extra LLM call)
@@ -339,6 +355,28 @@ async function main(): Promise<void> {
   // Persist updated web state (runs regardless of whether a report was generated)
   saveWebState(webState);
   console.log("  [web] State saved.");
+
+  // ── 6b. Trending report ────────────────────────────────────────────────────
+
+  const hasAnyTrendingData = trendingData.trendingRepos.length > 0 || trendingData.searchRepos.length > 0;
+  if (hasAnyTrendingData) {
+    const trendingContent =
+      `# AI 开源趋势日报 ${dateStr}\n\n` +
+      `> 数据来源: GitHub Trending + GitHub Search API | 生成时间: ${utcStr} UTC\n\n` +
+      `---\n\n` +
+      trendingSummary +
+      footer;
+
+    const trendingPath = saveFile(trendingContent, dateStr, "ai-trending.md");
+    console.log(`  Saved ${trendingPath}`);
+
+    if (digestRepo) {
+      const trendingUrl = await createGitHubIssue(`📈 AI 开源趋势日报 ${dateStr}`, trendingContent, "trending");
+      console.log(`  Created trending issue: ${trendingUrl}`);
+    }
+  } else {
+    console.log("  [trending] No data available, skipping report.");
+  }
 
   // ── 7. Create GitHub issues (CLI + OpenClaw) ────────────────────────────────
 
