@@ -1,0 +1,48 @@
+{
+  "generated": "2026-02-28T08:36:08.135Z",
+  "dates": [
+    {
+      "date": "2026-02-28",
+      "reports": [
+        "ai-cli",
+        "ai-agents",
+        "ai-web",
+        "ai-trending"
+      ]
+    },
+    {
+      "date": "2026-02-27",
+      "reports": [
+        "ai-cli",
+        "ai-agents",
+        "ai-web"
+      ]
+    },
+    {
+      "date": "2026-02-26",
+      "reports": [
+        "ai-cli",
+        "ai-agents",
+        "ai-web"
+      ]
+    },
+    {
+      "date": "2026-02-25",
+      "reports": [
+        "ai-cli"
+      ]
+    },
+    {
+      "date": "2026-02-24",
+      "reports": [
+        "ai-cli"
+      ]
+    },
+    {
+      "date": "2026-02-23",
+      "reports": [
+        "ai-cli"
+      ]
+    }
+  ]
+}
