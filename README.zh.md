@@ -4,6 +4,12 @@
 
 每天早上 08:00 CST 自动运行的 GitHub Actions 工作流。追踪主流 AI CLI 工具的 GitHub 动态、OpenClaw 及其同赛道项目的生态活动、Anthropic 和 OpenAI 官网最新资讯，并每日监测 GitHub AI 热门仓库趋势，以中文每日简报的形式发布为 GitHub Issues 并提交为 Markdown 文件。
 
+## Web UI
+
+**[https://duanyytop.github.io/agents-radar](https://duanyytop.github.io/agents-radar)**
+
+在线浏览所有历史简报，深色主题，无需登录。报告直接由本仓库的 Markdown 文件通过 GitHub Pages 渲染。
+
 ## 追踪来源
 
 ### AI CLI 工具（GitHub）

@@ -4,6 +4,12 @@ English | [中文](./README.zh.md)
 
 A GitHub Actions workflow that runs every morning at 08:00 CST. It tracks GitHub activity from AI CLI tools, OpenClaw and its peer projects in the AI agent ecosystem, scrapes official news and research from Anthropic and OpenAI, and monitors the GitHub AI trending repos daily — then publishes Chinese-language daily digests as GitHub Issues and committed Markdown files.
 
+## Web UI
+
+**[https://duanyytop.github.io/agents-radar](https://duanyytop.github.io/agents-radar)**
+
+Browse all historical digests in a clean, dark-themed interface — no login required. Reports are rendered from the Markdown files in this repo via GitHub Pages.
+
 ## Tracked sources
 
 ### AI CLI tools (GitHub)
