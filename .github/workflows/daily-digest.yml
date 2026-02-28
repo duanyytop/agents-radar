@@ -53,3 +53,15 @@ jobs:
             git commit -m "digest: ${DATE} daily digest"
             git push
           fi
+
+      - name: Update web manifest
+        run: pnpm manifest
+
+      - name: Commit manifest
+        run: |
+          git add manifest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update manifest.json"
+            git push
+          fi
+
