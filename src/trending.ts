@@ -37,12 +37,12 @@ export interface TrendingData {
 // ---------------------------------------------------------------------------
 
 const SEARCH_QUERIES = [
-  { q: "topic:llm",                  label: "llm"       },
-  { q: "topic:ai-agent",             label: "ai-agent"  },
-  { q: "topic:rag",                  label: "rag"       },
-  { q: "topic:vector-database",      label: "vector-db" },
+  { q: "topic:llm", label: "llm" },
+  { q: "topic:ai-agent", label: "ai-agent" },
+  { q: "topic:rag", label: "rag" },
+  { q: "topic:vector-database", label: "vector-db" },
   { q: "topic:large-language-model", label: "llm-model" },
-  { q: "topic:machine-learning",     label: "ml"        },
+  { q: "topic:machine-learning", label: "ml" },
 ];
 
 // ---------------------------------------------------------------------------
@@ -66,7 +66,8 @@ async function fetchGitHubTrending(): Promise<{ repos: TrendingRepo[]; success: 
     const repos: TrendingRepo[] = [];
 
     // Split by article blocks
-    const articlePattern = /<article[^>]*class="[^"]*Box-row[^"]*"[\s\S]*?(?=<article[^>]*class="[^"]*Box-row[^"]*"|$)/g;
+    const articlePattern =
+      /<article[^>]*class="[^"]*Box-row[^"]*"[\s\S]*?(?=<article[^>]*class="[^"]*Box-row[^"]*"|$)/g;
     const blocks = html.match(articlePattern) ?? [];
 
     for (const block of blocks) {
@@ -78,15 +79,11 @@ async function fetchGitHubTrending(): Promise<{ repos: TrendingRepo[]; success: 
 
         // description from col-9 paragraph
         const descMatch = block.match(/<p[^>]*class="[^"]*col-9[^"]*"[^>]*>([\s\S]*?)<\/p>/);
-        const description = descMatch?.[1]
-          ? descMatch[1].replace(/<[^>]+>/g, "").trim()
-          : "";
+        const description = descMatch?.[1] ? descMatch[1].replace(/<[^>]+>/g, "").trim() : "";
 
         // language
         const langMatch = block.match(/<span[^>]+itemprop="programmingLanguage"[^>]*>([\s\S]*?)<\/span>/);
-        const language = langMatch?.[1]
-          ? langMatch[1].replace(/<[^>]+>/g, "").trim()
-          : "";
+        const language = langMatch?.[1] ? langMatch[1].replace(/<[^>]+>/g, "").trim() : "";
 
         // today stars
         const todayMatch = block.match(/([\d,]+)\s+stars?\s+today/i);
@@ -197,9 +194,7 @@ async function searchAiRepos(sevenDaysAgo: string): Promise<SearchRepo[]> {
 // ---------------------------------------------------------------------------
 
 export async function fetchTrendingData(): Promise<TrendingData> {
-  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
-    .toISOString()
-    .slice(0, 10);
+  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
 
   const [{ repos: trendingRepos, success }, searchRepos] = await Promise.all([
     fetchGitHubTrending(),

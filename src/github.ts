@@ -64,8 +64,8 @@ const MAX_PAGES = 5;
 
 function headers(): Record<string, string> {
   return {
-    Authorization:          `Bearer ${process.env["GITHUB_TOKEN"] ?? ""}`,
-    Accept:                 "application/vnd.github+json",
+    Authorization: `Bearer ${process.env["GITHUB_TOKEN"] ?? ""}`,
+    Accept: "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",
   };
 }
@@ -85,19 +85,17 @@ async function fetchItemPage(
   page: number,
 ): Promise<GitHubItem[]> {
   const params: Record<string, string> = {
-    state: "all", sort: "updated", direction: "desc",
-    per_page: "100", page: String(page),
+    state: "all",
+    sort: "updated",
+    direction: "desc",
+    per_page: "100",
+    page: String(page),
   };
   // /pulls does not support `since`; filter client-side instead
   if (itemType === "issues") params["since"] = since.toISOString();
 
-  const items = await githubGet<GitHubItem[]>(
-    `https://api.github.com/repos/${repo}/${itemType}`,
-    params,
-  );
-  return itemType === "pulls"
-    ? items.filter((i) => new Date(i.updated_at) >= since)
-    : items;
+  const items = await githubGet<GitHubItem[]>(`https://api.github.com/repos/${repo}/${itemType}`, params);
+  return itemType === "pulls" ? items.filter((i) => new Date(i.updated_at) >= since) : items;
 }
 
 // ---------------------------------------------------------------------------
@@ -116,16 +114,17 @@ export async function fetchRecentItems(
 ): Promise<GitHubItem[]> {
   if (!cfg.paginated) {
     const params: Record<string, string> = {
-      state: "all", sort: "updated", direction: "desc", per_page: "50",
+      state: "all",
+      sort: "updated",
+      direction: "desc",
+      per_page: "50",
     };
     if (itemType === "issues") params["since"] = since.toISOString();
     const items = await githubGet<GitHubItem[]>(
       `https://api.github.com/repos/${cfg.repo}/${itemType}`,
       params,
     );
-    return itemType === "pulls"
-      ? items.filter((i) => new Date(i.updated_at) >= since)
-      : items;
+    return itemType === "pulls" ? items.filter((i) => new Date(i.updated_at) >= since) : items;
   }
 
   const all: GitHubItem[] = [];
@@ -141,10 +140,9 @@ export async function fetchRecentItems(
 }
 
 export async function fetchRecentReleases(repo: string, since: Date): Promise<GitHubRelease[]> {
-  const releases = await githubGet<GitHubRelease[]>(
-    `https://api.github.com/repos/${repo}/releases`,
-    { per_page: "10" },
-  );
+  const releases = await githubGet<GitHubRelease[]>(`https://api.github.com/repos/${repo}/releases`, {
+    per_page: "10",
+  });
   return releases.filter((r) => new Date(r.published_at) >= since);
 }
 
@@ -168,20 +166,22 @@ export async function ensureLabel(name: string, color: string): Promise<void> {
 export async function fetchSkillsData(repo: string): Promise<{ prs: GitHubItem[]; issues: GitHubItem[] }> {
   const [prs, issuesRaw] = await Promise.all([
     githubGet<GitHubItem[]>(`https://api.github.com/repos/${repo}/pulls`, {
-      state: "open", sort: "popularity", direction: "desc", per_page: "50",
+      state: "open",
+      sort: "popularity",
+      direction: "desc",
+      per_page: "50",
     }),
     githubGet<GitHubItem[]>(`https://api.github.com/repos/${repo}/issues`, {
-      state: "all", sort: "comments", direction: "desc", per_page: "50",
+      state: "all",
+      sort: "comments",
+      direction: "desc",
+      per_page: "50",
     }),
   ]);
   return { prs, issues: issuesRaw.filter((i) => !i.pull_request) };
 }
 
-export async function createGitHubIssue(
-  title: string,
-  body: string,
-  label: string,
-): Promise<string> {
+export async function createGitHubIssue(title: string, body: string, label: string): Promise<string> {
   const digestRepo = process.env["DIGEST_REPO"] ?? "";
   const LABEL_COLORS: Record<string, string> = {
     openclaw: "e11d48",

@@ -19,13 +19,20 @@ let llmSlots = LLM_CONCURRENCY;
 const llmQueue: Array<() => void> = [];
 
 function acquireSlot(): Promise<void> {
-  if (llmSlots > 0) { llmSlots--; return Promise.resolve(); }
+  if (llmSlots > 0) {
+    llmSlots--;
+    return Promise.resolve();
+  }
   return new Promise((resolve) => llmQueue.push(resolve));
 }
 
 function releaseSlot(): void {
   const next = llmQueue.shift();
-  if (next) { next(); } else { llmSlots++; }
+  if (next) {
+    next();
+  } else {
+    llmSlots++;
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -63,7 +70,5 @@ export function saveFile(content: string, ...segments: string[]): string {
 
 export function autoGenFooter(): string {
   const digestRepo = process.env["DIGEST_REPO"] ?? "";
-  return digestRepo
-    ? `\n\n---\n*本日报由 [agents-radar](https://github.com/${digestRepo}) 自动生成。*`
-    : "";
+  return digestRepo ? `\n\n---\n*本日报由 [agents-radar](https://github.com/${digestRepo}) 自动生成。*` : "";
 }

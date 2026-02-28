@@ -23,9 +23,9 @@ export interface RepoDigest {
 // ---------------------------------------------------------------------------
 
 export function formatItem(item: GitHubItem): string {
-  const labels   = item.labels.map((l) => l.name).join(", ");
+  const labels = item.labels.map((l) => l.name).join(", ");
   const labelStr = labels ? ` [${labels}]` : "";
-  const body     = (item.body ?? "").replace(/\n/g, " ").trim().slice(0, 300);
+  const body = (item.body ?? "").replace(/\n/g, " ").trim().slice(0, 300);
   const ellipsis = (item.body ?? "").length > 300 ? "..." : "";
   return [
     `#${item.number} [${item.state.toUpperCase()}]${labelStr} ${item.title}`,
@@ -40,17 +40,15 @@ export function formatItem(item: GitHubItem): string {
 // ---------------------------------------------------------------------------
 
 const CLI_ISSUE_LIMIT = 30;
-const CLI_PR_LIMIT    = 20;
+const CLI_PR_LIMIT = 20;
 
 /** Sort by comment count desc, take top N. */
 function topN(items: GitHubItem[], n: number): GitHubItem[] {
   return [...items].sort((a, b) => b.comments - a.comments).slice(0, n);
 }
 
-function sampleNote(total: number, sampled: number, label: string): string {
-  return total > sampled
-    ? `（共 ${total} 条，以下展示评论数最多的 ${sampled} 条）`
-    : `（共 ${total} 条）`;
+function sampleNote(total: number, sampled: number): string {
+  return total > sampled ? `（共 ${total} 条，以下展示评论数最多的 ${sampled} 条）` : `（共 ${total} 条）`;
 }
 
 // ---------------------------------------------------------------------------
@@ -65,16 +63,16 @@ export function buildCliPrompt(
   dateStr: string,
 ): string {
   const sampledIssues = topN(issues, CLI_ISSUE_LIMIT);
-  const sampledPrs    = topN(prs,    CLI_PR_LIMIT);
+  const sampledPrs = topN(prs, CLI_PR_LIMIT);
 
-  const issuesText   = sampledIssues.map(formatItem).join("\n") || "无";
-  const prsText      = sampledPrs.map(formatItem).join("\n") || "无";
+  const issuesText = sampledIssues.map(formatItem).join("\n") || "无";
+  const prsText = sampledPrs.map(formatItem).join("\n") || "无";
   const releasesText = releases.length
     ? releases.map((r) => `- ${r.tag_name}: ${r.name}\n  ${(r.body ?? "").slice(0, 300)}`).join("\n")
     : "无";
 
-  const issueNote = sampleNote(issues.length, sampledIssues.length, "issues");
-  const prNote    = sampleNote(prs.length,    sampledPrs.length,    "prs");
+  const issueNote = sampleNote(issues.length, sampledIssues.length);
+  const prNote = sampleNote(prs.length, sampledPrs.length);
 
   return `你是一位专注于 AI 开发工具的技术分析师。请根据以下 GitHub 数据，生成 ${dateStr} 的 ${cfg.name} 社区动态日报。
 
@@ -105,7 +103,7 @@ ${prsText}
 }
 
 const PEER_ISSUE_LIMIT = 30;
-const PEER_PR_LIMIT    = 20;
+const PEER_PR_LIMIT = 20;
 
 export function buildPeerPrompt(
   cfg: RepoConfig,
@@ -117,24 +115,24 @@ export function buildPeerPrompt(
   prLimit = PEER_PR_LIMIT,
 ): string {
   const totalIssues = issues.length;
-  const totalPrs    = prs.length;
+  const totalPrs = prs.length;
 
   const sampledIssues = topN(issues, issueLimit);
-  const sampledPrs    = topN(prs,    prLimit);
+  const sampledPrs = topN(prs, prLimit);
 
-  const issuesText   = sampledIssues.map(formatItem).join("\n") || "无";
-  const prsText      = sampledPrs.map(formatItem).join("\n") || "无";
+  const issuesText = sampledIssues.map(formatItem).join("\n") || "无";
+  const prsText = sampledPrs.map(formatItem).join("\n") || "无";
   const releasesText = releases.length
     ? releases.map((r) => `- ${r.tag_name}: ${r.name}\n  ${(r.body ?? "").slice(0, 300)}`).join("\n")
     : "无";
 
-  const openIssues   = issues.filter((i) => i.state === "open").length;
+  const openIssues = issues.filter((i) => i.state === "open").length;
   const closedIssues = issues.filter((i) => i.state === "closed").length;
-  const openPrs      = prs.filter((p) => p.state === "open").length;
-  const mergedPrs    = prs.filter((p) => p.state === "closed").length;
+  const openPrs = prs.filter((p) => p.state === "open").length;
+  const mergedPrs = prs.filter((p) => p.state === "closed").length;
 
-  const issueSampleNote = sampleNote(totalIssues, sampledIssues.length, "issues");
-  const prSampleNote    = sampleNote(totalPrs,    sampledPrs.length,    "prs");
+  const issueSampleNote = sampleNote(totalIssues, sampledIssues.length);
+  const prSampleNote = sampleNote(totalPrs, sampledPrs.length);
 
   return `你是一位 AI 智能体与个人 AI 助手领域开源项目分析师。请根据以下来自 ${cfg.name} (github.com/${cfg.repo}) 的 GitHub 数据，生成 ${dateStr} 的项目动态日报。
 
@@ -174,8 +172,7 @@ export function buildPeersComparisonPrompt(
   peerDigests: RepoDigest[],
   dateStr: string,
 ): string {
-  const openclawSection =
-    `## OpenClaw（核心参照，github.com/${openclawDigest.config.repo}）\n${openclawDigest.summary}`;
+  const openclawSection = `## OpenClaw（核心参照，github.com/${openclawDigest.config.repo}）\n${openclawDigest.summary}`;
 
   const peerSections = peerDigests
     .map((d) => {
@@ -209,15 +206,11 @@ ${peerSections}
 `;
 }
 
-export function buildSkillsPrompt(
-  prs: GitHubItem[],
-  issues: GitHubItem[],
-  dateStr: string,
-): string {
-  const topPrs    = topN(prs,    20);
+export function buildSkillsPrompt(prs: GitHubItem[], issues: GitHubItem[], dateStr: string): string {
+  const topPrs = topN(prs, 20);
   const topIssues = topN(issues, 15);
 
-  const prsText    = topPrs.map(formatItem).join("\n") || "无";
+  const prsText = topPrs.map(formatItem).join("\n") || "无";
   const issuesText = topIssues.map(formatItem).join("\n") || "无";
 
   return `你是一位专注于 Claude Code 生态的技术分析师。以下是来自 github.com/anthropics/skills（Claude Code Skills 官方仓库）的数据，请分析社区最关注的 Skills 动态（数据截止 ${dateStr}）。
@@ -273,32 +266,34 @@ ${sections}
 }
 
 export function buildTrendingPrompt(data: TrendingData, dateStr: string): string {
-  const trendingSection = data.trendingFetchSuccess && data.trendingRepos.length > 0
-    ? data.trendingRepos
-        .map(
-          (r) =>
-            `- [${r.fullName}](${r.url})` +
-            (r.language ? ` [${r.language}]` : "") +
-            ` ⭐${r.totalStars.toLocaleString()}` +
-            (r.todayStars > 0 ? ` (+${r.todayStars} today)` : "") +
-            (r.forks > 0 ? ` 🍴${r.forks.toLocaleString()}` : "") +
-            (r.description ? `\n  ${r.description}` : ""),
-        )
-        .join("\n")
-    : "（未能抓取今日 GitHub Trending 榜单）";
+  const trendingSection =
+    data.trendingFetchSuccess && data.trendingRepos.length > 0
+      ? data.trendingRepos
+          .map(
+            (r) =>
+              `- [${r.fullName}](${r.url})` +
+              (r.language ? ` [${r.language}]` : "") +
+              ` ⭐${r.totalStars.toLocaleString()}` +
+              (r.todayStars > 0 ? ` (+${r.todayStars} today)` : "") +
+              (r.forks > 0 ? ` 🍴${r.forks.toLocaleString()}` : "") +
+              (r.description ? `\n  ${r.description}` : ""),
+          )
+          .join("\n")
+      : "（未能抓取今日 GitHub Trending 榜单）";
 
-  const searchSection = data.searchRepos.length > 0
-    ? data.searchRepos
-        .map(
-          (r) =>
-            `- [${r.fullName}](${r.url})` +
-            (r.language ? ` [${r.language}]` : "") +
-            ` ⭐${r.stargazersCount.toLocaleString()}` +
-            ` [topic:${r.searchQuery}]` +
-            (r.description ? `\n  ${r.description}` : ""),
-        )
-        .join("\n")
-    : "（无搜索结果）";
+  const searchSection =
+    data.searchRepos.length > 0
+      ? data.searchRepos
+          .map(
+            (r) =>
+              `- [${r.fullName}](${r.url})` +
+              (r.language ? ` [${r.language}]` : "") +
+              ` ⭐${r.stargazersCount.toLocaleString()}` +
+              ` [topic:${r.searchQuery}]` +
+              (r.description ? `\n  ${r.description}` : ""),
+          )
+          .join("\n")
+      : "（无搜索结果）";
 
   return `你是一位专注于 AI 开源生态的技术分析师。以下是 ${dateStr} 的 GitHub AI 相关热门仓库数据，请进行 AI 相关性筛选、分类和趋势分析。
 
@@ -410,4 +405,3 @@ ${siteSections}
 ${isAnyFirstRun ? "6. **内容格局总览** — 首次全量独有：汇总两家公司各内容类别的数量分布，并说明各自的内容运营风格（学术导向 vs 产品导向 vs 用户故事等）\n\n" : ""}语言要求：中文，专业深入，内容详实，适合 AI 领域研究者、产品经理和技术决策者阅读。每个条目必须附上 GitHub/官网链接。
 `;
 }
-
