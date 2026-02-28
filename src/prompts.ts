@@ -133,12 +133,8 @@ export function buildPeerPrompt(
   const openPrs      = prs.filter((p) => p.state === "open").length;
   const mergedPrs    = prs.filter((p) => p.state === "closed").length;
 
-  const issueSampleNote = totalIssues > issueLimit
-    ? `（共 ${totalIssues} 条，以下展示评论数最多的 ${sampledIssues.length} 条）`
-    : `（共 ${totalIssues} 条）`;
-  const prSampleNote = totalPrs > prLimit
-    ? `（共 ${totalPrs} 条，以下展示评论数最多的 ${sampledPrs.length} 条）`
-    : `（共 ${totalPrs} 条）`;
+  const issueSampleNote = sampleNote(totalIssues, sampledIssues.length, "issues");
+  const prSampleNote    = sampleNote(totalPrs,    sampledPrs.length,    "prs");
 
   return `你是一位 AI 智能体与个人 AI 助手领域开源项目分析师。请根据以下来自 ${cfg.name} (github.com/${cfg.repo}) 的 GitHub 数据，生成 ${dateStr} 的项目动态日报。
 
