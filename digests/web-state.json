@@ -1,6 +1,6 @@
 {
   "anthropic": {
-    "lastChecked": "2026-03-01T00:08:08.158Z",
+    "lastChecked": "2026-03-02T00:07:09.943Z",
     "seenUrls": {
       "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-25T23:57:06.000Z",
       "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -317,7 +317,7 @@
     }
   },
   "openai": {
-    "lastChecked": "2026-03-01T00:08:09.185Z",
+    "lastChecked": "2026-03-02T00:07:10.504Z",
     "seenUrls": {
       "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-02-27T18:40:43.703Z",
       "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-02-27T18:40:49.471Z",
@@ -379,9 +379,9 @@
       "https://openai.com/index/openai-en-france/": "2026-02-27T18:40:50.357Z",
       "https://openai.com/index/elon-musk-wanted-an-openai-for-profit/": "2026-02-27T18:40:49.927Z",
       "https://openai.com/index/scaling-postgresql/": "2026-02-28T00:23:15.500Z",
-      "https://openai.com/index/unlocking-the-codex-harness/": "2026-02-28T16:30:16.567Z",
-      "https://openai.com/index/unrolling-the-codex-agent-loop/": "2026-02-28T16:30:14.772Z",
-      "https://openai.com/index/harness-engineering/": "2026-02-28T16:12:55.135Z",
+      "https://openai.com/index/unlocking-the-codex-harness/": "2026-03-01T23:25:48.388Z",
+      "https://openai.com/index/unrolling-the-codex-agent-loop/": "2026-03-01T23:22:49.182Z",
+      "https://openai.com/index/harness-engineering/": "2026-03-01T13:22:23.484Z",
       "https://openai.com/index/first-proof-submissions/": "2026-02-25T00:59:03.242Z",
       "https://openai.com/index/confidence-building-measures-for-artificial-intelligence/": "2026-02-24T20:40:23.433Z",
       "https://openai.com/research/index/": "2026-02-24T20:40:14.005Z",
@@ -827,7 +827,7 @@
       "https://openai.com/business/put-ai-to-work-automate-and-scale-financial-operations/": "2025-12-26T18:50:32.418Z",
       "https://openai.com/business/enabling-a-data-driven-workforce-webinar/": "2025-12-26T18:48:40.812Z",
       "https://openai.com/business/fine-tuning-gpt-4o-webinar/": "2025-12-26T18:48:40.270Z",
-      "https://openai.com/business/put-ai-to-work-lessons-from-hundreds-of-successful-deployments/": "2026-03-01T00:01:24.429Z",
+      "https://openai.com/business/put-ai-to-work-lessons-from-hundreds-of-successful-deployments/": "2026-03-01T23:32:30.922Z",
       "https://openai.com/index/updating-our-preparedness-framework/": "2025-12-19T13:22:25.962Z",
       "https://openai.com/index/gpt-4-5-system-card/": "2025-12-19T13:22:24.869Z",
       "https://openai.com/index/gpt-4o-image-generation-system-card-addendum/": "2025-12-19T13:22:24.100Z",
@@ -929,11 +929,11 @@
       "https://openai.com/index/affective-use-study/": "2025-06-24T22:17:06.485Z",
       "https://openai.com/index/bertelsmann-powers-creativity-and-productivity-with-openai/": "2025-05-23T02:02:29.542Z",
       "https://openai.com/index/nonprofit-commission-guidance/": "2025-05-22T22:50:03.329Z",
-      "https://openai.com/index/update-on-mental-health-related-work/": "2026-02-28T12:47:49.409Z",
-      "https://openai.com/index/continuing-microsoft-partnership/": "2026-02-28T12:24:10.177Z",
-      "https://openai.com/index/amazon-partnership/": "2026-02-28T13:24:19.172Z",
-      "https://openai.com/index/scaling-ai-for-everyone/": "2026-02-28T13:24:16.877Z",
-      "https://openai.com/index/introducing-the-stateful-runtime-environment-for-agents-in-amazon-bedrock/": "2026-03-01T00:08:05.921Z",
+      "https://openai.com/index/update-on-mental-health-related-work/": "2026-03-02T00:00:33.788Z",
+      "https://openai.com/index/continuing-microsoft-partnership/": "2026-03-01T05:51:16.553Z",
+      "https://openai.com/index/amazon-partnership/": "2026-03-01T04:56:59.476Z",
+      "https://openai.com/index/scaling-ai-for-everyone/": "2026-03-01T05:51:25.093Z",
+      "https://openai.com/index/introducing-the-stateful-runtime-environment-for-agents-in-amazon-bedrock/": "2026-03-01T00:09:21.844Z",
       "https://openai.com/index/our-agreement-with-the-department-of-war/": "2026-02-28T21:36:40.481Z"
     }
   }
