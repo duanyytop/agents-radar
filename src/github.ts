@@ -192,6 +192,7 @@ export async function createGitHubIssue(title: string, body: string, label: stri
   const LABEL_COLORS: Record<string, string> = {
     openclaw: "e11d48",
     trending: "f9a825",
+    hn: "ff6600",
   };
   await ensureLabel(label, LABEL_COLORS[label] ?? "0075ca");
   const resp = await fetch(`https://api.github.com/repos/${digestRepo}/issues`, {

@@ -27,10 +27,12 @@ import {
   buildSkillsPrompt,
   buildWebReportPrompt,
   buildTrendingPrompt,
+  buildHnPrompt,
 } from "./prompts.ts";
 import { callLlm, saveFile, autoGenFooter } from "./report.ts";
 import { loadWebState, saveWebState, fetchSiteContent, type WebFetchResult, type WebState } from "./web.ts";
 import { fetchTrendingData, type TrendingData } from "./trending.ts";
+import { fetchHnData, type HnData } from "./hn.ts";
 
 // ---------------------------------------------------------------------------
 // Repo config
@@ -104,11 +106,12 @@ async function fetchAllData(
   skillsData: { prs: GitHubItem[]; issues: GitHubItem[] };
   webResults: WebFetchResult[];
   trendingData: TrendingData;
+  hnData: HnData;
 }> {
   const allConfigs = [...CLI_REPOS, OPENCLAW, ...OPENCLAW_PEERS];
-  console.log(`  Tracking: ${allConfigs.map((r) => r.id).join(", ")}, claude-code-skills, web`);
+  console.log(`  Tracking: ${allConfigs.map((r) => r.id).join(", ")}, claude-code-skills, web, hn`);
 
-  const [fetched, skillsData, webResults, trendingData] = await Promise.all([
+  const [fetched, skillsData, webResults, trendingData, hnData] = await Promise.all([
     Promise.all(
       allConfigs.map(async (cfg) => {
         const [issuesRaw, prs, releases] = await Promise.all([
@@ -150,9 +153,10 @@ async function fetchAllData(
         trendingFetchSuccess: false,
       }),
     ),
+    fetchHnData().catch((): HnData => ({ stories: [], fetchSuccess: false })),
   ]);
 
-  return { fetched, skillsData, webResults, trendingData };
+  return { fetched, skillsData, webResults, trendingData, hnData };
 }
 
 // ---------------------------------------------------------------------------
@@ -431,6 +435,40 @@ async function saveTrendingReport(
   }
 }
 
+async function saveHnReport(
+  hnData: HnData,
+  utcStr: string,
+  dateStr: string,
+  digestRepo: string,
+  footer: string,
+): Promise<void> {
+  if (!hnData.fetchSuccess) {
+    console.log("  [hn] No data available, skipping report.");
+    return;
+  }
+
+  console.log("  [hn] Calling LLM for HN report...");
+  try {
+    const hnSummary = await callLlm(buildHnPrompt(hnData, dateStr));
+    const hnContent =
+      `# Hacker News AI 社区动态日报 ${dateStr}\n\n` +
+      `> 数据来源: [Hacker News](https://news.ycombinator.com/) | ` +
+      `共 ${hnData.stories.length} 条 | 生成时间: ${utcStr} UTC\n\n` +
+      `---\n\n` +
+      hnSummary +
+      footer;
+
+    console.log(`  Saved ${saveFile(hnContent, dateStr, "ai-hn.md")}`);
+
+    if (digestRepo) {
+      const hnUrl = await createGitHubIssue(`📰 Hacker News AI 社区动态日报 ${dateStr}`, hnContent, "hn");
+      console.log(`  Created HN issue: ${hnUrl}`);
+    }
+  } catch (err) {
+    console.error(`  [hn] Report generation failed: ${err}`);
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
@@ -451,7 +489,7 @@ async function main(): Promise<void> {
 
   // 1. Fetch all data in parallel
   const webState = loadWebState();
-  const { fetched, skillsData, webResults, trendingData } = await fetchAllData(since, webState);
+  const { fetched, skillsData, webResults, trendingData, hnData } = await fetchAllData(since, webState);
 
   const peerIds = new Set(OPENCLAW_PEERS.map((p) => p.id));
   const fetchedCli = fetched.filter((f) => f.cfg.id !== OPENCLAW.id && !peerIds.has(f.cfg.id));
@@ -495,6 +533,7 @@ async function main(): Promise<void> {
 
   await saveWebReport(webResults, webState, utcStr, dateStr, digestRepo, footer);
   await saveTrendingReport(trendingData, trendingSummary, utcStr, dateStr, digestRepo, footer);
+  await saveHnReport(hnData, utcStr, dateStr, digestRepo, footer);
 
   // 5. Create GitHub issues for CLI + OpenClaw
   if (digestRepo) {
