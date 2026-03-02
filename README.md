@@ -60,6 +60,10 @@ Two data sources are fetched in parallel every day:
 
 The LLM filters out non-AI repos from the trending list, classifies the rest by dimension (AI infrastructure / agents / applications / models / RAG), and extracts trend signals.
 
+### Hacker News
+
+Top AI stories from the last 24 hours, fetched via the [Algolia HN Search API](https://hn.algolia.com/api). Six queries run in parallel (`AI`, `LLM`, `Claude`, `OpenAI`, `Anthropic`, `machine learning`), results are deduplicated and ranked by points. The top 30 stories are passed to the LLM for analysis.
+
 ### Official web content (sitemap-based)
 
 | Organization | Site | Tracked sections |
@@ -77,6 +81,7 @@ New articles are detected by comparing sitemap `lastmod` timestamps against a pe
 - Generates a deep OpenClaw project report plus a cross-ecosystem comparison against 10 peer projects
 - Scrapes official Anthropic and OpenAI web content via sitemaps; detects new articles incrementally
 - Monitors GitHub Trending daily + searches 6 AI topic tags; classifies repos by dimension and extracts trend signals
+- Fetches top-30 AI stories from Hacker News (last 24h, ranked by points); generates community sentiment report
 - Publishes GitHub Issues for each report type; commits Markdown files to `digests/YYYY-MM-DD/`
 - Runs on a daily schedule via GitHub Actions; supports manual triggering
 
@@ -126,6 +131,7 @@ Files are written to `digests/YYYY-MM-DD/`:
 | `ai-agents.md` | OpenClaw deep report + cross-ecosystem comparison + 10 peer details | `openclaw` |
 | `ai-web.md` | Official web content report (only written when new content exists) | `web` |
 | `ai-trending.md` | GitHub AI trending report — repos classified by dimension + trend signals (only written when data is available) | `trending` |
+| `ai-hn.md` | Hacker News AI community digest — top stories + sentiment analysis (only written when fetch succeeds) | `hn` |
 
 A shared state file `digests/web-state.json` tracks which web URLs have been seen; it is committed alongside the daily digests.
 
@@ -200,7 +206,21 @@ OpenAI 内容精选            (research / release / company / safety / ...)
 社区关注热点
 ```
 
-Historical digests are stored in [`digests/`](./digests/). Published issues are tagged by type: [`digest`](../../issues?label=digest) · [`openclaw`](../../issues?label=openclaw) · [`web`](../../issues?label=web) · [`trending`](../../issues?label=trending).
+`ai-hn.md` structure (written in Chinese):
+```
+数据来源: Hacker News (top-30 AI stories, last 24h)
+
+今日速览
+热门新闻与讨论
+  🔬 模型与研究   — 新模型发布 / 论文 / 基准测试
+  🛠️ 工具与工程   — 开源项目 / 框架 / 工程实践
+  🏢 产业动态     — 公司新闻 / 融资 / 产品发布
+  💬 观点与争议   — Ask HN / Show HN / 热议帖子
+社区情绪信号
+值得深读
+```
+
+Historical digests are stored in [`digests/`](./digests/). Published issues are tagged by type: [`digest`](../../issues?label=digest) · [`openclaw`](../../issues?label=openclaw) · [`web`](../../issues?label=web) · [`trending`](../../issues?label=trending) · [`hn`](../../issues?label=hn).
 
 ## Schedule
 

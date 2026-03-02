@@ -48,7 +48,6 @@ OpenClaw 作为重点追踪项目，同时横向对比 10 个同赛道项目，�
 | CoPaw | [agentscope-ai/CoPaw](https://github.com/agentscope-ai/CoPaw) | 2.2k |
 | ZeptoClaw | [qhkm/zeptoclaw](https://github.com/qhkm/zeptoclaw) | 394 |
 | EasyClaw | [gaoyangz77/easyclaw](https://github.com/gaoyangz77/easyclaw) | 102 |
-| CoPaw | [agentscope-ai/CoPaw](https://github.com/agentscope-ai/CoPaw) | — |
 
 ### GitHub AI 趋势热榜
 
@@ -60,6 +59,10 @@ OpenClaw 作为重点追踪项目，同时横向对比 10 个同赛道项目，�
 | GitHub Search API | 7 天内活跃的 AI 相关仓库，覆盖 6 个主题标签：`llm`、`ai-agent`、`rag`、`vector-database`、`large-language-model`、`machine-learning` |
 
 LLM 负责过滤非 AI 项目，将结果按维度分类（AI 基础工具 / AI 智能体 / AI 应用 / 大模型 / RAG 知识库），并提炼趋势信号。
+
+### Hacker News
+
+通过 [Algolia HN Search API](https://hn.algolia.com/api) 并行执行 6 个查询（`AI`、`LLM`、`Claude`、`OpenAI`、`Anthropic`、`machine learning`），抓取过去 24 小时内的 AI 相关帖子，去重后按分数排序，取 top 30 传入 LLM 进行社区情绪分析。
 
 ### 官网内容（基于 Sitemap）
 
@@ -78,6 +81,7 @@ LLM 负责过滤非 AI 项目，将结果按维度分类（AI 基础工具 / AI 
 - 生成 OpenClaw 深度项目报告，并与 10 个同赛道项目进行横向对比
 - 通过 Sitemap 抓取 Anthropic 和 OpenAI 官网内容，增量检测新文章
 - 每日监测 GitHub Trending + 搜索 6 个 AI 主题标签，按维度分类并提炼趋势信号
+- 抓取 Hacker News 过去 24 小时 AI 热门帖子（top 30，按分数排序），生成社区情绪报告
 - 以 GitHub Issues 形式发布报告，同时提交 Markdown 文件至 `digests/YYYY-MM-DD/`
 - 每日通过 GitHub Actions 定时运行，支持手动触发
 
@@ -127,6 +131,7 @@ pnpm start
 | `ai-agents.md` | OpenClaw 深度报告 + 横向生态对比 + 10 个同赛道项目详情 | `openclaw` |
 | `ai-web.md` | 官网内容报告（仅在有新内容时生成） | `web` |
 | `ai-trending.md` | GitHub AI 趋势热榜 — 按维度分类 + 趋势信号分析（仅在有数据时生成） | `trending` |
+| `ai-hn.md` | Hacker News AI 社区动态 — 热门帖子分类 + 情绪分析（仅在抓取成功时生成） | `hn` |
 
 `digests/web-state.json` 用于记录已处理的 URL，随每日简报一并提交。
 
@@ -201,7 +206,21 @@ OpenAI 内容精选            (research / release / company / safety / ...)
 社区关注热点
 ```
 
-历史简报存储在 [`digests/`](./digests/)。已发布的 Issues 按类型打标签：[`digest`](../../issues?label=digest) · [`openclaw`](../../issues?label=openclaw) · [`web`](../../issues?label=web) · [`trending`](../../issues?label=trending)。
+`ai-hn.md` 结构：
+```
+数据来源: Hacker News（top-30 AI 帖子，过去 24 小时）
+
+今日速览
+热门新闻与讨论
+  🔬 模型与研究   — 新模型发布 / 论文 / 基准测试
+  🛠️ 工具与工程   — 开源项目 / 框架 / 工程实践
+  🏢 产业动态     — 公司新闻 / 融资 / 产品发布
+  💬 观点与争议   — Ask HN / Show HN / 热议帖子
+社区情绪信号
+值得深读
+```
+
+历史简报存储在 [`digests/`](./digests/)。已发布的 Issues 按类型打标签：[`digest`](../../issues?label=digest) · [`openclaw`](../../issues?label=openclaw) · [`web`](../../issues?label=web) · [`trending`](../../issues?label=trending) · [`hn`](../../issues?label=hn)。
 
 ## 定时计划
 
