@@ -1,0 +1,198 @@
+# agents-radar 追踪来源设定
+# 编辑此档即可增减追踪标的，无需修改程式码
+
+# ============================================================
+# 报告分组
+# ============================================================
+groups:
+  # ── AI CLI 工具（原版 CLI_REPOS）──────────────────────────
+  - id: ai-cli
+    name: "AI CLI 工具"
+    reportFile: "ai-cli.md"
+    issueLabel: "digest"
+    issueEmoji: "📊"
+    promptStyle: "cli"
+    repos:
+      - id: claude-code
+        repo: anthropics/claude-code
+        name: Claude Code
+      - id: codex
+        repo: openai/codex
+        name: OpenAI Codex
+      - id: gemini-cli
+        repo: google-gemini/gemini-cli
+        name: Gemini CLI
+      - id: kimi-cli
+        repo: MoonshotAI/kimi-cli
+        name: Kimi Code CLI
+      - id: opencode
+        repo: anomalyco/opencode
+        name: OpenCode
+      - id: qwen-code
+        repo: QwenLM/qwen-code
+        name: Qwen Code
+
+  # ── OpenClaw 生态（原版 OPENCLAW + PEERS）─────────────────
+  - id: ai-agents
+    name: "OpenClaw 生态"
+    reportFile: "ai-agents.md"
+    issueLabel: "openclaw"
+    issueEmoji: "🦞"
+    promptStyle: "peer"
+    # 第一个 repo 作为主角（深度报告），其余为 peers
+    primaryRepo: openclaw
+    repos:
+      - id: openclaw
+        repo: openclaw/openclaw
+        name: OpenClaw
+        paginated: true
+      - id: nanobot
+        repo: HKUDS/nanobot
+        name: NanoBot
+        paginated: true
+      - id: zeroclaw
+        repo: zeroclaw-labs/zeroclaw
+        name: Zeroclaw
+      - id: picoclaw
+        repo: sipeed/picoclaw
+        name: PicoClaw
+        paginated: true
+      - id: nanoclaw
+        repo: qwibitai/nanoclaw
+        name: NanoClaw
+      - id: ironclaw
+        repo: nearai/ironclaw
+        name: IronClaw
+      - id: lobsterai
+        repo: netease-youdao/LobsterAI
+        name: LobsterAI
+      - id: tinyclaw
+        repo: TinyAGI/tinyclaw
+        name: TinyClaw
+      - id: copaw
+        repo: agentscope-ai/CoPaw
+        name: CoPaw
+      - id: zeptoclaw
+        repo: qhkm/zeptoclaw
+        name: ZeptoClaw
+      - id: easyclaw
+        repo: gaoyangz77/easyclaw
+        name: EasyClaw
+
+  # ── MCP 生态系统（新增）────────────────────────────────────
+  - id: mcp-ecosystem
+    name: "MCP 生态系统"
+    reportFile: "ai-mcp.md"
+    issueLabel: "mcp"
+    issueEmoji: "🔌"
+    promptStyle: "cli"
+    repos:
+      - id: mcp-spec
+        repo: modelcontextprotocol/modelcontextprotocol
+        name: MCP 规范
+        paginated: true
+      - id: mcp-ts-sdk
+        repo: modelcontextprotocol/typescript-sdk
+        name: MCP TypeScript SDK
+      - id: mcp-py-sdk
+        repo: modelcontextprotocol/python-sdk
+        name: MCP Python SDK
+      - id: mcp-servers
+        repo: modelcontextprotocol/servers
+        name: MCP 官方 Servers
+        paginated: true
+      - id: github-mcp
+        repo: github/github-mcp-server
+        name: GitHub MCP Server
+      - id: context7
+        repo: upstash/context7
+        name: Context7
+
+# ============================================================
+# Claude Code Skills（特殊追踪，无日期过滤）
+# ============================================================
+skills:
+  repo: anthropics/skills
+
+# ============================================================
+# 网站内容追踪
+# ============================================================
+websites:
+  anthropic:
+    name: "Anthropic (Claude)"
+    sitemapUrl: "https://www.anthropic.com/sitemap.xml"
+    prefixes:
+      - /news/
+      - /research/
+      - /engineering/
+      - /learn/
+    metadataOnly: false
+
+  openai:
+    name: "OpenAI"
+    sitemapUrl: "https://openai.com/sitemap.xml"
+    subSitemapNames:
+      - research
+      - publication
+      - release
+      - company
+      - engineering
+      - milestone
+      - learn-guides
+      - safety
+      - product
+    subSitemapTemplate: "https://openai.com/sitemap.xml/{name}/"
+    metadataOnly: true
+
+# ============================================================
+# GitHub Trending 搜寻关键字
+# ============================================================
+trending:
+  searchQueries:
+    - query: "topic:llm"
+      label: llm
+    - query: "topic:ai-agent"
+      label: ai-agent
+    - query: "topic:mcp-server"
+      label: mcp-server
+    - query: "topic:rag"
+      label: rag
+    - query: "topic:vector-database"
+      label: vector-db
+    - query: "topic:large-language-model"
+      label: llm-model
+    - query: "topic:machine-learning"
+      label: ml
+
+# ============================================================
+# 通知频道（环境变量启用）
+# ============================================================
+notifications:
+  slack:
+    enabled: false
+  discord:
+    enabled: false
+  telegram:
+    enabled: false
+
+# ============================================================
+# LLM 设定
+# ============================================================
+llm:
+  # Kimi Code API（兼容 Anthropic SDK）
+  defaultBaseUrl: "https://api.kimi.com/coding/"
+  defaultModel: "kimi-k2-0711-preview"
+  concurrency: 5
+  defaultMaxTokens: 4096
+  trendingMaxTokens: 6144
+  webMaxTokens: 8192
+
+# ============================================================
+# RSS Feed 设定
+# ============================================================
+rss:
+  title: "agents-radar AI 生态日报"
+  description: "每日 AI 编码工具、MCP 生态、开源趋势追踪"
+  link: "https://howardpen9.github.io/agents-radar/"
+  language: "zh-CN"
+  maxItems: 30
