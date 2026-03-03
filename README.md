@@ -16,6 +16,12 @@ Browse all historical digests in a clean, dark-themed interface — no login req
 
 Subscribe in any RSS reader (Feedly, Reeder, NewsBlur, etc.) to receive new digests automatically. The feed includes the latest 30 reports across all report types, updated daily alongside `manifest.json`.
 
+## Telegram Channel
+
+**[t.me/agents_radar](https://t.me/agents_radar)**
+
+Subscribe to get daily digest notifications pushed directly to Telegram. Each message links to all reports for that day (ZH and EN variants) plus the Web UI and RSS feed.
+
 ## Tracked sources
 
 ### AI CLI tools (GitHub)
@@ -110,10 +116,12 @@ Go to **Settings → Secrets and variables → Actions** and add:
 > `GITHUB_TOKEN` is provided automatically by GitHub Actions.
 
 **Setting up Telegram notifications** (optional):
-1. Message [@BotFather](https://t.me/BotFather) on Telegram, create a bot, copy the token
+1. Message [@BotFather](https://t.me/BotFather) on Telegram, create a bot, and copy the token
 2. Add the bot to your channel/group, or start a DM with it
-3. Get the chat ID: forward a message to [@userinfobot](https://t.me/userinfobot) or use the [getUpdates](https://core.telegram.org/bots/api#getupdates) API
+3. Get the chat ID via [@userinfobot](https://t.me/userinfobot) or the [getUpdates](https://core.telegram.org/bots/api#getupdates) API
 4. Add `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` as repository secrets
+
+> If neither secret is set, the notification step is silently skipped.
 
 ### 3. Enable the workflow
 

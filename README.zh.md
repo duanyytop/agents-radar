@@ -2,19 +2,25 @@
 
 [English](./README.md) | 中文
 
-每天早上 08:00 CST 自动运行的 GitHub Actions 工作流。追踪主流 AI CLI 工具的 GitHub 动态、OpenClaw 及其同赛道项目的生态活动、Anthropic 和 OpenAI 官网最新资讯，并每日监测 GitHub AI 热门仓库趋势，以中文每日简报的形式发布为 GitHub Issues 并提交为 Markdown 文件。
+每天早上 08:00 CST 自动运行的 GitHub Actions 工作流。追踪主流 AI CLI 工具的 GitHub 动态、OpenClaw 及其同赛道项目的生态活动、Anthropic 和 OpenAI 官网最新资讯，并每日监测 GitHub AI 热门仓库趋势，以中英双语每日简报的形式发布为 GitHub Issues 并提交为 Markdown 文件。每周和每月自动生成汇总报告。
 
 ## Web UI
 
 **[https://duanyytop.github.io/agents-radar](https://duanyytop.github.io/agents-radar)**
 
-在线浏览所有历史简报，深色主题，无需登录。报告直接由本仓库的 Markdown 文件通过 GitHub Pages 渲染。
+在线浏览所有历史简报，深色主题，无需登录。报告直接由本仓库的 Markdown 文件通过 GitHub Pages 渲染。每份报告支持中文 / 英文切换。
 
 ## RSS 订阅
 
 **[https://duanyytop.github.io/agents-radar/feed.xml](https://duanyytop.github.io/agents-radar/feed.xml)**
 
 在任意 RSS 阅读器（Feedly、Reeder、NewsBlur 等）中订阅，每日自动推送新简报。Feed 包含最新 30 条报告（覆盖所有报告类型），与 `manifest.json` 同步更新。
+
+## Telegram 频道
+
+**[t.me/agents_radar](https://t.me/agents_radar)**
+
+订阅 Telegram 频道，每日简报生成后自动推送通知，附带所有报告的直达链接（中文 / 英文）。
 
 ## 追踪来源
 
@@ -100,12 +106,22 @@ LLM 负责过滤非 AI 项目，将结果按维度分类（AI 基础工具 / AI 
 
 进入 **Settings → Secrets and variables → Actions**，添加以下密钥：
 
-| Secret | 说明 |
-|--------|------|
-| `ANTHROPIC_API_KEY` | API 密钥，兼容 Anthropic 和 Kimi Code |
-| `ANTHROPIC_BASE_URL` | API 地址覆盖。使用 Kimi Code 时设置为 `https://api.kimi.com/coding/`，使用 Anthropic 时留空 |
+| Secret | 必填 | 说明 |
+|--------|------|------|
+| `ANTHROPIC_API_KEY` | ✅ | API 密钥，兼容 Anthropic 和 Kimi Code |
+| `ANTHROPIC_BASE_URL` | 可选 | API 地址覆盖。使用 Kimi Code 时设置为 `https://api.kimi.com/coding/`，使用 Anthropic 时留空 |
+| `TELEGRAM_BOT_TOKEN` | 可选 | Telegram bot token，从 [@BotFather](https://t.me/BotFather) 获取。设置后每次 digest 完成自动推送通知 |
+| `TELEGRAM_CHAT_ID` | 可选 | 接收通知的 Telegram 频道 / 群组 / 用户 ID |
 
 > `GITHUB_TOKEN` 由 GitHub Actions 自动提供，无需手动添加。
+
+**配置 Telegram 推送**（可选）：
+1. 向 [@BotFather](https://t.me/BotFather) 创建 bot，复制 token
+2. 将 bot 加入频道 / 群组，或直接与 bot 私聊
+3. 通过 [@userinfobot](https://t.me/userinfobot) 获取 chat ID
+4. 在仓库 Secrets 中添加 `TELEGRAM_BOT_TOKEN` 和 `TELEGRAM_CHAT_ID`
+
+> 两个 secret 均未设置时，通知步骤静默跳过，不影响正常运行。
 
 ### 3. 启用工作流
 
