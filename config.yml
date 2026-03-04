@@ -1,0 +1,82 @@
+# agents-radar configuration
+# Edit this file to customize which repositories are tracked.
+# Changes take effect on the next workflow run.
+
+# ── AI CLI tools ──────────────────────────────────────────────────────────────
+# Tracked for per-tool digests and cross-tool comparison.
+# Each entry requires: id (filename slug), repo (owner/repo), name (display name).
+# Set paginated: true for high-volume repos with many daily updates.
+
+cli_repos:
+  - id: claude-code
+    repo: anthropics/claude-code
+    name: Claude Code
+  - id: codex
+    repo: openai/codex
+    name: OpenAI Codex
+  - id: gemini-cli
+    repo: google-gemini/gemini-cli
+    name: Gemini CLI
+  - id: copilot-cli
+    repo: github/copilot-cli
+    name: GitHub Copilot CLI
+  - id: kimi-cli
+    repo: MoonshotAI/kimi-cli
+    name: Kimi Code CLI
+  - id: opencode
+    repo: anomalyco/opencode
+    name: OpenCode
+  - id: qwen-code
+    repo: QwenLM/qwen-code
+    name: Qwen Code
+
+# ── Claude Code Skills ────────────────────────────────────────────────────────
+# Tracked separately without a date filter, sorted by community engagement.
+
+skills_repo: anthropics/skills
+
+# ── OpenClaw (primary focus project) ─────────────────────────────────────────
+# Tracked with a dedicated deep-dive report. Set paginated: true for high-volume repos.
+
+openclaw:
+  id: openclaw
+  repo: openclaw/openclaw
+  name: OpenClaw
+  paginated: true
+
+# ── OpenClaw peer projects ────────────────────────────────────────────────────
+# Tracked alongside OpenClaw for cross-ecosystem comparison.
+
+openclaw_peers:
+  - id: nanobot
+    repo: HKUDS/nanobot
+    name: NanoBot
+    paginated: true
+  - id: zeroclaw
+    repo: zeroclaw-labs/zeroclaw
+    name: Zeroclaw
+  - id: picoclaw
+    repo: sipeed/picoclaw
+    name: PicoClaw
+    paginated: true
+  - id: nanoclaw
+    repo: qwibitai/nanoclaw
+    name: NanoClaw
+  - id: ironclaw
+    repo: nearai/ironclaw
+    name: IronClaw
+  - id: lobsterai
+    repo: netease-youdao/LobsterAI
+    name: LobsterAI
+  - id: tinyclaw
+    repo: TinyAGI/tinyclaw
+    name: TinyClaw
+  - id: copaw
+    repo: agentscope-ai/CoPaw
+    name: CoPaw
+  - id: zeptoclaw
+    repo: qhkm/zeptoclaw
+    name: ZeptoClaw
+  - id: easyclaw
+    repo: gaoyangz77/easyclaw
+    name: EasyClaw

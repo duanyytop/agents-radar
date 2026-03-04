@@ -16,10 +16,12 @@
     "notify": "tsx src/notify.ts"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.36.3"
+    "@anthropic-ai/sdk": "^0.36.3",
+    "js-yaml": "^4.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.0.0",
     "eslint": "^9",
     "eslint-config-prettier": "^10",

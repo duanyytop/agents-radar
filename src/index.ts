@@ -33,46 +33,18 @@ import { callLlm, saveFile, autoGenFooter } from "./report.ts";
 import { loadWebState, saveWebState, fetchSiteContent, type WebFetchResult, type WebState } from "./web.ts";
 import { fetchTrendingData, type TrendingData } from "./trending.ts";
 import { fetchHnData, type HnData } from "./hn.ts";
+import { loadConfig } from "./config.ts";
 
 // ---------------------------------------------------------------------------
-// Repo config
+// Repo config — loaded from config.yml, falls back to built-in defaults
 // ---------------------------------------------------------------------------
 
-/** AI CLI tools — included in per-tool digests and cross-tool comparison. */
-const CLI_REPOS: RepoConfig[] = [
-  { id: "claude-code", repo: "anthropics/claude-code", name: "Claude Code" },
-  { id: "codex", repo: "openai/codex", name: "OpenAI Codex" },
-  { id: "gemini-cli", repo: "google-gemini/gemini-cli", name: "Gemini CLI" },
-  { id: "copilot-cli", repo: "github/copilot-cli", name: "GitHub Copilot CLI" },
-  { id: "kimi-cli", repo: "MoonshotAI/kimi-cli", name: "Kimi Code CLI" },
-  { id: "opencode", repo: "anomalyco/opencode", name: "OpenCode" },
-  { id: "qwen-code", repo: "QwenLM/qwen-code", name: "Qwen Code" },
-];
-
-/** OpenClaw — high-volume project tracked separately with its own prompt. */
-const OPENCLAW: RepoConfig = {
-  id: "openclaw",
-  repo: "openclaw/openclaw",
-  name: "OpenClaw",
-  paginated: true,
-};
-
-/** Peer projects in the personal AI assistant / agent space — tracked for cross-ecosystem comparison. */
-const OPENCLAW_PEERS: RepoConfig[] = [
-  { id: "nanobot", repo: "HKUDS/nanobot", name: "NanoBot", paginated: true },
-  { id: "zeroclaw", repo: "zeroclaw-labs/zeroclaw", name: "Zeroclaw" },
-  { id: "picoclaw", repo: "sipeed/picoclaw", name: "PicoClaw", paginated: true },
-  { id: "nanoclaw", repo: "qwibitai/nanoclaw", name: "NanoClaw" },
-  { id: "ironclaw", repo: "nearai/ironclaw", name: "IronClaw" },
-  { id: "lobsterai", repo: "netease-youdao/LobsterAI", name: "LobsterAI" },
-  { id: "tinyclaw", repo: "TinyAGI/tinyclaw", name: "TinyClaw" },
-  { id: "copaw", repo: "agentscope-ai/CoPaw", name: "CoPaw" },
-  { id: "zeptoclaw", repo: "qhkm/zeptoclaw", name: "ZeptoClaw" },
-  { id: "easyclaw", repo: "gaoyangz77/easyclaw", name: "EasyClaw" },
-];
-
-/** Claude Code Skills — trending skills tracked separately, no date filter. */
-const CLAUDE_SKILLS_REPO = "anthropics/skills";
+const {
+  cliRepos: CLI_REPOS,
+  skillsRepo: CLAUDE_SKILLS_REPO,
+  openclaw: OPENCLAW,
+  openclawPeers: OPENCLAW_PEERS,
+} = loadConfig();
 
 // ---------------------------------------------------------------------------
 // Helpers
