@@ -2,19 +2,8 @@
  * Report content builders — extracted from index.ts for testability.
  */
 
-import type { RepoConfig, GitHubItem, GitHubRelease } from "./github.ts";
+import type { RepoConfig, RepoFetch } from "./github.ts";
 import type { RepoDigest } from "./prompts.ts";
-
-// ---------------------------------------------------------------------------
-// Types
-// ---------------------------------------------------------------------------
-
-interface RepoFetch {
-  cfg: RepoConfig;
-  issues: GitHubItem[];
-  prs: GitHubItem[];
-  releases: GitHubRelease[];
-}
 
 // ---------------------------------------------------------------------------
 // CLI Report

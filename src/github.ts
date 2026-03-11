@@ -55,6 +55,13 @@ export interface GitHubRelease {
   published_at: string;
 }
 
+export interface RepoFetch {
+  cfg: RepoConfig;
+  issues: GitHubItem[];
+  prs: GitHubItem[];
+  releases: GitHubRelease[];
+}
+
 // ---------------------------------------------------------------------------
 // Internals
 // ---------------------------------------------------------------------------

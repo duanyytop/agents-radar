@@ -6,6 +6,7 @@
  */
 
 export type { LlmProvider, ProviderFactory } from "./types.ts";
+export { OpenAICompatibleProvider } from "./openai-compatible.ts";
 export { AnthropicProvider } from "./anthropic.ts";
 export { OpenAIProvider } from "./openai.ts";
 export { GitHubCopilotProvider } from "./github-copilot.ts";

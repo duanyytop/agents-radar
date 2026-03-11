@@ -10,9 +10,8 @@
  */
 
 import {
-  type RepoConfig,
   type GitHubItem,
-  type GitHubRelease,
+  type RepoFetch,
   fetchRecentItems,
   fetchRecentReleases,
   fetchSkillsData,
@@ -55,17 +54,6 @@ function requireEnv(name: string): string {
   const value = process.env[name];
   if (!value) throw new Error(`Missing required environment variable: ${name}`);
   return value;
-}
-
-// ---------------------------------------------------------------------------
-// Types
-// ---------------------------------------------------------------------------
-
-interface RepoFetch {
-  cfg: RepoConfig;
-  issues: GitHubItem[];
-  prs: GitHubItem[];
-  releases: GitHubRelease[];
 }
 
 // ---------------------------------------------------------------------------
@@ -403,7 +391,6 @@ async function saveHnReport(
 
 async function main(): Promise<void> {
   requireEnv("GITHUB_TOKEN");
-  requireEnv("ANTHROPIC_API_KEY");
 
   const now = new Date();
   const since = new Date(now.getTime() - 24 * 60 * 60 * 1000);
@@ -411,9 +398,8 @@ async function main(): Promise<void> {
   const utcStr = now.toISOString().slice(0, 16).replace("T", " ");
   const digestRepo = process.env["DIGEST_REPO"] ?? "";
 
-  console.log(
-    `[${now.toISOString()}] Starting digest | endpoint: ${process.env["ANTHROPIC_BASE_URL"] ?? "api.anthropic.com"}`,
-  );
+  const providerName = process.env["LLM_PROVIDER"] ?? "anthropic";
+  console.log(`[${now.toISOString()}] Starting digest | provider: ${providerName}`);
 
   // 1. Fetch all data in parallel
   const webState = loadWebState();
