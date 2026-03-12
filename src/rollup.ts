@@ -6,7 +6,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { callLlm, saveFile, autoGenFooter, LLM_TOKENS_ROLLUP } from "./report.ts";
-import { buildWeeklyPrompt, buildMonthlyPrompt } from "./prompts.ts";
+import { buildWeeklyPrompt, buildMonthlyPrompt } from "./prompts-data.ts";
 import { createGitHubIssue } from "./github.ts";
 import { toCstDateStr, toUtcStr } from "./date.ts";
 import { WEEKLY_REPORT, MONTHLY_REPORT } from "./i18n.ts";

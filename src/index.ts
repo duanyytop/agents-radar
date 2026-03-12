@@ -24,8 +24,8 @@ import {
   buildComparisonPrompt,
   buildPeersComparisonPrompt,
   buildSkillsPrompt,
-  buildTrendingPrompt,
 } from "./prompts.ts";
+import { buildTrendingPrompt } from "./prompts-data.ts";
 import { callLlm, saveFile, autoGenFooter, LLM_TOKENS_TRENDING } from "./report.ts";
 import { buildCliReportContent, buildOpenclawReportContent } from "./report-builders.ts";
 import { saveWebReport, saveTrendingReport, saveHnReport } from "./report-savers.ts";
