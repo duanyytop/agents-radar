@@ -214,9 +214,18 @@ function neutralizeGitHubRefs(text: string): string {
   return text.replace(/https:\/\/github\.com\//g, "https://github\u200B.com/");
 }
 
+/**
+ * Inserts a zero-width space (U+200B) after `@` so GitHub doesn't parse
+ * usernames in digest content as real @mentions and spam innocent people.
+ */
+function escapeMentions(text: string): string {
+  return text.replace(/@([a-zA-Z0-9])/g, "@\u200B$1");
+}
+
 export async function createGitHubIssue(title: string, body: string, label: string): Promise<string> {
   const digestRepo = process.env["DIGEST_REPO"] ?? "";
   body = neutralizeGitHubRefs(body);
+  body = escapeMentions(body);
   if (body.length > GITHUB_ISSUE_BODY_LIMIT) {
     body = body.slice(0, GITHUB_ISSUE_BODY_LIMIT - TRUNCATION_NOTICE.length) + TRUNCATION_NOTICE;
   }
