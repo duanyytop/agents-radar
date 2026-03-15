@@ -9,6 +9,8 @@
  * Provider-specific env vars — see src/providers/ for full list.
  */
 
+import fs from "node:fs";
+import path from "node:path";
 import {
   type GitHubItem,
   type RepoFetch,
@@ -25,7 +27,7 @@ import {
   buildPeersComparisonPrompt,
   buildSkillsPrompt,
 } from "./prompts.ts";
-import { buildTrendingPrompt } from "./prompts-data.ts";
+import { buildTrendingPrompt, buildHighlightsPrompt, type ReportHighlights } from "./prompts-data.ts";
 import { callLlm, saveFile, autoGenFooter, LLM_TOKENS_TRENDING } from "./report.ts";
 import { buildCliReportContent, buildOpenclawReportContent } from "./report-builders.ts";
 import { saveWebReport, saveTrendingReport, saveHnReport } from "./report-savers.ts";
@@ -341,7 +343,52 @@ async function main(): Promise<void> {
     saveHnReport(hnData, utcStr, dateStr, digestRepo, autoGenFooter("en"), "en"),
   ]);
 
-  // 5. Create GitHub issues for CLI + OpenClaw (zh + en)
+  // 5. Generate highlights for Telegram notification
+  const readReport = (name: string): string | undefined => {
+    const p = path.join("digests", dateStr, name);
+    return fs.existsSync(p) ? fs.readFileSync(p, "utf-8") : undefined;
+  };
+
+  const zhReports: Record<string, string> = { "ai-cli": cliContent.zh, "ai-agents": openclawContent.zh };
+  const enReports: Record<string, string> = { "ai-cli": cliContent.en, "ai-agents": openclawContent.en };
+  for (const [id, zhFile, enFile] of [
+    ["ai-trending", "ai-trending.md", "ai-trending-en.md"],
+    ["ai-web", "ai-web.md", "ai-web-en.md"],
+    ["ai-hn", "ai-hn.md", "ai-hn-en.md"],
+  ] as const) {
+    const zh = readReport(zhFile);
+    const en = readReport(enFile);
+    if (zh) zhReports[id] = zh;
+    if (en) enReports[id] = en;
+  }
+
+  console.log("  Generating highlights for Telegram...");
+  const highlights: Record<Lang, ReportHighlights> = { zh: {}, en: {} };
+  try {
+    const [zhRaw, enRaw] = await Promise.all([
+      callLlm(buildHighlightsPrompt(zhReports, "zh"), 1024),
+      callLlm(buildHighlightsPrompt(enReports, "en"), 1024),
+    ]);
+    highlights.zh = JSON.parse(
+      zhRaw
+        .replace(/```json?\n?/g, "")
+        .replace(/```/g, "")
+        .trim(),
+    );
+    highlights.en = JSON.parse(
+      enRaw
+        .replace(/```json?\n?/g, "")
+        .replace(/```/g, "")
+        .trim(),
+    );
+  } catch (err) {
+    console.error(`  [highlights] Generation failed: ${err}`);
+  }
+
+  const highlightsPath = saveFile(JSON.stringify(highlights, null, 2), dateStr, "highlights.json");
+  console.log(`  Saved ${highlightsPath}`);
+
+  // 6. Create GitHub issues for CLI + OpenClaw (zh + en)
   if (digestRepo) {
     for (const lang of ["zh", "en"] as const) {
       const cliUrl = await createGitHubIssue(

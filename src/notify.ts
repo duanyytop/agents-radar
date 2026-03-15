@@ -10,7 +10,14 @@
  */
 
 import fs from "node:fs";
+import path from "node:path";
 import { NOTIFY_LABELS } from "./i18n.ts";
+import type { ReportHighlights } from "./prompts-data.ts";
+
+export interface Highlights {
+  zh: ReportHighlights;
+  en: ReportHighlights;
+}
 
 const PAGES_URL_DEFAULT = "https://duanyytop.github.io/agents-radar";
 
@@ -34,7 +41,12 @@ async function sendTelegram(text: string): Promise<void> {
   }
 }
 
-export function buildMessage(date: string, reports: string[], pagesUrl?: string): string {
+export function buildMessage(
+  date: string,
+  reports: string[],
+  pagesUrl?: string,
+  highlights?: Highlights | null,
+): string {
   const PAGES_URL = (pagesUrl ?? process.env["PAGES_URL"] ?? PAGES_URL_DEFAULT).replace(/\/$/, "");
   const baseReports = reports.filter((r) => !r.endsWith("-en"));
   const isWeekly = baseReports.includes("ai-weekly");
@@ -42,7 +54,7 @@ export function buildMessage(date: string, reports: string[], pagesUrl?: string)
 
   const icon = isMonthly ? "📆" : isWeekly ? "📅" : "📡";
   const suffix = isMonthly ? " 月报" : isWeekly ? " 周报" : "";
-  const lines: string[] = [`${icon} <b>agents-radar${suffix} · ${date}</b>\n`];
+  const lines: string[] = [`${icon} <b>agents-radar${suffix} · ${date}</b>`];
 
   // Daily reports first, then rollups
   const ordered = [
@@ -50,16 +62,28 @@ export function buildMessage(date: string, reports: string[], pagesUrl?: string)
     ...baseReports.filter((r) => r.includes("weekly") || r.includes("monthly")),
   ];
 
+  const zhHighlights = highlights?.zh ?? {};
+
   for (const r of ordered) {
     const zhLabel = NOTIFY_LABELS[r]?.zh ?? r;
     const zhUrl = `${PAGES_URL}/#${date}/${r}`;
     const enKey = `${r}-en`;
+
+    lines.push(""); // blank line before each report section
     if (reports.includes(enKey)) {
       const enLabel = NOTIFY_LABELS[r]?.en ?? "EN";
       const enUrl = `${PAGES_URL}/#${date}/${enKey}`;
       lines.push(`• <a href="${zhUrl}">${zhLabel}</a>  ·  <a href="${enUrl}">${enLabel}</a>`);
     } else {
       lines.push(`• <a href="${zhUrl}">${zhLabel}</a>`);
+    }
+
+    // Add highlights as indented sub-items
+    const items = zhHighlights[r];
+    if (items?.length) {
+      for (const h of items) {
+        lines.push(`  ◦ ${h}`);
+      }
     }
   }
 
@@ -89,7 +113,19 @@ async function main(): Promise<void> {
     return;
   }
   const { date, reports } = latest;
-  const text = buildMessage(date, reports);
+
+  // Load highlights if available
+  let highlights: Highlights | null = null;
+  const highlightsPath = path.join("digests", date, "highlights.json");
+  if (fs.existsSync(highlightsPath)) {
+    try {
+      highlights = JSON.parse(fs.readFileSync(highlightsPath, "utf-8")) as Highlights;
+    } catch {
+      console.log("[notify] Failed to parse highlights.json — sending without highlights.");
+    }
+  }
+
+  const text = buildMessage(date, reports, undefined, highlights);
 
   console.log(`[notify] Sending Telegram message for ${date} (${reports.length} reports)…`);
   await sendTelegram(text);
