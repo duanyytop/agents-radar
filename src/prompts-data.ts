@@ -433,11 +433,11 @@ export function buildHnPrompt(data: HnData, dateStr: string, lang: Lang = "zh"):
         ? `${i + 1}. **${s.title}**\n` +
           `   Link: ${s.url}\n` +
           `   Discussion: ${s.hnUrl}\n` +
-          `   Score: ${s.points} | Comments: ${s.comments} | Author: @${s.author} | Time: ${s.createdAt.slice(0, 16)}`
+          `   Score: ${s.points} | Comments: ${s.comments} | Author: ${s.author} | Time: ${s.createdAt.slice(0, 16)}`
         : `${i + 1}. **${s.title}**\n` +
           `   链接: ${s.url}\n` +
           `   讨论: ${s.hnUrl}\n` +
-          `   分数: ${s.points} | 评论: ${s.comments} | 作者: @${s.author} | 时间: ${s.createdAt.slice(0, 16)}`,
+          `   分数: ${s.points} | 评论: ${s.comments} | 作者: ${s.author} | 时间: ${s.createdAt.slice(0, 16)}`,
     )
     .join("\n\n");
 

@@ -32,7 +32,7 @@ describe("formatItem", () => {
     const result = formatItem(makeItem());
     expect(result).toContain("#1 [OPEN]");
     expect(result).toContain("Test issue");
-    expect(result).toContain("作者: @alice");
+    expect(result).toContain("作者: alice");
     expect(result).toContain("评论: 5");
     expect(result).toContain("👍: 3");
     expect(result).toContain("链接: org/repo Issue #1");
@@ -41,7 +41,7 @@ describe("formatItem", () => {
 
   it("formats an item in English", () => {
     const result = formatItem(makeItem(), "en");
-    expect(result).toContain("Author: @alice");
+    expect(result).toContain("Author: alice");
     expect(result).toContain("Comments: 5");
     expect(result).toContain("URL:");
     expect(result).toContain("Summary: Some body text");

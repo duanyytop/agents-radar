@@ -329,7 +329,7 @@ describe("buildHnPrompt", () => {
     expect(result).toContain("AI News");
     expect(result).toContain("分数: 200");
     expect(result).toContain("评论: 50");
-    expect(result).toContain("@bob");
+    expect(result).toContain("作者: bob");
     expect(result).toContain("共 1 条");
   });
 

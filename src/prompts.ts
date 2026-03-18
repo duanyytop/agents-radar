@@ -43,7 +43,7 @@ export function formatItem(item: GitHubItem, lang: Lang = "zh"): string {
   const refStr = `${repoSlug} ${itemKind} #${item.number}`;
   return [
     `#${item.number} [${item.state.toUpperCase()}]${labelStr} ${item.title}`,
-    `  ${t.author}: @${item.user.login} | ${t.created}: ${item.created_at.slice(0, 10)} | ${t.updated}: ${item.updated_at.slice(0, 10)} | ${t.comments}: ${item.comments} | 👍: ${item.reactions?.["+1"] ?? 0}`,
+    `  ${t.author}: ${item.user.login} | ${t.created}: ${item.created_at.slice(0, 10)} | ${t.updated}: ${item.updated_at.slice(0, 10)} | ${t.comments}: ${item.comments} | 👍: ${item.reactions?.["+1"] ?? 0}`,
     `  ${t.url}: ${refStr}`,
     `  ${t.summary}: ${body}${ellipsis}`,
   ].join("\n");
