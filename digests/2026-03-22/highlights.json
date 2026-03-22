@@ -1,0 +1,70 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code终端滚动回归问题集中爆发",
+      "OpenAI Codex Rust重构追求性能极致",
+      "Gemini CLI押注SDD结构化工作流",
+      "Qwen Code单日12 PR性能优化密集",
+      "MCP生态整合从卖点变准入门槛",
+      "上下文管理成全行业共同技术债务"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时500 Issues密集迭代",
+      "开发者硬编码个人路径引发信任危机",
+      "Web UI新增多会话批量管理功能",
+      "Doctor诊断工具重构分离兼容迁移",
+      "Zalo图片消息字段映射修复",
+      "MiniMax M2.7与Gemini上下文缓存适配"
+    ],
+    "ai-trending": [
+      "claude-hud单日暴涨970星解决黑盒痛点",
+      "vllm-omni登榜支持端到端多模态部署",
+      "project-nomad离线AI设备2032星暴涨",
+      "PageIndex提出无向量推理式RAG新范式",
+      "ollama已支持Kimi-K2.5、GLM-5等模型",
+      "RAG赛道持续火热19个项目活跃"
+    ],
+    "ai-hn": [
+      "Tinybox离线120B参数设备引发硬件民主化热议",
+      "AI Team OS将Claude Code扩展为自治团队",
+      "PS2上24MB RAM运行LLM极客项目",
+      "AI SDLC Scaffold探索AI原生开发流程",
+      "vLLM Studio降低macOS使用门槛",
+      "OpenAI自动化研究员社区反应冷淡"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code leads with 10 hot issues including scrolling bugs",
+      "OpenAI Codex released 2 alphas: 0.117.0-a7/a8",
+      "180-comment thread on Codex token burn problems",
+      "Gemini CLI shipped nightly v0.36.0 with SDD focus",
+      "Qwen Code iterating on context compression innovations",
+      "Kimi CLI targets 'black box' transparency concerns"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues and 500 PRs in 24 hours",
+      "OpenClaw merged multi-session Web UI deletion feature",
+      "OpenClaw at 82% open issue rate shows backlog pressure",
+      "No new release since 2026.3.13, continuous dev model",
+      "13 projects covered in OpenClaw ecosystem digest",
+      "Community interest strong in MiniMax, Gemini integrations"
+    ],
+    "ai-trending": [
+      "claude-hud plugin surged to 970 stars today",
+      "claude-mem plugin hit nearly 1,000 stars",
+      "project-nomad gained 2,032 stars for offline AI hardware",
+      "vllm-omni extends inference to omni-modality models",
+      "opendataloader-pdf hit 950 stars for AI-ready PDF parsing",
+      "ollama added Kimi-K2.5, GLM-5, MiniMax support"
+    ],
+    "ai-hn": [
+      "Tinybox offline device runs 120B parameters locally",
+      "Tinybox topped HN with 250 points, 136 comments",
+      "Claude Code dominates multiple job anxiety threads",
+      "Bloomberg's 'Great Productivity Panic' resonated strongly",
+      "OpenAI pivoting to fully automated researcher agents",
+      "AI Team OS projects aim for self-managing agent teams"
+    ]
+  }
+}
