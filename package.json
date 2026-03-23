@@ -14,6 +14,7 @@
     "weekly": "tsx src/weekly.ts",
     "monthly": "tsx src/monthly.ts",
     "notify": "tsx src/notify.ts",
+    "notify:feishu": "tsx src/feishu.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
