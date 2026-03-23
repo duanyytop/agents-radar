@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { marked } from "marked";
 import { REPORT_LABELS } from "./i18n.ts";
 
 const DIGESTS_DIR = "digests";
@@ -35,6 +36,11 @@ interface Manifest {
   dates: DateEntry[];
 }
 
+interface ReportContent {
+  summary: string;
+  fullHtml: string;
+}
+
 const DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -50,7 +56,39 @@ export function escapeXml(s: string): string {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-function main(): void {
+async function getReportContent(date: string, report: string): Promise<ReportContent> {
+  const filePath = path.join(DIGESTS_DIR, date, `${report}.md`);
+
+  try {
+    const markdown = fs.readFileSync(filePath, "utf-8");
+    const html = await marked.parse(markdown, { async: false });
+
+    // Extract summary text from original HTML (before CDATA escape)
+    const textOnly = html
+      .replace(/<[^>]+>/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    const summary = textOnly.length > 500 ? textOnly.slice(0, 500) + "..." : textOnly;
+
+    // Escape CDATA end marker to prevent injection
+    const safeHtml = html.replace(/]]>/g, "]]]]><![CDATA[");
+
+    return {
+      summary: escapeXml(summary), // Plain text, XML-escaped, no CDATA
+      fullHtml: `<![CDATA[${safeHtml}]]>`, // HTML in CDATA, no escaping needed
+    };
+  } catch {
+    // Fallback to title-only content on any error
+    const label = REPORT_LABELS[report] ?? report;
+    const title = `${label} ${date}`;
+    return {
+      summary: escapeXml(title),
+      fullHtml: `<![CDATA[${escapeXml(title)}]]>`,
+    };
+  }
+}
+
+async function main(): Promise<void> {
   const entries = fs
     .readdirSync(DIGESTS_DIR)
     .filter((name) => DATE_RE.test(name) && fs.statSync(path.join(DIGESTS_DIR, name)).isDirectory())
@@ -82,28 +120,32 @@ function main(): void {
 
   const buildDate = toRfc822(new Date());
 
-  const itemsXml = feedItems
-    .map(({ date, report }) => {
-      const label = REPORT_LABELS[report] ?? report;
-      const title = `${label} ${date}`;
-      const link = `${SITE_URL}/#${date}/${report}`;
-      const parts = date.split("-").map(Number);
-      const pubDate = toRfc822(new Date(Date.UTC(parts[0]!, parts[1]! - 1, parts[2]!)));
-      return [
+  const itemXmlChunks: string[] = [];
+  for (const { date, report } of feedItems) {
+    const label = REPORT_LABELS[report] ?? report;
+    const title = `${label} ${date}`;
+    const link = `${SITE_URL}/#${date}/${report}`;
+    const parts = date.split("-").map(Number);
+    const pubDate = toRfc822(new Date(Date.UTC(parts[0]!, parts[1]! - 1, parts[2]!)));
+    const content = await getReportContent(date, report);
+    itemXmlChunks.push(
+      [
         "    <item>",
         `      <title>${escapeXml(title)}</title>`,
         `      <link>${escapeXml(link)}</link>`,
         `      <guid isPermaLink="true">${escapeXml(link)}</guid>`,
         `      <pubDate>${pubDate}</pubDate>`,
-        `      <description>${escapeXml(title)}</description>`,
+        `      <description>${content.summary}</description>`,
+        `      <content:encoded>${content.fullHtml}</content:encoded>`,
         "    </item>",
-      ].join("\n");
-    })
-    .join("\n");
+      ].join("\n"),
+    );
+  }
+  const itemsXml = itemXmlChunks.join("\n");
 
   const feedXml =
     `<?xml version="1.0" encoding="UTF-8"?>\n` +
-    `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n` +
+    `<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">\n` +
     `  <channel>\n` +
     `    <title>agents-radar</title>\n` +
     `    <link>${SITE_URL}</link>\n` +
@@ -123,4 +165,9 @@ function main(): void {
 const isDirectRun =
   process.argv[1] &&
   (process.argv[1].endsWith("generate-manifest.ts") || process.argv[1].endsWith("generate-manifest.js"));
-if (isDirectRun) main();
+if (isDirectRun) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
