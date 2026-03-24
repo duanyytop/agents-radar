@@ -80,17 +80,20 @@ pnpm install
 wrangler deploy
 ```
 
-## Telegram 频道
+## Telegram 频道 & 飞书群
 
-**[t.me/agents_radar](https://t.me/agents_radar)**
+订阅你常用的平台，每日简报生成后自动推送通知，附带所有报告的直达链接（中文 / 英文）。
 
-订阅 Telegram 频道，每日简报生成后自动推送通知，附带所有报告的直达链接（中文 / 英文）。
-
-## 飞书群
-
-**[加入飞书群](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=c3cldb2f-4fb7-4fbd-b7be-523ee97f9d79)**
-
-加入飞书群，每日简报生成后自动推送通知，内容与 Telegram 一致，附带所有报告的直达链接和亮点摘要。
+<table>
+  <tr>
+    <td align="center"><b><a href="https://t.me/agents_radar">加入 Telegram 频道</a></b></td>
+    <td align="center"><b><a href="https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=c3cldb2f-4fb7-4fbd-b7be-523ee97f9d79">加入飞书群</a></b></td>
+  </tr>
+  <tr>
+    <td><img src="assets/telegram.jpg" width="300" alt="Telegram 推送"></td>
+    <td><img src="assets/feishu.jpg" width="300" alt="飞书推送"></td>
+  </tr>
+</table>
 
 ## 追踪来源
 

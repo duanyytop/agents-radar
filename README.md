@@ -80,17 +80,20 @@ pnpm install
 wrangler deploy
 ```
 
-## Telegram Channel
+## Telegram Channel & Feishu Group
 
-**[t.me/agents_radar](https://t.me/agents_radar)**
+Subscribe to get daily digest notifications pushed directly to your preferred platform. Each message links to all reports for that day (ZH and EN variants) plus the Web UI and RSS feed.
 
-Subscribe to get daily digest notifications pushed directly to Telegram. Each message links to all reports for that day (ZH and EN variants) plus the Web UI and RSS feed.
-
-## Feishu Group
-
-**[Join Feishu Group](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=c3cldb2f-4fb7-4fbd-b7be-523ee97f9d79)**
-
-Join the Feishu group to receive daily digest notifications. Same content as Telegram — report links, highlights, and quick access to the Web UI and RSS feed.
+<table>
+  <tr>
+    <td align="center"><b><a href="https://t.me/agents_radar">Join Telegram Channel</a></b></td>
+    <td align="center"><b><a href="https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=c3cldb2f-4fb7-4fbd-b7be-523ee97f9d79">Join Feishu Group</a></b></td>
+  </tr>
+  <tr>
+    <td><img src="assets/telegram.jpg" width="300" alt="Telegram notification"></td>
+    <td><img src="assets/feishu.jpg" width="300" alt="Feishu notification"></td>
+  </tr>
+</table>
 
 ## Tracked sources
 
