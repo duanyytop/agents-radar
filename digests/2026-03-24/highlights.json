@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.81 遭遇 worktree 挂起与桌面应用故障",
+      "OpenAI Codex Token 消耗争议 Issue #14593 达 204 评论",
+      "Gemini CLI 连发 v0.35.0-preview.3/4/5 及 v0.36.0-nightly",
+      "GitHub Copilot CLI v1.0.11 强制 MCP 组织策略管控",
+      "Kimi Code v1.25.0 正式发布插件系统与子代理架构",
+      "Qwen Code v0.13.0 VSCode 发布流程多次失败"
+    ],
+    "ai-agents": [
+      "OpenClaw 24 小时 500 Issues/500 PRs 极高强度迭代",
+      "v2026.3.22 发布后出现严重 Control UI 资产缺失回归",
+      "v2026.3.23 紧急修复 macOS Chrome MCP 超时问题",
+      "插件安装源优先级调整：ClawHub 优先于 npm",
+      "370 条活跃 Issues 暴露发布流程疏漏",
+      "335 条待合并 PR 显示生态活力强劲"
+    ],
+    "ai-trending": [
+      "MoneyPrinterV2 登顶 Trending 纯 AI 自动化内容生成",
+      "deer-flow 字节跳动开源 AI 智能体工作流框架",
+      "browser-use 浏览器自动化智能体持续高热",
+      "tinygrad 极简深度学习框架技术向受关注",
+      "TradingAgents 金融交易多智能体系统上榜",
+      "Scrapegraph-ai 网页抓取智能体工具入榜"
+    ],
+    "ai-web": [
+      "Anthropic 一日 4 篇重磅内容聚焦 AI for Science",
+      "Claude Opus 4.5 2 周完成传统需 1 年的高能物理研究",
+      "Vibe physics 或成 AI 辅助科研新范式标签",
+      "Science Blog 正式上线标志战略优先级跃迁",
+      "哈佛物理学家称三个月前这还不可能",
+      "OpenAI 仅 1 篇元数据更新无实质信息"
+    ],
+    "ai-hn": [
+      "Claude Code 实战指南 93 分 71 评论成今日最热",
+      "Claude Code 速查表 82 分显示用户基数成熟",
+      "OpenAI 全自动研究员报道零评论显叙事疲劳",
+      "Mozilla Cq 代理问答平台试图解决上下文共享",
+      "开发者对 AI 编程助手方法论极度渴求",
+      "AGI 是否已达成社区存在明显分歧"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "OpenAI Codex drops 2 alphas: 0.117.0-α.9/10",
+      "Gemini CLI releases 4 builds: v0.36.0-nightly + patches",
+      "Claude Code v2.1.81 stable flagged regression-heavy",
+      "GitHub Copilot CLI patches MCP regressions in v1.0.11",
+      "Kimi Code CLI: 4 issues, 9 PRs with 6 closed",
+      "Sector converges on MCP plugins, agentic workflows"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues/PRs in 24h, v2026.3.23 hotfix",
+      "v2026.3.23 fixes macOS Chrome MCP attach flows",
+      "v2026.3.22 regression: missing Control UI assets",
+      "370 open issues vs 130 closed: QA capacity strained",
+      "13 projects tracked in OpenClaw ecosystem",
+      "NanoBot, Zeroclaw, PicoClaw among active forks"
+    ],
+    "ai-trending": [
+      "everything-claude-code: +4,458 stars today",
+      "deer-flow: ByteDance SuperAgent harness +3,546 stars",
+      "project-nomad: offline AI survival computer +4,138 stars",
+      "TradingAgents: financial AI agents +2,530 stars",
+      "pentagi: AI penetration testing +1,309 stars",
+      "4 of top 6 are agent orchestration tools"
+    ],
+    "ai-web": [
+      "Anthropic launches 4 science-focused research articles",
+      "Harvard professor: Claude Opus 4.5 did year of physics in 2 weeks",
+      "Vibe physics: 110 drafts, 36 million tokens consumed",
+      "Anthropic debuts dedicated Science Blog",
+      "New multi-day autonomous scientific computing guidance",
+      "OpenAI: only Sora safety metadata reference"
+    ],
+    "ai-hn": [
+      "Top posts: Claude Code workflows, cheat sheets dominate",
+      "Andrej Karpathy's perpetual AI psychosis sparks Ask HN",
+      "OpenAI doubling headcount, IPO prep, automated researchers",
+      "Community appetite for practical tooling over announcements",
+      "Zero-hallucination knowledge engine: 4 points, 2 comments",
+      "LLM Debate Benchmark: novel reasoning evaluation framework"
+    ]
+  }
+}
