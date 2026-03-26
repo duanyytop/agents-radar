@@ -21,6 +21,10 @@ export interface Highlights {
 
 const PAGES_URL_DEFAULT = "https://duanyytop.github.io/agents-radar";
 
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
 async function sendTelegram(text: string): Promise<void> {
   const BOT_TOKEN = process.env["TELEGRAM_BOT_TOKEN"] ?? "";
   const CHAT_ID = process.env["TELEGRAM_CHAT_ID"] || "@agents_radar";
@@ -82,7 +86,7 @@ export function buildMessage(
     const items = zhHighlights[r];
     if (items?.length) {
       for (const h of items) {
-        lines.push(`  ◦ ${h}`);
+        lines.push(`  ◦ ${escapeHtml(h)}`);
       }
     }
   }
