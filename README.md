@@ -87,7 +87,7 @@ Subscribe to get daily digest notifications pushed directly to your preferred pl
 <table>
   <tr>
     <td align="center"><b><a href="https://t.me/agents_radar">Join Telegram Channel</a></b></td>
-    <td align="center"><b><a href="https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=c3cldb2f-4fb7-4fbd-b7be-523ee97f9d79">Join Feishu Group</a></b></td>
+    <td align="center"><b><a href="https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=a00hcab4-86de-4a3f-b599-e46146a69b98">Join Feishu Group</a></b></td>
   </tr>
   <tr>
     <td><img src="assets/telegram.jpg" width="300" alt="Telegram notification"></td>
