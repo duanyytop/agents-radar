@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 用量危机：单日 2000+ 评论质疑计费透明度",
+      "OpenAI Codex 发布 rust-v0.119.0-alpha.2，MCP 模块化提取",
+      "Gemini CLI v0.37.0-preview.0 上线 ContextCompressionService",
+      "Kimi Code CLI v1.29.0 TypeScript 重构提案引发路线争议",
+      "OpenCode v1.3.13 Effect 架构大规模重构，Opus 4.6 兼容性危机",
+      "Qwen Code v0.14.0-preview.4 双轨版本策略，Qwen 3.6 支持滞后"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.4.1 正式版发布，任务面板与 SearXNG 搜索上线",
+      "OpenClaw 24 小时 500 Issues/500 PRs，活跃度极高但稳定性承压",
+      "OpenClaw 仪表盘 500 错误与执行审批配置失效等回归 Bug 密集出现",
+      "Linux/Windows 桌面客户端需求持续升温，#75 获 63 评论",
+      "Cron 工具权限修复 PR #59293 合并，补全 API schema 校验",
+      "npm 依赖缺失导致捆绑插件无法运行，用户需手动回滚"
+    ],
+    "ai-trending": [
+      "Claude Code 单日 +10,749 stars 登顶 GitHub Trending",
+      "OpenAI Codex 同日 +2,390 stars，终端 Agent 正面竞争",
+      "微软开源 VibeVoice 进军语音 AI 前沿",
+      "Google TimesFM 持续巩固时序预测基础设施",
+      "learn-claude-code 教程项目快速涌现，生态热度高涨",
+      "终端 Agent 工具爆发，自然语言驱动开发需求强烈"
+    ],
+    "ai-hn": [
+      "Anthropic 代码泄露事件点燃社区，近半热门帖相关",
+      "OpenAI 坟墓场盘点获 216 分 175 评论，承诺兑现能力遭质疑",
+      "OpenHarness 开源终端 Agent 试图填补信任真空",
+      "AI 已使传统代码混淆失效，安全 through obscurity 被反思",
+      "Mercury 2 扩散 LLM 首次公开基准超越 StepFun 3.5 Flash",
+      "Agent Arnold 手机 vibe coding 案例展示开发门槛归零"
+    ],
+    "ai-ph": [
+      "Claude Code 计算机使用功能 408 票断层领先",
+      "Solvea AI 前台接待员 235 票切入语音客服自动化",
+      "Unify 像招聘真人一样雇佣 AI 同事，探索人机协作组织形态",
+      "Perplexity API Platform 128 票进军开发者基础设施",
+      "Pixero AI 与 Viktor 营销自动化形成第二梯队",
+      "MCP 生态开始渗透商业工具领域，协议标准化趋势显现"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code hits v2.1.90 with rapid crisis-driven patches",
+      "OpenAI Codex releases rust-v0.119.0-alpha.2, modularization focus",
+      "Gemini CLI ships 3 releases including v0.37.0-preview.0",
+      "Kimi Code CLI proposes complete Bun/TS architecture rewrite",
+      "Community frustration drives open-source Claude Code extraction efforts",
+      "Effect-TS and Rust rewrites signal architectural divergence"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.4.1 adds /tasks chat-native background task board",
+      "SearXNG bundled as self-hosted unlimited search provider",
+      "500 issues and 500 PRs in 24h show extreme dev velocity",
+      "Critical exec approval bugs surface in v2026.3.31 cycle",
+      "63-comment discussion on platform expansion ongoing",
+      "Regression pressure mounts against feature advancement"
+    ],
+    "ai-trending": [
+      "Claude Code explodes with +10,749 stars in single day",
+      "claude-howto companion surges +3,301 stars",
+      "everything-claude-code hits 130K+ total stars",
+      "OpenAI codex adds +2,390 stars confirming category validation",
+      "VibeVoice gains +1,685 stars for voice AI frontier",
+      "ollama expands to Kimi-K2.5, GLM-5, MiniMax, DeepSeek"
+    ],
+    "ai-hn": [
+      "Claude Code's 500K+ lines accidentally open-sourced in security crisis",
+      "Developers reverse-engineering leaked agent architectures",
+      "OpenAI secondary market demand sinks per reports",
+      "Forbes catalogs OpenAI's string of failed deals",
+      "Mercury 2 diffusion LLM outperforms StepFun 3.5 Flash",
+      "Leak treated as accidental research windfall for community"
+    ],
+    "ai-ph": [
+      "Computer Use in Claude Code launches with 408 votes",
+      "Pixero AI markets itself as OpenClaw for AI Ads",
+      "Perplexity API Platform targets infrastructure developers",
+      "Google Ads MCP Server enables plug-and-play AI capabilities",
+      "Unify and Solvea push AI colleague metaphor forward",
+      "Viktor for Media Buyers attacks ad management workflows"
+    ]
+  }
+}
