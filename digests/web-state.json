@@ -1,6 +1,6 @@
 {
   "anthropic": {
-    "lastChecked": "2026-04-02T00:10:33.737Z",
+    "lastChecked": "2026-04-03T00:11:19.318Z",
     "seenUrls": {
       "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-25T23:57:06.000Z",
       "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -330,11 +330,12 @@
       "https://www.anthropic.com/engineering/harness-design-long-running-apps": "2026-03-24T16:23:08.000Z",
       "https://www.anthropic.com/engineering/claude-code-auto-mode": "2026-03-25T23:13:37.000Z",
       "https://www.anthropic.com/news/australia-MOU": "2026-03-31T23:16:54.000Z",
-      "https://www.anthropic.com/research/how-australia-uses-claude": "2026-03-31T22:35:47.000Z"
+      "https://www.anthropic.com/research/how-australia-uses-claude": "2026-03-31T22:35:47.000Z",
+      "https://www.anthropic.com/research/emotion-concepts-function": "2026-04-02T17:29:24.000Z"
     }
   },
   "openai": {
-    "lastChecked": "2026-04-02T00:10:33.989Z",
+    "lastChecked": "2026-04-03T00:11:21.748Z",
     "seenUrls": {
       "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-03-26T19:35:47.580Z",
       "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-04-01T22:49:25.620Z",
@@ -535,10 +536,10 @@
       "https://openai.com/index/ai-agent-link-safety/": "2026-03-19T19:33:02.740Z",
       "https://openai.com/index/trusted-access-for-cyber/": "2026-03-19T19:23:45.498Z",
       "https://openai.com/index/accelerating-biological-research-in-the-wet-lab/": "2026-03-26T19:37:39.163Z",
-      "https://openai.com/index/introducing-gpt-5-3-codex-spark/": "2026-04-01T15:03:36.544Z",
+      "https://openai.com/index/introducing-gpt-5-3-codex-spark/": "2026-04-03T00:06:49.964Z",
       "https://openai.com/index/developers-can-now-submit-apps-to-chatgpt/": "2026-02-12T18:08:27.690Z",
       "https://openai.com/index/testing-ads-in-chatgpt/": "2026-03-29T08:23:21.895Z",
-      "https://openai.com/index/introducing-gpt-5-3-codex/": "2026-04-01T15:03:22.473Z",
+      "https://openai.com/index/introducing-gpt-5-3-codex/": "2026-04-03T00:07:20.509Z",
       "https://openai.com/index/our-approach-to-advertising-and-expanding-access/": "2026-03-19T19:17:57.901Z",
       "https://openai.com/index/introducing-chatgpt-health/": "2026-03-19T19:25:19.571Z",
       "https://openai.com/index/introducing-our-next-generation-audio-models/": "2026-02-11T08:25:49.709Z",
@@ -547,7 +548,7 @@
       "https://openai.com/index/gpt-4o-system-card/": "2026-03-26T18:16:44.988Z",
       "https://openai.com/index/gpt-4-research/": "2026-03-26T18:17:04.258Z",
       "https://openai.com/index/memory-and-new-controls-for-chatgpt/": "2026-04-01T22:55:55.187Z",
-      "https://openai.com/index/introducing-the-codex-app/": "2026-04-01T15:03:34.444Z",
+      "https://openai.com/index/introducing-the-codex-app/": "2026-04-03T00:07:07.582Z",
       "https://openai.com/index/chatgpt-for-teachers/": "2026-03-27T20:39:27.155Z",
       "https://openai.com/index/chatgpt-plus/": "2026-03-26T19:34:48.978Z",
       "https://openai.com/index/whisper/": "2026-03-26T18:12:16.868Z",
@@ -968,14 +969,16 @@
       "https://openai.com/index/introducing-gpt-5-4-mini-and-nano/": "2026-03-24T18:05:24.264Z",
       "https://openai.com/index/japan-teen-safety-blueprint/": "2026-03-26T19:37:38.008Z",
       "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/": "2026-03-26T07:43:46.608Z",
-      "https://openai.com/index/openai-to-acquire-astral/": "2026-03-31T09:29:34.499Z",
-      "https://openai.com/index/creating-with-sora-safely/": "2026-04-01T20:56:33.683Z",
+      "https://openai.com/index/openai-to-acquire-astral/": "2026-04-02T12:53:19.798Z",
+      "https://openai.com/index/creating-with-sora-safely/": "2026-04-02T19:47:53.718Z",
       "https://openai.com/index/powering-product-discovery-in-chatgpt/": "2026-03-27T19:50:00.552Z",
       "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard/": "2026-03-26T19:33:21.212Z",
       "https://openai.com/index/update-on-the-openai-foundation/": "2026-03-26T03:08:42.033Z",
       "https://openai.com/index/safety-bug-bounty/": "2026-03-27T18:25:29.784Z",
-      "https://openai.com/index/our-approach-to-the-model-spec/": "2026-04-01T14:37:37.771Z",
-      "https://openai.com/index/accelerating-the-next-phase-ai/": "2026-04-01T23:50:04.932Z"
+      "https://openai.com/index/our-approach-to-the-model-spec/": "2026-04-02T21:21:38.421Z",
+      "https://openai.com/index/accelerating-the-next-phase-ai/": "2026-04-02T16:16:07.377Z",
+      "https://openai.com/index/codex-flexible-pricing-for-teams/": "2026-04-03T00:06:19.313Z",
+      "https://openai.com/index/openai-acquires-tbpn/": "2026-04-02T23:25:29.581Z"
     }
   }
 }
