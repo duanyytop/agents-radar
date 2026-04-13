@@ -86,3 +86,6 @@ openclaw_peers:
   - id: zeptoclaw
     repo: qhkm/zeptoclaw
     name: ZeptoClaw
+  - id: zeroclaw
+    repo: zeroclaw-labs/zeroclaw
+    name: ZeroClaw

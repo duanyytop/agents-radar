@@ -145,6 +145,7 @@ OpenClaw 作为重点追踪项目，同时横向对比多个同赛道项目，�
 | Hermes Agent | [nousresearch/hermes-agent](https://github.com/nousresearch/hermes-agent) | 32.3k |
 | PicoClaw | [sipeed/picoclaw](https://github.com/sipeed/picoclaw) | 27.5k |
 | NanoClaw | [qwibitai/nanoclaw](https://github.com/qwibitai/nanoclaw) | 26.5k |
+| ZeroClaw | [zeroclaw-labs/zeroclaw](https://github.com/zeroclaw-labs/zeroclaw) | 30.1k |
 | CoPaw | [agentscope-ai/CoPaw](https://github.com/agentscope-ai/CoPaw) | 14.4k |
 | IronClaw | [nearai/ironclaw](https://github.com/nearai/ironclaw) | 11.4k |
 | NullClaw | [nullclaw/nullclaw](https://github.com/nullclaw/nullclaw) | 7.0k |

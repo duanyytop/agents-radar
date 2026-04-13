@@ -88,7 +88,7 @@ Files written to `digests/YYYY-MM-DD/`:
 ## Tracked sources
 
 - **CLI_REPOS** (6): claude-code, codex, gemini-cli, kimi-cli, opencode, qwen-code
-- **OPENCLAW** + **OPENCLAW_PEERS** (12): openclaw/openclaw + 11 peer projects (sorted by stars)
+- **OPENCLAW** + **OPENCLAW_PEERS** (13): openclaw/openclaw + 12 peer projects (sorted by stars)
 - **CLAUDE_SKILLS_REPO**: anthropics/skills — no date filter, sorted by popularity
 - **Web**: anthropic.com + openai.com via sitemap, state in `digests/web-state.json`
 - **Trending**: github.com/trending (HTML) + GitHub Search API (6 AI topics, 7-day window)
