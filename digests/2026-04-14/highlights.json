@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 一日双更 v2.1.104/105，社区激辩模型退化",
+      "OpenAI Codex rust-v0.121.0-alpha.4/6 紧急修复 token 燃烧",
+      "Gemini CLI v0.37.2 补丁专攻离线部署阻塞",
+      "GitHub Copilot CLI v1.0.25 陷 Premium 请求黑洞信任危机",
+      "Kimi CLI v1.33.0 Thinking 显示策略引用户对立",
+      "OpenCode 10 个活跃 PR 重构 Effect 架构"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.4.12 发布，24 小时 500 Issues + 500 PRs",
+      "新增 openclaw models auth clean 命令防 OAuth 竞态",
+      "Telegram 语音转录失效成当日最热 bug",
+      "浏览器 CDP 连接 regression 警告升级用户",
+      "本地模型选项扩展，边缘部署再进一步",
+      "Feishu 机器人接入流程大幅简化"
+    ],
+    "ai-trending": [
+      "NousResearch/hermes-agent 登榜，AI Agent 热度不减",
+      "virattt/ai-hedge-fund 金融智能体引关注",
+      "anthropic/claude-cookbooks 官方实战指南上榜",
+      "coleam00/Archon 基础工具 + Agent 双标签突围",
+      "hacksider/Deep-Live-Cam 实时换脸应用持续走红",
+      "browser-use/browser-use 与 langchain-ai/langchain 稳居生态核心"
+    ],
+    "ai-web": [
+      "Anthropic 新增《Building Effective AI Agents》定义 agent 标准",
+      "提出 workflows 与 agents 严格二分法",
+      "批判复杂框架，倡导最小抽象层原生构建",
+      "强化 MCP 生态与企业基础设施层定位",
+      "OpenAI 今日零新增，或处重大发布蓄力期",
+      "Anthropic 主动定义赛道，OpenAI 静默跟进"
+    ],
+    "ai-hn": [
+      "Stanford AI Index 报告 180 分 228 评登顶：精英与大众脱节",
+      "Claude Mythos 网络安全评估引监管能否跟上的焦虑",
+      "\"后悔每次使用 AI\" 帖子获社区强烈共鸣",
+      "Economist 科技就业萧条报道为 AI 去罪化",
+      "Ithihāsas 印度史诗 AI 探索 90 分获赞简洁有用",
+      "Bloomberg Terminal for LLM ops 开源工具登榜"
+    ],
+    "ai-ph": [
+      "Google Gemini 交互式模拟 385 票领跑",
+      "Ray 终端个人 CFO 282 票切入开发者场景",
+      "Edgee Codex Compressor 直降 35.6% API 成本",
+      "Eleven Labs 音乐生成进军版权分润市场",
+      "Nicelydone MCP 设计上下文工具链创新",
+      "AI 向终端场景深度渗透趋势显著"
+    ],
+    "ai-hf": [
+      "google/gemma-4-31B-it 单周下载破 240 万霸榜",
+      "Jackrong/Qwen3.5-27B 蒸馏 Claude 4.6 获 2620 赞登顶",
+      "zai-org/GLM-5.1 1145 赞 MoE+DSA 架构引关注",
+      "k2-fsa/OmniVoice 零样本语音克隆 46 万下载",
+      "netflix/void-model 首款开源视频修复模型发布",
+      "prism-ml/Bonsai-8B-gguf 1-bit 量化挑战边缘部署"
+    ],
+    "ai-community": [
+      "500 组实验揭示：代理记忆瓶颈在绑定不在召回",
+      "Gemini Live + Reachy Mini 打造开源对话机器人",
+      "Memory Pointer Pattern 修复上下文窗口溢出",
+      "OpenClaw + Telegram 零成本搭建个人 AI 代理",
+      "按模型粒度追踪 AI 编码工具黑盒账单",
+      "claude-mem 为 Claude Code 补齐持久跨会话记忆"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code shipped v2.1.104–105 today",
+      "OpenAI Codex Rust alpha v0.121.0-alpha.4/6 shipped",
+      "Codex hit 530-comment megathread on billing",
+      "Claude Code had 9 hot issues, 10 key PRs",
+      "All tools face token billing and MCP robustness crises",
+      "Enterprise readiness is the new differentiation battleground"
+    ],
+    "ai-agents": [
+      "OpenClaw released v2026.4.12 with memory fixes",
+      "OpenClaw had 500 issues and 500 PRs in 24h",
+      "Regression reports surged on builds 2026.4.9–12",
+      "New OpenClaw admin command: openclaw qa credentials",
+      "342 open PRs signal approaching release cycle",
+      "Model resolution and Telegram bugs are top regressions"
+    ],
+    "ai-trending": [
+      "NousResearch/hermes-agent gained +11,289 stars today",
+      "Claude Code ecosystem tools dominated GitHub trending",
+      "Kronos foundation model for market language is heating up",
+      "Archon and ralph show shift to AI-driven software engineering",
+      "microsoft/markitdown gained +2,808 stars today",
+      "blender-mcp bridges AI into 3D creative workflows"
+    ],
+    "ai-web": [
+      "Anthropic republished Building Effective AI Agents",
+      "OpenAI published zero new articles today",
+      "Anthropic distinguishes workflows vs agents sharply",
+      "Article update signals enterprise agentic AI push",
+      "OpenAI silence hints at lull before major announcement",
+      "332 total Anthropic sitemap articles tracked"
+    ],
+    "ai-hn": [
+      "Stanford HAI report on AI insider disconnect led discussions",
+      "Claude Mythos Preview dominated front-page posts",
+      "Invisible token consumption reports sparked concern",
+      "UK AISI evaluated Claude Mythos cyber capabilities",
+      "Labor market anxiety hit top discussions",
+      "228 comments on Stanford report reflect governance anxiety"
+    ],
+    "ai-ph": [
+      "Google Gemini Interactive Simulations topped with 385 votes",
+      "Ray open-source terminal CFO launched with 282 votes",
+      "Edgee Codex Compressor cuts Codex costs 35.6%",
+      "Eleven Labs Music Marketplace enables creator monetization",
+      "AI launches shifted to workflow-native utilities",
+      "Domain-specific tools beat general chatbots today"
+    ],
+    "ai-hf": [
+      "Google Gemma-4 family dominated model downloads",
+      "Qwen3.5-27B-Claude-4.6-Opus-Reasoning led with 2,620 likes",
+      "unsloth dropped GGUFs for Gemma-4, GLM-5.1, MiniMax-M2.7",
+      "Jackrong's reasoning-distilled model shows strong interest",
+      "Non-text modalities: TTS, video, audio gaining ground",
+      "uncensored fine-tunes posted strong download numbers"
+    ],
+    "ai-community": [
+      "Agent memory binding, not recall, is the real problem",
+      "DIY persistent memory layers for Claude Code trending",
+      "Cost visibility proxies are emerging for per-model spend",
+      "Gemini Live + Reachy Mini talking robot guide published",
+      "OpenClaw + Telegram laptop agent setup went viral",
+      "Skepticism grows toward AI-generated analytics narratives"
+    ]
+  }
+}

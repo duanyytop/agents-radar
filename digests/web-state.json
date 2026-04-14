@@ -1,6 +1,6 @@
 {
   "anthropic": {
-    "lastChecked": "2026-04-13T00:13:43.292Z",
+    "lastChecked": "2026-04-14T00:16:40.559Z",
     "seenUrls": {
       "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-25T23:57:06.000Z",
       "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -55,7 +55,7 @@
       "https://www.anthropic.com/research/next-generation-constitutional-classifiers": "2026-01-09T21:18:12.000Z",
       "https://www.anthropic.com/engineering/contextual-retrieval": "2026-01-07T15:00:44.000Z",
       "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents": "2026-01-06T15:31:12.000Z",
-      "https://www.anthropic.com/engineering/building-effective-agents": "2026-01-06T15:24:44.000Z",
+      "https://www.anthropic.com/engineering/building-effective-agents": "2026-04-13T17:46:47.000Z",
       "https://www.anthropic.com/news/prompting-long-context": "2026-01-06T15:23:18.000Z",
       "https://www.anthropic.com/engineering/multi-agent-research-system": "2026-01-06T15:09:32.000Z",
       "https://www.anthropic.com/engineering/writing-tools-for-agents": "2026-01-06T15:05:23.000Z",
@@ -339,10 +339,10 @@
     }
   },
   "openai": {
-    "lastChecked": "2026-04-13T00:13:41.691Z",
+    "lastChecked": "2026-04-14T00:16:41.415Z",
     "seenUrls": {
       "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-03-26T19:35:47.580Z",
-      "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-04-09T16:35:45.312Z",
+      "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-04-13T08:59:58.960Z",
       "https://openai.com/index/why-our-structure-must-evolve-to-advance-our-mission/": "2026-04-09T16:31:42.734Z",
       "https://openai.com/index/adebayo-ogunlesi-joins-openais-board-of-directors/": "2026-04-06T21:29:23.928Z",
       "https://openai.com/index/leadership-updates-march-2025/": "2026-04-06T21:28:12.886Z",
@@ -553,7 +553,7 @@
       "https://openai.com/index/gpt-4-research/": "2026-04-06T21:27:03.455Z",
       "https://openai.com/index/memory-and-new-controls-for-chatgpt/": "2026-04-09T16:35:26.231Z",
       "https://openai.com/index/introducing-the-codex-app/": "2026-04-10T19:18:56.772Z",
-      "https://openai.com/index/chatgpt-for-teachers/": "2026-04-12T07:11:40.955Z",
+      "https://openai.com/index/chatgpt-for-teachers/": "2026-04-13T08:29:13.610Z",
       "https://openai.com/index/chatgpt-plus/": "2026-04-06T21:26:33.113Z",
       "https://openai.com/index/whisper/": "2026-04-06T21:17:42.168Z",
       "https://openai.com/index/gpt-4/": "2026-04-06T21:37:30.070Z",
@@ -757,7 +757,7 @@
       "https://openai.com/index/introducing-chatgpt-edu/": "2026-04-09T16:32:45.843Z",
       "https://openai.com/index/introducing-nextgenai/": "2026-04-06T21:28:44.621Z",
       "https://openai.com/index/built-to-benefit-everyone/": "2026-04-06T21:25:32.477Z",
-      "https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work/": "2026-04-12T22:07:13.192Z",
+      "https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work/": "2026-04-13T23:51:22.057Z",
       "https://openai.com/index/edu-for-countries/": "2026-04-06T22:03:36.622Z",
       "https://openai.com/index/openai-and-future-partner-on-specialist-content/": "2026-04-09T16:32:43.516Z",
       "https://openai.com/index/news-corp-and-openai-sign-landmark-multi-year-global-partnership/": "2026-04-09T16:32:37.247Z",
@@ -843,13 +843,13 @@
       "https://openai.com/index/dall-e-2/": "2026-04-06T21:19:05.914Z",
       "https://openai.com/index/ten-years/": "2026-04-06T21:49:09.641Z",
       "https://openai.com/index/strengthening-chatgpt-responses-in-sensitive-conversations/": "2026-04-06T21:18:48.512Z",
-      "https://openai.com/index/mattels-iconic-brands/": "2026-04-12T05:30:07.173Z",
-      "https://openai.com/business/solving-complex-problems-with-openai-o1-models/": "2026-04-06T21:36:50.456Z",
-      "https://openai.com/business/put-ai-to-work-for-marketing-teams/": "2026-04-06T21:37:17.669Z",
-      "https://openai.com/business/put-ai-to-work-automate-and-scale-financial-operations/": "2026-04-06T22:06:30.655Z",
-      "https://openai.com/business/enabling-a-data-driven-workforce-webinar/": "2026-04-06T21:28:17.989Z",
-      "https://openai.com/business/fine-tuning-gpt-4o-webinar/": "2026-04-06T21:28:14.193Z",
-      "https://openai.com/business/put-ai-to-work-lessons-from-hundreds-of-successful-deployments/": "2026-04-06T21:15:31.945Z",
+      "https://openai.com/index/mattels-iconic-brands/": "2026-04-13T08:47:33.560Z",
+      "https://openai.com/business/solving-complex-problems-with-openai-o1-models/": "2026-04-13T09:00:56.504Z",
+      "https://openai.com/business/put-ai-to-work-for-marketing-teams/": "2026-04-13T08:44:48.575Z",
+      "https://openai.com/business/put-ai-to-work-automate-and-scale-financial-operations/": "2026-04-13T09:17:29.053Z",
+      "https://openai.com/business/enabling-a-data-driven-workforce-webinar/": "2026-04-13T09:01:55.351Z",
+      "https://openai.com/business/fine-tuning-gpt-4o-webinar/": "2026-04-13T08:59:15.472Z",
+      "https://openai.com/business/put-ai-to-work-lessons-from-hundreds-of-successful-deployments/": "2026-04-13T08:28:03.999Z",
       "https://openai.com/index/updating-our-preparedness-framework/": "2026-04-06T22:30:03.772Z",
       "https://openai.com/index/gpt-4-5-system-card/": "2026-04-06T21:28:43.614Z",
       "https://openai.com/index/gpt-4o-image-generation-system-card-addendum/": "2026-04-06T21:28:09.252Z",
@@ -985,7 +985,7 @@
       "https://openai.com/index/openai-acquires-tbpn/": "2026-04-07T16:32:31.005Z",
       "https://openai.com/index/introducing-openai-safety-fellowship/": "2026-04-08T19:48:57.389Z",
       "https://openai.com/index/next-phase-of-enterprise-ai/": "2026-04-09T20:36:15.711Z",
-      "https://openai.com/index/introducing-child-safety-blueprint/": "2026-04-12T15:41:53.861Z"
+      "https://openai.com/index/introducing-child-safety-blueprint/": "2026-04-13T03:34:55.426Z"
     }
   }
 }
