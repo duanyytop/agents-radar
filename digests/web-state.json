@@ -1,6 +1,6 @@
 {
   "anthropic": {
-    "lastChecked": "2026-04-15T00:17:13.479Z",
+    "lastChecked": "2026-04-16T00:17:36.861Z",
     "seenUrls": {
       "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-25T23:57:06.000Z",
       "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -337,11 +337,12 @@
       "https://www.anthropic.com/engineering/managed-agents": "2026-04-10T19:17:30.000Z",
       "https://www.anthropic.com/research/trustworthy-agents": "2026-04-09T17:00:08.000Z",
       "https://www.anthropic.com/research/automated-alignment-researchers": "2026-04-14T19:00:21.000Z",
-      "https://www.anthropic.com/news/narasimhan-board": "2026-04-14T14:00:04.000Z"
+      "https://www.anthropic.com/news/narasimhan-board": "2026-04-14T14:00:04.000Z",
+      "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills": "2026-04-15T14:39:01.000Z"
     }
   },
   "openai": {
-    "lastChecked": "2026-04-15T00:17:12.241Z",
+    "lastChecked": "2026-04-16T00:17:31.902Z",
     "seenUrls": {
       "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-03-26T19:35:47.580Z",
       "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-04-13T08:59:58.960Z",
@@ -405,7 +406,7 @@
       "https://openai.com/index/scaling-postgresql/": "2026-03-19T19:18:10.525Z",
       "https://openai.com/index/unlocking-the-codex-harness/": "2026-04-07T22:32:27.562Z",
       "https://openai.com/index/unrolling-the-codex-agent-loop/": "2026-03-21T05:51:59.027Z",
-      "https://openai.com/index/harness-engineering/": "2026-04-07T16:41:32.751Z",
+      "https://openai.com/index/harness-engineering/": "2026-04-15T02:23:27.877Z",
       "https://openai.com/index/first-proof-submissions/": "2026-03-26T18:29:47.111Z",
       "https://openai.com/index/confidence-building-measures-for-artificial-intelligence/": "2026-04-06T02:37:52.381Z",
       "https://openai.com/research/index/": "2026-04-06T21:33:21.870Z",
@@ -742,7 +743,7 @@
       "https://openai.com/global-affairs/a-primer-on-the-eu-ai-act/": "2026-04-09T16:35:18.334Z",
       "https://openai.com/global-affairs/openai-chief-economist-announcement/": "2026-04-09T16:31:35.116Z",
       "https://openai.com/index/expanding-economic-opportunity-with-ai/": "2026-04-06T21:48:18.599Z",
-      "https://openai.com/index/people-first-ai-fund/": "2026-04-15T00:09:21.991Z",
+      "https://openai.com/index/people-first-ai-fund/": "2026-04-16T00:13:54.077Z",
       "https://openai.com/index/us-caisi-uk-aisi-ai-update/": "2026-04-06T21:25:36.557Z",
       "https://openai.com/index/japan-economic-blueprint/": "2026-04-06T21:28:41.233Z",
       "https://openai.com/index/south-korea-economic-blueprint/": "2026-04-06T21:37:53.881Z",
@@ -759,7 +760,7 @@
       "https://openai.com/index/introducing-chatgpt-edu/": "2026-04-09T16:32:45.843Z",
       "https://openai.com/index/introducing-nextgenai/": "2026-04-06T21:28:44.621Z",
       "https://openai.com/index/built-to-benefit-everyone/": "2026-04-06T21:25:32.477Z",
-      "https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work/": "2026-04-14T23:21:11.515Z",
+      "https://openai.com/business/guides-and-resources/chatgpt-usage-and-adoption-patterns-at-work/": "2026-04-15T04:25:10.422Z",
       "https://openai.com/index/edu-for-countries/": "2026-04-06T22:03:36.622Z",
       "https://openai.com/index/openai-and-future-partner-on-specialist-content/": "2026-04-09T16:32:43.516Z",
       "https://openai.com/index/news-corp-and-openai-sign-landmark-multi-year-global-partnership/": "2026-04-09T16:32:37.247Z",
@@ -796,7 +797,7 @@
       "https://openai.com/global-affairs/the-power-of-personalized-ai/": "2026-04-06T21:30:51.878Z",
       "https://openai.com/global-affairs/1000-scientist-ai-jam-session/": "2026-04-06T21:28:30.405Z",
       "https://openai.com/index/nonprofit-commission-advisors/": "2026-04-06T21:27:58.072Z",
-      "https://openai.com/index/nonprofit-commission-report/": "2026-04-15T00:11:07.149Z",
+      "https://openai.com/index/nonprofit-commission-report/": "2026-04-15T19:48:51.829Z",
       "https://openai.com/index/50-million-fund-to-build-with-communities/": "2026-04-06T21:54:05.267Z",
       "https://openai.com/index/providing-chatgpt-to-the-entire-us-federal-workforce/": "2026-04-06T21:24:09.619Z",
       "https://openai.com/index/supporting-nonprofit-and-community-innovation/": "2026-04-06T21:21:38.769Z",
@@ -807,7 +808,7 @@
       "https://openai.com/index/five-new-stargate-sites/": "2026-04-06T21:52:23.653Z",
       "https://openai.com/index/expanding-stargate-to-michigan/": "2026-04-06T21:55:10.317Z",
       "https://openai.com/index/small-business-ai-jam/": "2026-04-06T21:37:43.916Z",
-      "https://openai.com/index/people-first-ai-fund-grantees/": "2026-04-06T22:03:30.845Z",
+      "https://openai.com/index/people-first-ai-fund-grantees/": "2026-04-15T22:30:10.331Z",
       "https://openai.com/index/stargate-sb-energy-partnership/": "2026-01-15T16:17:03.970Z",
       "https://openai.com/index/openai-academy-for-news-organizations/": "2026-01-15T16:16:42.247Z",
       "https://openai.com/index/gpt-oss-safeguard-technical-report/": "2026-04-06T21:47:17.254Z",
@@ -985,10 +986,11 @@
       "https://openai.com/index/accelerating-the-next-phase-ai/": "2026-04-06T12:53:57.834Z",
       "https://openai.com/index/codex-flexible-pricing-for-teams/": "2026-04-14T17:32:32.505Z",
       "https://openai.com/index/openai-acquires-tbpn/": "2026-04-07T16:32:31.005Z",
-      "https://openai.com/index/introducing-openai-safety-fellowship/": "2026-04-08T19:48:57.389Z",
+      "https://openai.com/index/introducing-openai-safety-fellowship/": "2026-04-15T09:55:23.097Z",
       "https://openai.com/index/next-phase-of-enterprise-ai/": "2026-04-09T20:36:15.711Z",
       "https://openai.com/index/introducing-child-safety-blueprint/": "2026-04-13T03:34:55.426Z",
-      "https://openai.com/index/scaling-trusted-access-for-cyber-defense/": "2026-04-14T20:18:33.503Z"
+      "https://openai.com/index/scaling-trusted-access-for-cyber-defense/": "2026-04-15T22:08:30.817Z",
+      "https://openai.com/index/the-next-evolution-of-the-agents-sdk/": "2026-04-15T22:29:49.337Z"
     }
   }
 }
