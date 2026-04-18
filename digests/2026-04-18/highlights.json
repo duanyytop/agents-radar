@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.113陷计费信任危机，642评论",
+      "OpenAI Codex rust-v0.122连发4个alpha，14 PR工程投入最高",
+      "Gemini CLI v0.38.2支持Gemma 4，本地模型命令上线",
+      "Kimi CLI v1.36.0 max_steps扩至500，K2.6过度思考引争议",
+      "OpenCode单日6 PR激进重构Effect Schema，稳定性承压",
+      "GitHub Copilot CLI仅1条PR，社区贡献门槛高企"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时500 Issues+500 PR，安全补丁四连击阻断Critical漏洞",
+      "node:sqlite崩溃修复：每6-7分钟网关崩溃终结",
+      "模型冷却熔断器终结静默数小时无限重试循环",
+      "Google Gemini TTS新增24kHz语音输出能力",
+      "BlueBubbles客户端统一等XL架构重构仍处Draft",
+      "多通道稳定性攻坚：Telegram/Discord/Slack/Web UI修复潮"
+    ],
+    "ai-trending": [
+      "obra/superpowers单日+1713星，技能即代码方法论引爆",
+      "google/magika +956星，AI文件类型检测替代传统魔数",
+      "z-lab/dflash块扩散+投机解码，推理进入扩散模型时代",
+      "ChromeDevTools MCP：浏览器即Agent操作界面",
+      "openai-agents-python +625星，模型厂商下沉基础设施",
+      "shareAI-lab/learn-claude-code 5.4万星，中文LLM工程教育登顶"
+    ],
+    "ai-web": [
+      "Claude Opus 4.7上线，软件工程能力质变可完全委托",
+      "Opus 4.7首次定向压制网络攻击能力，配自动拦截系统",
+      "Claude Design视觉协作工具对标Figma/Canva/Gamma",
+      "自定义滑块暗示动态UI生成，模型自适应创建参数",
+      "明确低于Mythos Preview能力层级，建立产品梯度",
+      "与上周Glasswing风险披露形成直接呼应"
+    ],
+    "ai-hn": [
+      "Claude Design 799分532评论碾压式登顶HN",
+      "Claude 4.7 tokenizer成本分析520分，隐性定价陷阱引共鸣",
+      "第三方复现Mythos发现，闭馆研究透明度危机",
+      "Egregore：Claude Code多用户协作层实验",
+      "OpenAI高管离职与Cerebras巨额芯片采购并行",
+      "社区对AI内容泛滥slop保持高度警惕"
+    ],
+    "ai-ph": [
+      "Claude Code桌面端537票，并行多Agent协作编码",
+      "OpenAI Agents SDK 129票，生产级Agent框架内置沙箱",
+      "Windsurf 2.0集成Devin级Agent Command Center",
+      "Agent Card虚拟支付卡补齐Agent数字身份",
+      "Astropad Workbench远程桌面完善Agent执行环境",
+      "Resend CLI 2.0开发者工具链持续迭代"
+    ],
+    "ai-arxiv": [
+      "LLM评判器评估造假：上下文暗示 stakes 即可扭曲评分",
+      "RLVR训练出现新型奖励黑客，欺骗验证器而非真推理",
+      "步骤级投机解码加速多步推理，无需外部奖励模型",
+      "Agent微观物理学：从孤立模型到群体涌现风险",
+      "K-Token Merging潜在嵌入空间压缩突破长上下文",
+      "共形预测+传递性分析首次量化LLM评判器不可靠性"
+    ],
+    "ai-hf": [
+      "google/gemma-4-31B-it 351万下载霸榜，开源多模态新标杆",
+      "Jackrong/Qwen3.5蒸馏Claude-4.6 Opus，2723点赞冠军",
+      "zai-org/GLM-5.1 MoE+DSA架构，1381点赞超国际主流",
+      "MiniMax-M2.7周下载19万，国产大模型出海代表",
+      "OBLITERATUS激进去审查化Gemma-4，社区需求强烈",
+      "腾讯HY-Embodied-0.5视频生成向具身智能延伸"
+    ],
+    "ai-community": [
+      "Notion MCP Challenge结果公布，协议进入实际场景",
+      "Claude Code遗忘架构，SQLite本地持久化记忆方案",
+      "176M Token消耗警示：LLM读CSS类名成本陷阱",
+      "llm-cache深度解析，系统性降低重复查询API成本",
+      "88%Agent故障与模型无关，数百条追踪根因重构认知",
+      "Consensus Server模式：多Agent共识捕获生产幻觉"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.113 leads native binary performance",
+      "OpenAI Codex rewrites runtime in Rust",
+      "Gemini CLI adds local Gemma model support",
+      "MCP now standard across all major tools",
+      "Billing transparency dominates community discourse",
+      "642-comment thread on Claude Code pricing"
+    ],
+    "ai-agents": [
+      "OpenClaw hits 500 issues and 500 PRs in 24h",
+      "72% open PR rate signals backlog crisis",
+      "No releases despite regression reports",
+      "Focus shifts to agent identity and trust",
+      "Windows UI and auth systems under strain",
+      "Project enters stabilization phase post-feature rush"
+    ],
+    "ai-trending": [
+      "obra/superpowers gains +1,713 stars today",
+      "Self-evolving agent architectures dominate trends",
+      "Claude Code skills ecosystem explodes",
+      "Google magika hits +956 stars for file detection",
+      "EvoMap/evolver pioneers genome evolution for agents",
+      "GenericAgent introduces skill-tree growth systems"
+    ],
+    "ai-web": [
+      "Anthropic launches Claude Opus 4.7 model",
+      "Claude Design challenges Figma and Adobe",
+      "Opus 4.7 tests differential capability reduction",
+      "OpenAI posts zero new content today",
+      "Anthropic seizes narrative momentum from OpenAI",
+      "Design tool transforms Claude to visual partner"
+    ],
+    "ai-hn": [
+      "Claude Design dominates with 799 points, 532 comments",
+      "Tokenizer cost analysis hits 520 points",
+      "Community reproduces Mythos findings independently",
+      "Anthropic negotiates Mythos access with US government",
+      "OpenAI's $20B Cerebras deal surfaces",
+      "Skeptical-engaged mood on lock-in risks"
+    ],
+    "ai-ph": [
+      "Claude Code Desktop App leads with 537 votes",
+      "Agent Card launches prepaid Visa for AI agents",
+      "9 of 15 products target developers",
+      "Google launches Chrome Skills and Gemini TTS",
+      "Sandboxed agent environments trending",
+      "Multi-agent coding workflows in demand"
+    ],
+    "ai-arxiv": [
+      "LLM judges vulnerable to stakes signaling bias",
+      "Test-time compute scaling via looped transformers",
+      "Agentic systems deploy in medical imaging",
+      "Population-level safety analysis emerges",
+      "Conformal prediction sets fix judge reliability",
+      "Speculative decoding advances multi-step reasoning"
+    ],
+    "ai-hf": [
+      "Gemma 4 family passes 8.5M downloads",
+      "Uncensored Gemma 4 fine-tunes trend strongly",
+      "Qwen 3.6 gains momentum as multimodal MoE",
+      "MiniMax M2.7 outperforms larger models",
+      "OmniVoice nears 850K zero-shot voice clones",
+      "Claude reasoning distilled into open Qwen weights"
+    ],
+    "ai-community": [
+      "Notion MCP Challenge winners announced",
+      "SQLite file fixes Claude Code memory loss",
+      "llm-cache deep dive tackles token anxiety",
+      "Semantic caching becomes production essential",
+      "Persistent memory now solvable infrastructure",
+      "Neural network weight querying on Lobste.rs"
+    ]
+  }
+}
