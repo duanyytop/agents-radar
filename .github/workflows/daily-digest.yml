@@ -81,3 +81,9 @@ jobs:
           PAGES_URL: https://duanyytop.github.io/agents-radar
         run: pnpm notify:feishu
 
+      - name: Close stale issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DIGEST_REPO: ${{ github.repository }}
+        run: pnpm close-stale
+

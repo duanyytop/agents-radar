@@ -228,6 +228,45 @@ function neutralizeGitHubRefs(text: string): string {
   );
 }
 
+/**
+ * Close open issues created more than `days` days ago.
+ * Uses pagination to handle large backlogs. Returns the number of issues closed.
+ */
+export async function closeStaleIssues(days: number): Promise<number> {
+  const digestRepo = process.env["DIGEST_REPO"] ?? "";
+  if (!digestRepo) return 0;
+  const cutoff = new Date(Date.now() - days * 86_400_000);
+  let closed = 0;
+  let page = 1;
+
+  while (true) {
+    const issues = await githubGet<{ number: number; created_at: string }[]>(
+      `https://api.github.com/repos/${digestRepo}/issues`,
+      { state: "open", sort: "created", direction: "asc", per_page: "100", page: String(page) },
+    );
+    if (issues.length === 0) break;
+
+    const stale = issues.filter((i) => new Date(i.created_at) < cutoff);
+    if (stale.length === 0) break;
+
+    await Promise.all(
+      stale.map(async (i) => {
+        const resp = await fetch(`https://api.github.com/repos/${digestRepo}/issues/${i.number}`, {
+          method: "PATCH",
+          headers: { ...headers(), "Content-Type": "application/json" },
+          body: JSON.stringify({ state: "closed" }),
+        });
+        if (!resp.ok) console.error(`[github] Failed to close #${i.number}: ${resp.status}`);
+      }),
+    );
+    closed += stale.length;
+
+    if (stale.length < issues.length) break;
+    page++;
+  }
+  return closed;
+}
+
 export async function createGitHubIssue(title: string, body: string, label: string): Promise<string> {
   const digestRepo = process.env["DIGEST_REPO"] ?? "";
   body = neutralizeGitHubRefs(body);
