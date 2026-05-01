@@ -17,7 +17,6 @@ export class AnthropicProvider implements LlmProvider {
 
   constructor(model?: string) {
     this.model = model ?? process.env["ANTHROPIC_MODEL"] ?? "claude-sonnet-4-6";
-    // Reads ANTHROPIC_API_KEY and ANTHROPIC_BASE_URL from env automatically
     this.client = new Anthropic();
   }
 
