@@ -1,12 +1,12 @@
 {
   "zh": {
     "ai-cli": [
-      "Claude Code 计费Bug引177👍，社区信任危机加剧",
-      "OpenAI Codex v0.128.0 引入 /goal 工作流",
-      "Gemini CLI 聚焦AST感知与Agent稳定性",
-      "Kimi Code v1.41.0 发布，强化记忆系统",
-      "Pi (pi-mono) v0.71.0 修复RCE安全漏洞",
-      "社区共识：Agent需精细化权限与跨会话记忆"
+      "Claude Code登顶GitHub Trending后陷入信任危机",
+      "OpenAI Codex加速Rust重构，修复架构债务",
+      "Gemini CLI发布v0.40.0，追赶头部工具",
+      "Claude Code计费黑洞引发大规模用户流失",
+      "社区自救工具CC-Canary诞生，对抗计费问题",
+      "OpenAI Codex Token消耗过快成新痛点"
     ],
     "ai-agents": [
       "OpenClaw 发布5个v2026.4.29版本，增强消息与自动化",
@@ -129,6 +129,14 @@
       "SaaS boilerplates resurge with AI",
       "Self-improving LLM limits debated",
       "1930s language model discussed"
+    ],
+    "ai-monthly": [
+      "OpenAI raises $122B at $852B valuation",
+      "Anthropic source code leak sparks backlash",
+      "Anthropic reveals $30B annualized revenue",
+      "Claude Opus 4.7 launches for coding",
+      "Claude Design challenges Figma/Canva",
+      "Anthropic signs 10-year 5GW AWS deal"
     ]
   }
 }
