@@ -126,6 +126,7 @@ wrangler deploy
 | OpenCode | [anomalyco/opencode](https://github.com/anomalyco/opencode) |
 | Pi | [badlogic/pi-mono](https://github.com/badlogic/pi-mono) |
 | Qwen Code | [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) |
+| agenttrace | [luoyuctl/agenttrace](https://github.com/luoyuctl/agenttrace) |
 
 ### Claude Code Skills (GitHub)
 

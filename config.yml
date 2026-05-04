@@ -32,6 +32,9 @@ cli_repos:
   - id: qwen-code
     repo: QwenLM/qwen-code
     name: Qwen Code
+  - id: agenttrace
+    repo: luoyuctl/agenttrace
+    name: agenttrace
 
 # ── Claude Code Skills ────────────────────────────────────────────────────────
 # Tracked separately without a date filter, sorted by community engagement.
