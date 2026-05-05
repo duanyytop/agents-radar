@@ -1,6 +1,6 @@
 {
   "anthropic": {
-    "lastChecked": "2026-05-04T00:19:47.266Z",
+    "lastChecked": "2026-05-05T00:20:51.558Z",
     "seenUrls": {
       "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-02-25T23:57:06.000Z",
       "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-02-25T20:58:11.000Z",
@@ -339,7 +339,7 @@
       "https://www.anthropic.com/research/automated-alignment-researchers": "2026-04-14T19:00:21.000Z",
       "https://www.anthropic.com/news/narasimhan-board": "2026-04-14T14:00:04.000Z",
       "https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills": "2026-04-15T14:39:01.000Z",
-      "https://www.anthropic.com/news/claude-opus-4-7": "2026-04-20T17:27:26.000Z",
+      "https://www.anthropic.com/news/claude-opus-4-7": "2026-05-04T23:23:49.000Z",
       "https://www.anthropic.com/news/claude-design-anthropic-labs": "2026-04-17T14:58:21.000Z",
       "https://www.anthropic.com/news/anthropic-amazon-compute": "2026-04-24T15:50:13.000Z",
       "https://www.anthropic.com/research/81k-economics": "2026-04-22T17:04:00.000Z",
@@ -350,11 +350,12 @@
       "https://www.anthropic.com/news/theo-hourmouzis-general-manager-australia-new-zealand": "2026-04-27T22:30:22.000Z",
       "https://www.anthropic.com/news/claude-for-creative-work": "2026-05-01T15:44:00.000Z",
       "https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench": "2026-04-30T15:03:14.000Z",
-      "https://www.anthropic.com/research/claude-personal-guidance": "2026-05-01T00:08:28.000Z"
+      "https://www.anthropic.com/research/claude-personal-guidance": "2026-05-01T00:08:28.000Z",
+      "https://www.anthropic.com/news/enterprise-ai-services-company": "2026-05-04T15:43:58.000Z"
     }
   },
   "openai": {
-    "lastChecked": "2026-05-04T00:19:46.852Z",
+    "lastChecked": "2026-05-05T00:20:43.950Z",
     "seenUrls": {
       "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-05-02T01:30:37.967Z",
       "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-05-02T01:36:03.782Z",
@@ -367,8 +368,8 @@
       "https://openai.com/index/openai-deutschland/": "2026-05-02T01:34:28.980Z",
       "https://openai.com/news/": "2026-05-02T01:52:33.255Z",
       "https://openai.com/news/engineering/": "2026-05-02T01:36:36.645Z",
-      "https://openai.com/news/safety-alignment/": "2026-05-02T01:46:14.321Z",
-      "https://openai.com/news/product-releases/": "2026-05-02T01:43:59.316Z",
+      "https://openai.com/news/safety-alignment/": "2026-05-04T06:41:56.695Z",
+      "https://openai.com/news/product-releases/": "2026-05-04T06:47:53.506Z",
       "https://openai.com/news/company-announcements/": "2026-05-02T01:39:44.650Z",
       "https://openai.com/index/openai-scholars/": "2026-05-02T01:39:18.494Z",
       "https://openai.com/index/special-projects/": "2026-05-02T01:37:54.288Z",
@@ -422,7 +423,7 @@
       "https://openai.com/index/first-proof-submissions/": "2026-05-02T01:41:22.206Z",
       "https://openai.com/index/confidence-building-measures-for-artificial-intelligence/": "2026-05-02T01:42:41.588Z",
       "https://openai.com/research/index/": "2026-05-02T02:06:50.656Z",
-      "https://openai.com/news/research/": "2026-05-02T01:47:29.536Z",
+      "https://openai.com/news/research/": "2026-05-04T07:58:30.976Z",
       "https://openai.com/index/new-result-theoretical-physics/": "2026-05-02T01:12:06.844Z",
       "https://openai.com/index/advancing-independent-research-ai-alignment/": "2026-04-22T07:11:29.276Z",
       "https://openai.com/index/introducing-deep-research/": "2026-05-01T00:19:33.073Z",
@@ -438,9 +439,9 @@
       "https://openai.com/index/how-confessions-can-keep-language-models-honest/": "2026-04-23T08:15:23.021Z",
       "https://openai.com/index/introducing-gpt-5-2/": "2026-05-02T05:36:10.691Z",
       "https://openai.com/index/how-people-are-using-chatgpt/": "2026-04-23T08:37:34.485Z",
-      "https://openai.com/research/index/publication/": "2026-05-02T01:43:27.106Z",
-      "https://openai.com/research/index/milestone/": "2026-05-02T01:44:03.212Z",
-      "https://openai.com/research/index/release/": "2026-05-02T01:48:36.817Z",
+      "https://openai.com/research/index/publication/": "2026-05-04T07:47:22.973Z",
+      "https://openai.com/research/index/milestone/": "2026-05-04T06:39:32.635Z",
+      "https://openai.com/research/index/release/": "2026-05-04T07:54:10.430Z",
       "https://openai.com/index/video-generation-models-as-world-simulators/": "2026-05-02T01:41:16.202Z",
       "https://openai.com/index/dall-e-3-system-card/": "2026-05-02T01:44:14.083Z",
       "https://openai.com/index/gpt-4v-system-card/": "2026-05-02T01:43:03.429Z",
@@ -582,7 +583,7 @@
       "https://openai.com/index/introducing-4o-image-generation/": "2026-04-23T08:17:26.481Z",
       "https://openai.com/index/instruction-following/": "2026-05-02T01:36:27.474Z",
       "https://openai.com/index/introducing-o3-and-o4-mini/": "2026-05-02T01:50:26.326Z",
-      "https://openai.com/index/introducing-prism/": "2026-04-27T01:07:29.026Z",
+      "https://openai.com/index/introducing-prism/": "2026-05-04T09:48:28.281Z",
       "https://openai.com/index/image-generation-api/": "2026-04-23T08:50:14.961Z",
       "https://openai.com/index/introducing-data-residency-in-europe/": "2026-04-23T08:35:32.844Z",
       "https://openai.com/index/dall-e/": "2026-05-02T01:42:19.980Z",
@@ -738,7 +739,7 @@
       "https://openai.com/index/more-enterprise-grade-features-for-api-customers/": "2026-05-02T01:32:45.053Z",
       "https://openai.com/index/simplifying-stabilizing-and-scaling-continuous-time-consistency-models/": "2026-05-02T01:40:09.782Z",
       "https://openai.com/global-affairs/openai-chief-compliance-officer-announcement/": "2026-05-02T01:48:18.305Z",
-      "https://openai.com/index/introducing-simpleqa/": "2026-05-02T01:39:57.738Z",
+      "https://openai.com/index/introducing-simpleqa/": "2026-05-04T14:52:26.635Z",
       "https://openai.com/index/sora-is-here/": "2026-05-02T01:37:20.474Z",
       "https://openai.com/global-affairs/openais-economic-blueprint/": "2026-05-02T01:35:23.205Z",
       "https://openai.com/index/operator-system-card/": "2026-04-23T08:25:31.190Z",
@@ -838,7 +839,7 @@
       "https://openai.com/index/gartner-2025-emerging-leader/": "2026-04-30T06:42:51.964Z",
       "https://openai.com/index/gpt-5-1-for-developers/": "2026-04-23T03:39:25.386Z",
       "https://openai.com/index/dall-e-3/": "2026-04-22T23:54:17.638Z",
-      "https://openai.com/devday/": "2026-05-02T01:29:36.137Z",
+      "https://openai.com/devday/": "2026-05-04T08:43:26.416Z",
       "https://openai.com/index/introducing-gpt-realtime/": "2026-04-23T17:56:45.237Z",
       "https://openai.com/index/introducing-gpt-oss-safeguard/": "2026-04-23T22:52:36.390Z",
       "https://openai.com/index/introducing-agentkit/": "2026-04-23T08:00:24.776Z",
@@ -975,7 +976,7 @@
       "https://openai.com/index/gpt-5-3-instant/": "2026-04-23T03:47:28.610Z",
       "https://openai.com/index/gpt-5-3-instant-system-card/": "2026-04-23T06:02:41.219Z",
       "https://openai.com/index/extending-single-minus-amplitudes-to-gravitons/": "2026-05-02T01:11:27.009Z",
-      "https://openai.com/index/introducing-gpt-5-4/": "2026-05-02T05:35:22.704Z",
+      "https://openai.com/index/introducing-gpt-5-4/": "2026-05-04T21:31:45.001Z",
       "https://openai.com/index/reasoning-models-chain-of-thought-controllability/": "2026-04-30T10:41:26.667Z",
       "https://openai.com/index/chatgpt-for-excel/": "2026-04-28T17:56:55.880Z",
       "https://openai.com/index/gpt-5-4-thinking-system-card/": "2026-04-23T05:45:21.943Z",
@@ -1024,7 +1025,8 @@
       "https://openai.com/index/openai-on-aws/": "2026-05-01T20:15:24.702Z",
       "https://openai.com/index/our-commitment-to-community-safety/": "2026-05-02T01:32:31.591Z",
       "https://openai.com/index/advanced-account-security/": "2026-05-02T11:40:22.699Z",
-      "https://openai.com/index/where-the-goblins-came-from/": "2026-05-01T21:58:18.765Z"
+      "https://openai.com/index/where-the-goblins-came-from/": "2026-05-01T21:58:18.765Z",
+      "https://openai.com/index/delivering-low-latency-voice-ai-at-scale/": "2026-05-04T19:06:07.881Z"
     }
   }
 }
