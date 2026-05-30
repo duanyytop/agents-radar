@@ -19,11 +19,22 @@ interface RawRepoEntry {
   paginated?: boolean;
 }
 
+interface RawRedditConfig {
+  enabled?: boolean;
+  subreddits?: string[];
+}
+
+export interface RedditConfig {
+  enabled: boolean;
+  subreddits: string[];
+}
+
 interface RawConfig {
   cli_repos?: RawRepoEntry[];
   skills_repo?: string;
   openclaw?: RawRepoEntry;
   openclaw_peers?: RawRepoEntry[];
+  reddit?: RawRedditConfig;
 }
 
 export interface RadarConfig {
@@ -31,6 +42,7 @@ export interface RadarConfig {
   skillsRepo: string;
   openclaw: RepoConfig;
   openclawPeers: RepoConfig[];
+  reddit: RedditConfig;
 }
 
 // ---------------------------------------------------------------------------
@@ -72,6 +84,11 @@ const DEFAULT_OPENCLAW_PEERS: RepoConfig[] = [
   { id: "zeroclaw", repo: "zeroclaw-labs/zeroclaw", name: "ZeroClaw" },
 ];
 
+const DEFAULT_REDDIT: RedditConfig = {
+  enabled: false,
+  subreddits: ["LocalLLaMA"],
+};
+
 // ---------------------------------------------------------------------------
 // Loader
 // ---------------------------------------------------------------------------
@@ -90,6 +107,7 @@ export function loadConfig(configPath = "config.yml"): RadarConfig {
       skillsRepo: DEFAULT_SKILLS_REPO,
       openclaw: DEFAULT_OPENCLAW,
       openclawPeers: DEFAULT_OPENCLAW_PEERS,
+      reddit: DEFAULT_REDDIT,
     };
   }
 
@@ -112,10 +130,18 @@ export function loadConfig(configPath = "config.yml"): RadarConfig {
       ? raw.openclaw_peers.map(toRepoConfig)
       : DEFAULT_OPENCLAW_PEERS;
 
+  const reddit: RedditConfig = {
+    enabled: typeof raw?.reddit?.enabled === "boolean" ? raw.reddit.enabled : DEFAULT_REDDIT.enabled,
+    subreddits:
+      Array.isArray(raw?.reddit?.subreddits) && raw.reddit.subreddits.length > 0
+        ? raw.reddit.subreddits.map(String)
+        : DEFAULT_REDDIT.subreddits,
+  };
+
   console.log(
     `[config] Loaded from ${configPath}: ` +
-      `${cliRepos.length} CLI repos, ${openclawPeers.length} OpenClaw peers`,
+      `${cliRepos.length} CLI repos, ${openclawPeers.length} OpenClaw peers, Reddit is ${reddit.enabled ? "enabled" : "disabled"} (${reddit.subreddits.join(", ")})`,
   );
 
-  return { cliRepos, skillsRepo, openclaw, openclawPeers };
+  return { cliRepos, skillsRepo, openclaw, openclawPeers, reddit };
 }

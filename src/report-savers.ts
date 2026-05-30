@@ -12,6 +12,7 @@ import {
   ARXIV_REPORT,
   HF_REPORT,
   COMMUNITY_REPORT,
+  REDDIT_REPORT,
   ISSUE_LABELS,
 } from "./i18n.ts";
 import {
@@ -21,6 +22,7 @@ import {
   buildArxivPrompt,
   buildHfPrompt,
   buildCommunityPrompt,
+  buildRedditPrompt,
 } from "./prompts-data.ts";
 import { callLlm, saveFile, LLM_TOKENS_WEB } from "./report.ts";
 import { createGitHubIssue } from "./github.ts";
@@ -32,6 +34,7 @@ import type { ArxivData } from "./arxiv.ts";
 import type { HfData } from "./hf.ts";
 import type { DevtoData } from "./devto.ts";
 import type { LobstersData } from "./lobsters.ts";
+import type { RedditData } from "./reddit.ts";
 
 // ---------------------------------------------------------------------------
 // Web report
@@ -369,3 +372,47 @@ export async function saveCommunityReport(
     console.error(`  [community/${lang}] Report generation failed: ${err}`);
   }
 }
+
+// ---------------------------------------------------------------------------
+// Reddit report
+// ---------------------------------------------------------------------------
+
+export async function saveRedditReport(
+  redditData: RedditData,
+  subreddits: string[],
+  utcStr: string,
+  dateStr: string,
+  digestRepo: string,
+  footer: string,
+  lang: Lang = "zh",
+): Promise<void> {
+  if (!redditData.fetchSuccess || redditData.posts.length === 0) {
+    console.log(`  [reddit/${lang}] No data available, skipping report.`);
+    return;
+  }
+
+  console.log(`  [reddit/${lang}] Calling LLM for Reddit report...`);
+  try {
+    const summary = await callLlm(buildRedditPrompt(redditData, dateStr, lang));
+    const fileName = lang === "en" ? "ai-reddit-en.md" : "ai-reddit.md";
+    
+    const header =
+      `# ${REDDIT_REPORT.title[lang]} ${dateStr}\n\n` +
+      `${REDDIT_REPORT.metadata(redditData.posts.length, subreddits, utcStr, lang)}\n\n` +
+      `---\n\n`;
+
+    const content = header + summary + footer;
+
+    console.log(`  Saved ${saveFile(content, dateStr, fileName)}`);
+
+    if (digestRepo) {
+      const title = REDDIT_REPORT.issueTitle(dateStr, lang);
+      const label = ISSUE_LABELS.reddit[lang];
+      const url = await createGitHubIssue(title, content, label);
+      console.log(`  Created Reddit issue (${lang}): ${url}`);
+    }
+  } catch (err) {
+    console.error(`  [reddit/${lang}] Report generation failed: ${err}`);
+  }
+}
+

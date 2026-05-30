@@ -12,12 +12,14 @@ import {
   buildWeeklyPrompt,
   buildMonthlyPrompt,
   buildHnPrompt,
+  buildRedditPrompt,
 } from "../prompts-data.ts";
 import type { RepoConfig, GitHubItem, GitHubRelease } from "../github.ts";
 import type { RepoDigest } from "../prompts.ts";
 import type { TrendingData } from "../trending.ts";
 import type { HnData } from "../hn.ts";
 import type { WebFetchResult } from "../web.ts";
+import type { RedditData } from "../reddit.ts";
 
 // ---------------------------------------------------------------------------
 // Fixtures
@@ -355,3 +357,59 @@ describe("buildHnPrompt", () => {
     expect(result).toContain("Hacker News");
   });
 });
+
+// ---------------------------------------------------------------------------
+// buildRedditPrompt
+// ---------------------------------------------------------------------------
+
+describe("buildRedditPrompt", () => {
+  it("includes reddit posts with metadata", () => {
+    const data: RedditData = {
+      posts: [
+        {
+          id: "abc",
+          title: "Local LLM releasing",
+          url: "https://example.com/llm",
+          redditUrl: "https://reddit.com/r/LocalLLaMA/comments/abc",
+          score: 150,
+          comments: 45,
+          author: "alice",
+          subreddit: "LocalLLaMA",
+          createdAt: "2026-03-09T10:00:00Z",
+          postText: "This is a great new local model.",
+        },
+      ],
+      fetchSuccess: true,
+    };
+    const result = buildRedditPrompt(data, "2026-03-09");
+    expect(result).toContain("Local LLM releasing");
+    expect(result).toContain("分数: 150");
+    expect(result).toContain("评论: 45");
+    expect(result).toContain("作者: alice");
+    expect(result).toContain("r/LocalLLaMA");
+  });
+
+  it("generates English variant", () => {
+    const data: RedditData = {
+      posts: [
+        {
+          id: "xyz",
+          title: "New hardware tweaks",
+          url: "https://reddit.com/r/LocalLLaMA/comments/xyz",
+          redditUrl: "https://reddit.com/r/LocalLLaMA/comments/xyz",
+          score: 50,
+          comments: 12,
+          author: "bob",
+          subreddit: "LocalLLaMA",
+          createdAt: "2026-03-09T10:00:00Z",
+        },
+      ],
+      fetchSuccess: true,
+    };
+    const result = buildRedditPrompt(data, "2026-03-09", "en");
+    expect(result).toContain("Score: 50");
+    expect(result).toContain("Comments: 12");
+    expect(result).toContain("Reddit");
+  });
+});
+

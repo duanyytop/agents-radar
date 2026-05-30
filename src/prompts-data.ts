@@ -13,6 +13,7 @@ import type { ArxivData } from "./arxiv.ts";
 import type { HfData } from "./hf.ts";
 import type { DevtoData } from "./devto.ts";
 import type { LobstersData } from "./lobsters.ts";
+import type { RedditData } from "./reddit.ts";
 import type { Lang } from "./i18n.ts";
 export function buildTrendingPrompt(data: TrendingData, dateStr: string, lang: Lang = "zh"): string {
   const trendingSection =
@@ -906,3 +907,81 @@ ${lobstersText}
 语言要求：中文，简洁专业，保留所有原文链接。
 `;
 }
+
+export function buildRedditPrompt(data: RedditData, dateStr: string, lang: Lang = "zh"): string {
+  const postsText = data.posts
+    .map((p, i) => {
+      const textSnippet = p.postText 
+        ? `\n   Text Snippet: ${p.postText.slice(0, 300)}${p.postText.length > 300 ? "..." : ""}`
+        : "";
+      const extLink = p.externalLink ? `\n   External Link: ${p.externalLink}` : "";
+      
+      return lang === "en"
+        ? `${i + 1}. **${p.title}** (r/${p.subreddit})\n` +
+          `   Discussion: ${p.redditUrl}${extLink}\n` +
+          `   Score: ${p.score} | Comments: ${p.comments} | Author: ${p.author} | Time: ${p.createdAt.slice(0, 16)}${textSnippet}`
+        : `${i + 1}. **${p.title}** (r/${p.subreddit})\n` +
+          `   讨论: ${p.redditUrl}${extLink}\n` +
+          `   分数: ${p.score} | 评论: ${p.comments} | 作者: ${p.author} | 时间: ${p.createdAt.slice(0, 16)}${textSnippet}`;
+    })
+    .join("\n\n");
+
+  if (lang === "en") {
+    return `You are a professional AI technology analyst and community researcher. The following are trending and high-engagement posts from AI-related subreddits (such as r/LocalLLaMA) in the past 24 hours as of ${dateStr} (sorted by custom engagement/recency score, ${data.posts.length} total):
+
+---
+
+${postsText}
+
+---
+
+Generate a highly structured Reddit AI Community Digest in English:
+
+1. **Today's Highlights** — 3-5 sentences summarizing the most critical discussions, trends, and breakthroughs on Reddit today.
+
+2. **Key Insights by Category** — Categorize the most noteworthy posts and extract their core signals. Avoid simply listing the posts. Instead, summarize what they mean, include links, scores, comments, and the subreddit context. Identify findings under these headings:
+   - 💬 Top Discussions (significant technical threads, arguments, community thoughts)
+   - 🧠 Model Releases & Fine-Tuning (new models, open-weights releases, quantization updates, fine-tuning results)
+   - 🛠️ Tooling & Infrastructure (inference engines, local AI tooling, RAG, agent frameworks, hardware optimization)
+   - 🔬 Research & Experiments (notable papers, benchmark results, user experiments)
+
+3. **Community Sentiment & Pulse** — 150-250 words analyzing what the community is excited, concerned, or debating about today:
+   - What are the dominant consensus points or hot debates?
+   - Any emergent tech stacks or challenges appearing for AI engineers?
+   - Practical developer sentiment about newly released tools.
+
+4. **Actionable Takeaways** — A bulleted list of 3-5 specific signals, projects, or practices that AI engineers and software developers should pay close attention to, with brief developer-focused reasoning.
+
+Style: English, professional, analytical, concise, and focused on insight extraction. Ensure all original Reddit links (discussion links) and external links are preserved.
+`;
+  }
+
+  return `你是一位专业的 AI 技术分析师和社区研究员。以下是 ${dateStr} 从 AI 相关 Reddit 社区（如 r/LocalLLaMA）抓取的过去 24 小时内热门且高互动的帖子（按自定义的热度与时效性得分降序，共 ${data.posts.length} 条）：
+
+---
+
+${postsText}
+
+---
+
+请生成一份结构清晰、分析深入的《Reddit AI 社区动态日报》，要求：
+
+1. **今日速览** — 3~5 句话，概括今日 Reddit 社区最核心的讨论方向、前沿趋势或重大突破。
+
+2. **热门讨论与技术信号** — 避免简单罗列帖子，请按以下分类进行整合和提炼，深入分析其背后的核心价值、社区反馈与影响，并包含原文/讨论链接、subreddit 标识以及分数/评论数：
+   - 💬 深度社区热议（重点技术讨论、行业观点争议、社区思想碰撞）
+   - 🧠 模型发布与微调（新模型及开源权重发布、量化更新、微调成效、评测结果）
+   - 🛠️ 工具链与基础设施（推理引擎、本地 AI 工具、RAG、Agent 框架、硬件优化）
+   - 🔬 研究与前沿实验（值得关注的论文分享、用户自测基准、新奇探索）
+
+3. **社区情绪与技术脉搏** — 150~250 字，剖析今日 Reddit 社区的整体情绪和热点议题：
+   - 社区对哪些话题达成了共识，又在争论什么？
+   - 开发者在使用最新工具时遇到了哪些实际痛点或带来了哪些新思路？
+   - 透露出哪些潜在的技术演进方向？
+
+4. **开发者行动指南** — 以 bullet 形式列出 3~5 条最值得 AI 工程师/软件开发者重点跟进的具体项目、工具或实践，并给出硬核的技术理由。
+
+语言要求：中文，专业硬核，简洁清晰，每个条目必须保留所有 Reddit 讨论链接和外部链接。
+`;
+}
+

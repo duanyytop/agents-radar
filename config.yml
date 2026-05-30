@@ -92,3 +92,11 @@ openclaw_peers:
   - id: zeroclaw
     repo: zeroclaw-labs/zeroclaw
     name: ZeroClaw
+
+# ── Reddit Ingestion ──────────────────────────────────────────────────────────
+# Tracked subreddits. enabled determines if the ingestion runs.
+reddit:
+  enabled: true
+  subreddits:
+    - LocalLLaMA
+

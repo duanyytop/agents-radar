@@ -9,6 +9,7 @@
  * Provider-specific env vars — see src/providers/ for full list.
  */
 
+import "dotenv/config";
 import fs from "node:fs";
 import path from "node:path";
 import {
@@ -38,6 +39,7 @@ import {
   saveArxivReport,
   saveHfReport,
   saveCommunityReport,
+  saveRedditReport,
 } from "./report-savers.ts";
 import { loadWebState, fetchSiteContent, type WebFetchResult, type WebState } from "./web.ts";
 import { fetchTrendingData, type TrendingData } from "./trending.ts";
@@ -47,6 +49,7 @@ import { fetchArxivData, type ArxivData } from "./arxiv.ts";
 import { fetchHfData, type HfData } from "./hf.ts";
 import { fetchDevtoData, type DevtoData } from "./devto.ts";
 import { fetchLobstersData, type LobstersData } from "./lobsters.ts";
+import { fetchRedditData, type RedditData } from "./reddit.ts";
 import { loadConfig } from "./config.ts";
 import { toCstDateStr, toUtcStr } from "./date.ts";
 import { type Lang, MSG, ISSUE_LABELS, CLI_ISSUE_TITLE, OPENCLAW_ISSUE_TITLE } from "./i18n.ts";
@@ -60,6 +63,7 @@ const {
   skillsRepo: CLAUDE_SKILLS_REPO,
   openclaw: OPENCLAW,
   openclawPeers: OPENCLAW_PEERS,
+  reddit: REDDIT_CONFIG,
 } = loadConfig();
 
 // ---------------------------------------------------------------------------
@@ -79,6 +83,7 @@ function requireEnv(name: string): string {
 async function fetchAllData(
   since: Date,
   webState: WebState,
+  subreddits: string[],
 ): Promise<{
   fetched: RepoFetch[];
   skillsData: { prs: GitHubItem[]; issues: GitHubItem[] };
@@ -90,10 +95,11 @@ async function fetchAllData(
   hfData: HfData;
   devtoData: DevtoData;
   lobstersData: LobstersData;
+  redditData: RedditData;
 }> {
   const allConfigs = [...CLI_REPOS, OPENCLAW, ...OPENCLAW_PEERS];
   console.log(
-    `  Tracking: ${allConfigs.map((r) => r.id).join(", ")}, claude-code-skills, web, hn, ph, arxiv, hf, devto, lobsters`,
+    `  Tracking: ${allConfigs.map((r) => r.id).join(", ")}, claude-code-skills, web, hn, ph, arxiv, hf, devto, lobsters, reddit`,
   );
 
   const [
@@ -107,6 +113,7 @@ async function fetchAllData(
     hfData,
     devtoData,
     lobstersData,
+    redditData,
   ] = await Promise.all([
     Promise.all(
       allConfigs.map(async (cfg) => {
@@ -165,6 +172,9 @@ async function fetchAllData(
     fetchHfData().catch((): HfData => ({ models: [], fetchSuccess: false })),
     fetchDevtoData().catch((): DevtoData => ({ articles: [], fetchSuccess: false })),
     fetchLobstersData().catch((): LobstersData => ({ stories: [], fetchSuccess: false })),
+    REDDIT_CONFIG.enabled
+      ? fetchRedditData(subreddits).catch((): RedditData => ({ posts: [], fetchSuccess: false }))
+      : Promise.resolve({ posts: [], fetchSuccess: false }),
   ]);
 
   return {
@@ -178,6 +188,7 @@ async function fetchAllData(
     hfData,
     devtoData,
     lobstersData,
+    redditData,
   };
 }
 
@@ -311,7 +322,8 @@ async function main(): Promise<void> {
     hfData,
     devtoData,
     lobstersData,
-  } = await fetchAllData(since, webState);
+    redditData,
+  } = await fetchAllData(since, webState, REDDIT_CONFIG.subreddits);
 
   const peerIds = new Set(OPENCLAW_PEERS.map((p) => p.id));
   const fetchedCli = fetched.filter((f) => f.cfg.id !== OPENCLAW.id && !peerIds.has(f.cfg.id));
@@ -417,6 +429,8 @@ async function main(): Promise<void> {
     saveHfReport(hfData, utcStr, dateStr, digestRepo, autoGenFooter("en"), "en"),
     saveCommunityReport(devtoData, lobstersData, utcStr, dateStr, digestRepo, autoGenFooter("zh"), "zh"),
     saveCommunityReport(devtoData, lobstersData, utcStr, dateStr, digestRepo, autoGenFooter("en"), "en"),
+    REDDIT_CONFIG.enabled ? saveRedditReport(redditData, REDDIT_CONFIG.subreddits, utcStr, dateStr, digestRepo, autoGenFooter("zh"), "zh") : Promise.resolve(),
+    REDDIT_CONFIG.enabled ? saveRedditReport(redditData, REDDIT_CONFIG.subreddits, utcStr, dateStr, digestRepo, autoGenFooter("en"), "en") : Promise.resolve(),
   ]);
 
   // 5. Generate highlights for Telegram notification
@@ -435,6 +449,7 @@ async function main(): Promise<void> {
     ["ai-arxiv", "ai-arxiv.md", "ai-arxiv-en.md"],
     ["ai-hf", "ai-hf.md", "ai-hf-en.md"],
     ["ai-community", "ai-community.md", "ai-community-en.md"],
+    ["ai-reddit", "ai-reddit.md", "ai-reddit-en.md"],
   ] as const) {
     const zh = readReport(zhFile);
     const en = readReport(enFile);
