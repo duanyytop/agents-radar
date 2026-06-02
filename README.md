@@ -435,3 +435,83 @@ To change the schedule, edit the cron expressions in the corresponding workflow 
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=duanyytop/agents-radar&type=Date)](https://star-history.com/#duanyytop/agents-radar&Date)
+
+
+## ❓ FAQ
+
+### What is agents-radar?
+
+agents-radar is a GitHub Actions workflow that runs daily to aggregate AI ecosystem signals from 10 data sources, publishing bilingual (Chinese + English) daily digests as GitHub Issues and Markdown files.
+
+### What data sources are tracked?
+
+| Source | Type | Data |
+|--------|------|------|
+| GitHub Repos | API | Issues, PRs, releases from 17+ tracked AI tool repos |
+| Claude Code Skills | API | Trending skills sorted by community engagement |
+| GitHub Trending | HTML + API | Daily trending repos + AI topic search |
+| Hacker News | Algolia API | Top 30 AI stories from last 24h |
+| Product Hunt | GraphQL API | Yesterday's top AI products |
+| ArXiv | ArXiv API | Latest papers from cs.AI, cs.CL, cs.LG |
+| Hugging Face | Hub API | 30 trending models sorted by weekly likes |
+| Dev.to | Forem API | Top AI/LLM articles from 5 tags |
+| Lobste.rs | JSON API | AI/ML tagged stories |
+| Anthropic/OpenAI | Sitemap | New articles via lastmod diff |
+
+### How can I access the digests?
+
+- **Web UI**: [https://duanyytop.github.io/agents-radar](https://duanyytop.github.io/agents-radar) — browse all historical digests
+- **Telegram Channel**: [https://t.me/agents_radar](https://t.me/agents_radar) — push notifications
+- **Feishu Group**: Join via link in README — bilingual notifications
+- **RSS Feed**: [https://duanyytop.github.io/agents-radar/feed.xml](https://duanyytop.github.io/agents-radar/feed.xml) — subscribe in any RSS reader
+
+### What is the MCP Server?
+
+The MCP server exposes agents-radar data as tools for MCP-compatible clients (Claude Desktop, OpenClaw, etc.):
+
+| Tool | Description |
+|------|-------------|
+| `list_reports` | List available dates and report types |
+| `get_latest` | Fetch the most recent report of a given type |
+| `get_report` | Fetch a specific report by date and type |
+| `search` | Keyword search across recent reports |
+
+### How do I set up Claude Desktop with MCP?
+
+Add to `~/Library/Application Support/Claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "agents-radar": {
+      "url": "https://agents-radar-mcp.duanyytop.workers.dev"
+    }
+  }
+}
+```
+
+Restart Claude Desktop after saving.
+
+### What report types are available?
+
+- **Daily digests**: Published every morning at 08:00 CST
+- **Weekly rollups**: Automated weekly summaries
+- **Monthly rollups**: Automated monthly summaries
+
+### Is this free and open source?
+
+Yes! agents-radar is open source. You can:
+- Browse the Web UI without login
+- Subscribe to Telegram/Feishu/RSS for free
+- Use the MCP server with any compatible client
+
+### How can I contribute?
+
+- Report issues or suggest improvements via GitHub Issues
+- Submit PRs for new data sources or features
+- Star the repo if you find it useful!
+
+### Where can I get help?
+
+- **GitHub Issues**: [https://github.com/duanyytop/agents-radar/issues](https://github.com/duanyytop/agents-radar/issues)
+- **Web UI**: [https://duanyytop.github.io/agents-radar](https://duanyytop.github.io/agents-radar)
