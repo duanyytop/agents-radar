@@ -12,6 +12,7 @@ export { OpenAIProvider } from "./openai.ts";
 export { GitHubCopilotProvider } from "./github-copilot.ts";
 export { OpenRouterProvider } from "./openrouter.ts";
 export { DeepSeekProvider } from "./deepseek.ts";
+export { EvolinkProvider } from "./evolink.ts";
 
 import type { LlmProvider, ProviderFactory } from "./types.ts";
 import { AnthropicProvider } from "./anthropic.ts";
@@ -19,6 +20,7 @@ import { OpenAIProvider } from "./openai.ts";
 import { GitHubCopilotProvider } from "./github-copilot.ts";
 import { OpenRouterProvider } from "./openrouter.ts";
 import { DeepSeekProvider } from "./deepseek.ts";
+import { EvolinkProvider } from "./evolink.ts";
 
 // ---------------------------------------------------------------------------
 // Single source of truth — add new providers here only.
@@ -30,6 +32,7 @@ const PROVIDERS = {
   "github-copilot": () => new GitHubCopilotProvider(),
   openrouter: () => new OpenRouterProvider(),
   deepseek: () => new DeepSeekProvider(),
+  evolink: () => new EvolinkProvider(),
 } satisfies Record<string, ProviderFactory>;
 
 /** Supported provider name — derived from the PROVIDERS registry. */
