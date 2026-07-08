@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/duanyytop-agents-radar-badge.png)](https://mseep.ai/app/duanyytop-agents-radar)
+
 # agents-radar
 
 English | [中文](./README.zh.md)
