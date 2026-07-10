@@ -4,6 +4,8 @@ import {
   OpenAIProvider,
   GitHubCopilotProvider,
   OpenRouterProvider,
+  DeepSeekProvider,
+  EvolinkProvider,
   createProvider,
   VALID_PROVIDER_NAMES,
   type LlmProvider,
@@ -100,12 +102,24 @@ describe("LlmProvider interface", () => {
     expect(p.name).toBe("openrouter");
   });
 
+  it("DeepSeekProvider has correct name", () => {
+    const p = new DeepSeekProvider({ apiKey: "test" });
+    expect(p.name).toBe("deepseek");
+  });
+
+  it("EvolinkProvider has correct name", () => {
+    const p = new EvolinkProvider({ apiKey: "test" });
+    expect(p.name).toBe("evolink");
+  });
+
   it("all providers implement LlmProvider with call()", () => {
     const providers: LlmProvider[] = [
       new AnthropicProvider(),
       new OpenAIProvider({ apiKey: "k" }),
       new GitHubCopilotProvider({ apiKey: "k" }),
       new OpenRouterProvider({ apiKey: "k" }),
+      new DeepSeekProvider({ apiKey: "k" }),
+      new EvolinkProvider({ apiKey: "k" }),
     ];
     for (const p of providers) {
       expect(typeof p.name).toBe("string");
@@ -119,8 +133,15 @@ describe("LlmProvider interface", () => {
 // ---------------------------------------------------------------------------
 
 describe("VALID_PROVIDER_NAMES", () => {
-  it("contains all five supported providers", () => {
-    expect(VALID_PROVIDER_NAMES).toEqual(["anthropic", "openai", "github-copilot", "openrouter", "deepseek"]);
+  it("contains all six supported providers", () => {
+    expect(VALID_PROVIDER_NAMES).toEqual([
+      "anthropic",
+      "openai",
+      "github-copilot",
+      "openrouter",
+      "deepseek",
+      "evolink",
+    ]);
   });
 });
 
@@ -314,6 +335,45 @@ describe("OpenRouterProvider", () => {
 });
 
 // ---------------------------------------------------------------------------
+// EvolinkProvider
+// ---------------------------------------------------------------------------
+
+describe("EvolinkProvider", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it("call returns text", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [{ message: { content: "Hello from Evolink" } }],
+    });
+
+    const p = new EvolinkProvider({ apiKey: "evl_test" });
+    const result = await p.call("prompt", 256);
+    expect(result).toBe("Hello from Evolink");
+  });
+
+  it(
+    "uses EVOLINK_MODEL env",
+    withEnv({ EVOLINK_MODEL: "deepseek-v4-pro" }, () => {
+      const p = new EvolinkProvider({ apiKey: "k" });
+      expect(p.name).toBe("evolink");
+    }),
+  );
+
+  it("throws on empty response", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [{ message: { content: "" } }],
+    });
+
+    const p = new EvolinkProvider({ apiKey: "k" });
+    await expect(p.call("prompt", 100)).rejects.toThrow("Unexpected empty response from evolink");
+  });
+});
+
+// ---------------------------------------------------------------------------
 // createProvider factory
 // ---------------------------------------------------------------------------
 
@@ -353,6 +413,16 @@ describe("createProvider", () => {
   it("creates openrouter provider", () => {
     const p = createProvider("openrouter");
     expect(p).toBeInstanceOf(OpenRouterProvider);
+  });
+
+  it("creates deepseek provider", () => {
+    const p = createProvider("deepseek");
+    expect(p).toBeInstanceOf(DeepSeekProvider);
+  });
+
+  it("creates evolink provider", () => {
+    const p = createProvider("evolink");
+    expect(p).toBeInstanceOf(EvolinkProvider);
   });
 
   it(
