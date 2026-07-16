@@ -38,6 +38,9 @@ cli_repos:
   - id: grok-cli
     repo: superagent-ai/grok-cli
     name: Grok CLI
+  - id: tura
+    repo: Tura-AI/tura
+    name: Tura
 
 # ── Claude Code Skills ────────────────────────────────────────────────────────
 # Tracked separately without a date filter, sorted by community engagement.
