@@ -13,7 +13,7 @@
 | [GitHub Trending](https://github.com/trending) | HTML + API | 每日热门仓库 + AI 主题搜索（7 天窗口） |
 | [Hacker News](https://news.ycombinator.com) | [Algolia API](https://hn.algolia.com/api) | 过去 24 小时 Top 30 AI 热帖，6 组并行查询 |
 | [Product Hunt](https://www.producthunt.com) | GraphQL API | 昨日 AI 产品按投票排序 |
-| [ArXiv](https://arxiv.org) | [ArXiv API](https://export.arxiv.org/api/query) | cs.AI、cs.CL、cs.LG 最新论文（48 小时内） |
+| [ArXiv](https://arxiv.org) | [ArXiv API](http://web.archive.org/web/20251016220536/https://export.arxiv.org/api/query?) | cs.AI、cs.CL、cs.LG 最新论文（48 小时内） |
 | [Hugging Face](https://huggingface.co) | [Hub API](https://huggingface.co/api/models) | 按周点赞排序的 30 个热门模型 |
 | [Dev.to](https://dev.to) | [Forem API](https://dev.to/api) | 5 个标签下的 AI/LLM 热门文章 |
 | [Lobste.rs](https://lobste.rs) | JSON API | 7 天内 AI/ML 标签内容 |
