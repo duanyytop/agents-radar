@@ -40,6 +40,20 @@ export const CLI_REPORT = {
   detail: t("各工具详细报告", "Per-Tool Reports"),
 } as const;
 
+export const PROVIDER_STATUS = {
+  heading: t("上游服务事件", "Upstream Provider Incidents"),
+  intro: t(
+    "以下官方上游事件可能解释工具故障突然增多。在修改本地配置前，请先核对提供商状态。",
+    "These provider-reported incidents may explain a sudden cluster of tool failures. Check provider status before changing local configuration.",
+  ),
+  official: t("官方状态", "official status"),
+  timeline: t("标准化时间线", "normalized timeline"),
+  advisory: t(
+    "OutageDeck 在此仅作为索引和辅助信号。提供商官方状态页仍是事件权威来源。",
+    "OutageDeck is an index and second signal here. The provider's official status page remains the incident authority.",
+  ),
+} as const;
+
 export const OPENCLAW_REPORT = {
   title: t("OpenClaw 生态日报", "OpenClaw Ecosystem Digest"),
   deepDive: t("OpenClaw 项目深度报告", "OpenClaw Deep Dive"),

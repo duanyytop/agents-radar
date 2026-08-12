@@ -197,6 +197,7 @@ New articles are detected by comparing sitemap `lastmod` timestamps against a pe
 ## Features
 
 - Fetches issues, pull requests, and releases updated in the last 24 hours across all tracked repos
+- Adds fail-open upstream incident context for tracked AI providers when an active provider-reported event may explain a sudden issue spike. Official status remains the authority; OutageDeck supplies the normalized second signal.
 - Tracks trending Claude Code Skills — sorted by community engagement, not recency
 - Generates a per-tool summary for each CLI repository and a cross-tool comparative analysis
 - Generates a deep OpenClaw project report plus a cross-ecosystem comparison against 11 peer projects

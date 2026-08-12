@@ -5,6 +5,7 @@
 import type { RepoConfig, RepoFetch } from "./github.ts";
 import type { RepoDigest } from "./prompts.ts";
 import { type Lang, CLI_REPORT, OPENCLAW_REPORT, INFRA_REPORT } from "./i18n.ts";
+import { buildProviderStatusSection, type ProviderIncident } from "./provider-status.ts";
 
 // ---------------------------------------------------------------------------
 // CLI Report
@@ -19,6 +20,7 @@ export function buildCliReportContent(
   footer: string,
   skillsRepo: string,
   lang: Lang = "zh",
+  providerIncidents: ProviderIncident[] = [],
 ): string {
   const repoLinks =
     cliDigests.map((d) => `- [${d.config.name}](https://github.com/${d.config.repo})`).join("\n") +
@@ -51,6 +53,7 @@ export function buildCliReportContent(
     meta +
     `${repoLinks}\n\n` +
     `---\n\n` +
+    buildProviderStatusSection(providerIncidents, lang) +
     `## ${CLI_REPORT.comparison[lang]}\n\n` +
     comparison +
     `\n\n---\n\n` +

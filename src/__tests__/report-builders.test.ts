@@ -92,6 +92,35 @@ describe("buildCliReportContent", () => {
     // Skills should not appear after codex section
     expect(result.split("SKILLS_CONTENT")).toHaveLength(2); // appears exactly once
   });
+
+  it("adds active upstream provider context before the comparison", () => {
+    const result = buildCliReportContent(
+      [makeDigest()],
+      "Skills",
+      "Comparison",
+      "2026-08-12 16:10",
+      "2026-08-12",
+      "",
+      "anthropics/skills",
+      "en",
+      [
+        {
+          slug: "anthropic-elevated-errors-2026-08-12",
+          title: "Elevated errors",
+          status: "investigating",
+          severity: "minor",
+          updatedAt: "2026-08-12T16:10:00Z",
+          providerName: "Anthropic",
+          officialUrl: "https://status.claude.com/",
+          timelineUrl: "https://outagedeck.com/incidents/example",
+        },
+      ],
+    );
+
+    expect(result.indexOf("Upstream Provider Incidents")).toBeLessThan(
+      result.indexOf("Cross-Tool Comparison"),
+    );
+  });
 });
 
 // ---------------------------------------------------------------------------

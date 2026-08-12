@@ -53,6 +53,7 @@ import { fetchArxivData, type ArxivData } from "./arxiv.ts";
 import { fetchHfData, type HfData } from "./hf.ts";
 import { fetchDevtoData, type DevtoData } from "./devto.ts";
 import { fetchLobstersData, type LobstersData } from "./lobsters.ts";
+import { fetchProviderIncidents, type ProviderIncident } from "./provider-status.ts";
 import { loadConfig } from "./config.ts";
 import { toCstDateStr, toUtcStr } from "./date.ts";
 import {
@@ -104,6 +105,7 @@ async function fetchAllData(
   hfData: HfData;
   devtoData: DevtoData;
   lobstersData: LobstersData;
+  providerIncidents: ProviderIncident[];
 }> {
   const allConfigs = [...CLI_REPOS, OPENCLAW, ...OPENCLAW_PEERS, ...INFRA_REPOS];
   console.log(
@@ -121,6 +123,7 @@ async function fetchAllData(
     hfData,
     devtoData,
     lobstersData,
+    providerIncidents,
   ] = await Promise.all([
     Promise.all(
       allConfigs.map(async (cfg) => {
@@ -179,6 +182,10 @@ async function fetchAllData(
     fetchHfData().catch((): HfData => ({ models: [], fetchSuccess: false })),
     fetchDevtoData().catch((): DevtoData => ({ articles: [], fetchSuccess: false })),
     fetchLobstersData().catch((): LobstersData => ({ stories: [], fetchSuccess: false })),
+    fetchProviderIncidents(CLI_REPOS).catch((err): ProviderIncident[] => {
+      console.error(`  [provider-status] fetch failed: ${err}`);
+      return [];
+    }),
   ]);
 
   return {
@@ -192,6 +199,7 @@ async function fetchAllData(
     hfData,
     devtoData,
     lobstersData,
+    providerIncidents,
   };
 }
 
@@ -343,6 +351,7 @@ async function main(): Promise<void> {
     hfData,
     devtoData,
     lobstersData,
+    providerIncidents,
   } = await fetchAllData(since, webState);
 
   const peerIds = new Set(OPENCLAW_PEERS.map((p) => p.id));
@@ -430,6 +439,7 @@ async function main(): Promise<void> {
       ft,
       CLAUDE_SKILLS_REPO,
       lang,
+      providerIncidents,
     );
     openclawContent[lang] = buildOpenclawReportContent(
       fetchedOpenclaw,
