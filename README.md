@@ -127,6 +127,7 @@ wrangler deploy
 | Pi | [badlogic/pi-mono](https://github.com/badlogic/pi-mono) |
 | Qwen Code | [QwenLM/qwen-code](https://github.com/QwenLM/qwen-code) |
 | DeepSeek TUI | [Hmbown/DeepSeek-TUI](https://github.com/Hmbown/DeepSeek-TUI) |
+| Grok Build | [xai-org/grok-build](https://github.com/xai-org/grok-build) |
 
 ### Claude Code Skills (GitHub)
 
