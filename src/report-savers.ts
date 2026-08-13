@@ -8,6 +8,7 @@ import {
   WEB_REPORT,
   TRENDING_REPORT,
   HN_REPORT,
+  RADAR_REPORT,
   PH_REPORT,
   ARXIV_REPORT,
   HF_REPORT,
@@ -22,10 +23,12 @@ import {
   buildHfPrompt,
   buildCommunityPrompt,
 } from "./prompts-data.ts";
+import { buildRadarReportContent } from "./report-builders.ts";
 import { callLlm, saveFile, LLM_TOKENS_WEB, LLM_TOKENS_LISTING } from "./report.ts";
 import { createGitHubIssue } from "./github.ts";
 import { saveWebState, type WebFetchResult, type WebState } from "./web.ts";
 import type { HnData } from "./hn.ts";
+import type { RadarData } from "./radar.ts";
 import type { PhData } from "./ph.ts";
 import type { TrendingData } from "./trending.ts";
 import type { ArxivData } from "./arxiv.ts";
@@ -177,6 +180,35 @@ export async function saveHnReport(
     }
   } catch (err) {
     console.error(`  [hn/${lang}] Report generation failed: ${err}`);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Radar report
+// ---------------------------------------------------------------------------
+
+export async function saveRadarReport(
+  data: RadarData,
+  utcStr: string,
+  dateStr: string,
+  digestRepo: string,
+  footer: string,
+  lang: Lang = "zh",
+): Promise<void> {
+  if (data.items.length === 0) {
+    console.log(`  [radar/${lang}] No data available, skipping report.`);
+    return;
+  }
+  const fileName = lang === "en" ? "ai-radar-en.md" : "ai-radar.md";
+  const content = buildRadarReportContent(data, utcStr, dateStr, footer, lang);
+  console.log(`  Saved ${saveFile(content, dateStr, fileName)}`);
+  if (digestRepo) {
+    const url = await createGitHubIssue(
+      RADAR_REPORT.issueTitle(dateStr, lang),
+      content,
+      ISSUE_LABELS.radar[lang],
+    );
+    console.log(`  Created Radar issue (${lang}): ${url}`);
   }
 }
 

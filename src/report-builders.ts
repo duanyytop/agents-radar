@@ -4,7 +4,8 @@
 
 import type { RepoConfig, RepoFetch } from "./github.ts";
 import type { RepoDigest } from "./prompts.ts";
-import { type Lang, CLI_REPORT, OPENCLAW_REPORT, INFRA_REPORT } from "./i18n.ts";
+import type { RadarData } from "./radar.ts";
+import { type Lang, CLI_REPORT, OPENCLAW_REPORT, INFRA_REPORT, RADAR_REPORT } from "./i18n.ts";
 
 // ---------------------------------------------------------------------------
 // CLI Report
@@ -157,6 +158,55 @@ export function buildOpenclawReportContent(
     `\n\n---\n\n` +
     `## ${OPENCLAW_REPORT.peers[lang]}\n\n` +
     peerDetailSections +
+    footer
+  );
+}
+
+function escapeRadarTable(value: string): string {
+  return value.replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
+}
+
+export function buildRadarReportContent(
+  data: RadarData,
+  utcStr: string,
+  dateStr: string,
+  footer: string,
+  lang: Lang = "zh",
+): string {
+  const mode = RADAR_REPORT.mode[data.mode][lang];
+  const recommendations = data.top5
+    .map(
+      (item, index) =>
+        `### ${index + 1}. [${item.story.title}](${item.story.url}) — ${item.totalScore.toFixed(1)}\n\n` +
+        `**${RADAR_REPORT.reason[lang]}:** ${item.reason[lang]}\n\n` +
+        `[${RADAR_REPORT.discussion[lang]}](${item.story.hnUrl})`,
+    )
+    .join("\n\n");
+
+  const rows = data.items
+    .map(
+      (item, index) =>
+        `| ${index + 1} | [${escapeRadarTable(item.story.title)}](${item.story.url}) | ` +
+        `${item.totalScore.toFixed(1)} | ${item.story.points} | ${item.story.comments} | ` +
+        `${escapeRadarTable(item.story.createdAt)} | ${escapeRadarTable(item.summary[lang])} |`,
+    )
+    .join("\n");
+
+  const insufficient =
+    data.items.length < 5 ? `${RADAR_REPORT.insufficient(data.items.length, lang)}\n\n` : "";
+
+  return (
+    `# ${RADAR_REPORT.title[lang]} ${dateStr}\n\n` +
+    RADAR_REPORT.meta(data.scannedCount, data.items.length, data.duplicateCount, mode, utcStr, lang) +
+    `\n\n---\n\n## ${RADAR_REPORT.top5[lang]}\n\n` +
+    insufficient +
+    recommendations +
+    `\n\n---\n\n## ${RADAR_REPORT.allCandidates[lang]}\n\n` +
+    RADAR_REPORT.tableHeader[lang] +
+    "\n" +
+    RADAR_REPORT.tableAlign +
+    "\n" +
+    rows +
     footer
   );
 }

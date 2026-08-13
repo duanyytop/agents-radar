@@ -6,6 +6,7 @@ import {
   WEB_REPORT,
   TRENDING_REPORT,
   HN_REPORT,
+  RADAR_REPORT,
   INFRA_REPORT,
   ISSUE_LABELS,
   CLI_ISSUE_TITLE,
@@ -143,6 +144,16 @@ describe("REPORT_LABELS", () => {
   it("covers the infra report in both languages", () => {
     expect(REPORT_LABELS["ai-infra"]).toBe("AI 基础设施日报");
     expect(REPORT_LABELS["ai-infra-en"]).toBe("AI Infrastructure Digest");
+  });
+
+  it("covers Radar titles, Issue labels, manifest labels, and notifications", () => {
+    expect(RADAR_REPORT.title.zh).toBe("AI 信息雷达");
+    expect(RADAR_REPORT.title.en).toBe("AI Information Radar");
+    expect(ISSUE_LABELS.radar.zh).toBe("radar");
+    expect(ISSUE_LABELS.radar.en).toBe("radar-en");
+    expect(REPORT_LABELS["ai-radar"]).toBe("AI 信息雷达");
+    expect(REPORT_LABELS["ai-radar-en"]).toBe("AI Information Radar");
+    expect(NOTIFY_LABELS["ai-radar"]?.zh).toBe("Top 5 信息雷达");
   });
 });
 

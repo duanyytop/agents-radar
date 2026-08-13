@@ -85,6 +85,41 @@ export const HN_REPORT = {
     lang === "en" ? `📰 Hacker News AI Digest ${dateStr}` : `📰 Hacker News AI 社区动态日报 ${dateStr}`,
 } as const;
 
+export const RADAR_REPORT = {
+  title: t("AI 信息雷达", "AI Information Radar"),
+  source: t("数据来源: Hacker News Top Stories", "Source: Hacker News Top Stories"),
+  mode: {
+    deepseek: t("DeepSeek 编辑评分", "DeepSeek editorial scoring"),
+    deterministic: t("确定性降级模式", "Deterministic fallback"),
+  },
+  meta: (
+    scanned: number,
+    candidates: number,
+    duplicates: number,
+    mode: string,
+    utcStr: string,
+    lang: Lang,
+  ) =>
+    lang === "en"
+      ? `> Source: Hacker News Top Stories | Scanned ${scanned} | Candidates ${candidates} | Duplicates ${duplicates} | Scoring: ${mode} | Generated: ${utcStr} UTC`
+      : `> 数据来源: Hacker News Top Stories | 扫描 ${scanned} 条 | 候选 ${candidates} 条 | 去重 ${duplicates} 条 | 评分模式: ${mode} | 生成时间: ${utcStr} UTC`,
+  top5: t("今日 Top 5", "Today's Top 5"),
+  allCandidates: t("全部候选", "All Candidates"),
+  reason: t("推荐理由", "Why it is recommended"),
+  discussion: t("HN 讨论", "HN discussion"),
+  tableHeader: t(
+    "| 排名 | 标题 | 总分 | Points | Comments | 发布时间 | 摘要 |",
+    "| Rank | Title | Score | Points | Comments | Published | Summary |",
+  ),
+  tableAlign: "| ---: | :--- | ---: | ---: | ---: | :--- | :--- |",
+  insufficient: (count: number, lang: Lang) =>
+    lang === "en"
+      ? `Only ${count} candidates were available; no duplicate items were added.`
+      : `当前仅有 ${count} 条候选，未使用重复条目补齐。`,
+  issueTitle: (dateStr: string, lang: Lang) =>
+    lang === "en" ? `📡 AI Information Radar ${dateStr}` : `📡 AI 信息雷达 ${dateStr}`,
+} as const;
+
 export const RADAR_FALLBACK = {
   summary: (title: string, points: number, comments: number): Record<Lang, string> =>
     t(
@@ -128,6 +163,7 @@ export const ISSUE_LABELS = {
   web: t("web", "web-en"),
   trending: t("trending", "trending-en"),
   hn: t("hn", "hn-en"),
+  radar: t("radar", "radar-en"),
   ph: t("ph", "ph-en"),
   arxiv: t("arxiv", "arxiv-en"),
   hf: t("hf", "hf-en"),
@@ -172,6 +208,8 @@ export const REPORT_LABELS: Record<string, string> = {
   "ai-trending-en": "AI Open Source Trends",
   "ai-hn": "Hacker News AI 社区动态日报",
   "ai-hn-en": "Hacker News AI Community Digest",
+  "ai-radar": "AI 信息雷达",
+  "ai-radar-en": "AI Information Radar",
   "ai-ph": "Product Hunt AI 产品日报",
   "ai-ph-en": "Product Hunt AI Products Digest",
   "ai-arxiv": "ArXiv AI 研究日报",
@@ -195,6 +233,7 @@ export const NOTIFY_LABELS: Record<string, Record<Lang, string>> = {
   "ai-web": t("官网动态", "Official Updates"),
   "ai-trending": t("GitHub 趋势", "GitHub Trends"),
   "ai-hn": t("HN 社区动态", "HN Community"),
+  "ai-radar": t("Top 5 信息雷达", "Top 5 Radar"),
   "ai-ph": t("Product Hunt", "Product Hunt"),
   "ai-arxiv": t("ArXiv 研究", "ArXiv Research"),
   "ai-hf": t("HF 模型", "HF Models"),

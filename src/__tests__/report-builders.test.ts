@@ -3,9 +3,11 @@ import {
   buildCliReportContent,
   buildOpenclawReportContent,
   buildInfraReportContent,
+  buildRadarReportContent,
 } from "../report-builders.ts";
 import type { RepoDigest } from "../prompts.ts";
 import type { GitHubItem, GitHubRelease } from "../github.ts";
+import type { RadarData } from "../radar.ts";
 
 // ---------------------------------------------------------------------------
 // Fixtures
@@ -19,6 +21,35 @@ function makeDigest(overrides: Partial<RepoDigest> = {}): RepoDigest {
     releases: [],
     summary: "Test summary content",
     ...overrides,
+  };
+}
+
+function makeRadarData(count: number, mode: RadarData["mode"]): RadarData {
+  const items: RadarData["items"] = Array.from({ length: count }, (_, index) => ({
+    story: {
+      id: String(index + 1),
+      hnRank: index + 1,
+      title: `AI story ${index + 1}`,
+      url: `https://example.com/${index + 1}`,
+      hnUrl: `https://news.ycombinator.com/item?id=${index + 1}`,
+      points: 100 - index,
+      comments: 20 - index,
+      author: "author",
+      createdAt: "2026-08-11T00:00:00.000Z",
+    },
+    breakdown: { points: 20, comments: 8, rank: 19, freshness: 10 },
+    baseScore: 57,
+    editorialScore: mode === "deepseek" ? 25 : 0,
+    totalScore: 95 - index,
+    summary: { zh: `摘要 ${index + 1}`, en: `Summary ${index + 1}` },
+    reason: { zh: `理由 ${index + 1}`, en: `Reason ${index + 1}` },
+  }));
+  return {
+    items,
+    top5: items.slice(0, 5),
+    mode,
+    scannedCount: count + 2,
+    duplicateCount: 2,
   };
 }
 
@@ -190,5 +221,32 @@ describe("buildInfraReportContent", () => {
     expect(result).toContain("Projects covered: 1");
     expect(result).toContain("Cross-Project Comparison");
     expect(result).toContain("Per-Project Reports");
+  });
+});
+
+describe("buildRadarReportContent", () => {
+  it("renders metadata, exactly five recommendations, and every candidate in Chinese", () => {
+    const data = makeRadarData(6, "deepseek");
+    const result = buildRadarReportContent(data, "2026-08-12 00:00", "2026-08-12", "\nfooter", "zh");
+    expect(result).toContain("# AI 信息雷达 2026-08-12");
+    expect(result).toContain("扫描 8 条");
+    expect(result).toContain("候选 6 条");
+    expect(result).toContain("去重 2 条");
+    expect(result).toContain("DeepSeek 编辑评分");
+    expect(result.match(/^### \d+\./gm) ?? []).toHaveLength(5);
+    expect(result.match(/^\| \d+ \|/gm) ?? []).toHaveLength(6);
+    expect(new Set(data.top5.map((item) => item.story.url)).size).toBe(5);
+    for (const item of data.top5) {
+      expect(result.split(item.story.url)).toHaveLength(3);
+    }
+  });
+
+  it("marks deterministic mode and renders all available items when fewer than five exist", () => {
+    const data = makeRadarData(3, "deterministic");
+    const result = buildRadarReportContent(data, "2026-08-12 00:00", "2026-08-12", "", "en");
+    expect(result).toContain("# AI Information Radar 2026-08-12");
+    expect(result).toContain("Deterministic fallback");
+    expect(result).toContain("Only 3 candidates were available");
+    expect(result.match(/^### \d+\./gm) ?? []).toHaveLength(3);
   });
 });
