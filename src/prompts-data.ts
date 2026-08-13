@@ -6,7 +6,7 @@
 
 import type { WebFetchResult } from "./web.ts";
 import type { TrendingData } from "./trending.ts";
-import type { HnData } from "./hn.ts";
+import type { HnData, HnStory } from "./hn.ts";
 import type { PhData } from "./ph.ts";
 import type { ArxivData } from "./arxiv.ts";
 import type { HfData } from "./hf.ts";
@@ -873,4 +873,38 @@ ${lobstersText}
 
 语言要求：中文，简洁专业，保留所有原文链接。
 `;
+}
+
+export function buildRadarPrompt(stories: HnStory[], dateStr: string): string {
+  const candidates = stories.map((story) => ({
+    id: story.id,
+    hnRank: story.hnRank,
+    title: story.title,
+    url: story.url,
+    hnUrl: story.hnUrl,
+    points: story.points,
+    comments: story.comments,
+    createdAt: story.createdAt,
+  }));
+  return `You are the bilingual editor for an AI information radar dated ${dateStr}.
+Score every candidate exactly once. Relevance, novelty, and actionability must each be integers from 0 to 10.
+Write one concise Chinese and English summary and recommendation reason per item.
+Do not change IDs, URLs, points, or comments. Do not add or omit candidates.
+
+Candidates:
+${JSON.stringify(candidates, null, 2)}
+
+Return JSON only with this exact shape:
+{
+  "items": [
+    {
+      "id": "123",
+      "relevance": 0,
+      "novelty": 0,
+      "actionability": 0,
+      "summary": { "zh": "中文摘要", "en": "English summary" },
+      "reason": { "zh": "中文推荐理由", "en": "English recommendation reason" }
+    }
+  ]
+}`;
 }

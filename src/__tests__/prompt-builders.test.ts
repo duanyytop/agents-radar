@@ -8,7 +8,12 @@ import {
   buildPeersComparisonPrompt,
   buildSkillsPrompt,
 } from "../prompts.ts";
-import { buildTrendingPrompt, buildWebReportPrompt, buildHnPrompt } from "../prompts-data.ts";
+import {
+  buildTrendingPrompt,
+  buildWebReportPrompt,
+  buildHnPrompt,
+  buildRadarPrompt,
+} from "../prompts-data.ts";
 import type { RepoConfig, GitHubItem, GitHubRelease } from "../github.ts";
 import type { RepoDigest } from "../prompts.ts";
 import type { TrendingData } from "../trending.ts";
@@ -372,5 +377,31 @@ describe("buildHnPrompt", () => {
     expect(result).toContain("Score: 10");
     expect(result).toContain("Comments: 2");
     expect(result).toContain("Hacker News");
+  });
+});
+
+describe("buildRadarPrompt", () => {
+  it("includes every stable candidate ID and the exact bilingual JSON fields", () => {
+    const stories = [
+      {
+        id: "123",
+        hnRank: 4,
+        title: "AI News",
+        url: "https://example.com/ai",
+        hnUrl: "https://news.ycombinator.com/item?id=123",
+        points: 200,
+        comments: 50,
+        author: "bob",
+        createdAt: "2026-08-11T10:00:00.000Z",
+      },
+    ];
+    const prompt = buildRadarPrompt(stories, "2026-08-12");
+    expect(prompt).toContain('"id": "123"');
+    expect(prompt).toContain('"relevance"');
+    expect(prompt).toContain('"novelty"');
+    expect(prompt).toContain('"actionability"');
+    expect(prompt).toContain('"summary": { "zh"');
+    expect(prompt).toContain('"reason": { "zh"');
+    expect(prompt).toContain("Do not change IDs, URLs, points, or comments");
   });
 });

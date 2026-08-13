@@ -85,6 +85,18 @@ export const HN_REPORT = {
     lang === "en" ? `📰 Hacker News AI Digest ${dateStr}` : `📰 Hacker News AI 社区动态日报 ${dateStr}`,
 } as const;
 
+export const RADAR_FALLBACK = {
+  summary: (title: string, points: number, comments: number): Record<Lang, string> =>
+    t(
+      `HN 热门条目：${title}（${points} 分，${comments} 条评论）。`,
+      `HN item: ${title} (${points} points, ${comments} comments).`,
+    ),
+  reason: t(
+    "基于 HN 排名、热度、讨论度与时效性的确定性推荐。",
+    "Deterministic recommendation based on HN rank, popularity, discussion, and freshness.",
+  ),
+} as const;
+
 export const PH_REPORT = {
   title: t("Product Hunt AI 产品日报", "Product Hunt AI Products Digest"),
   issueTitle: (dateStr: string, lang: Lang) =>
