@@ -33,6 +33,12 @@ describe("buildMessage", () => {
     expect(msg).not.toContain("HN Community");
   });
 
+  it("renders Radar bilingual links", () => {
+    const msg = buildMessage("2026-08-12", ["ai-radar", "ai-radar-en"], BASE_URL);
+    expect(msg).toContain("Top 5 信息雷达");
+    expect(msg).toContain("#2026-08-12/ai-radar-en");
+  });
+
   it("includes Web UI and RSS links", () => {
     const msg = buildMessage("2026-03-09", ["ai-cli"], BASE_URL);
     expect(msg).toContain("🌐 Web UI");

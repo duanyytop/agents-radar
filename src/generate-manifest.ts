@@ -8,7 +8,7 @@ const MANIFEST_PATH = "manifest.json";
 const FEED_PATH = "feed.xml";
 const SITE_URL = "https://duanyytop.github.io/agents-radar";
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
-const REPORT_FILES = [
+export const REPORT_FILES: readonly string[] = [
   "ai-cli",
   "ai-cli-en",
   "ai-agents",
@@ -21,6 +21,8 @@ const REPORT_FILES = [
   "ai-trending-en",
   "ai-hn",
   "ai-hn-en",
+  "ai-radar",
+  "ai-radar-en",
   "ai-ph",
   "ai-ph-en",
   "ai-arxiv",
@@ -35,7 +37,7 @@ const REPORT_FILES = [
   "ai-weekly-en",
   "ai-monthly",
   "ai-monthly-en",
-] as const;
+];
 const MAX_FEED_ITEMS = 30;
 
 interface DateEntry {

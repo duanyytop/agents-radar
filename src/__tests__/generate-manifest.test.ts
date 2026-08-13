@@ -1,5 +1,13 @@
 import { describe, it, expect } from "vitest";
-import { toRfc822, escapeXml } from "../generate-manifest.ts";
+import { toRfc822, escapeXml, REPORT_FILES } from "../generate-manifest.ts";
+
+describe("REPORT_FILES", () => {
+  it("registers both Radar language files in manifest order", () => {
+    const zhIndex = REPORT_FILES.indexOf("ai-radar");
+    expect(zhIndex).toBeGreaterThan(-1);
+    expect(REPORT_FILES[zhIndex + 1]).toBe("ai-radar-en");
+  });
+});
 
 // ---------------------------------------------------------------------------
 // toRfc822

@@ -202,6 +202,8 @@ const LABEL_COLORS: Record<string, string> = {
   "web-en": "6366f1",
   "trending-en": "fbbf24",
   "hn-en": "fb923c",
+  radar: "0ea5e9",
+  "radar-en": "38bdf8",
   "ph-en": "e8854a",
   arxiv: "b31b1b",
   "arxiv-en": "d44a4a",
