@@ -161,6 +161,21 @@ describe("generateRadarData", () => {
     expect(result.top5.map((item) => item.story.id)).toEqual(["1", "2", "3", "4", "5"]);
   });
 
+  it("falls back when a rejection reason cannot be coerced to a string", async () => {
+    const result = await generateRadarData(
+      {
+        stories: [story("1")],
+        fetchSuccess: true,
+        scannedCount: 1,
+        duplicateCount: 0,
+      },
+      NOW,
+      async () => Promise.reject(Object.create(null)),
+    );
+    expect(result.mode).toBe("deterministic");
+    expect(result.items[0]?.editorialScore).toBe(0);
+  });
+
   it("uses exact bilingual deterministic fallback summary and reason copy", async () => {
     const stories = [story("1", { title: "Agent launch", points: 42, comments: 7 })];
     const result = await generateRadarData(

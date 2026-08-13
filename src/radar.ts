@@ -172,7 +172,7 @@ export async function generateRadarData(
     editorialById = new Map(validated.map((item) => [item.id, item]));
   } catch (error) {
     mode = "deterministic";
-    console.error(`  [radar] Editorial scoring failed; using deterministic fallback: ${error}`);
+    console.error("  [radar] Editorial scoring failed; using deterministic fallback:", error);
   }
 
   const items = baseItems
