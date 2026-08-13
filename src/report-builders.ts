@@ -166,6 +166,10 @@ function escapeRadarTable(value: string): string {
   return value.replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
 }
 
+function escapeMarkdownLinkLabel(value: string): string {
+  return value.replace(/([\\[\]])/g, "\\$1");
+}
+
 export function buildRadarReportContent(
   data: RadarData,
   utcStr: string,
@@ -175,9 +179,10 @@ export function buildRadarReportContent(
 ): string {
   const mode = RADAR_REPORT.mode[data.mode][lang];
   const recommendations = data.top5
+    .slice(0, 5)
     .map(
       (item, index) =>
-        `### ${index + 1}. [${item.story.title}](${item.story.url}) — ${item.totalScore.toFixed(1)}\n\n` +
+        `### ${index + 1}. [${escapeMarkdownLinkLabel(item.story.title)}](${item.story.url}) — ${item.totalScore.toFixed(1)}\n\n` +
         `**${RADAR_REPORT.reason[lang]}:** ${item.reason[lang]}\n\n` +
         `[${RADAR_REPORT.discussion[lang]}](${item.story.hnUrl})`,
     )
@@ -186,7 +191,7 @@ export function buildRadarReportContent(
   const rows = data.items
     .map(
       (item, index) =>
-        `| ${index + 1} | [${escapeRadarTable(item.story.title)}](${item.story.url}) | ` +
+        `| ${index + 1} | [${escapeRadarTable(escapeMarkdownLinkLabel(item.story.title))}](${item.story.url}) | ` +
         `${item.totalScore.toFixed(1)} | ${item.story.points} | ${item.story.comments} | ` +
         `${escapeRadarTable(item.story.createdAt)} | ${escapeRadarTable(item.summary[lang])} |`,
     )

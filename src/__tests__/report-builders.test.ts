@@ -1,3 +1,4 @@
+import { marked } from "marked";
 import { describe, it, expect } from "vitest";
 import {
   buildCliReportContent,
@@ -248,5 +249,29 @@ describe("buildRadarReportContent", () => {
     expect(result).toContain("Deterministic fallback");
     expect(result).toContain("Only 3 candidates were available");
     expect(result.match(/^### \d+\./gm) ?? []).toHaveLength(3);
+  });
+
+  it("preserves external story titles and distinct article and HN discussion anchors", () => {
+    const data = makeRadarData(1, "deepseek");
+    data.items[0]!.story.title = "A ] B";
+    const markdown = buildRadarReportContent(data, "2026-08-12 00:00", "2026-08-12", "", "en");
+    const html = marked.parse(markdown, { async: false });
+
+    expect(html.match(/<a href="https:\/\/example\.com\/1">A \] B<\/a>/g) ?? []).toHaveLength(2);
+    expect(html).toContain('<a href="https://news.ycombinator.com/item?id=1">HN discussion</a>');
+  });
+
+  it("caps recommendations at the first five items even when top5 is oversized", () => {
+    const data = makeRadarData(6, "deepseek");
+    data.top5 = data.items;
+    const result = buildRadarReportContent(data, "2026-08-12 00:00", "2026-08-12", "", "en");
+
+    expect(result.match(/^### \d+\. \[AI story \d+\]/gm) ?? []).toEqual([
+      "### 1. [AI story 1]",
+      "### 2. [AI story 2]",
+      "### 3. [AI story 3]",
+      "### 4. [AI story 4]",
+      "### 5. [AI story 5]",
+    ]);
   });
 });
