@@ -2,6 +2,8 @@
  * Hacker News AI stories fetched from the official Firebase API.
  */
 
+import { acceptUniqueLink, createLinkDedupeState } from "./link-utils.ts";
+
 // ---------------------------------------------------------------------------
 // Types
 // ---------------------------------------------------------------------------
@@ -21,6 +23,8 @@ export interface HnStory {
 export interface HnData {
   stories: HnStory[];
   fetchSuccess: boolean;
+  scannedCount: number;
+  duplicateCount: number;
 }
 
 // ---------------------------------------------------------------------------
@@ -105,14 +109,17 @@ export async function fetchHnData(): Promise<HnData> {
     });
     if (!topResp.ok) {
       console.error(`  [hn] topstories: HTTP ${topResp.status}`);
-      return { stories: [], fetchSuccess: false };
+      return { stories: [], fetchSuccess: false, scannedCount: 0, duplicateCount: 0 };
     }
 
     const topIds = ((await topResp.json()) as number[]).slice(0, HN_STORIES_TO_SCAN);
     const stories: HnStory[] = [];
+    const dedupeState = createLinkDedupeState();
+    let scannedCount = 0;
 
     for (let i = 0; i < topIds.length && stories.length < HN_TOP_STORIES; i += HN_BATCH_SIZE) {
       const batchIds = topIds.slice(i, i + HN_BATCH_SIZE);
+      scannedCount += batchIds.length;
       const items = await Promise.all(
         batchIds.map(async (id): Promise<HnFirebaseItem | null> => {
           const resp = await fetch(HN_ITEM_URL(id), {
@@ -128,19 +135,22 @@ export async function fetchHnData(): Promise<HnData> {
 
       for (let j = 0; j < items.length && stories.length < HN_TOP_STORIES; j += 1) {
         const item = items[j];
-        if (!item || item.deleted || item.dead || item.type !== "story" || !item.title) {
-          continue;
-        }
-        if (isAiRelated(item)) {
-          stories.push(toHnStory(item, i + j + 1));
-        }
+        if (!item || item.deleted || item.dead || item.type !== "story" || !item.title) continue;
+        if (!isAiRelated(item)) continue;
+        const story = toHnStory(item, i + j + 1);
+        if (acceptUniqueLink(story, dedupeState)) stories.push(story);
       }
     }
 
     console.log(`  [hn] ${stories.length} AI stories (scanned ${topIds.length} topstories)`);
-    return { stories, fetchSuccess: stories.length > 0 };
+    return {
+      stories,
+      fetchSuccess: stories.length > 0,
+      scannedCount,
+      duplicateCount: dedupeState.duplicateCount,
+    };
   } catch (err) {
     console.error(`  [hn] fetch failed: ${err}`);
-    return { stories: [], fetchSuccess: false };
+    return { stories: [], fetchSuccess: false, scannedCount: 0, duplicateCount: 0 };
   }
 }

@@ -339,6 +339,8 @@ describe("buildHnPrompt", () => {
         },
       ],
       fetchSuccess: true,
+      scannedCount: 1,
+      duplicateCount: 0,
     };
     const result = buildHnPrompt(data, "2026-03-09");
     expect(result).toContain("AI News");
@@ -363,6 +365,8 @@ describe("buildHnPrompt", () => {
         },
       ],
       fetchSuccess: true,
+      scannedCount: 1,
+      duplicateCount: 0,
     };
     const result = buildHnPrompt(data, "2026-03-09", "en");
     expect(result).toContain("Score: 10");

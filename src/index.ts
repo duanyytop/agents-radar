@@ -173,7 +173,9 @@ async function fetchAllData(
         trendingFetchSuccess: false,
       }),
     ),
-    fetchHnData().catch((): HnData => ({ stories: [], fetchSuccess: false })),
+    fetchHnData().catch(
+      (): HnData => ({ stories: [], fetchSuccess: false, scannedCount: 0, duplicateCount: 0 }),
+    ),
     fetchPhData().catch((): PhData => ({ products: [], fetchSuccess: false })),
     fetchArxivData().catch((): ArxivData => ({ papers: [], fetchSuccess: false })),
     fetchHfData().catch((): HfData => ({ models: [], fetchSuccess: false })),
