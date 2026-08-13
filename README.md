@@ -439,7 +439,7 @@ Community sentiment signals
 Worth reading
 ```
 
-Historical digests are stored in [`digests/`](./digests/). Published issues are tagged by type: [`digest`](../../issues?label=digest) · [`openclaw`](../../issues?label=openclaw) · [`web`](../../issues?label=web) · [`trending`](../../issues?label=trending) · [`hn`](../../issues?label=hn) · [`ph`](../../issues?label=ph) · [`arxiv`](../../issues?label=arxiv) · [`hf`](../../issues?label=hf) · [`community`](../../issues?label=community).
+Historical digests are stored in [`digests/`](./digests/). Published issues are tagged by type: [`digest`](../../issues?label=digest) · [`openclaw`](../../issues?label=openclaw) · [`web`](../../issues?label=web) · [`trending`](../../issues?label=trending) · [`hn`](../../issues?label=hn) · [`radar`](../../issues?label=radar) · [`ph`](../../issues?label=ph) · [`arxiv`](../../issues?label=arxiv) · [`hf`](../../issues?label=hf) · [`community`](../../issues?label=community).
 
 Weekly and monthly rollup reports were discontinued in July 2026; past ones remain browsable under `digests/` and in the Web UI.
 

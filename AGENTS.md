@@ -34,16 +34,18 @@ node --env-file=.env --import=tsx src/index.ts
 
 `GITHUB_TOKEN` belongs only to the current process and must not be written to `.env`. With `DIGEST_REPO` unset, reports are written locally and no GitHub Issues are created. Set `DIGEST_REPO=owner/repo` only for an intentional publishing run.
 
-The provider factory still defaults to `anthropic` when `LLM_PROVIDER` is absent. Supported providers are `anthropic`, `openai`, `github-copilot`, `openrouter`, and `deepseek`; their required keys are documented in `.env.example` and `README.md`.
+The provider factory still defaults to `anthropic` when `LLM_PROVIDER` is absent. Supported providers are `anthropic`, `openai`, `github-copilot`, `openrouter`, and `deepseek`. `README.md` is the complete provider/key matrix; `.env.example` is the preferred local DeepSeek example with commented Anthropic/OpenAI alternatives.
 
 ## Architecture
 
-The pipeline runs in four sequential phases, each implemented as a named async function in `src/index.ts`:
+The main flow has four major stages, but Radar intentionally overlaps the middle two rather than running as a sequential stage:
 
 1. **`fetchAllData`** — all network I/O in parallel: GitHub API (issues/PRs/releases) for 17 repos, Claude Code Skills, Anthropic/OpenAI sitemaps, GitHub Trending HTML + Search API, and Hacker News Firebase Top Stories.
 2. **`generateSummaries`** — per-repo LLM calls, all in parallel, rate-limited to 5 concurrent requests by a queue in `src/report.ts`.
-3. **Comparisons and Radar** — the existing comparison calls plus one bilingual Radar editorial request; Radar falls back to deterministic scoring if that request fails validation or exhausts retries.
+3. **Comparisons** — cross-tool CLI, OpenClaw cross-ecosystem, and infrastructure comparison calls.
 4. **Save phase** — report builders assemble Markdown; savers write bilingual files and create GitHub Issues only when `DIGEST_REPO` is explicitly set. `saveRadarReport` reuses the single shared Radar result for both languages.
+
+Immediately after fetch, `main()` creates one `radarDataPromise` for the bilingual editorial request. It runs while summaries and comparisons proceed, falls back to deterministic scoring if editorial validation or retries fail, and is awaited exactly once immediately before the save batch; both languages reuse that result.
 
 ## Source files
 
