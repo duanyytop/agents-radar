@@ -293,6 +293,18 @@ describe("buildRadarReportContent", () => {
     expect(cells).toContain(String.raw`<a href="https://example.com/1">alpha \| beta</a>`);
   });
 
+  it("preserves a backslash followed by a pipe in the parsed summary cell", () => {
+    const data = makeRadarData(1, "deepseek");
+    data.items[0]!.summary.en = String.raw`alpha \| beta`;
+
+    const markdown = buildRadarReportContent(data, "2026-08-12 00:00", "2026-08-12", "", "en");
+    const html = marked.parse(markdown, { async: false });
+    const cells = Array.from(html.matchAll(/<td[^>]*>(.*?)<\/td>/g), (match) => match[1]);
+
+    expect(cells).toHaveLength(7);
+    expect(cells[5]).toBe("2026-08-11T00:00:00.000Z");
+    expect(cells[6]).toBe(String.raw`alpha \| beta`);
+  });
   it("caps recommendations at the first five items even when top5 is oversized", () => {
     const data = makeRadarData(6, "deepseek");
     data.top5 = data.items;
