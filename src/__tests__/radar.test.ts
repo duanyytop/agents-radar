@@ -64,6 +64,20 @@ const editorial = (ids: string[]) => ({
 });
 
 describe("generateRadarData", () => {
+  it("calls the bilingual editorial loader exactly once", async () => {
+    const stories = [story("1"), story("2")];
+    let calls = 0;
+    await generateRadarData(
+      { stories, fetchSuccess: true, scannedCount: 2, duplicateCount: 0 },
+      NOW,
+      async () => {
+        calls += 1;
+        return editorial(["1", "2"]);
+      },
+    );
+    expect(calls).toBe(1);
+  });
+
   it("merges one valid editorial record per candidate and selects five unique items", async () => {
     const stories = Array.from({ length: 6 }, (_, index) => story(String(index + 1), { points: 60 - index }));
     const result = await generateRadarData(
