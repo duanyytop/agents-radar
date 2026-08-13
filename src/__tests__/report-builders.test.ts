@@ -261,6 +261,38 @@ describe("buildRadarReportContent", () => {
     expect(html).toContain('<a href="https://news.ycombinator.com/item?id=1">HN discussion</a>');
   });
 
+  it.each([
+    ["closing parenthesis", "https://example.com/a)tail", "https://example.com/a)tail"],
+    ["less-than sign", "https://example.com/a<tail", "https://example.com/a%3Ctail"],
+    ["greater-than sign", "https://example.com/a>tail", "https://example.com/a%3Etail"],
+    ["whitespace", "https://example.com/a tail", "https://example.com/a%20tail"],
+    ["backslash", "https://example.com/a\\tail", "https://example.com/a%5Ctail"],
+    ["C1 control", "https://example.com/a\u0085tail", "https://example.com/a%C2%85tail"],
+    ["lone surrogate", "https://example.com/a\uD800tail", "https://example.com/a%EF%BF%BDtail"],
+  ])("preserves %s in parsed Top 5 and table article links", (_case, inputUrl, expectedHref) => {
+    const data = makeRadarData(1, "deepseek");
+    data.items[0]!.story.url = inputUrl;
+
+    const markdown = buildRadarReportContent(data, "2026-08-12 00:00", "2026-08-12", "", "en");
+    const html = marked.parse(markdown, { async: false });
+    expect(markdown).toContain(`(<${expectedHref}>)`);
+    const articleHrefs = Array.from(html.matchAll(/<a href="([^"]+)">AI story 1<\/a>/g), (match) => match[1]);
+
+    expect(articleHrefs).toEqual([expectedHref, expectedHref]);
+    expect(html).toContain('<a href="https://news.ycombinator.com/item?id=1">HN discussion</a>');
+  });
+
+  it("preserves a backslash followed by a pipe in a parsed table link label", () => {
+    const data = makeRadarData(1, "deepseek");
+    data.items[0]!.story.title = String.raw`alpha \| beta`;
+
+    const markdown = buildRadarReportContent(data, "2026-08-12 00:00", "2026-08-12", "", "en");
+    const html = marked.parse(markdown, { async: false });
+    const cells = Array.from(html.matchAll(/<td[^>]*>(.*?)<\/td>/g), (match) => match[1]);
+
+    expect(cells).toContain(String.raw`<a href="https://example.com/1">alpha \| beta</a>`);
+  });
+
   it("caps recommendations at the first five items even when top5 is oversized", () => {
     const data = makeRadarData(6, "deepseek");
     data.top5 = data.items;

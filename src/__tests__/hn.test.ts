@@ -163,4 +163,74 @@ describe("fetchHnData", () => {
     expect(result.stories.map((story) => story.id)).toEqual(["202"]);
     expect(console.error).toHaveBeenCalledWith("  [hn] item 201: HTTP 503");
   });
+
+  it("isolates a rejected item fetch and keeps successful items from the same batch", async () => {
+    const errorSpy = vi.spyOn(console, "error").mockImplementation(() => undefined);
+    vi.spyOn(globalThis, "fetch").mockImplementation(async (input) => {
+      const url = String(input);
+      if (url.endsWith("/topstories.json")) return jsonResponse([401, 402]);
+      if (url.endsWith("/item/401.json")) throw new TypeError("fetch failed: secret-token");
+      return jsonResponse({
+        id: 402,
+        type: "story",
+        title: "AI compiler",
+        url: "https://example.com/compiler",
+      });
+    });
+
+    const result = await fetchHnData();
+
+    expect(result.stories.map((story) => story.id)).toEqual(["402"]);
+    expect(result.scannedCount).toBe(2);
+    expect(errorSpy).toHaveBeenCalledWith("  [hn] item 401: request failed");
+    expect(errorSpy.mock.calls.flat().join(" ")).not.toContain("secret-token");
+  });
+
+  it("isolates a rejected item JSON body and keeps successful items from the same batch", async () => {
+    const errorSpy = vi.spyOn(console, "error").mockImplementation(() => undefined);
+    vi.spyOn(globalThis, "fetch").mockImplementation(async (input) => {
+      const url = String(input);
+      if (url.endsWith("/topstories.json")) return jsonResponse([501, 502]);
+      if (url.endsWith("/item/501.json")) {
+        return {
+          ok: true,
+          json: () => Promise.reject(new SyntaxError("invalid JSON: secret-body")),
+        } as Response;
+      }
+      return jsonResponse({
+        id: 502,
+        type: "story",
+        title: "AI inference engine",
+        url: "https://example.com/inference",
+      });
+    });
+
+    const result = await fetchHnData();
+
+    expect(result.stories.map((story) => story.id)).toEqual(["502"]);
+    expect(result.scannedCount).toBe(2);
+    expect(errorSpy).toHaveBeenCalledWith("  [hn] item 501: request failed");
+    expect(errorSpy.mock.calls.flat().join(" ")).not.toContain("secret-body");
+  });
+
+  it("logs the number of requested items rather than every available topstory", async () => {
+    const logSpy = vi.spyOn(console, "log").mockImplementation(() => undefined);
+    const ids = Array.from({ length: 60 }, (_, index) => 601 + index);
+    vi.spyOn(globalThis, "fetch").mockImplementation(async (input) => {
+      const url = String(input);
+      if (url.endsWith("/topstories.json")) return jsonResponse(ids);
+      const id = Number(url.match(/item\/(\d+)\.json$/)?.[1]);
+      return jsonResponse({
+        id,
+        type: "story",
+        title: `AI story ${id}`,
+        url: `https://example.com/${id}`,
+      });
+    });
+
+    const result = await fetchHnData();
+
+    expect(result.scannedCount).toBe(50);
+    expect(logSpy).toHaveBeenCalledWith("  [hn] 30 AI stories (scanned 50 topstories)");
+  });
 });

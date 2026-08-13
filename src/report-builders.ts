@@ -163,11 +163,47 @@ export function buildOpenclawReportContent(
 }
 
 function escapeRadarTable(value: string): string {
-  return value.replace(/\|/g, "\\|").replace(/\s+/g, " ").trim();
+  return value.replace(/[\\|]/g, "\\$&").replace(/\s+/g, " ").trim();
 }
 
 function escapeMarkdownLinkLabel(value: string): string {
   return value.replace(/([\\[\]])/g, "\\$1");
+}
+
+function escapeRadarTableLinkLabel(value: string): string {
+  return value
+    .replace(/[\\|[\]]/g, "\\$&")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function percentEncodeCharacter(value: string): string {
+  return Array.from(
+    new TextEncoder().encode(value),
+    (byte) => `%${byte.toString(16).toUpperCase().padStart(2, "0")}`,
+  ).join("");
+}
+
+function serializeMarkdownLinkDestination(value: string): string {
+  let encoded = "";
+  for (const character of value) {
+    const codePoint = character.codePointAt(0) ?? 0;
+    const isUnpairedSurrogate = codePoint >= 0xd800 && codePoint <= 0xdfff;
+    if (
+      character === "<" ||
+      character === ">" ||
+      character === "\\" ||
+      /\s/u.test(character) ||
+      codePoint < 0x20 ||
+      (codePoint >= 0x7f && codePoint <= 0x9f) ||
+      isUnpairedSurrogate
+    ) {
+      encoded += percentEncodeCharacter(character);
+    } else {
+      encoded += character;
+    }
+  }
+  return `<${encoded}>`;
 }
 
 export function buildRadarReportContent(
@@ -182,7 +218,7 @@ export function buildRadarReportContent(
     .slice(0, 5)
     .map(
       (item, index) =>
-        `### ${index + 1}. [${escapeMarkdownLinkLabel(item.story.title)}](${item.story.url}) — ${item.totalScore.toFixed(1)}\n\n` +
+        `### ${index + 1}. [${escapeMarkdownLinkLabel(item.story.title)}](${serializeMarkdownLinkDestination(item.story.url)}) — ${item.totalScore.toFixed(1)}\n\n` +
         `**${RADAR_REPORT.reason[lang]}:** ${item.reason[lang]}\n\n` +
         `[${RADAR_REPORT.discussion[lang]}](${item.story.hnUrl})`,
     )
@@ -191,7 +227,7 @@ export function buildRadarReportContent(
   const rows = data.items
     .map(
       (item, index) =>
-        `| ${index + 1} | [${escapeRadarTable(escapeMarkdownLinkLabel(item.story.title))}](${item.story.url}) | ` +
+        `| ${index + 1} | [${escapeRadarTableLinkLabel(item.story.title)}](${serializeMarkdownLinkDestination(item.story.url)}) | ` +
         `${item.totalScore.toFixed(1)} | ${item.story.points} | ${item.story.comments} | ` +
         `${escapeRadarTable(item.story.createdAt)} | ${escapeRadarTable(item.summary[lang])} |`,
     )

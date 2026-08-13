@@ -122,14 +122,19 @@ export async function fetchHnData(): Promise<HnData> {
       scannedCount += batchIds.length;
       const items = await Promise.all(
         batchIds.map(async (id): Promise<HnFirebaseItem | null> => {
-          const resp = await fetch(HN_ITEM_URL(id), {
-            headers: { "User-Agent": "agents-radar/1.0" },
-          });
-          if (!resp.ok) {
-            console.error(`  [hn] item ${id}: HTTP ${resp.status}`);
+          try {
+            const resp = await fetch(HN_ITEM_URL(id), {
+              headers: { "User-Agent": "agents-radar/1.0" },
+            });
+            if (!resp.ok) {
+              console.error(`  [hn] item ${id}: HTTP ${resp.status}`);
+              return null;
+            }
+            return (await resp.json()) as HnFirebaseItem;
+          } catch {
+            console.error(`  [hn] item ${id}: request failed`);
             return null;
           }
-          return (await resp.json()) as HnFirebaseItem;
         }),
       );
 
@@ -142,7 +147,7 @@ export async function fetchHnData(): Promise<HnData> {
       }
     }
 
-    console.log(`  [hn] ${stories.length} AI stories (scanned ${topIds.length} topstories)`);
+    console.log(`  [hn] ${stories.length} AI stories (scanned ${scannedCount} topstories)`);
     return {
       stories,
       fetchSuccess: stories.length > 0,
