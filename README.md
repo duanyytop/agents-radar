@@ -11,7 +11,7 @@ A GitHub Actions workflow that runs every morning at 08:00 CST. It aggregates AI
 | [GitHub Repos](https://github.com) | API | Issues, PRs, releases from 17+ tracked AI tool repos |
 | [Claude Code Skills](https://github.com/anthropics/skills) | API | Trending skills sorted by community engagement |
 | [GitHub Trending](https://github.com/trending) | HTML + API | Daily trending repos + AI topic search (7-day window) |
-| [Hacker News](https://news.ycombinator.com) | [Algolia API](https://hn.algolia.com/api) | Top 30 AI stories from last 24h, 6 parallel queries |
+| [Hacker News](https://news.ycombinator.com) | [Firebase API](https://github.com/HackerNews/API) | Top Stories scanned in rank order for up to 30 unique AI links |
 | [Product Hunt](https://www.producthunt.com) | GraphQL API | Yesterday's top AI products by votes |
 | [ArXiv](https://arxiv.org) | [ArXiv API](https://export.arxiv.org/api/query) | Latest papers from cs.AI, cs.CL, cs.LG (last 48h) |
 | [Hugging Face](https://huggingface.co) | [Hub API](https://huggingface.co/api/models) | 30 trending models sorted by weekly likes |
@@ -183,7 +183,7 @@ The LLM filters out non-AI repos from the trending list, classifies the rest by 
 
 ### Hacker News
 
-Top AI stories from the last 24 hours, fetched via the [Algolia HN Search API](https://hn.algolia.com/api). Six queries run in parallel (`AI`, `LLM`, `Claude`, `OpenAI`, `Anthropic`, `machine learning`), results are deduplicated and ranked by points. The top 30 stories are passed to the LLM for analysis.
+Hacker News [Top Stories](https://github.com/HackerNews/API) are scanned in rank order. AI-related links are normalized and deduplicated by canonical URL and title until up to 30 unique candidates are accepted; scanning continues past duplicates when more stories are available.
 
 ### Official web content (sitemap-based)
 
@@ -203,7 +203,8 @@ New articles are detected by comparing sitemap `lastmod` timestamps against a pe
 - Tracks 6 AI infrastructure projects (inference engines, gateways, fine-tuning) with a dedicated report and cross-project comparison
 - Scrapes official Anthropic and OpenAI web content via sitemaps; detects new articles incrementally
 - Monitors GitHub Trending daily + searches 6 AI topic tags; classifies repos by dimension and extracts trend signals
-- Fetches top-30 AI stories from Hacker News (last 24h, ranked by points); generates community sentiment report
+- Scans Hacker News Top Stories for up to 30 canonical URL/title-unique AI links
+- Generates bilingual AI Radar reports with all unique candidates and a stable Top 5, falling back to deterministic scoring if editorial output is unavailable or invalid
 - Publishes GitHub Issues for each report type; commits Markdown files to `digests/YYYY-MM-DD/`
 - Runs on a daily schedule via GitHub Actions; supports manual triggering
 - All tracked repositories are configurable via `config.yml` — no code changes needed
@@ -243,12 +244,13 @@ Go to **Settings → Secrets and variables → Actions** and add:
 
 | Secret | Required | Description |
 |--------|----------|-------------|
-| `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, or `openrouter` |
+| `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, `openrouter`, or `deepseek` |
 | `ANTHROPIC_API_KEY` | if Anthropic | API key — works with both Anthropic and Kimi Code |
 | `ANTHROPIC_BASE_URL` | optional | API endpoint override. Set to `https://api.kimi.com/coding/` for Kimi Code; leave unset for Anthropic |
 | `OPENAI_API_KEY` | if OpenAI | OpenAI API key |
 | `OPENAI_BASE_URL` | optional | OpenAI endpoint override |
 | `OPENROUTER_API_KEY` | if OpenRouter | OpenRouter API key |
+| `DEEPSEEK_API_KEY` | if DeepSeek | DeepSeek API key |
 | `TELEGRAM_BOT_TOKEN` | optional | Telegram bot token from [@BotFather](https://t.me/BotFather). If set, a message is sent after each digest run |
 | `TELEGRAM_CHAT_ID` | optional | Telegram chat/channel/group ID to send notifications to |
 | `FEISHU_WEBHOOK_URLS` | optional | Comma-separated Feishu custom bot webhook URLs. If set, a card message is sent to each group after each digest run |
@@ -281,36 +283,33 @@ Set `LLM_PROVIDER` to choose which model backend powers the digest generation. D
 | OpenAI | `openai` | `OPENAI_API_KEY` | `gpt-4o` |
 | GitHub Copilot | `github-copilot` | `GITHUB_TOKEN` | `gpt-4o` |
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
+| DeepSeek | `deepseek` | `DEEPSEEK_API_KEY` | `deepseek-v4-flash` |
 
-Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, or `OPENROUTER_MODEL` respectively.
+Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, `OPENROUTER_MODEL`, or `DEEPSEEK_MODEL` respectively.
 
 The provider abstraction lives in `src/providers/` — each provider is a separate file implementing the `LlmProvider` interface. Adding a new provider only requires creating a new file and registering it in the factory.
 
 ## Running locally
 
-```bash
-pnpm install
+Copy `.env.example` to the ignored `.env` file. For the preferred DeepSeek setup, keep only the provider and its key in that file:
 
-export GITHUB_TOKEN=ghp_xxxxx
-
-# Option A: Anthropic (default)
-export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
-
-# Option B: OpenAI
-# export LLM_PROVIDER=openai
-# export OPENAI_API_KEY=sk-xxxxxxxx
-
-# Option C: GitHub Copilot (uses GITHUB_TOKEN)
-# export LLM_PROVIDER=github-copilot
-
-# Option D: OpenRouter
-# export LLM_PROVIDER=openrouter
-# export OPENROUTER_API_KEY=sk-or-xxxxxxxx
-
-export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write files
-
-pnpm start
+```dotenv
+LLM_PROVIDER=deepseek
+DEEPSEEK_API_KEY=sk-xxxxx
 ```
+
+Then run the complete pipeline from Windows PowerShell:
+
+```powershell
+corepack pnpm install --frozen-lockfile
+$env:GITHUB_TOKEN = gh auth token
+Remove-Item Env:DIGEST_REPO -ErrorAction SilentlyContinue
+node --env-file=.env --import=tsx src/index.ts
+```
+
+`GITHUB_TOKEN` is assigned only to the current PowerShell process; do not store it in `.env`. Clearing `DIGEST_REPO` keeps the run local and prevents GitHub Issue creation. Set `DIGEST_REPO=owner/repo` explicitly only when publishing Issues is intended.
+
+The run writes the bilingual Radar reports `ai-radar.md` and `ai-radar-en.md` under `digests/YYYY-MM-DD/`. They contain up to 30 unique Hacker News AI candidates and a Top 5 recommendation list; when fewer unique candidates are available, the reports show the actual count.
 
 ## Output format
 
@@ -324,6 +323,7 @@ Files are written to `digests/YYYY-MM-DD/`:
 | `ai-web.md` | Official web content report (only written when new content exists) | `web` |
 | `ai-trending.md` | GitHub AI trending report — repos classified by dimension + trend signals (only written when data is available) | `trending` |
 | `ai-hn.md` | Hacker News AI community digest — top stories + sentiment analysis (only written when fetch succeeds) | `hn` |
+| `ai-radar.md` | AI information Radar - up to 30 unique HN candidates + Top 5 recommendations (only written when candidates are available) | `radar` |
 | `ai-ph.md` | Product Hunt AI products digest (only written when `PRODUCTHUNT_TOKEN` is set and data is available) | `ph` |
 | `ai-arxiv.md` | ArXiv AI research digest — key papers from cs.AI/cs.CL/cs.LG | `arxiv` |
 | `ai-hf.md` | Hugging Face trending models digest — sorted by weekly likes | `hf` |
@@ -427,7 +427,7 @@ Community focus
 
 `ai-hn.md` / `ai-hn-en.md` structure:
 ```
-Sources: Hacker News (top-30 AI stories, last 24h)
+Sources: Hacker News Top Stories (up to 30 unique AI links)
 
 Today's summary
 Top stories & discussions

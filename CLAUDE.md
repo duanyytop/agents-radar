@@ -16,38 +16,34 @@ pnpm format         # Prettier --write src
 pnpm format:check   # Prettier --check src
 ```
 
-Required env vars for local runs:
+Preferred Windows local run (DeepSeek):
 
-```bash
-export GITHUB_TOKEN=ghp_xxxxx
-export DIGEST_REPO=owner/repo   # omit to skip GitHub issue creation
-
-# LLM provider (default: anthropic)
-export LLM_PROVIDER=anthropic   # anthropic | openai | github-copilot | openrouter | deepseek
-
-# Anthropic (default)
-export ANTHROPIC_API_KEY=sk-ant-xxxxx
-
-# OpenAI
-# export OPENAI_API_KEY=sk-xxxxx
-
-# GitHub Copilot — uses GITHUB_TOKEN
-
-# OpenRouter
-# export OPENROUTER_API_KEY=sk-or-xxxxx
-
-# DeepSeek
-# export DEEPSEEK_API_KEY=sk-xxxxx
+```dotenv
+LLM_PROVIDER=deepseek
+DEEPSEEK_API_KEY=sk-xxxxx
 ```
+
+Keep only the provider and its required key in the ignored `.env` file. Then run from PowerShell:
+
+```powershell
+corepack pnpm install --frozen-lockfile
+$env:GITHUB_TOKEN = gh auth token
+Remove-Item Env:DIGEST_REPO -ErrorAction SilentlyContinue
+node --env-file=.env --import=tsx src/index.ts
+```
+
+`GITHUB_TOKEN` belongs only to the current process and must not be written to `.env`. With `DIGEST_REPO` unset, reports are written locally and no GitHub Issues are created. Set `DIGEST_REPO=owner/repo` only for an intentional publishing run.
+
+The provider factory still defaults to `anthropic` when `LLM_PROVIDER` is absent. Supported providers are `anthropic`, `openai`, `github-copilot`, `openrouter`, and `deepseek`; their required keys are documented in `.env.example` and `README.md`.
 
 ## Architecture
 
 The pipeline runs in four sequential phases, each implemented as a named async function in `src/index.ts`:
 
-1. **`fetchAllData`** — all network I/O in parallel: GitHub API (issues/PRs/releases) for 17 repos, Claude Code Skills, Anthropic/OpenAI sitemaps, GitHub Trending HTML + Search API, Hacker News Algolia API.
+1. **`fetchAllData`** — all network I/O in parallel: GitHub API (issues/PRs/releases) for 17 repos, Claude Code Skills, Anthropic/OpenAI sitemaps, GitHub Trending HTML + Search API, and Hacker News Firebase Top Stories.
 2. **`generateSummaries`** — per-repo LLM calls, all in parallel, rate-limited to 5 concurrent requests by a queue in `src/report.ts`.
-3. **Comparisons** — two LLM calls: cross-tool CLI comparison and OpenClaw cross-ecosystem comparison.
-4. **Save phase** — `buildCliReportContent` / `buildOpenclawReportContent` / `buildInfraReportContent` (in `src/report-builders.ts`) build Markdown strings; `saveWebReport` / `saveTrendingReport` / `saveHnReport` (in `src/report-savers.ts`) call LLM + write file + create GitHub Issue.
+3. **Comparisons and Radar** — the existing comparison calls plus one bilingual Radar editorial request; Radar falls back to deterministic scoring if that request fails validation or exhausts retries.
+4. **Save phase** — report builders assemble Markdown; savers write bilingual files and create GitHub Issues only when `DIGEST_REPO` is explicitly set. `saveRadarReport` reuses the single shared Radar result for both languages.
 
 ## Source files
 
@@ -58,10 +54,10 @@ The pipeline runs in four sequential phases, each implemented as a named async f
 | `src/github.ts` | GitHub API helpers: `fetchRecentItems`, `fetchRecentReleases`, `fetchSkillsData`, `createGitHubIssue`; shared `RepoFetch` type |
 | `src/config.ts` | Loads `config.yml` into `RadarConfig` (`cliRepos`, `skillsRepo`, `openclaw`, `openclawPeers`, `infraRepos`); built-in defaults when a section is missing |
 | `src/prompts.ts` | LLM prompt builders for repo reports: `buildCliPrompt`, `buildPeerPrompt`, `buildInfraPrompt`, `buildComparisonPrompt`, `buildInfraComparisonPrompt`, `buildPeersComparisonPrompt`, `buildSkillsPrompt` |
-| `src/prompts-data.ts` | LLM prompt builders for data-source reports: `buildTrendingPrompt`, `buildWebReportPrompt`, `buildHnPrompt` |
+| `src/prompts-data.ts` | LLM prompt builders for data-source reports, including one bilingual `buildRadarPrompt` request for all Radar candidates |
 | `src/report.ts` | `callLlm` (with concurrency limiter), `saveFile`, `autoGenFooter` (uses i18n), LLM token budget constants |
-| `src/report-builders.ts` | `buildCliReportContent`, `buildOpenclawReportContent`, `buildInfraReportContent` — assemble final Markdown strings for CLI, OpenClaw and infra reports |
-| `src/report-savers.ts` | `saveWebReport`, `saveTrendingReport`, `saveHnReport` — LLM call + file save + optional GitHub issue |
+| `src/report-builders.ts` | Pure Markdown builders, including `buildRadarReportContent` for bilingual candidate tables and Top 5 sections |
+| `src/report-savers.ts` | Report save wrappers, including `saveRadarReport`; GitHub Issue creation is conditional on `DIGEST_REPO` |
 | `src/date.ts` | Date and timing utilities: `toCstDateStr`, `toUtcStr`, `sleep` |
 | `src/providers/types.ts` | `LlmProvider` interface, `ProviderName` type, `VALID_PROVIDER_NAMES` |
 | `src/providers/openai-compatible.ts` | `OpenAICompatibleProvider` — shared base class for OpenAI-compatible providers |
@@ -73,7 +69,9 @@ The pipeline runs in four sequential phases, each implemented as a named async f
 | `src/providers/index.ts` | `createProvider` factory + barrel re-exports |
 | `src/web.ts` | Sitemap-based web content fetching; state persisted to `digests/web-state.json` |
 | `src/trending.ts` | GitHub Trending HTML scraper + Search API topic queries |
-| `src/hn.ts` | Hacker News top AI stories via Algolia HN Search API |
+| `src/link-utils.ts` | Canonical URL/title normalization and streaming duplicate rejection |
+| `src/hn.ts` | Scans Hacker News Firebase Top Stories in rank order for up to 30 unique AI links |
+| `src/radar.ts` | Deterministic scoring, editorial validation, fallback, stable ranking, and Top 5 selection |
 | `src/generate-manifest.ts` | Generates `manifest.json` (sidebar data for Web UI) and `feed.xml` (RSS 2.0 feed) |
 
 ## Report outputs
@@ -87,7 +85,8 @@ Files written to `digests/YYYY-MM-DD/`:
 | `ai-infra.md` | `infra` | Always generated |
 | `ai-web.md` | `web` | Skipped if no new sitemap content |
 | `ai-trending.md` | `trending` | Skipped if both data sources fail |
-| `ai-hn.md` | `hn` | Skipped if Algolia fetch fails |
+| `ai-hn.md` | `hn` | Skipped if the HN Top Stories fetch yields no data |
+| `ai-radar.md` | `radar` | Up to 30 unique HN candidates and Top 5 recommendations; skipped only when there are no candidates |
 
 ## Tracked sources
 
@@ -97,15 +96,16 @@ Files written to `digests/YYYY-MM-DD/`:
 - **CLAUDE_SKILLS_REPO**: anthropics/skills — no date filter, sorted by popularity
 - **Web**: anthropic.com + openai.com via sitemap, state in `digests/web-state.json`
 - **Trending**: github.com/trending (HTML) + GitHub Search API (6 AI topics, 7-day window)
-- **HN**: Algolia HN Search API — 6 parallel queries, top-30 AI stories by points, last 24h
+- **HN**: Firebase Top Stories — scanned in HN rank order until up to 30 canonical URL/title-unique AI links are accepted
 
 ## Key conventions
 
 - All bilingual strings (titles, labels, footers, messages) are centralized in `src/i18n.ts`. Use the `Lang` type (`"zh" | "en"`) and `Record<Lang, string>` maps. Do not add inline bilingual ternaries elsewhere.
 - LLM prompt builders are split across two files: `src/prompts.ts` (repo-level prompts) and `src/prompts-data.ts` (data-source prompts). Each report type has its own builder function.
 - Weekly and monthly rollups were removed in July 2026. `ai-weekly`/`ai-monthly` remain in `REPORT_LABELS` (`src/i18n.ts`) and `REPORT_FILES` (`src/generate-manifest.ts`) only so archived reports stay reachable — do not add generation code back.
-- `callLlm(prompt, maxTokens?)` defaults to 4096 tokens. Web report uses 8192, trending uses 6144. The table-formatted listing reports (HN, PH, ArXiv, HF, Community) use `LLM_TOKENS_LISTING` = 6144 to fit multi-row tables plus 2-sentence summaries.
-- Data-source listing reports (Trending, HN, PH, ArXiv, HF, Community) render their item lists as **Markdown tables** (not bullet lists). Numeric columns are copied verbatim from the fetched data; the summary column is 2 sentences. Tables already have CSS in `index.html` and render natively in GitHub Issues too.
+- `callLlm(prompt, maxTokens?)` defaults to 4096 tokens. Web report uses 8192; listing reports and the single Radar editorial request use `LLM_TOKENS_LISTING` = 6144.
+- Data-source listing reports render item lists as **Markdown tables**. Radar renders every sorted unique candidate exactly once in its table and a maximum of five unique recommendations in its Top 5 section.
+- Radar ranking is stable: total score descending, original HN rank ascending, then candidate ID ascending. Invalid or unavailable editorial output uses the deterministic base-score fallback rather than suppressing the reports.
 - On 429 rate-limit errors `callLlm` retries up to 3 times with exponential backoff (5 s / 10 s / 20 s); the concurrency slot is released during the wait.
 - The concurrency limiter (`LLM_CONCURRENCY = 5`) prevents 429s when many parallel LLM calls fire. Do not bypass it by calling SDK clients directly.
 - LLM provider is selected via `LLM_PROVIDER` env var (default: `anthropic`). Valid values: `anthropic`, `openai`, `github-copilot`, `openrouter`, `deepseek`.
@@ -131,4 +131,4 @@ Files written to `digests/YYYY-MM-DD/`:
 6. Add a label color entry in `LABEL_COLORS` in `src/github.ts`.
 7. Add the report ID and label to `REPORT_LABELS` in `src/i18n.ts` and `LABELS` in `index.html`.
 8. Add the report file name to `REPORT_FILES` in `src/generate-manifest.ts`.
-9. Update both README files and this file.
+9. Update `README.md` and the contributor instruction docs required by the task. Do not create `README.zh-CN.md`.
