@@ -89,6 +89,9 @@ infra_repos:
     repo: BerriAI/litellm
     name: LiteLLM
     paginated: true
+  - id: bifrost
+    repo: maximhq/bifrost
+    name: Bifrost
   - id: unsloth
     repo: unslothai/unsloth
     name: Unsloth
