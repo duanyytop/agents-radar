@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 今日新增10个问题",
+      "Gemini CLI 发布 v0.60.0-nightly.20260905",
+      "OpenAI Codex 24小时内提交10个PR",
+      "GitHub Copilot CLI 活跃，关联10个问题",
+      "Qwen Code 在CLI领域崭露头角",
+      "OpenCode 24小时内贡献10个PR"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.9.2 提升聊天性能",
+      "OpenClaw 今日新增500个问题与PR",
+      "静默数据损坏修复已合并",
+      "高I/O负载下会话稳定处理",
+      "新版本优化持久化历史读取",
+      "Hermes Agent 社区热度上升"
+    ],
+    "ai-infra": [
+      "SGLang 24小时内贡献18个PR",
+      "vLLM 报告57个开放问题",
+      "Ollama 发布 v0.34.0-rc1",
+      "Unsloth 持续迭代更新",
+      "LiteLLM 聚焦功能开发",
+      "llama.cpp 随 b10819 版本修复"
+    ],
+    "ai-trending": [
+      "Ponytail 单日增长2,845颗星",
+      "ECC 突增1,314颗新星",
+      "Hermes-Agent 成为热门代理",
+      "RAGFlow 重塑上下文管理",
+      "HumanLayer 推动隐私优先代理",
+      "QwenPaw 亮相多模型框架"
+    ],
+    "ai-hn": [
+      "GPT-6 Astra 登陆 OpenRouter",
+      "秘密的OpenAI董事会引发争议",
+      "Anthropic资助宗教组织：泄露事件",
+      "在Lean 4中形式化费马大定理",
+      "大模型如'认知病毒'——论文走红",
+      "关于GPT-6实际应用的争论爆发"
+    ],
+    "ai-ph": [
+      "GPT-6 Astra 在PH获421票支持",
+      "Clockwork 将AI代理引入日历",
+      "Inline 实现人机实时协作",
+      "Omarchy 整合AI至系统工作流",
+      "Chalked 提供上下文感知智能",
+      "myAIcademy 优化学习流程"
+    ],
+    "ai-community": [
+      "AI代理因接口失效失败",
+      "真实可靠性始于LLM之外",
+      "RAG无法解决幻觉风险",
+      "优化器非瓶颈——关卡才是",
+      "生产级AI需更安全的容错机制",
+      "防护墙对系统信任至关重要"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code hits 10 new issues today",
+      "Gemini CLI releases v0.60.0-nightly.20260905",
+      "OpenAI Codex sees 10 PRs in 24h",
+      "GitHub Copilot CLI active with 10 issues",
+      "Qwen Code gains traction in CLI space",
+      "OpenCode leads with 10 PRs in 24h"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.9.2 boosts chat performance",
+      "500 issues and PRs in OpenClaw today",
+      "Fix for silent AI data corruption merged",
+      "Stable session handling under heavy I/O",
+      "New release improves durable history reads",
+      "Hermes Agent gaining momentum in community"
+    ],
+    "ai-infra": [
+      "SGLang leads with 18 PRs in 24h",
+      "vLLM reports 57 open issues",
+      "Ollama releases v0.34.0-rc1",
+      "Unsloth sees steady iterative updates",
+      "LiteLLM focuses on feature development",
+      "llama.cpp patches with b10819 release"
+    ],
+    "ai-trending": [
+      "Ponytail gains 2,845 stars in one day",
+      "ECC surges with 1,314 new stars",
+      "Hermes-Agent now top trending agent",
+      "RAGFlow redefines context management",
+      "HumanLayer drives privacy-focused agents",
+      "QwenPaw emerges as multi-model framework"
+    ],
+    "ai-hn": [
+      "GPT-6 Astra launches on OpenRouter",
+      "Clandestine OpenAI board sparks debate",
+      "Anthropic funds religious NGOs: leak",
+      "Formalizing Fermat’s Last Theorem in Lean 4",
+      "LLMs as 'cognitive viruses'—paper goes viral",
+      "Debate erupts over GPT-6's real-world use"
+    ],
+    "ai-ph": [
+      "GPT-6 Astra wins 421 votes on PH",
+      "Clockwork brings AI agents to calendars",
+      "Inline enables real-time human-AI work",
+      "Omarchy integrates AI into OS workflows",
+      "Chalked offers context-aware intelligence",
+      "myAIcademy enhances learning workflows"
+    ],
+    "ai-community": [
+      "AI agents fail due to broken APIs",
+      "Real reliability starts outside LLMs",
+      "RAG doesn’t fix hallucination risks",
+      "Optimizer not the bottleneck—gate is",
+      "Production AI needs safer failure modes",
+      "Guardrails critical for system trust"
+    ]
+  }
+}
