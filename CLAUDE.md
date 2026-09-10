@@ -23,7 +23,7 @@ export GITHUB_TOKEN=ghp_xxxxx
 export DIGEST_REPO=owner/repo   # omit to skip GitHub issue creation
 
 # LLM provider (default: anthropic)
-export LLM_PROVIDER=anthropic   # anthropic | openai | github-copilot | openrouter | deepseek | qwen
+export LLM_PROVIDER=anthropic   # anthropic | openai | github-copilot | openrouter | deepseek | qwen | atlas
 
 # Anthropic (default)
 export ANTHROPIC_API_KEY=sk-ant-xxxxx
@@ -41,6 +41,9 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxx
 
 # Qwen (Alibaba Model Studio) — provider used by the GitHub Actions cron
 # export DASHSCOPE_API_KEY=sk-xxxxx
+
+# Atlas Cloud
+# export ATLASCLOUD_API_KEY=sk-xxxxx
 ```
 
 ## Architecture
@@ -84,6 +87,7 @@ Report bodies are generated **once in English** and translated to Chinese. Gener
 | `src/providers/openrouter.ts` | `OpenRouterProvider` — extends `OpenAICompatibleProvider` |
 | `src/providers/deepseek.ts` | `DeepSeekProvider` — extends `OpenAICompatibleProvider` |
 | `src/providers/qwen.ts` | `QwenProvider` — extends `OpenAICompatibleProvider`; Alibaba Model Studio |
+| `src/providers/atlas.ts` | `AtlasProvider` — extends `OpenAICompatibleProvider`; Atlas Cloud |
 | `src/providers/index.ts` | `createProvider` factory + barrel re-exports |
 | `src/web.ts` | Sitemap-based web content fetching; state persisted to `digests/web-state.json` |
 | `src/trending.ts` | GitHub Trending HTML scraper + Search API topic queries |

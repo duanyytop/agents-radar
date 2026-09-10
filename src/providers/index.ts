@@ -13,6 +13,7 @@ export { GitHubCopilotProvider } from "./github-copilot.ts";
 export { OpenRouterProvider } from "./openrouter.ts";
 export { DeepSeekProvider } from "./deepseek.ts";
 export { QwenProvider } from "./qwen.ts";
+export { AtlasProvider } from "./atlas.ts";
 
 import type { LlmProvider, ProviderFactory } from "./types.ts";
 import { AnthropicProvider } from "./anthropic.ts";
@@ -21,6 +22,7 @@ import { GitHubCopilotProvider } from "./github-copilot.ts";
 import { OpenRouterProvider } from "./openrouter.ts";
 import { DeepSeekProvider } from "./deepseek.ts";
 import { QwenProvider } from "./qwen.ts";
+import { AtlasProvider } from "./atlas.ts";
 
 // ---------------------------------------------------------------------------
 // Single source of truth — add new providers here only.
@@ -33,6 +35,7 @@ const PROVIDERS = {
   openrouter: () => new OpenRouterProvider(),
   deepseek: () => new DeepSeekProvider(),
   qwen: () => new QwenProvider(),
+  atlas: () => new AtlasProvider(),
 } satisfies Record<string, ProviderFactory>;
 
 /** Supported provider name — derived from the PROVIDERS registry. */

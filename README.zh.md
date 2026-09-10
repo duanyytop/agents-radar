@@ -237,13 +237,14 @@ infra_repos:
 
 | Secret | 必填 | 说明 |
 |--------|------|------|
-| `LLM_PROVIDER` | 可选 | `anthropic`（默认）、`openai`、`github-copilot`、`openrouter`、`deepseek` 或 `qwen` |
+| `LLM_PROVIDER` | 可选 | `anthropic`（默认）、`openai`、`github-copilot`、`openrouter`、`deepseek`、`qwen` 或 `atlas` |
 | `ANTHROPIC_API_KEY` | Anthropic 时 | API 密钥，兼容 Anthropic 和 Kimi Code |
 | `ANTHROPIC_BASE_URL` | 可选 | API 地址覆盖。使用 Kimi Code 时设置为 `https://api.kimi.com/coding/`，使用 Anthropic 时留空 |
 | `OPENAI_API_KEY` | OpenAI 时 | OpenAI API 密钥 |
 | `OPENAI_BASE_URL` | 可选 | OpenAI 端点覆盖 |
 | `OPENROUTER_API_KEY` | OpenRouter 时 | OpenRouter API 密钥 |
 | `DEEPSEEK_API_KEY` | DeepSeek 时 | DeepSeek API 密钥 |
+| `ATLASCLOUD_API_KEY` | Atlas Cloud 时 | Atlas Cloud API 密钥 |
 | `DASHSCOPE_API_KEY` | Qwen 时 | 阿里云百炼 API 密钥 |
 | `TELEGRAM_BOT_TOKEN` | 可选 | Telegram bot token，从 [@BotFather](https://t.me/BotFather) 获取。设置后每次 digest 完成自动推送通知 |
 | `TELEGRAM_CHAT_ID` | 可选 | 接收通知的 Telegram 频道 / 群组 / 用户 ID |
@@ -279,8 +280,9 @@ infra_repos:
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 | DeepSeek | `deepseek` | `DEEPSEEK_API_KEY` | `deepseek-v4-flash` |
 | Qwen | `qwen` | `DASHSCOPE_API_KEY` | `qwen-flash` |
+| Atlas Cloud | `atlas` | `ATLASCLOUD_API_KEY` | `Qwen/Qwen3-235B-A22B-Instruct-2507` |
 
-可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`GITHUB_COPILOT_MODEL`、`OPENROUTER_MODEL`、`DEEPSEEK_MODEL` 或 `QWEN_MODEL` 分别覆盖默认模型名称；Qwen 的接入点可用 `DASHSCOPE_BASE_URL` 覆盖。
+可通过 `ANTHROPIC_MODEL`、`OPENAI_MODEL`、`GITHUB_COPILOT_MODEL`、`OPENROUTER_MODEL`、`DEEPSEEK_MODEL`、`QWEN_MODEL` 或 `ATLASCLOUD_MODEL` 分别覆盖默认模型名称；Qwen 和 Atlas Cloud 的接入点可分别用 `DASHSCOPE_BASE_URL` 与 `ATLASCLOUD_BASE_URL` 覆盖。
 
 每日定时任务使用 `qwen` / `qwen-flash`。
 
@@ -314,6 +316,9 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # Qwen（阿里云百炼）
 # export LLM_PROVIDER=qwen
 # export DASHSCOPE_API_KEY=sk-xxxxxxxx
+
+# export LLM_PROVIDER=atlas
+# export ATLASCLOUD_API_KEY=sk-xxxxxxxx
 
 export DIGEST_REPO=your-username/agents-radar  # 可选，留空则仅写入本地文件
 

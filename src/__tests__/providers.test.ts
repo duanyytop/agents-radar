@@ -5,6 +5,7 @@ import {
   GitHubCopilotProvider,
   OpenRouterProvider,
   QwenProvider,
+  AtlasProvider,
   createProvider,
   VALID_PROVIDER_NAMES,
   type LlmProvider,
@@ -106,6 +107,11 @@ describe("LlmProvider interface", () => {
     expect(p.name).toBe("qwen");
   });
 
+  it("AtlasProvider has correct name", () => {
+    const p = new AtlasProvider({ apiKey: "test" });
+    expect(p.name).toBe("atlas");
+  });
+
   it("all providers implement LlmProvider with call()", () => {
     const providers: LlmProvider[] = [
       new AnthropicProvider(),
@@ -113,6 +119,7 @@ describe("LlmProvider interface", () => {
       new GitHubCopilotProvider({ apiKey: "k" }),
       new OpenRouterProvider({ apiKey: "k" }),
       new QwenProvider({ apiKey: "k" }),
+      new AtlasProvider({ apiKey: "k" }),
     ];
     for (const p of providers) {
       expect(typeof p.name).toBe("string");
@@ -126,7 +133,7 @@ describe("LlmProvider interface", () => {
 // ---------------------------------------------------------------------------
 
 describe("VALID_PROVIDER_NAMES", () => {
-  it("contains all six supported providers", () => {
+  it("contains all seven supported providers", () => {
     expect(VALID_PROVIDER_NAMES).toEqual([
       "anthropic",
       "openai",
@@ -134,7 +141,63 @@ describe("VALID_PROVIDER_NAMES", () => {
       "openrouter",
       "deepseek",
       "qwen",
+      "atlas",
     ]);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// AtlasProvider
+// ---------------------------------------------------------------------------
+
+describe("AtlasProvider", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
+  it("call returns text", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({
+      choices: [{ message: { content: "Hello from Atlas Cloud" } }],
+    });
+
+    const p = new AtlasProvider({ apiKey: "sk-test" });
+    const result = await p.call("prompt", 256);
+    expect(result).toBe("Hello from Atlas Cloud");
+  });
+
+  it(
+    "uses ATLASCLOUD_MODEL env",
+    withEnv({ ATLASCLOUD_MODEL: "custom/model" }, async () => {
+      const mockCreate = await getOpenAIMockCreate();
+      mockCreate.mockResolvedValueOnce({ choices: [{ message: { content: "ok" } }] });
+
+      const p = new AtlasProvider({ apiKey: "k" });
+      await p.call("prompt", 128);
+      expect(mockCreate).toHaveBeenCalledWith(expect.objectContaining({ model: "custom/model" }));
+    }),
+  );
+
+  it(
+    "uses the Atlas default model when ATLASCLOUD_MODEL is unset",
+    withEnv({ ATLASCLOUD_MODEL: undefined }, async () => {
+      const mockCreate = await getOpenAIMockCreate();
+      mockCreate.mockResolvedValueOnce({ choices: [{ message: { content: "ok" } }] });
+
+      const p = new AtlasProvider({ apiKey: "k" });
+      await p.call("prompt", 128);
+      expect(mockCreate).toHaveBeenCalledWith(
+        expect.objectContaining({ model: "Qwen/Qwen3-235B-A22B-Instruct-2507" }),
+      );
+    }),
+  );
+
+  it("throws on empty response", async () => {
+    const mockCreate = await getOpenAIMockCreate();
+    mockCreate.mockResolvedValueOnce({ choices: [] });
+
+    const p = new AtlasProvider({ apiKey: "k" });
+    await expect(p.call("prompt", 100)).rejects.toThrow("Unexpected empty response from atlas");
   });
 });
 
@@ -427,6 +490,11 @@ describe("createProvider", () => {
     expect(p).toBeInstanceOf(QwenProvider);
   });
 
+  it("creates atlas provider", () => {
+    const p = createProvider("atlas");
+    expect(p).toBeInstanceOf(AtlasProvider);
+  });
+
   it(
     "reads LLM_PROVIDER from env",
     withEnv({ LLM_PROVIDER: "openai" }, () => {
@@ -437,7 +505,7 @@ describe("createProvider", () => {
 
   it("throws descriptive error for unknown provider", () => {
     expect(() => createProvider("bogus" as never)).toThrow(
-      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter, deepseek, qwen/,
+      /Invalid LLM provider: "bogus".*Valid providers are: anthropic, openai, github-copilot, openrouter, deepseek, qwen, atlas/,
     );
   });
 

@@ -23,7 +23,7 @@ export GITHUB_TOKEN=ghp_xxxxx
 export DIGEST_REPO=owner/repo   # omit to skip GitHub issue creation
 
 # LLM provider (default: anthropic)
-export LLM_PROVIDER=anthropic   # anthropic | openai | github-copilot | openrouter | deepseek
+export LLM_PROVIDER=anthropic   # anthropic | openai | github-copilot | openrouter | deepseek | qwen | atlas
 
 # Anthropic (default)
 export ANTHROPIC_API_KEY=sk-ant-xxxxx
@@ -38,6 +38,12 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxx
 
 # DeepSeek
 # export DEEPSEEK_API_KEY=sk-xxxxx
+
+# Qwen (Alibaba Model Studio)
+# export DASHSCOPE_API_KEY=sk-xxxxx
+
+# Atlas Cloud
+# export ATLASCLOUD_API_KEY=sk-xxxxx
 ```
 
 ## Architecture
@@ -70,6 +76,8 @@ The pipeline runs in four sequential phases, each implemented as a named async f
 | `src/providers/github-copilot.ts` | `GitHubCopilotProvider` — extends `OpenAICompatibleProvider` |
 | `src/providers/openrouter.ts` | `OpenRouterProvider` — extends `OpenAICompatibleProvider` |
 | `src/providers/deepseek.ts` | `DeepSeekProvider` — extends `OpenAICompatibleProvider` |
+| `src/providers/qwen.ts` | `QwenProvider` — extends `OpenAICompatibleProvider`; Alibaba Model Studio |
+| `src/providers/atlas.ts` | `AtlasProvider` — extends `OpenAICompatibleProvider`; Atlas Cloud |
 | `src/providers/index.ts` | `createProvider` factory + barrel re-exports |
 | `src/web.ts` | Sitemap-based web content fetching; state persisted to `digests/web-state.json` |
 | `src/trending.ts` | GitHub Trending HTML scraper + Search API topic queries |
@@ -109,7 +117,7 @@ Files written to `digests/YYYY-MM-DD/`:
 - Data-source listing reports (Trending, HN, PH, ArXiv, HF, Community) render their item lists as **Markdown tables** (not bullet lists). Numeric columns are copied verbatim from the fetched data; the summary column is 2 sentences. Tables already have CSS in `index.html` and render natively in GitHub Issues too.
 - On 429 rate-limit errors `callLlm` retries up to 3 times with exponential backoff (5 s / 10 s / 20 s); the concurrency slot is released during the wait.
 - The concurrency limiter (`LLM_CONCURRENCY = 5`) prevents 429s when many parallel LLM calls fire. Do not bypass it by calling SDK clients directly.
-- LLM provider is selected via `LLM_PROVIDER` env var (default: `anthropic`). Valid values: `anthropic`, `openai`, `github-copilot`, `openrouter`, `deepseek`.
+- LLM provider is selected via `LLM_PROVIDER` env var (default: `anthropic`). Valid values: `anthropic`, `openai`, `github-copilot`, `openrouter`, `deepseek`, `qwen`, `atlas`.
 - Provider implementations live in `src/providers/`. Each file implements the `LlmProvider` interface. The factory in `src/providers/index.ts` validates the provider name and logs only the provider name — never API keys or endpoint URLs.
 - GitHub issue label colors are defined in `LABEL_COLORS` in `src/github.ts`. Add new labels there.
 - GitHub Discussions have no REST API, so `fetchRecentDiscussions` uses GraphQL. Enable per-repo with `discussions: true` — most tracked repos have the board enabled but dormant, and an unconditional fetch would just burn quota. Only `buildCliPrompt` renders a Discussions section, and it is omitted entirely when there is no data.

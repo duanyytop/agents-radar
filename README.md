@@ -238,13 +238,14 @@ Go to **Settings → Secrets and variables → Actions** and add:
 
 | Secret | Required | Description |
 |--------|----------|-------------|
-| `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, `openrouter`, `deepseek`, or `qwen` |
+| `LLM_PROVIDER` | optional | `anthropic` (default), `openai`, `github-copilot`, `openrouter`, `deepseek`, `qwen`, or `atlas` |
 | `ANTHROPIC_API_KEY` | if Anthropic | API key — works with both Anthropic and Kimi Code |
 | `ANTHROPIC_BASE_URL` | optional | API endpoint override. Set to `https://api.kimi.com/coding/` for Kimi Code; leave unset for Anthropic |
 | `OPENAI_API_KEY` | if OpenAI | OpenAI API key |
 | `OPENAI_BASE_URL` | optional | OpenAI endpoint override |
 | `OPENROUTER_API_KEY` | if OpenRouter | OpenRouter API key |
 | `DEEPSEEK_API_KEY` | if DeepSeek | DeepSeek API key |
+| `ATLASCLOUD_API_KEY` | if Atlas Cloud | Atlas Cloud API key |
 | `DASHSCOPE_API_KEY` | if Qwen | Alibaba Model Studio API key |
 | `TELEGRAM_BOT_TOKEN` | optional | Telegram bot token from [@BotFather](https://t.me/BotFather). If set, a message is sent after each digest run |
 | `TELEGRAM_CHAT_ID` | optional | Telegram chat/channel/group ID to send notifications to |
@@ -280,8 +281,9 @@ Set `LLM_PROVIDER` to choose which model backend powers the digest generation. D
 | OpenRouter | `openrouter` | `OPENROUTER_API_KEY` | `anthropic/claude-sonnet-4` |
 | DeepSeek | `deepseek` | `DEEPSEEK_API_KEY` | `deepseek-v4-flash` |
 | Qwen | `qwen` | `DASHSCOPE_API_KEY` | `qwen-flash` |
+| Atlas Cloud | `atlas` | `ATLASCLOUD_API_KEY` | `Qwen/Qwen3-235B-A22B-Instruct-2507` |
 
-Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, `OPENROUTER_MODEL`, `DEEPSEEK_MODEL`, or `QWEN_MODEL` respectively. The Qwen endpoint can be overridden with `DASHSCOPE_BASE_URL`.
+Override the model name with `ANTHROPIC_MODEL`, `OPENAI_MODEL`, `GITHUB_COPILOT_MODEL`, `OPENROUTER_MODEL`, `DEEPSEEK_MODEL`, `QWEN_MODEL`, or `ATLASCLOUD_MODEL` respectively. The Qwen and Atlas Cloud endpoints can be overridden with `DASHSCOPE_BASE_URL` and `ATLASCLOUD_BASE_URL`.
 
 The scheduled daily run uses `qwen` / `qwen-flash`.
 
@@ -315,6 +317,9 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxxxxx
 # Qwen (Alibaba Model Studio)
 # export LLM_PROVIDER=qwen
 # export DASHSCOPE_API_KEY=sk-xxxxxxxx
+
+# export LLM_PROVIDER=atlas
+# export ATLASCLOUD_API_KEY=sk-xxxxxxxx
 
 export DIGEST_REPO=your-username/agents-radar  # optional; omit to only write files
 
