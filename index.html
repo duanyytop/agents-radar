@@ -484,8 +484,12 @@ async function loadReport(date, report, push = true) {
     }
   });
 
-  // Close mobile sidebar
-  document.getElementById('sidebar').classList.remove('open');
+  // Close mobile sidebar and reset its inner scroll — a retained scrollTop
+  // pushes the toggle row out of the collapsed 48px strip, making the bar
+  // look like it vanished (and it can't be clicked to reopen).
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.remove('open');
+  sidebar.scrollTop = 0;
 
   const cwrap = document.getElementById('cwrap');
   setContent('<div class="msg"><div class="msg-icon">⏳</div><div>Loading…</div></div>');
@@ -493,21 +497,29 @@ async function loadReport(date, report, push = true) {
 
   try {
     let res;
-    // Retry transient network failures (e.g. a cold CDN edge) before giving up.
+    // Retry transient failures (network errors as well as non-ok CDN
+    // responses such as a 502 from a cold edge) before giving up.
     for (let attempt = 0; ; attempt++) {
       try {
         res = await fetch(`./digests/${date}/${report}.md`);
-        break;
+        if (res.ok || attempt >= 2) break;
       } catch (netErr) {
         if (attempt >= 2) throw netErr;
-        await new Promise((r) => setTimeout(r, 300 * (attempt + 1)));
       }
+      await new Promise((r) => setTimeout(r, 300 * (attempt + 1)));
     }
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const raw = await res.text();
+    // Drop the response if the user has navigated to another report while
+    // this fetch was in flight, so a slow stale reply can't overwrite it.
+    if (currentKey !== key) return;
     const safe = renderMarkdown(raw);
     setContent(`<div class="md fade">${safe}</div>`);
   } catch (e) {
+    // Reset the guard so clicking the same report again retries; otherwise
+    // the early-return above turns every further click into a silent no-op
+    // and the only way out is loading a different report first.
+    if (currentKey === key) currentKey = null;
     setContent(`<div class="msg"><div class="msg-icon">⚠️</div><div>加载失败：${e.message}</div></div>`);
   }
 }
