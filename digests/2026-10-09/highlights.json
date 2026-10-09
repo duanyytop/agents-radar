@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.295 发布，支持 OSC 7501",
+      "OpenAI Codex 升级至 rust-v0.163.0-alpha.2",
+      "GitHub Copilot CLI v1.0.95 修复 macOS 认证问题",
+      "Gemini CLI 尽管活跃但无新版本发布",
+      "OpenCode 和 Pi 在开源 AI 工具中崭露头角",
+      "Qwen Code 在开发者社区中势头上升"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.9.9 发布，修复会话稳定性",
+      "OpenClaw 更新解决关键运行时卡死问题",
+      "OpenClaw 修复包交换权限失败",
+      "Hermes Agent 因可靠性受关注",
+      "IronClaw 聚焦安全多代理编排",
+      "QwenPaw 提升代理的 RAG 集成"
+    ],
+    "ai-infra": [
+      "vLLM 稳定在 v0.31，无新版本发布",
+      "SGLang 活跃，v0.30.x 开发持续进行",
+      "llama.cpp v1.10.0-b11514 修复稳定性",
+      "Ollama v0.40.2 修复关键 MLX 问题",
+      "LiteLLM v1.106.0-dev.2 非破坏性发布",
+      "Unsloth v0.1.905-beta 推出测试功能"
+    ],
+    "ai-trending": [
+      "ECC 与 claude-mem 主导 AI 代理优化趋势",
+      "CherryHQ/cherry-studio 领先自托管 AI 运动",
+      "RAGflow 降低高达 95% 的令牌使用",
+      "Meilisearch 为代理系统提供语义检索",
+      "Qdrant 达 34,982 星，实现快速向量搜索",
+      "Run-llama/llama_index 扩展企业级 RAG 流水线"
+    ],
+    "ai-web": [
+      "Anthropic 推出针对工业控制防御的网络任务",
+      "OSS Scanner 现可选择启用开源安全扫描",
+      "CIDP 专注电网、水务和交通系统",
+      "Claude Science 生成首张紫外天空图",
+      "OpenAI 发布反虚假信息宣传内容",
+      "新 AI 内容揭示国家安全关注点"
+    ],
+    "ai-hn": [
+      "Step 5 预览：StepFun 推出 100 万上下文 MoE 模型",
+      "Claude Haiku 5.5 因速度与成本效率获赞",
+      "潜变量分解实现亚 1 比特 LLM 压缩",
+      "三篇 OpenAI 数学成果因争议撤回",
+      "Edi Life OS 与 Aura 引发代理系统兴趣",
+      "AI 驱动数学推理取得突破"
+    ],
+    "ai-ph": [
+      "IrisGo 面向独立创业者赢得 Product Hunt 518 票",
+      "Velozity 推出多人协作 AI 办公环境",
+      "Mistral Large 4 作为开源模型受欢迎",
+      "Alkera Databench 推动协作式 AI 创新",
+      "Pegasus 1.6 从第一人称视频训练机器人",
+      "Ana by Vertice 自动化 SaaS 谈判流程"
+    ],
+    "ai-arxiv": [
+      "Jev 模型实现低延迟强化学习策略推理",
+      "LTBD 通过信任边界防御提示注入",
+      "LLM 更换削弱科学写作筛选",
+      "图像生成 3D 资产推动多模态 AI",
+      "音位感知分词提升 NLP 效果",
+      "新基准呼吁真实世界对齐评估"
+    ],
+    "ai-community": [
+      "重试逻辑对稳健 AI 工作流设计至关重要",
+      "肉代理用于稳定 AI 代理输出",
+      "用 AI 快速交付不代表工程成熟",
+      "本地图像识别获得隐私优势",
+      "TouchGrass 与 AgriSensa 推动真实世界应用",
+      "Llama Village 展示有意义的 AI 应用"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.295 released with OSC 7501 support",
+      "OpenAI Codex updates to rust-v0.163.0-alpha.2",
+      "GitHub Copilot CLI v1.0.95 fixes macOS auth issues",
+      "Gemini CLI sees no new release despite activity",
+      "OpenCode and Pi gain traction in open-source AI tools",
+      "Qwen Code gains momentum in developer communities"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.9.9 released with session stability fixes",
+      "Critical runtime hangs resolved in OpenClaw update",
+      "OpenClaw fixes package-swap permission failures",
+      "Hermes Agent gains attention for agent reliability",
+      "IronClaw focuses on secure multi-agent orchestration",
+      "QwenPaw enhances RAG integration for agents"
+    ],
+    "ai-infra": [
+      "vLLM stable at v0.31 with no new release",
+      "SGLang active with v0.30.x development ongoing",
+      "llama.cpp v1.10.0-b11514 patched for stability",
+      "Ollama v0.40.2 fixes critical MLX issues",
+      "LiteLLM v1.106.0-dev.2 released non-breaking",
+      "Unsloth v0.1.905-beta launches beta features"
+    ],
+    "ai-trending": [
+      "ECC & claude-mem dominate AI agent optimization trends",
+      "CherryHQ/cherry-studio leads self-hosted AI movement",
+      "RAGflow reduces token usage by up to 95%",
+      "Meilisearch powers semantic retrieval in agent systems",
+      "Qdrant hits 34,982 stars with fast vector search",
+      "Run-llama/llama_index scales enterprise RAG pipelines"
+    ],
+    "ai-web": [
+      "Anthropic launches Cyber Mission for OT defense",
+      "OSS Scanner now opt-in for open-source security",
+      "CIDP targets power grids, water, and transport",
+      "Claude Science produces first UV sky map",
+      "OpenAI publishes disinformation counter-campaign posts",
+      "New AI content reveals national security focus"
+    ],
+    "ai-hn": [
+      "Step 5 Preview: 1M-context MoE model from StepFun",
+      "Claude Haiku 5.5 praised for speed and cost-efficiency",
+      "Sub-1-Bit LLM Compression via Latent Factorization",
+      "Three OpenAI math results withdrawn amid debate",
+      "Edi Life OS and Aura spark interest in agent systems",
+      "Breakthroughs in AI-driven mathematical reasoning"
+    ],
+    "ai-ph": [
+      "IrisGo for Solopreneurs wins 518 votes on Product Hunt",
+      "Velozity launches multiplayer AI office environment",
+      "Mistral Large 4 gains traction as open-source model",
+      "Databench by Alkera drives collaborative AI innovation",
+      "Pegasus 1.6 trains robots from egocentric video",
+      "Ana by Vertice automates SaaS negotiation workflows"
+    ],
+    "ai-arxiv": [
+      "Jev model enables low-latency RL policy inference",
+      "LTBD defends against prompt injection with trust boundaries",
+      "LLM turnover undermines scientific writing screening",
+      "3D asset generation from images advances multimodal AI",
+      "Phonologically informed tokenization improves NLP",
+      "New benchmarks call for real-world alignment evaluation"
+    ],
+    "ai-community": [
+      "Retry logic critical for robust AI workflow design",
+      "Meat proxies used to stabilize AI agent outputs",
+      "Shipping faster with AI isn't engineering maturity",
+      "On-device image recognition gains privacy appeal",
+      "TouchGrass and AgriSensa drive real-world AI use",
+      "Llama Village highlights meaningful AI applications"
+    ]
+  }
+}
