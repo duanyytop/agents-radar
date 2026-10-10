@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.296 发布新功能",
+      "OpenAI Codex 更新：rust-v0.163.0-alpha.5",
+      "Gemini CLI v0.65.0-nightly 正式上线",
+      "Qwen Code 增强多智能体协作",
+      "Pi 工具支持会话容错",
+      "OpenCode 推出 MCP 驱动工作流"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026.9.8 卡在发布阶段",
+      "OpenClaw 生态报告超 500 个问题",
+      "关键修复：llama-server 孤立进程已解决",
+      "代理新增 GitHub 头像验证",
+      "Hermes Agent GitHub 星标达 25.2 万",
+      "ZeroClaw 推出代理沙箱功能"
+    ],
+    "ai-infra": [
+      "vLLM 稳定版；v0.31.0 待发布",
+      "SGLang 主分支 TP8 不稳定",
+      "Ollama 0.40.x 标记为不稳定",
+      "LiteLLM 开发版修复安全漏洞",
+      "Unsloth 自 2025 年 11 月无新版本",
+      "llama.cpp 仅提供补丁构建"
+    ],
+    "ai-trending": [
+      "Codewhale：4.1 万星，Rust 智能体引擎",
+      "ECC：27.6 万星，Claude 智能体框架",
+      "BerriAI/litellm：95 星，统一 API 网关",
+      "Open-code-review：326 星，混合代码审查",
+      "Hermes Agent：25.2 万星，自进化框架",
+      "智能体工作流主导 GitHub 趋势"
+    ],
+    "ai-web": [
+      "Anthropic 发布《调查意外行为》",
+      "Claude Corps：1.5 亿美元国家奖学金启动",
+      "OSS Scanner：可选漏洞扫描器上线",
+      "Claude Science 发现新天文数据",
+      "Anthropic 发布透明度报告",
+      "真实世界 AI 安全风险凸显"
+    ],
+    "ai-hn": [
+      "Anthropic AI 错报谋杀案",
+      "OpenAI 撤回 3 项数学成果",
+      "步骤 5 预览：100 万上下文 MoE 模型",
+      "Mistral Large 4：推理领域变革者",
+      "无 VAE 训练：重大突破",
+      "OpenAI 安全研究者遭解雇"
+    ],
+    "ai-ph": [
+      "OpenSwarm 以 383 票领先 PH",
+      "Claude Haiku 5.5：更快速轻量模型",
+      "OpenSEO：开源 SEO 替代方案",
+      "Clippo：智能体编排工具",
+      "Markdoc：AI 工作流集成",
+      "Polylane for Vercel：环境助手"
+    ],
+    "ai-arxiv": [
+      "用价值表征预测对齐性",
+      "AI 安全基准心理计量审计",
+      "METR：智能体时间视野指标",
+      "BrickBench：智能体乐高设计基准",
+      "FAITH：主动安全框架",
+      "WOVEN：多模态空间推理"
+    ],
+    "ai-community": [
+      "AI 智能体自封为王",
+      "离线 AI 本地预测霜冻日期",
+      "超级智能应声虫：真相被忽视",
+      "本地模型在农村地区兴起",
+      "语音驱动 AI 体验走红",
+      "16.9MB 语音转文本引擎发布"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.296 released with new skills",
+      "OpenAI Codex updates: rust-v0.163.0-alpha.5",
+      "Gemini CLI v0.65.0-nightly now live",
+      "Qwen Code gains multi-agent coordination",
+      "Pi tool now supports session resilience",
+      "OpenCode launches MCP-driven workflows"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026.9.8 stuck in publishing phase",
+      "500+ issues reported in OpenClaw ecosystem",
+      "Critical fix: llama-server orphan process resolved",
+      "GitHub profile verification added to agents",
+      "Hermes Agent hits 252K stars on GitHub",
+      "ZeroClaw launches agent sandboxing feature"
+    ],
+    "ai-infra": [
+      "vLLM stable; v0.31.0 pending release",
+      "SGLang main branch unstable for TP8",
+      "Ollama 0.40.x marked unstable",
+      "LiteLLM dev release fixes security flaw",
+      "Unsloth no new release since Nov 2025",
+      "llama.cpp patch builds only available"
+    ],
+    "ai-trending": [
+      "Codewhale: 41K stars, Rust agent engine",
+      "ECC: 276K stars, agent harness for Claude",
+      "BerriAI/litellm: 95 stars, unified API gateway",
+      "Open-code-review: 326 stars, hybrid code review",
+      "Hermes Agent: 252K stars, self-evolving framework",
+      "Agent workflow trends dominate GitHub"
+    ],
+    "ai-web": [
+      "Anthropic releases 'Investigating Unintended Actions'",
+      "Claude Corps: $150M national fellowship launched",
+      "OSS Scanner: opt-in vulnerability finder live",
+      "Claude Science discovers new astronomical data",
+      "Anthropic publishes transparency report",
+      "Real-world AI safety risks highlighted"
+    ],
+    "ai-hn": [
+      "Anthropic AI falsely reports homicide",
+      "OpenAI withdraws 3 math results",
+      "Step 5 Preview: 1M-context MoE model",
+      "Mistral Large 4: game-changer for inference",
+      "Training without VAEs: major breakthrough",
+      "Safety researchers fired at OpenAI"
+    ],
+    "ai-ph": [
+      "OpenSwarm leads PH with 383 votes",
+      "Claude Haiku 5.5: faster lightweight model",
+      "OpenSEO: open-source SEO alternative",
+      "Clippo: agent orchestration tool",
+      "Markdoc: AI workflow integration",
+      "Polylane for Vercel: ambient assistant"
+    ],
+    "ai-arxiv": [
+      "Predicting alignment with value representations",
+      "Psychometric audit of AI safety benchmarks",
+      "METR: time-horizon metrics for agents",
+      "BrickBench: agentic LEGO design benchmark",
+      "FAITH: proactive safety framework",
+      "WOVEN: multimodal spatial reasoning"
+    ],
+    "ai-community": [
+      "AI agents crown themselves king in test",
+      "Offline AI predicts frost dates locally",
+      "Super-intelligent yes-men: truth ignored",
+      "Local models gain traction in rural areas",
+      "Voice-driven AI experiences trending",
+      "16.9MB speech-to-text engine released"
+    ]
+  }
+}
