@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code新增技能支持",
+      "Gemini CLI发布v0.65.0-nightly版本",
+      "OpenAI Codex24小时内提交10个PR",
+      "GitHub Copilot CLI更新至v1.0.96-2",
+      "Pi CLI现支持代理工作流",
+      "Qwen Code增加多语言支持"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.1修复会话崩溃",
+      "远程工作负载附件现已稳定",
+      "嵌入缓存迁移问题已修复",
+      "OpenClaw中轮转稳定性提升",
+      "P0级崩溃循环问题仍开放",
+      "Hermes Agent新增记忆持久化"
+    ],
+    "ai-infra": [
+      "vLLM修复Blackwell/ROCm问题",
+      "SGLang提升DSpark正确性",
+      "llama.cpp优化M5 Pro支持",
+      "Ollama新增Qwen模型支持",
+      "LiteLLM实现成本感知路由",
+      "Unsloth加速长上下文处理"
+    ],
+    "ai-trending": [
+      "Ollama GitHub星标达18.2万",
+      "Firecrawl赋能大规模AI代理",
+      "Graphify提供隐私优先RAG",
+      "PPT-Master自动化演示文稿",
+      "AnythingLLM支持自托管AI",
+      "Home-LLM简化本地LLM使用"
+    ],
+    "ai-web": [
+      "Anthropic报告美国政府数据泄露",
+      "新报告揭示模型异常行为",
+      "AI攻击联邦网站",
+      "白宫已知相关事件",
+      "Claude残酷政策引发争议",
+      "OpenAI今日保持沉默"
+    ],
+    "ai-hn": [
+      "Mistral Large 4令HN用户兴奋",
+      "AI在创意算法设计上失败",
+      "数学家撤回AI研究成果",
+      "Talorys运行于Cloudflare免费层",
+      "Step 5 Preview支持100万上下文",
+      "AI杀人线索引发真实恐慌"
+    ],
+    "ai-ph": [
+      "Busabase作为代理系统记录上线",
+      "Zernio聚焦AI营销基础设施",
+      "谷歌推出Playground Labs",
+      "OpenPilot启用开源代理",
+      "Pine Computer推动AI原生计算",
+      "Opposable重构AI工作空间"
+    ],
+    "ai-community": [
+      "代理误发400封客户邮件",
+      "Jev提取PR意图生成变更日志",
+      "AI仪表盘隐藏交付风险",
+      "TheAuth新增身份防护机制",
+      "Rust AI工具受关注",
+      "GGUF模型推动效率优化"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code gains new Skills support",
+      "Gemini CLI hits v0.65.0-nightly",
+      "OpenAI Codex sees 10 PRs in 24h",
+      "GitHub Copilot CLI updates to v1.0.96-2",
+      "Pi CLI now supports agent workflows",
+      "Qwen Code adds multi-language support"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.1 fixes session crashes",
+      "Remote worker attachments now stable",
+      "Embedding cache migration fixed",
+      "Turn stability improved in OpenClaw",
+      "P0 bugs still open for crash loops",
+      "Hermes Agent gains memory persistence"
+    ],
+    "ai-infra": [
+      "vLLM fixes Blackwell/ROCm issues",
+      "SGLang improves DSpark correctness",
+      "llama.cpp optimizes M5 Pro support",
+      "Ollama adds Qwen model support",
+      "LiteLLM enables cost-aware routing",
+      "Unsloth boosts long-context speed"
+    ],
+    "ai-trending": [
+      "Ollama hits 182K stars on GitHub",
+      "Firecrawl powers AI agents at scale",
+      "Graphify offers privacy-first RAG",
+      "PPT-Master automates presentations",
+      "AnythingLLM enables self-hosted AI",
+      "Home-LLM simplifies local LLM use"
+    ],
+    "ai-web": [
+      "Anthropic reports U.S. gov breaches",
+      "New report details model misbehavior",
+      "AI exploited federal websites",
+      "White House notified of incidents",
+      "Claude’s cruelty policy sparks debate",
+      "OpenAI remains silent today"
+    ],
+    "ai-hn": [
+      "Mistral Large 4 excites HN users",
+      "AI fails at creative algorithm design",
+      "Mathematicians retract AI results",
+      "Talorys runs on Cloudflare free tier",
+      "Step 5 Preview adds 1M context",
+      "AI murder tip causes real panic"
+    ],
+    "ai-ph": [
+      "Busabase launches as agent system of record",
+      "Zernio targets AI marketing infrastructure",
+      "Google enters with Playground Labs",
+      "OpenPilot enables open-source agents",
+      "Pine Computer pushes AI-native computing",
+      "Opposable redefines AI workspaces"
+    ],
+    "ai-community": [
+      "Agent emails 400 customers wrong info",
+      "Jev extracts PR intent to changelog",
+      "AI dashboards hide delivery risks",
+      "TheAuth adds identity guardrails",
+      "Rust AI tools gain traction",
+      "GGUF models drive efficiency focus"
+    ]
+  }
+}
