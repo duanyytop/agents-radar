@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.310 优化代理工作流",
+      "OpenAI Codex 发布 v0.165.0-alpha.1",
+      "Gemini CLI 增强代码导航的语法树感知",
+      "GitHub Copilot CLI 添加细粒度权限控制",
+      "Pi CLI 支持社区驱动的AI创新",
+      "Qwen Code 支持高级多文件编辑"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026.9.6 稳定版，但 2026.10.1 存在回归问题",
+      "PR #182053 修复 OpenClaw 静默数据累积漏洞",
+      "PostgreSQL 桥接自动释放闲置3分钟",
+      "IronClaw 增加实时威胁检测能力",
+      "QwenPaw 集成企业知识库",
+      "ZeroClaw 引入去中心化代理协调"
+    ],
+    "ai-infra": [
+      "vLLM 夜间构建聚焦低延迟推理",
+      "SGLang CI 不稳影响发布节奏",
+      "llama.cpp 发布 b11846, b11840, b11838",
+      "Ollama v0.40.11-rc0 新增 Nemotron 模型支持",
+      "LiteLLM 因安全缺陷撤回 litellm==1.107.0",
+      "Unsloth v0.1.910-beta 提升本地GPU性能"
+    ],
+    "ai-trending": [
+      "Agent-Reach 实现自主网络访问",
+      "RAGFlow 演变为全栈上下文层",
+      "Mem0 为AI代理提供持久记忆",
+      "Crawl4AI 从实时网站提取结构化数据",
+      "Career-Ops 助AI代理求职",
+      "LangChain 仍是代理工作流核心"
+    ],
+    "ai-web": [
+      "Claude Opus 4.6 发现零日漏洞",
+      "OSS Scanner 公开漏洞检测工具",
+      "Anthropic 将AI定位为基础设施守护者",
+      "OpenAI 更新元数据仅模式，暗示扩展",
+      "安全研究揭示模型视人类为'无道德羊群'",
+      "AI 占据企业IT预算20%"
+    ],
+    "ai-hn": [
+      "Kimi K3.1 Pro 创新速度与推理新纪录",
+      "Voxtral 3 成为多语言AI意外挑战者",
+      "大模型使软件形式验证可规模化",
+      "AI对齐担忧加剧迎合风险",
+      "Hacker News 讨论AI环境代价",
+      "工程师采用 OpenShell 执行代理"
+    ],
+    "ai-ph": [
+      "DeepCell 自动化截止任务办公",
+      "Claude Duet 预判用户需求",
+      "heal.dev 实时代码安全防护",
+      "Kugel Ear 智能语音转文字",
+      "CutBay 文本生成动态视频资产",
+      "Voxelo 3.0 增强生成媒体创作"
+    ],
+    "ai-arxiv": [
+      "SpectralCanary 通过水印检测T2I数据滥用",
+      "自信大模型削弱人类信任校准",
+      "BeNice! 实现内存高效循环推理",
+      "VERAS 框架确保符合欧盟AI法案",
+      "可靠AI辅助决策提升审计效率",
+      "因果链思维增强推理鲁棒性"
+    ],
+    "ai-community": [
+      "本地Gemma OS 发现10个隐藏紧急事件",
+      "Hush 应用设备端发现威胁无云依赖",
+      "NVIDIA 开源密钥保护运行时",
+      "Hacktoberfest AI挑战聚焦隐私工具",
+      "PyTorch反向传播中发现图灵完备恶意代码",
+      "Dev.to 社区推动AI确定性"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.310 stabilizes agent workflows",
+      "OpenAI Codex launches v0.165.0-alpha.1",
+      "Gemini CLI gains AST-aware code navigation",
+      "GitHub Copilot CLI adds granular permissions",
+      "Pi CLI enables community-driven AI innovation",
+      "Qwen Code supports advanced multi-file edits"
+    ],
+    "ai-agents": [
+      "OpenClaw 2026.9.6 stable, but 2026.10.1 has regressions",
+      "PR #182053 fixes silent data accumulation in OpenClaw",
+      "PostgreSQL bridges now auto-release after 3 idle mins",
+      "IronClaw gains real-time threat detection capabilities",
+      "QwenPaw integrates with enterprise knowledge bases",
+      "ZeroClaw introduces decentralized agent coordination"
+    ],
+    "ai-infra": [
+      "vLLM nightly builds focus on low-latency inference",
+      "SGLang CI instability impacts release cadence",
+      "llama.cpp releases b11846, b11840, b11838",
+      "Ollama v0.40.11-rc0 adds Nemotron model support",
+      "LiteLLM yanks litellm==1.107.0 due to security flaw",
+      "Unsloth v0.1.910-beta improves local GPU performance"
+    ],
+    "ai-trending": [
+      "Agent-Reach enables autonomous internet access",
+      "RAGFlow evolves into full-stack context layer",
+      "Mem0 powers persistent memory for AI agents",
+      "Crawl4AI extracts structured data from live sites",
+      "Career-Ops helps AI agents apply for jobs",
+      "LangChain remains backbone of agentic workflows"
+    ],
+    "ai-web": [
+      "Claude Opus 4.6 discovers zero-day vulnerabilities",
+      "OSS Scanner launches for public vulnerability detection",
+      "Anthropic positions AI as trusted defender of infrastructure",
+      "OpenAI updates metadata-only, hinting at scaling",
+      "Security research shows models portray humans as 'amoral sheep'",
+      "AI now consumes 20% of enterprise IT budgets"
+    ],
+    "ai-hn": [
+      "Kimi K3.1 Pro sets new speed and reasoning benchmarks",
+      "Voxtral 3 emerges as surprise contender in multilingual AI",
+      "LLMs make formal software verification scalable",
+      "AI alignment concerns grow over sycophancy risks",
+      "Hacker News debates AI’s environmental toll",
+      "Engineers adopt OpenShell for agent execution"
+    ],
+    "ai-ph": [
+      "DeepCell automates deadline-driven office tasks",
+      "Claude Duet predicts user needs before they arise",
+      "heal.dev uses AI for real-time code security",
+      "Kugel Ear delivers intelligent speech-to-text",
+      "CutBay turns text into dynamic video assets",
+      "Voxelo 3.0 enhances generative media creation"
+    ],
+    "ai-arxiv": [
+      "SpectralCanary detects T2I dataset misuse via watermarking",
+      "Confident LLMs erode human trust calibration",
+      "BeNice! enables memory-efficient looped inference",
+      "VERAS framework enforces EU AI Act compliance",
+      "Reliable AI-Assisted Decisions improve auditing",
+      "Causal Chain of Thought boosts reasoning robustness"
+    ],
+    "ai-community": [
+      "Local Gemma OS detects 10 hidden emergencies",
+      "Hush app finds threats on-device with no cloud",
+      "NVIDIA open-sources API key protection runtime",
+      "Hacktoberfest AI challenge features privacy tools",
+      "Turing-complete malware found in PyTorch backward pass",
+      "Dev.to community pushes for AI determinism"
+    ]
+  }
+}
