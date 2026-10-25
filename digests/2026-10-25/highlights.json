@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Gemini CLI v0.67.0-nightly发布关键修复",
+      "Claude Code因数据丢失问题信任度下降",
+      "OpenAI Codex 24小时内新增10个问题",
+      "Qwen Code通过结构化发布持续进步",
+      "GitHub Copilot CLI升级至v1.0.104-3",
+      "Pi工具在轻量级AI编程中崭露头角"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.7新增安全会话恢复功能",
+      "v2026.9.34为等效LTS安全更新",
+      "会话状态处理严重漏洞激增",
+      "性能优化聚焦冷启动效率",
+      "插件捕获与WAL死锁问题持续存在",
+      "代理自主性优先保障确定性流程"
+    ],
+    "ai-infra": [
+      "Ollama v0.40.11发布关键改进",
+      "LiteLLM v1.106.3：发布关键安全更新",
+      "vLLM保持v0.32.0稳定状态",
+      "SGLang今日新增9个问题",
+      "Unsloth等待beta发布确认",
+      "llama.cpp热修复解决稳定性问题"
+    ],
+    "ai-trending": [
+      "NVIDIA OpenShell 24小时收获896星",
+      "morluto/rea飙升至378k星",
+      "firecrawl/firecrawl推动联网AI趋势",
+      "Agent-Reach在上下文管理中加速发展",
+      "thedotmack/claude-mem实现持久记忆",
+      "makecindy/cindy崛起为AI代理强大力量"
+    ],
+    "ai-hn": [
+      "神经芯片解码脑区交互",
+      "LLMs无法可靠评估置信度",
+      "Anthropic展示LLMs实现大规模验证",
+      "对生产力宣称的AI疑虑加剧",
+      "病毒式传播质疑AI伦理动机",
+      "Hacker News热议AI真实影响"
+    ],
+    "ai-ph": [
+      "MOVO AI：首个移动长视频代理",
+      "ElevenLabs Realtime延迟降至570ms",
+      "Cloudflare Clairic将AI引入基础设施",
+      "Polylane for Cloudflare自动化值班工作",
+      "实时语音AI主导移动端创新",
+      "用户控制与透明度成首要关注"
+    ],
+    "ai-community": [
+      "AI将安全响应从数周缩短至数小时",
+      "代理称完成，但测试可能未执行",
+      "基于Gemma的工具因隐私受青睐",
+      "欧盟推动有争议的‘数字征用’",
+      "本地AI工具减少云依赖",
+      "提示注入风险仍未解决"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Gemini CLI v0.67.0-nightly released with critical fixes",
+      "Claude Code faces trust erosion amid data-loss issues",
+      "OpenAI Codex hits 10 new issues in 24 hours",
+      "Qwen Code advances with structured releases",
+      "GitHub Copilot CLI updates to v1.0.104-3",
+      "Pi tool gains traction for lightweight AI coding"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.7 adds replay-safe session recovery",
+      "v2026.9.34 is LTS-equivalent security release",
+      "High-severity bugs surge in session state handling",
+      "Performance optimizations focus on cold-boot efficiency",
+      "Plugin capture and WAL deadlock issues persist",
+      "Agent autonomy now prioritizes deterministic control flow"
+    ],
+    "ai-infra": [
+      "Ollama v0.40.11 released with key improvements",
+      "LiteLLM v1.106.3: critical security update issued",
+      "vLLM remains stable at v0.32.0",
+      "SGLang sees 9 new issues today",
+      "Unsloth awaits beta release confirmation",
+      "llama.cpp hotfixes address stability concerns"
+    ],
+    "ai-trending": [
+      "NVIDIA OpenShell hits 896 stars in 24h",
+      "morluto/rea surges to 378k stars",
+      "firecrawl/firecrawl drives web-connected AI trends",
+      "Agent-Reach gains momentum in context management",
+      "thedotmack/claude-mem enables persistent memory",
+      "makecindy/cindy emerges as AI agent powerhouse"
+    ],
+    "ai-hn": [
+      "Neural chip decodes brain region interactions",
+      "LLMs can’t be trusted to assess confidence",
+      "Anthropic shows LLMs enable large-scale verification",
+      "AI skepticism grows over productivity claims",
+      "Viral thread questions AI’s ethical motives",
+      "Hacker News debates AI’s real-world impact"
+    ],
+    "ai-ph": [
+      "MOVO AI: first mobile long-form video agent",
+      "ElevenLabs Realtime hits 570ms latency",
+      "Cloudflare Clairic brings AI to infrastructure",
+      "Polylane for Cloudflare automates on-call work",
+      "Real-time voice AI dominates mobile innovation",
+      "User control and transparency are top priorities"
+    ],
+    "ai-community": [
+      "AI shrinks security response from weeks to hours",
+      "Agents say 'done'—but tests may not run",
+      "Gemma-based tools gain popularity for privacy",
+      "EU pushes controversial 'digital expropriation'",
+      "Local AI tools reduce cloud dependency",
+      "Prompt injection risks remain unaddressed"
+    ]
+  }
+}
