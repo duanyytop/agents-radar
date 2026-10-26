@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 今日新增10个问题",
+      "Gemini CLI 发布 v0.67.0-nightly 版本",
+      "Qwen Code 推出夜间版 v0.26.1",
+      "OpenAI Codex 出现10个开放问题",
+      "Pi 与 OpenCode 各合并10个PR",
+      "GitHub Copilot CLI 活跃，存在10个问题"
+    ],
+    "ai-agents": [
+      "OpenClaw：24小时内358个开放问题，500个PR",
+      "报告严重SQLite WAL增长漏洞",
+      "v2026.10.7-beta 版本启动回归问题",
+      "优化Prometheus头部性能",
+      "Talk中继改善音频时序处理",
+      "过去7天无新版本发布"
+    ],
+    "ai-infra": [
+      "vLLM：新增8个问题，合并7个PR",
+      "SGLang专注推测解码",
+      "llama.cpp 发布3个补丁更新",
+      "Ollama 遇到macOS/Metal稳定性问题",
+      "LiteLLM 新增实时成本追踪",
+      "vLLM 夜间版稳定，含关键修复"
+    ],
+    "ai-trending": [
+      "cindy & hallmark：零配置AI代理",
+      "Graphify 与 LightRAG 提升RAG工作流",
+      "VoiceStudio语音克隆热度飙升",
+      "ollama：184K星标，本地LLM领头羊",
+      "langchain：148K星标，代理标准",
+      "AgriciDaniel/claude-seo：SEO自动化"
+    ],
+    "ai-hn": [
+      "10岁少年用CNN击败大模型皮肤癌诊断",
+      "Cerebras部署万亿参数模型",
+      "OpenAI价格下调最高达80%",
+      "伯克利教授质疑评分机制",
+      "尼康比赛冠军因使用AI被取消资格",
+      "AI hype 与实际影响之争"
+    ],
+    "ai-ph": [
+      "myPip以266票领先游戏AI",
+      "1Password for Agents：安全代理访问",
+      "Fluxix提供精细代理控制",
+      "AgentValley：原生Mac AI助手",
+      "sideOS.ai：轻量级AI工作流工具",
+      "Shedi：本地化日常任务AI"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B：18K点赞，800万下载",
+      "Lightricks/LTX-2.5：9K点赞，200万下载",
+      "DavidAU的非审查Qwen GGUF受关注",
+      "Comfy-Org推动可及工作流",
+      "XHToken的Spark-X2.6-4B：高效4B模型",
+      "GGUF版本主导微调活动"
+    ],
+    "ai-community": [
+      "Dev.to：LLM发现测试边缘案例",
+      "Gemma离线审计代码仅需17秒",
+      "本地AI代理自动处理GitHub收件箱",
+      "Hacktoberfest：稳步发展AI工具",
+      "Mistral推出时序AI Timestral",
+      "PyTorch反向传播存在恶意风险"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code hits 10 new issues today",
+      "Gemini CLI releases v0.67.0-nightly",
+      "Qwen Code rolls out nightly v0.26.1",
+      "OpenAI Codex sees 10 open issues",
+      "Pi and OpenCode each merge 10 PRs",
+      "GitHub Copilot CLI active with 10 issues"
+    ],
+    "ai-agents": [
+      "OpenClaw: 358 open issues, 500 PRs in 24h",
+      "Critical SQLite WAL growth bug reported",
+      "Startup regressions in v2026.10.7-beta",
+      "Performance fix for Prometheus headers",
+      "Talk relay now handles audio timing better",
+      "No new releases in past 7 days"
+    ],
+    "ai-infra": [
+      "vLLM: 8 new issues, 7 PRs merged",
+      "SGLang focuses on speculative decoding",
+      "llama.cpp releases 3 patch updates",
+      "Ollama faces macOS/Metal stability issues",
+      "LiteLLM adds real-time cost tracking",
+      "vLLM stable nightly with critical fixes"
+    ],
+    "ai-trending": [
+      "cindy & hallmark: zero-config AI agents",
+      "Graphify & LightRAG boost RAG workflows",
+      "VoiceStudio surges in voice cloning",
+      "ollama: 184K stars, local LLM leader",
+      "langchain: 148K stars, agent standard",
+      "AgriciDaniel/claude-seo: SEO automation"
+    ],
+    "ai-hn": [
+      "10-year-old CNN beats LLMs in skin cancer",
+      "Cerebras deploys trillion-parameter models",
+      "OpenAI cuts prices by up to 80%",
+      "UC Berkeley professor questions grading",
+      "Nikon contest winner stripped for AI use",
+      "AI hype vs. real-world impact debate"
+    ],
+    "ai-ph": [
+      "myPip leads with 266 votes for game AI",
+      "1Password for Agents: secure agent access",
+      "Fluxix offers granular agent controls",
+      "AgentValley: Mac-native AI assistant",
+      "sideOS.ai: lightweight AI workflow tool",
+      "Shedi: local AI for daily tasks"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B: 18K likes, 8M downloads",
+      "Lightricks/LTX-2.5: 9K likes, 2M downloads",
+      "DavidAU’s uncensored Qwen GGUF gains traction",
+      "Comfy-Org drives accessible workflows",
+      "XHToken’s Spark-X2.6-4B: efficient 4B model",
+      "GGUF versions dominate fine-tune activity"
+    ],
+    "ai-community": [
+      "Dev.to: LLM catches test edge cases",
+      "Gemma audits code offline in 17s",
+      "Local AI agents automate GitHub inbox",
+      "Hacktoberfest: slow, steady AI tools",
+      "Mistral’s Timestral for time-series AI",
+      "PyTorch backward pass has malware risk"
+    ]
+  }
+}
