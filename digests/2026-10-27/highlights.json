@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.311 稳定版上线",
+      "OpenAI Codex 仍仅限测试版",
+      "Gemini CLI 夜间版更新",
+      "GitHub Copilot CLI v1.0.104-4 修复版发布",
+      "OpenCode 尚无新版本",
+      "Pi 工具持续开发中"
+    ],
+    "ai-agents": [
+      "OpenClaw：24小时内处理500个问题",
+      "P0 严重缺陷影响Windows稳定性",
+      "PR #185263 修复OAuth过期警告",
+      "侧边聊天界面错误已修复",
+      "插件清理提升性能",
+      "暂无新版本—避免升级"
+    ],
+    "ai-infra": [
+      "SGLang 新增12个问题",
+      "Ollama v0.40.12-rc0 发布",
+      "Unsloth beta v0.1.911 正式上线",
+      "vLLM 与 SGLang 活跃度高",
+      "llama.cpp 补丁级更新",
+      "LiteLLM PR 流动稳定"
+    ],
+    "ai-trending": [
+      "Ollama 达18.4万星标",
+      "LangChain 仍占主导",
+      "Meilisearch 在RAG领域获关注",
+      "Cindy代理激增+1,296星标",
+      "Makecindy零配置AI迅速兴起",
+      "Cindy 无需设置即可运行"
+    ],
+    "ai-web": [
+      "Anthropic 提交IPO S-1文件",
+      "OpenAI 暗示GPT-6.1 Terra",
+      "IPO文件预示市场转向",
+      "GPT-6.1 关联科学重点",
+      "工作主题浮现",
+      "SEC注册确认"
+    ],
+    "ai-hn": [
+      "ETH论文称假设为假",
+      "OpenAI 公布三项发现",
+      "10岁CNN胜过LLMs皮肤癌识别",
+      "AI是否为科学共发现者争议",
+      "Hacker News 对ETH声明分歧",
+      "滥用安全担忧上升"
+    ],
+    "ai-ph": [
+      "Moli by Lexmount 登顶产品猎手",
+      "AgentGrid.io 支持人机协作",
+      "Llama Windows 提升本地AI访问",
+      "Yourcast 2.0 为Telegram带来AI摘要",
+      "面向代理的无头浏览器上线",
+      "开源工具占据榜单"
+    ],
+    "ai-arxiv": [
+      "BriLLM-MetaPred 统一预测",
+      "MetaPred框架推动AGI进展",
+      "引导教师优化自蒸馏",
+      "物理信息模型受关注",
+      "守恒定律嵌入AI",
+      "联邦系统应对异构性"
+    ],
+    "ai-community": [
+      "AI杀毒软件专为代理安全设计",
+      "Claude Code 用于30天编码",
+      "MCP 降低令牌成本与错误",
+      "本地LLM教程火爆",
+      "代理化IDE受欢迎",
+      "Thinkrail 成为开源替代"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.311 stable now live",
+      "OpenAI Codex still alpha-only",
+      "Gemini CLI nightly release updated",
+      "GitHub Copilot CLI v1.0.104-4 fix out",
+      "OpenCode no new release yet",
+      "Pi tool sees active development"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues in 24 hours",
+      "P0 bugs plague Windows stability",
+      "PR #185263 fixes OAuth expiry warnings",
+      "UI bug in Side chat now fixed",
+      "Performance boost via plugin cleanup",
+      "No new releases—avoid upgrading"
+    ],
+    "ai-infra": [
+      "SGLang leads with 12 new issues",
+      "Ollama v0.40.12-rc0 released",
+      "Unsloth beta v0.1.911 now live",
+      "vLLM & SGLang see high activity",
+      "llama.cpp patch-level update",
+      "LiteLLM sees steady PR flow"
+    ],
+    "ai-trending": [
+      "Ollama hits 184K stars",
+      "LangChain remains dominant",
+      "Meilisearch gains RAG traction",
+      "Cindy agent explodes +1,296 stars",
+      "Makecindy's zero-config AI takes off",
+      "Cindy runs without setup needed"
+    ],
+    "ai-web": [
+      "Anthropic files S-1 for IPO",
+      "OpenAI hints at GPT-6.1 Terra",
+      "IPO filing signals public market shift",
+      "GPT-6.1 tied to scientific focus",
+      "World of work theme emerges",
+      "SEC registration confirmed"
+    ],
+    "ai-hn": [
+      "ETH paper claims hypothesis is false",
+      "OpenAI announces three discoveries",
+      "10-year-old CNN beats LLMs on skin cancer",
+      "AI as co-discoverer in science debated",
+      "Hacker News splits on ETH claim",
+      "Safety concerns rise over misuse"
+    ],
+    "ai-ph": [
+      "Moli by Lexmount leads Product Hunt",
+      "AgentGrid.io enables human-agent collab",
+      "Llama Windows boosts local AI access",
+      "Yourcast 2.0 brings AI summaries to Telegram",
+      "Headless browser for agents launched",
+      "Open-source tools dominate list"
+    ],
+    "ai-arxiv": [
+      "BriLLM-MetaPred unifies prediction",
+      "MetaPred framework for AGI progress",
+      "Steering teacher improves self-distillation",
+      "Physics-informed models gain traction",
+      "Conservation laws embedded in AI",
+      "Federated systems tackle heterogeneity"
+    ],
+    "ai-community": [
+      "AI antivirus built for agent security",
+      "Claude Code used for 30-day coding",
+      "MCP reduces token costs and errors",
+      "Local LLM tutorials go viral",
+      "Agentic IDEs gain popularity",
+      "Thinkrail emerges as open alternative"
+    ]
+  }
+}
