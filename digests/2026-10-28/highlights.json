@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.312 优化代理编排",
+      "OpenAI Codex 发布 v0.166.0-alpha.4",
+      "Gemini CLI 推出夜间构建 v0.67.0-nightly.20261028",
+      "Pi 新增代理协作功能",
+      "Qwen Code 提升会话容错能力",
+      "OpenCode v2.2.0 进入实验阶段"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.10-beta.4 修复关键竞态条件",
+      "v2026.10.8 自动重启失败网关",
+      "孤立工作进程不再阻塞CLI命令",
+      "代理持久化保留角色与策略边界",
+      "Hermes Agent 增强安全防护",
+      "IronClaw 集成云原生工作流"
+    ],
+    "ai-infra": [
+      "llama.cpp 发布 b11944, b11930, b11940",
+      "LiteLLM 推送 v1.106.5 至 v1.103.10",
+      "Unsloth 通过代理工具提升开发体验",
+      "vLLM 聚焦内核级优化",
+      "SGLang 目标多模态推理加速",
+      "Ollama 通过轻量网关统一模型访问"
+    ],
+    "ai-trending": [
+      "openbot：本地优先AI队友人气飙升",
+      "ECC：代理调度优化获1.1K星标",
+      "hallmark：反AI冗余设计原则走红",
+      "Graphify：无向量检索革新RAG",
+      "Cognee：上下文保留突破",
+      "Superpowers：自主多代理工作流流行"
+    ],
+    "ai-web": [
+      "Anthropic 提交S-1文件准备上市",
+      "GSA合作提供Claude 40%折扣",
+      "Claude for Government用户自2月起增长8倍",
+      "AI药物发现取得突破",
+      "OpenAI暗示通过'Oracle Apps'集成Oracle",
+      "新研究显示AI可检测网络漏洞"
+    ],
+    "ai-hn": [
+      "指数时间假设被证伪[论文]",
+      "OpenAI披露3项新科学发现",
+      "CFSG在Lean中形式化引发热议",
+      "Claude训练数据涉盗版斯坦福书？争议爆发",
+      "GPT-6.1 Terra在学术圈引发热潮",
+      "AI医疗滥用引现实伤害担忧"
+    ],
+    "ai-ph": [
+      "Strawberry 1.0 每周节省超100小时",
+      "MiniMax M3.1 Flash瞄准高性能代理",
+      "ManyAgents 从Mac窗口运行AI编码团队",
+      "tabsh 实现浏览器端代理执行",
+      "WhoIsCooking 监控AI CPU使用",
+      "PDF无障碍检查器保障包容性"
+    ],
+    "ai-arxiv": [
+      "DCKV：KV缓存的可学习变换编码",
+      "自键入参数记忆无需内存",
+      "视觉语言代理在潜在世界学习",
+      "RubricAtlas推进结构化代理评估",
+      "SetGRPO为深度研究代理校准奖励",
+      "演化代理团队协同优化策略与评分"
+    ],
+    "ai-community": [
+      "插件阻断AI宣称直至测试通过",
+      "AI编写90%代码—最后10%耗时三周",
+      "令牌计账防范静默失败",
+      "自托管LLM因合规需求上升",
+      "工具泄露与幻觉成安全首要关切",
+      "护栏已成为生产代理流水线标配"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.312 stabilizes agent orchestration",
+      "OpenAI Codex launches v0.166.0-alpha.4",
+      "Gemini CLI hits nightly build v0.67.0-nightly.20261028",
+      "Pi gains new agent collaboration features",
+      "Qwen Code enhances session resilience",
+      "OpenCode v2.2.0 enters experimental phase"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.10-beta.4 fixes critical race conditions",
+      "v2026.10.8 auto-restarts failed Gateways",
+      "Orphaned workers no longer block CLI commands",
+      "Agent persistence now preserves role and policy boundaries",
+      "Hermes Agent gains new security hardening",
+      "IronClaw integrates with cloud-native workflows"
+    ],
+    "ai-infra": [
+      "llama.cpp releases b11944, b11930, b11940",
+      "LiteLLM rolls out v1.106.5 to v1.103.10",
+      "Unsloth boosts developer experience with agent tools",
+      "vLLM focuses on kernel-level optimization",
+      "SGLang targets multimodal inference acceleration",
+      "Ollama unifies model access via lightweight gateways"
+    ],
+    "ai-trending": [
+      "openbot: local-first AI teammates surge in popularity",
+      "ECC: agent harness optimization gains 1.1K stars",
+      "hallmark: anti-AI-slop design principles go viral",
+      "Graphify: vectorless retrieval revolutionizes RAG",
+      "Cognee: context retention breakthrough",
+      "Superpowers: autonomous multi-agent workflows trend"
+    ],
+    "ai-web": [
+      "Anthropic files S-1 for public market entry",
+      "GSA partnership offers 40% discount on Claude",
+      "Claude for Government users up 8x since Feb",
+      "AI drug discovery breakthrough revealed",
+      "OpenAI hints at Oracle integration via 'Oracle Apps'",
+      "New research shows AI can detect cyber vulnerabilities"
+    ],
+    "ai-hn": [
+      "Exponential Time Hypothesis claimed false [paper]",
+      "OpenAI reveals 3 new scientific discoveries",
+      "CFSG formalized in Lean sparks debate",
+      "Claude trained on pirated Stanford books? Controversy erupts",
+      "GPT-6.1 Terra sparks excitement in research circles",
+      "AI misuse in healthcare raises real-world harm concerns"
+    ],
+    "ai-ph": [
+      "Strawberry 1.0 saves teams 100+ hours/week",
+      "MiniMax M3.1 Flash targets high-performance agents",
+      "ManyAgents runs AI coding teams from Mac window",
+      "tabsh enables browser-based agent execution",
+      "WhoIsCooking monitors AI CPU usage",
+      "PDF Accessibility Checker ensures inclusivity"
+    ],
+    "ai-arxiv": [
+      "DCKV: learned transform coding for KV cache",
+      "Self-Keyed In-Parameter Memorization works without memory",
+      "Vision-Language Agents learn in latent worlds",
+      "RubricAtlas advances structured agent evaluation",
+      "SetGRPO calibrates rewards for deep research agents",
+      "Evolving Agent Teams co-optimize policies and rubrics"
+    ],
+    "ai-community": [
+      "Plugin blocks AI claims until tests pass",
+      "AI wrote 90% of app—last 10% took 3 weeks",
+      "Token accounting guards against silent failures",
+      "Self-hosted LLMs rise for compliance needs",
+      "Tool leakage and hallucination top security concerns",
+      "Guardrails now standard in production agent pipelines"
+    ]
+  }
+}
