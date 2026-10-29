@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code新增技能层",
+      "OpenAI Codex发布第3个alpha版本",
+      "Qwen Code更新至v1.19.5",
+      "Gemini CLI 24小时内提交10个PR",
+      "GitHub Copilot CLI活跃，贡献10个PR",
+      "Pi CLI新增代理工作流支持"
+    ],
+    "ai-agents": [
+      "OpenClaw：今日处理500个问题，500个PR",
+      "网关启动存在关键稳定性漏洞",
+      "Undici v7.30.1安全补丁发布",
+      "Vercel工具链修复fast-uri v3.1.9",
+      "单日合并211个PR",
+      "CLI安全依赖加固进行中"
+    ],
+    "ai-infra": [
+      "llama.cpp发布v0.8.0",
+      "Ollama更新至v0.40.13",
+      "LiteLLM推出候选版本",
+      "vLLM上周贡献87个PR",
+      "SGLang合并52个PR",
+      "Unsloth当前43个开放问题"
+    ],
+    "ai-trending": [
+      "Hermes-Agent：25.8万星标，自我生长",
+      "Agent-Reach赋予代理网络访问能力",
+      "NanoBot：超轻量个人AI",
+      "Oh-My-Pi：IDE集成编码代理",
+      "AnythingLLM：隐私优先的AI架构",
+      "Mem0：高级RAG实现上下文留存"
+    ],
+    "ai-web": [
+      "Anthropic携手20家全球实验室",
+      "Claude发现零点击Chrome漏洞",
+      "发现新型类CRISPR酶",
+      "OpenAI拓展ServiceNow合作",
+      "AI for Science计划全球推进",
+      "真实软件漏洞被曝光"
+    ],
+    "ai-hn": [
+      "Gemini 4 Carbon瞄准边缘设备",
+      "GPT-6.1 Terra强调实时自适应",
+      "指数时间假说不成立？",
+      "Claude训练数据含盗版学术书",
+      "ChatGPT建议危险用药",
+      "AI用于交警执法引发争议"
+    ],
+    "ai-ph": [
+      "TheySaid 4.0以366票领先",
+      "Overmind：自主学习系统",
+      "Revix AI适配团队实践",
+      "Off Grid AI本地运行，私密",
+      "NINX专注本地AI执行",
+      "Paddock：代理沙盒环境"
+    ],
+    "ai-arxiv": [
+      "安全头部阻止提示注入",
+      "SimpleLoRIF追踪安全退化",
+      "跟随梯度：测试时风险",
+      "Timestral创时间序列新基准",
+      "MoI-Bench提升设备端图像生成",
+      "物理信息模型受关注"
+    ],
+    "ai-community": [
+      "AI开发：80%超越简单提示",
+      "精简输入令牌：实战指南",
+      "为代理重构Git基础设施",
+      "上下文处理主导AI工作",
+      "基准测试质疑幻觉问题",
+      "代理驱动提交涌入仓库"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code gains new Skills layer",
+      "OpenAI Codex hits 3 alpha releases",
+      "Qwen Code updates to v1.19.5",
+      "Gemini CLI sees 10 PRs in 24h",
+      "GitHub Copilot CLI active with 10 PRs",
+      "Pi CLI now supports agent workflows"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues, 500 PRs today",
+      "Critical stability bugs in gateway startup",
+      "Security patches for Undici v7.30.1",
+      "Vercel toolchain fixed in fast-uri v3.1.9",
+      "211 PRs merged in one day",
+      "Hardened CLI security pins in progress"
+    ],
+    "ai-infra": [
+      "llama.cpp releases v0.8.0",
+      "Ollama updates to v0.40.13",
+      "LiteLLM rolls out RCs",
+      "vLLM sees 87 PRs last week",
+      "SGLang merges 52 PRs",
+      "Unsloth active with 43 open issues"
+    ],
+    "ai-trending": [
+      "Hermes-Agent: 258K stars, self-growing",
+      "Agent-Reach gives agents internet access",
+      "NanoBot: ultra-lightweight personal AI",
+      "Oh-My-Pi: IDE-integrated coding agent",
+      "AnythingLLM: privacy-first AI stack",
+      "Mem0: advanced RAG for context retention"
+    ],
+    "ai-web": [
+      "Anthropic partners with 20 global labs",
+      "Claude finds zero-click Chrome exploit",
+      "New CRISPR-like enzyme discovered",
+      "OpenAI expands ServiceNow partnership",
+      "AI for Science program goes global",
+      "Real-world software vulnerability exposed"
+    ],
+    "ai-hn": [
+      "Gemini 4 Carbon targets edge devices",
+      "GPT-6.1 Terra emphasizes real-time adaptability",
+      "The Exponential Time Hypothesis is false?",
+      "Claude trained on pirated academic books",
+      "ChatGPT advises dangerous medication",
+      "AI use in police traffic stops sparks debate"
+    ],
+    "ai-ph": [
+      "TheySaid 4.0 leads with 366 votes",
+      "Overmind: autonomous learning system",
+      "Revix AI adapts to team practices",
+      "Off Grid AI runs on-device, private",
+      "NINX focuses on local AI execution",
+      "Paddock: sandboxed environments for agents"
+    ],
+    "ai-arxiv": [
+      "Heads of Security blocks prompt injection",
+      "SimpleLoRIF traces safety degradation",
+      "Follow the Gradient: test-time risks",
+      "Timestral sets new time-series benchmark",
+      "MoI-Bench improves on-device image gen",
+      "Physics-informed models gain traction"
+    ],
+    "ai-community": [
+      "AI dev: 80% beyond just prompting",
+      "Cut input tokens: battle-tested guide",
+      "Git infrastructure rebuilt for agents",
+      "Context handling dominates AI work",
+      "Benchmarks questioned for hallucination",
+      "Agent-driven commits flood repositories"
+    ]
+  }
+}
