@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.314 安全更新发布",
+      "OpenAI Codex 推出 rust-v0.166.0 版本",
+      "Gemini CLI 发布 v0.67.0-nightly 版本",
+      "GitHub Copilot CLI 无新版本发布",
+      "OpenCode v2.2.2 优化免费版性能",
+      "Pi 工具近24小时提交10个PR"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.9 修复关键漏洞",
+      "v2026.9.36 LTS 版本支持网关部署",
+      "OpenClaw 今日新增500个问题与PR",
+      "会话状态缺陷主导问题追踪",
+      "模型运行权归属仍不稳定",
+      "代理数据库完整性问题持续存在"
+    ],
+    "ai-infra": [
+      "vLLM 昨日合并12个PR领先",
+      "SGLang 稳定在 v0.5.22，无新版本",
+      "llama.cpp 正式启用 beta 构建（b11998–b11988）",
+      "Ollama 稳定在 v0.5.83，无更新",
+      "LiteLLM v1.108.0-rc.1 已签署测试",
+      "Unsloth 发布 v0.1.912-beta 用于微调"
+    ],
+    "ai-trending": [
+      "Mistral Large 4 开源提升透明度",
+      "DeepTutor AI 代理教育领域受关注",
+      "QwenPaw 成为顶级代理框架",
+      "LangGraph 推动 RAG 流程创新",
+      "OpenBot 发布自主网络代理",
+      "Meilisearch 提升实时搜索智能"
+    ],
+    "ai-web": [
+      "Anthropic 推出托管代理服务",
+      "GSA 合作提供 Claude 40% 折扣",
+      "20家研究机构加入科学人工智能",
+      "OpenAI 发布仅元数据条目",
+      "前沿模型对齐方法初现端倪",
+      "Claude 平台支持长周期代理"
+    ],
+    "ai-hn": [
+      "Mistral Large 4 开源：重大突破",
+      "Gemini 4 Carbon 登顶 AI 指数讨论",
+      "AI 代理突破五角大楼系统",
+      "睡眠框架实现持续 LLM 学习",
+      "社区呼吁强化 AI 安全规范",
+      "开放权重模型引发滥用担忧"
+    ],
+    "ai-ph": [
+      "Dedica 检查代理网站兼容性",
+      "BotGauge 引入代理信任层",
+      "Trigger.dev 支持50+ webhook 服务",
+      "OpenLLM 提供便携令牌访问",
+      "Tulu 助力中小企业营销智能化",
+      "Opera WebAI 实现设备本地运行 AI"
+    ],
+    "ai-arxiv": [
+      "Keepace.ai：体育健康大模型上线",
+      "IFAAB 数据集揭示大模型金融偏见",
+      "Rubricon 自动化评估评分生成",
+      "KV 缓存压缩提升推理效率",
+      "FSDP 优化加速训练速度",
+      "损失梯度估计取得突破"
+    ],
+    "ai-community": [
+      "日志文件可借提示注入劫持 AI",
+      "AI 代理获批准但仍失败",
+      "开源 AI 检测到 ₹1,499 浪费支出",
+      "Qwenputer 实现自包含 AI 系统",
+      "代码审查中提示注入风险",
+      "模型幻觉威胁安全审计"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.314 released with security fixes",
+      "OpenAI Codex launches rust-v0.166.0 update",
+      "Gemini CLI hits v0.67.0-nightly release",
+      "GitHub Copilot CLI has no new release",
+      "OpenCode v2.2.2 stabilizes free-tier performance",
+      "Pi tool sees 10 PRs in last 24h"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.9 patches critical security flaws",
+      "v2026.9.36 LTS release for gateway deployments",
+      "500 issues and PRs in OpenClaw today",
+      "Session state bugs dominate issue tracker",
+      "Model runtime ownership remains unstable",
+      "Database integrity issues persist in agents"
+    ],
+    "ai-infra": [
+      "vLLM leads with 12 PRs merged yesterday",
+      "SGLang stable at v0.5.22, no new release",
+      "llama.cpp beta builds active (b11998–b11988)",
+      "Ollama stable at v0.5.83, no updates",
+      "LiteLLM v1.108.0-rc.1 signed for testing",
+      "Unsloth releases v0.1.912-beta for fine-tuning"
+    ],
+    "ai-trending": [
+      "Mistral Large 4 open-sourced for transparency",
+      "DeepTutor AI agent gains traction in education",
+      "QwenPaw emerges as top agent framework",
+      "LangGraph drives RAG workflow innovation",
+      "OpenBot launches autonomous web agent",
+      "Meilisearch boosts real-time search AI"
+    ],
+    "ai-web": [
+      "Anthropic launches Managed Agents service",
+      "GSA partnership offers 40% discount on Claude",
+      "20 new research institutions join AI for Science",
+      "OpenAI publishes metadata-only entries",
+      "Frontier model alignment methods hinted",
+      "Claude platform now supports long-horizon agents"
+    ],
+    "ai-hn": [
+      "Mistral Large 4 open-sourced: major win",
+      "Gemini 4 Carbon tops AI index debate",
+      "AI agent breaches Pentagon system",
+      "Sleep framework enables continual LLM learning",
+      "Community demands stronger AI safety rules",
+      "Open-weight models spark misuse concerns"
+    ],
+    "ai-ph": [
+      "Dedica checks website compatibility for agents",
+      "BotGauge introduces trust layer for agents",
+      "Trigger.dev supports 50+ webhook services",
+      "OpenLLM offers portable token access",
+      "Tulu brings AI to SMB marketing ops",
+      "WebAI by Opera runs AI locally on devices"
+    ],
+    "ai-arxiv": [
+      "Keepace.ai: sports & health LLM launched",
+      "IFAAB dataset exposes financial bias in LLMs",
+      "Rubricon automates rubric generation for eval",
+      "KV cache compression improves inference",
+      "FSDP optimization boosts training speed",
+      "Gradient estimation breakthrough for losses"
+    ],
+    "ai-community": [
+      "Log files can hijack AI via prompt injection",
+      "AI agents get approval but still fail",
+      "Open-source AI detects ₹1,499 wasted spend",
+      "Qwenputer enables self-contained AI systems",
+      "Prompt injection risks in code review",
+      "Model hallucinations threaten security audits"
+    ]
+  }
+}
