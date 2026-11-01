@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 今日触发10个问题",
+      "Gemini CLI 发布夜间版 v0.67.0",
+      "OpenAI Codex 新增10个问题",
+      "Pi 工具24小时内新增10个PR",
+      "Qwen Code 登顶主流CLI工具",
+      "GitHub Copilot CLI 更新至 v1.0.106-1"
+    ],
+    "ai-agents": [
+      "OpenClaw：24小时内出现500个问题",
+      "PR #189729 修复会话状态",
+      "会话持久化现已稳定",
+      "关键回归问题正在审查中",
+      "自10月31日以来无新版本发布",
+      "Hermes Agent 受关注"
+    ],
+    "ai-infra": [
+      "vLLM：348个开放问题，+12",
+      "SGLang 报告高不稳定",
+      "llama.cpp 发布 b12024",
+      "Ollama 稳定性修复进行中",
+      "LiteLLM 升级安全",
+      "Unsloth 增加代理工具"
+    ],
+    "ai-trending": [
+      "ECC项目热度飙升",
+      "Firecrawl助力网页抓取",
+      "Ragflow 达到生产级",
+      "Orkas AI代理势头强劲",
+      "Claude-mem 实现持久记忆",
+      "Headroom AI 成熟RAG系统"
+    ],
+    "ai-web": [
+      "Anthropic 推出AI红队测试",
+      "托管代理提供稳定API",
+      "Chrome/Safari发现漏洞",
+      "OpenAI暗示公平使用政策",
+      "青少年安全保护即将上线",
+      "新研究揭示Claude使用情况"
+    ],
+    "ai-hn": [
+      "Mistral Large 4 开源权重发布",
+      "Claude Code VSX 发现后门",
+      "Google Sleep框架曝光",
+      "AI用于逆向游戏开发",
+      "SRE岗位受AI威胁",
+      "大模型恶意软件引发伦理担忧"
+    ],
+    "ai-ph": [
+      "Vaani开发者平台领跑PH",
+      "SpeakON代理实现语音转任务",
+      "Cluinn提供实时AI帮助",
+      "Faylee专注工作流辅助",
+      "ilse增强环境智能",
+      "fastbrowse推动开源创新"
+    ],
+    "ai-community": [
+      "AI亡灵师复活旧代码",
+      "简单函数胜过AI串谋",
+      "ESA卫星幽灵信号被探测",
+      "TabPFN以0.83美元超越LLM",
+      "Qwenputer模拟完整计算系统",
+      "模糊测试与AI漏洞之争升温"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code hits 10 issues today",
+      "Gemini CLI releases nightly v0.67.0",
+      "OpenAI Codex sees 10 new issues",
+      "Pi tool gains 10 PRs in 24h",
+      "Qwen Code joins top CLI tools",
+      "GitHub Copilot CLI updates to v1.0.106-1"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues in 24h",
+      "PR #189729 fixes session state",
+      "Session persistence now stable",
+      "Critical regressions under review",
+      "No new release since Oct 31",
+      "Hermes Agent gains traction"
+    ],
+    "ai-infra": [
+      "vLLM: 348 open issues, +12",
+      "SGLang: high instability reported",
+      "llama.cpp releases b12024",
+      "Ollama stability fixes ongoing",
+      "LiteLLM upgrades security",
+      "Unsloth adds agent tooling"
+    ],
+    "ai-trending": [
+      "ECC project surges in popularity",
+      "Firecrawl grows for web ingestion",
+      "Ragflow becomes production-grade",
+      "Orkas AI agent gains momentum",
+      "Claude-mem enables persistent memory",
+      "Headroom AI matures RAG systems"
+    ],
+    "ai-web": [
+      "Anthropic launches AI red teaming",
+      "Managed Agents with stable APIs",
+      "Chrome/Safari vulnerabilities found",
+      "OpenAI hints at fair use policies",
+      "Teen safety protections coming",
+      "New research on Claude usage"
+    ],
+    "ai-hn": [
+      "Mistral Large 4 released open weights",
+      "Backdoor found in Claude Code VSX",
+      "Google's Sleep framework revealed",
+      "AI used to reverse-engineer games",
+      "SRE roles under threat from AI",
+      "Ethical concerns over LLM malware"
+    ],
+    "ai-ph": [
+      "Vaani Developer Platform leads PH",
+      "SpeakON Agent turns speech to tasks",
+      "Cluinn offers real-time AI help",
+      "Faylee focuses on workflow aid",
+      "ilse enhances ambient intelligence",
+      "fastbrowse boosts open-source innovation"
+    ],
+    "ai-community": [
+      "AI Necromancer resurrects legacy code",
+      "Simple function beats AI collusion",
+      "ESA satellite ghost signals detected",
+      "TabPFN outperforms LLMs at $0.83",
+      "Qwenputer simulates full computing system",
+      "Fuzzing vs AI vulnerability debate heats up"
+    ]
+  }
+}
