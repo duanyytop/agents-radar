@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 今日登上十大热点",
+      "OpenAI Codex 发布 v0.167.0-alpha.2 & .3",
+      "Gemini CLI 推出夜间版 v0.67.0-nightly.20261102",
+      "GitHub Copilot CLI 见 10 项关键 PR",
+      "Qwen Code 在 CLI 工具中崭露头角",
+      "Pi AI 工具展现强劲社区增长"
+    ],
+    "ai-agents": [
+      "OpenClaw：24 小时内处理 500 个问题与 PR",
+      "OpenClaw 无新版本发布——聚焦稳定性",
+      "聊天冻结问题已合并至 #170801",
+      "Zoom/Teams 音频捕获功能修复",
+      "技能工作坊预算回退问题解决",
+      "macOS Tailscale 查找功能已在 Linux 移除"
+    ],
+    "ai-infra": [
+      "vLLM：报告 SM120 解码回归问题",
+      "SGLang：#26340 中 CUDA 崩溃",
+      "llama.cpp：MoE 越界读取漏洞修复",
+      "Ollama：Qwen3.8 GGUF 加载失败",
+      "LiteLLM：严重结构化输出缺陷",
+      "SGLang：fa4 注意力崩溃被检测"
+    ],
+    "ai-trending": [
+      "claude-mem 今日收获 3,094 颗星",
+      "CopilotKit/OpenBot 支持离线代理",
+      "beenuar/AiSOC 实现安全本地 AI",
+      "ragflow 与 qdrant 领先 RAG 基础设施",
+      "FreeToken 在桌面运行数据中心模型",
+      "OpenWebUI 支持 Ollama 与本地模型"
+    ],
+    "ai-hn": [
+      "Mistral Large 4 权重开源",
+      "Google 睡眠框架防遗忘",
+      "Claude VS Code 扩展发现后门",
+      "AI 恶意软件瞄准高价值目标",
+      "Apollo 报告：AI 投资零回报",
+      "JavaScript 框架遭 AI 审查"
+    ],
+    "ai-ph": [
+      "Specsight 获 314 票胜出",
+      "Copilot Fusion 登陆 PH",
+      "Telemetry.dev 提升 AI 可观测性",
+      "SKI 引入语音优先编程",
+      "Backenly 自动化后端生成",
+      "GitHub Copilot Fusion 融合模型"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B：下载量达 790 万",
+      "LTX-2.5：下载量达 240 万",
+      "DeepSeek-V4.1-Flash：下载量 17 万",
+      "Mistral-Large-4-1T-A52B：获赞 4.5 千",
+      "GGUF 量化需求激增",
+      "NVIDIA Nemotron 语音表现提升"
+    ],
+    "ai-community": [
+      "本地 AI 创造 162 个 Python 包",
+      "AI 编写谷歌 75% 代码",
+      "Dev.to：AI 相信所读一切",
+      "Qwenputer：语言模型内置 CPU",
+      "AI 生成代码可复现性测试",
+      "生产环境需设 AI 保护机制"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code hits 10 hot issues today",
+      "OpenAI Codex releases v0.167.0-alpha.2 & .3",
+      "Gemini CLI rolls out nightly v0.67.0-nightly.20261102",
+      "GitHub Copilot CLI sees 10 key PRs",
+      "Qwen Code gains traction in CLI tools",
+      "Pi AI tool shows strong community growth"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues & PRs in 24h",
+      "No new OpenClaw release — stability focus",
+      "Chat freeze fix merged in #170801",
+      "Audio capture fixed for Zoom/Teams",
+      "Skill workshop budget fallback resolved",
+      "macOS Tailscale lookup removed on Linux"
+    ],
+    "ai-infra": [
+      "vLLM: SM120 decode regression reported",
+      "SGLang: CUDA coredumps in #26340",
+      "llama.cpp: MoE OOB read bug fixed",
+      "Ollama: Qwen3.8 GGUF load failure",
+      "LiteLLM: Critical structured output bug",
+      "SGLang: fa4 attention crash detected"
+    ],
+    "ai-trending": [
+      "claude-mem hits 3,094 stars today",
+      "CopilotKit/OpenBot enables offline agents",
+      "beenuar/AiSOC brings secure local AI",
+      "ragflow & qdrant lead RAG infrastructure",
+      "FreeToken runs datacenter models on desktop",
+      "OpenWebUI supports Ollama & local models"
+    ],
+    "ai-hn": [
+      "Mistral Large 4 weights open-sourced",
+      "Google's Sleep Framework prevents forgetting",
+      "Backdoor found in Claude VS Code extension",
+      "AI malware targets high-value victims",
+      "Apollo report: zero ROI from AI investments",
+      "JavaScript frameworks under AI scrutiny"
+    ],
+    "ai-ph": [
+      "Specsight wins with 314 votes",
+      "Copilot Fusion launches on PH",
+      "Telemetry.dev boosts AI observability",
+      "SKI introduces voice-first coding",
+      "Backenly automates backend generation",
+      "GitHub Copilot Fusion combines models"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B: 7.9M downloads",
+      "LTX-2.5: 2.4M downloads",
+      "DeepSeek-V4.1-Flash: 170K downloads",
+      "Mistral-Large-4-1T-A52B: 4.5K likes",
+      "GGUF quantization surges in demand",
+      "NVIDIA Nemotron gains speech traction"
+    ],
+    "ai-community": [
+      "Local AI invents 162 Python packages",
+      "AI writes 75% of Google’s code",
+      "Dev.to: AI trusts everything it reads",
+      "Qwenputer: CPU inside a language model",
+      "Reproducibility tested with AI-generated code",
+      "Guardrails needed for AI in production"
+    ]
+  }
+}
