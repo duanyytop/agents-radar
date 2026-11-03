@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.317 稳定版发布",
+      "OpenAI Codex rust-v0.167.0-alpha.4",
+      "Gemini CLI 夜间构建 v0.67.0-nightly",
+      "GitHub Copilot CLI v1.0.106-5 稳定版",
+      "OpenCode 尚未发布",
+      "Pi 工具在 CLI 领域崛起"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.10 发布并修复安全问题",
+      "OpenClaw 敏感数据脱敏功能增强",
+      "Codex 集成在 OpenClaw 中优化",
+      "OpenClaw 高严重性漏洞已分类",
+      "会话完整性问题正在审查",
+      "凭证处理漏洞已解决"
+    ],
+    "ai-infra": [
+      "vLLM v0.33.0 GA 支持 MoE + Blackwell",
+      "SGLang v0.5.23 稳定版，扩展 NPU/ROCm",
+      "llama.cpp b12063 夜间版支持 Flash attention",
+      "Ollama v0.40.14-rc0 边缘预发布",
+      "LiteLLM 活跃度上升，聚焦 Rust 代理",
+      "vLLM 获 389 位贡献者超 900 次提交"
+    ],
+    "ai-trending": [
+      "thedotmack/claude-mem 星标破 11 万",
+      "mem0ai/mem0 实现长期 AI 记忆",
+      "Claude-Code-Game-Studios 自动化开发流程",
+      "AnythingLLM：自托管智能体平台兴起",
+      "OpenWebUI 和 FreeToken 强调隐私",
+      "ollama/ollama 主导本地 LLM 运行器市场"
+    ],
+    "ai-web": [
+      "Anthropic 'Vibe Physics' 论文两周完成",
+      "使用 Claude Opus 撰写完整物理论文",
+      "BootLoops 工具突出 AI 优势",
+      "麻省理工物理学家记录 AI 科研协作",
+      "OpenAI 发布 6 个新索引页，无内容",
+      "美国证监会加强对 Anthropic IPO 的审查"
+    ],
+    "ai-hn": [
+      "LongCat-2.5：原生多模态智能体任务",
+      "Mistral Large 4 开源权重发布",
+      "Claude Code VS Code 插件漏洞引发信任危机",
+      "据报 Anthropic AI 成本超员工薪酬",
+      "Hacker News 讨论 AI 可持续性与治理",
+      "新模型发布推动智能体能力热潮"
+    ],
+    "ai-ph": [
+      "ClawsGO Science 推出云实验室智能体",
+      "Riverside Agents 自动化视频制作",
+      "Modelpeers 支持用户社交关注 AI 模型",
+      "Click 提供通用 API 管理智能体",
+      "Fluent 2 与 Termy 引领本地优先趋势",
+      "AI 智能体正式登陆 Product Hunt"
+    ],
+    "ai-community": [
+      "智能体记忆审计成关键议题",
+      "文档流水线中的提示注入风险",
+      "AI 代码审查或取代人工判断",
+      "Qwenputer 在语言模型内运行 RISC-V CPU",
+      "20 万 Token Claude 会话自我重购",
+      "调试智能体循环成为痛点"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.317 stable release",
+      "OpenAI Codex in rust-v0.167.0-alpha.4",
+      "Gemini CLI nightly build v0.67.0-nightly",
+      "GitHub Copilot CLI v1.0.106-5 stable",
+      "OpenCode no release yet",
+      "Pi tool gaining traction in CLI space"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.10 released with security fixes",
+      "Backup redaction for sensitive data in OpenClaw",
+      "Codex integration improved in OpenClaw",
+      "High-severity bugs triaged in OpenClaw",
+      "Session integrity issues under active review",
+      "Credential handling vulnerabilities addressed"
+    ],
+    "ai-infra": [
+      "vLLM v0.33.0 GA with MoE + Blackwell support",
+      "SGLang v0.5.23 stable, NPU/ROCm expansion",
+      "llama.cpp b12063 nightly with Flash attention",
+      "Ollama v0.40.14-rc0 pre-release for edge",
+      "LiteLLM activity rising with Rust proxy focus",
+      "vLLM sees 900+ commits from 389 contributors"
+    ],
+    "ai-trending": [
+      "thedotmack/claude-mem hits 110k+ stars",
+      "mem0ai/mem0 enables long-term AI memory",
+      "Claude-Code-Game-Studios automates dev workflows",
+      "AnythingLLM: self-hosted agent platform trend",
+      "OpenWebUI and FreeToken gain privacy appeal",
+      "ollama/ollama dominates local LLM runner space"
+    ],
+    "ai-web": [
+      "Anthropic’s 'Vibe Physics' paper completed in 2 weeks",
+      "Claude Opus used to draft full physics paper",
+      "BootLoops toolkit designed for AI strengths",
+      "MIT physicist documents AI scientific collaboration",
+      "OpenAI publishes 6 new index pages, no content",
+      "SEC IPO scrutiny intensifies around Anthropic"
+    ],
+    "ai-hn": [
+      "LongCat-2.5: native multimodal agentic tasks",
+      "Mistral Large 4 open-source weights released",
+      "Claude Code VS Code extension breach sparks distrust",
+      "AI costs reportedly exceed employee pay at Anthropic",
+      "Hacker News debates AI sustainability and governance",
+      "New model releases driving agentic capability hype"
+    ],
+    "ai-ph": [
+      "ClawsGO Science launches with cloud lab agent",
+      "Riverside Agents automate video production",
+      "Modelpeers lets users follow AI models socially",
+      "Click offers universal API for managing agents",
+      "Fluent 2 and Termy lead local-first AI trend",
+      "AI agents now first-class citizens on Product Hunt"
+    ],
+    "ai-community": [
+      "Agent memory auditing becomes critical topic",
+      "Prompt injection risks in document pipelines",
+      "AI code reviewer may replace human judgment",
+      "Qwenputer runs RISC-V CPU inside language model",
+      "200K-Token Claude session re-buys itself",
+      "Debugging agent loops is a growing pain point"
+    ]
+  }
+}
