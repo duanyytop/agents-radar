@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.318 稳定性修复版发布",
+      "OpenAI Codex 升级 libcap-v2.75",
+      "Gemini CLI 发布夜间版 v0.67.0",
+      "GitHub Copilot CLI 新增代理编排支持",
+      "Qwen Code 支持多文件重构",
+      "Pi CLI 增加实时调试"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.10 修复 macOS 崩溃循环",
+      "新 OpenClaw 版本提升会话状态完整性",
+      "Hermes Agent 增加记忆持久化",
+      "IronClaw 提升跨平台兼容性",
+      "QwenPaw 集成本地 RAG 系统",
+      "ZeroClaw 引入自动恢复工作流"
+    ],
+    "ai-infra": [
+      "vLLM RC 待发布，含内核优化",
+      "SGLang 开发活跃，支持 MoE",
+      "llama.cpp 稳定版 b12091+ 构建",
+      "Ollama v0.40.15-rc0 发布",
+      "LiteLLM v1.109.0-rc.1 上线",
+      "Unsloth v0.1.914-rc 新增界面优化"
+    ],
+    "ai-trending": [
+      "Claude-Mem 实现代理持久记忆",
+      "Mem0AI 引领上下文保留趋势",
+      "Agent-desktop 星标增长 3791",
+      "Worktrunk 推出 Rust 代理 CLI",
+      "RAGflow 与 Qdrant 主导向量数据库",
+      "代理原生工作流受关注"
+    ],
+    "ai-web": [
+      "Anthropic 推出可验证 AI FlashProve",
+      "FlashProve 证实模型身份",
+      "OpenAI 发布仅元数据更新",
+      "StarkWare 加入 Anthropic 信任计划",
+      "研究论文详解可证明推理",
+      "响应完整性加密验证"
+    ],
+    "ai-hn": [
+      "Hacker News：开源模型成本下降 90%",
+      "Postman AI 插件争议引发讨论",
+      "谷歌关闭学校搜索访问",
+      "Revolut 大幅降低 AI 编码成本",
+      "生成式 AI 数学入门火爆",
+      "LLM 无法读取神经网络权重"
+    ],
+    "ai-ph": [
+      "Beacon.sh 发布自进化记忆",
+      "Cedric AI 自主展示幻灯片",
+      "Agent Inbox 处理邮件与 Slack",
+      "CuriousLM 支持本地推理",
+      "Hyperresearch 实现可信搜索",
+      "AI 代理成为数字同事"
+    ],
+    "ai-arxiv": [
+      "Neologism Inoculation Prompting 降低攻击风险",
+      "COMPREHEND 基准使用蕴含层级",
+      "Say Less, Mean Better 控制冗余",
+      "评估合约提升公平性",
+      "KV 缓存优化提升效率",
+      "零样本机器人奖励建模进展"
+    ],
+    "ai-community": [
+      "AI 因缺少上下文写出错误代码",
+      "代理误判正确答案为错误",
+      "AI 法案飙升 4 倍—无透明度",
+      "检索非安全边界",
+      "本地 125B 模型可在消费级 GPU 运行",
+      "对 AI 输出的信任正在瓦解"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.318 released with stability fixes",
+      "OpenAI Codex updates libcap-v2.75",
+      "Gemini CLI hits nightly v0.67.0",
+      "GitHub Copilot CLI now supports agent orchestration",
+      "Qwen Code gains multi-file refactoring",
+      "Pi CLI adds real-time debugging"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.10 fixes crash loops on macOS",
+      "New OpenClaw release improves session state integrity",
+      "Hermes Agent gains memory persistence",
+      "IronClaw boosts cross-platform compatibility",
+      "QwenPaw integrates with local RAG systems",
+      "ZeroClaw introduces auto-recovery workflows"
+    ],
+    "ai-infra": [
+      "vLLM RC pending with kernel optimizations",
+      "SGLang active dev with MoE support",
+      "llama.cpp stable b12091+ build",
+      "Ollama v0.40.15-rc0 released",
+      "LiteLLM v1.109.0-rc.1 out",
+      "Unsloth v0.1.914-rc adds UI enhancements"
+    ],
+    "ai-trending": [
+      "Claude-Mem enables persistent agent memory",
+      "Mem0AI leads AI context retention trend",
+      "Agent-desktop surges with 3791 new stars",
+      "Worktrunk launches Rust-based agent CLI",
+      "RAGflow and Qdrant dominate vector DBs",
+      "Agent-native workflows gain traction"
+    ],
+    "ai-web": [
+      "Anthropic unveils FlashProve for verifiable AI",
+      "FlashProve cryptographically verifies model identity",
+      "OpenAI posts metadata-only updates",
+      "StarkWare joins Anthropic's trust initiative",
+      "Research paper details provable inference",
+      "Cryptographic proof of response integrity"
+    ],
+    "ai-hn": [
+      "Hacker News: 90% cost drop via open models",
+      "Postman AI plugin backlash sparks debate",
+      "Google cuts school access to Search",
+      "Revolut slashes AI coding costs",
+      "Math primer on generative AI goes viral",
+      "LLMs can't read neural network weights"
+    ],
+    "ai-ph": [
+      "Beacon.sh launches self-improving memory",
+      "Cedric AI presents slides autonomously",
+      "Agent Inbox handles emails & Slack",
+      "CuriousLM offers on-device inference",
+      "Hyperresearch delivers verified search",
+      "AI agents become digital coworkers"
+    ],
+    "ai-arxiv": [
+      "Neologism Inoculation Prompting reduces hacking",
+      "COMPREHEND benchmark uses entailment hierarchy",
+      "Say Less, Mean Better controls verbosity",
+      "Evaluation Contracts improve fairness",
+      "KV cache optimization boosts efficiency",
+      "Zero-shot robotic reward modeling advances"
+    ],
+    "ai-community": [
+      "AI wrote wrong code without full context",
+      "Agent claimed right answer was wrong",
+      "AI bill spiked 4x—no visibility",
+      "Retrieval not a safety boundary",
+      "Local 125B models run on consumer GPUs",
+      "Trust in AI outputs is collapsing"
+    ]
+  }
+}
