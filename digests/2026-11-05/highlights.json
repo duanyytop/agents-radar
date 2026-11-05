@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code新增技能功能",
+      "OpenAI Codex发布v0.168.0-alpha.x版本",
+      "Gemini CLI新增10个问题",
+      "Qwen Code成为企业首选",
+      "Pi工具强化开放创新",
+      "GitHub Copilot CLI趋于稳定"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.5-beta.1发布",
+      "知识文士实现持久记忆",
+      "PostgreSQL支持现为实验性",
+      "OpenClaw生态存在395个问题",
+      "IronClaw在代理工具中获得关注",
+      "QwenPaw扩展多代理支持"
+    ],
+    "ai-infra": [
+      "llama.cpp v0.9.0正式发布",
+      "LiteLLM v1.108.0稳定更新",
+      "vLLM更新停滞于v0.32.0+",
+      "SGLang增加多GPU优化",
+      "Ollama PR活动上升",
+      "Unsloth提升训练速度"
+    ],
+    "ai-trending": [
+      "Agent-Reach实现实时网页访问",
+      "thedotmack/claude-mem爆火",
+      "NVIDIA/auto-ontology增强推理",
+      "FareedKhan-dev/kimi-k3-in-c获1k星",
+      "Gstack提供高管级AI配置",
+      "Agent-Desktop支持桌面控制"
+    ],
+    "ai-web": [
+      "Anthropic揭示3D保险库粒子结构",
+      "OpenAI宣布Images 2.6上线",
+      "Pierre收购预示扩张",
+      "Daybreak Red AWS GovCloud上线",
+      "Claude助力生命科学发现",
+      "OpenAI索引更新暗示新功能"
+    ],
+    "ai-hn": [
+      "AI暴露40年技术债务",
+      "Gemini训练使用个人聊天记录",
+      "Nvidia RTX Spark使Linux变慢65%",
+      "OpenAI重新启用Codex训练",
+      "Images 2.6与Pierre收购公布",
+      "可证明安全的LLM推理受关注"
+    ],
+    "ai-ph": [
+      "AgentKit以419票领先",
+      "Teamily AI统一人机通讯",
+      "kwant用AI机器人审计代码",
+      "Scalekit推出MCP网关",
+      "AgentKit实现自主工作流",
+      "Teamily AI融合社交协作"
+    ],
+    "ai-arxiv": [
+      "模态感知剪枝降低MoE成本90%",
+      "新框架抑制偏差行为",
+      "DNO-Prc对齐通用偏好",
+      "CARTBench评估复杂代理任务",
+      "TandemBench评估多代理系统",
+      "高效推理优化进展"
+    ],
+    "ai-community": [
+      "AI代理无声失败——需做健康检查",
+      "零信任沙箱防范bash风险",
+      "代码幻觉骗过语法检测",
+      "Dev.to：AI替代工作？尚未实现",
+      "Codra在代码审查中受关注",
+      "MemT-1.0-Nano提供持久记忆"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code gains new Skills feature",
+      "OpenAI Codex releases v0.168.0-alpha.x",
+      "Gemini CLI sees 10 new issues",
+      "Qwen Code emerges as enterprise choice",
+      "Pi tool boosts open innovation focus",
+      "GitHub Copilot CLI stabilizes"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.5-beta.1 released",
+      "Knowledge Scribes enable persistent memory",
+      "PostgreSQL support now experimental",
+      "395 issues in OpenClaw ecosystem",
+      "IronClaw gains traction in agent tools",
+      "QwenPaw expands multi-agent support"
+    ],
+    "ai-infra": [
+      "llama.cpp v0.9.0 officially released",
+      "LiteLLM v1.108.0 stable update",
+      "vLLM updates stalled at v0.32.0+",
+      "SGLang adds multi-GPU optimizations",
+      "Ollama sees rising PR activity",
+      "Unsloth enhances training speed"
+    ],
+    "ai-trending": [
+      "Agent-Reach enables real-time web access",
+      "thedotmack/claude-mem goes viral",
+      "NVIDIA/auto-ontology boosts reasoning",
+      "FareedKhan-dev/kimi-k3-in-c gains 1k stars",
+      "Gstack offers CEO-level AI setup",
+      "Agent-Desktop enables desktop control"
+    ],
+    "ai-web": [
+      "Anthropic reveals 3D vault particle structure",
+      "OpenAI announces Images 2.6 launch",
+      "Pierre acquisition signals expansion",
+      "Daybreak Red AWS GovCloud launched",
+      "Claude aids life sciences discovery",
+      "OpenAI’s index updates hint at new features"
+    ],
+    "ai-hn": [
+      "AI exposes 40 years of tech debt",
+      "Gemini trains on personal chat history",
+      "Nvidia RTX Spark slows Linux by 65%",
+      "OpenAI re-enables Codex training",
+      "Images 2.6 and Pierre acquisition revealed",
+      "Provably safe LLM inference gains traction"
+    ],
+    "ai-ph": [
+      "AgentKit leads with 419 votes",
+      "Teamily AI unifies human-AI messaging",
+      "kwant uses AI bots to audit code",
+      "Scalekit launches MCP gateway",
+      "AgentKit enables autonomous workflows",
+      "Teamily AI blends social collaboration"
+    ],
+    "ai-arxiv": [
+      "Modality-aware pruning cuts MoE costs by 90%",
+      "New framework suppresses misaligned behavior",
+      "DNO-Prc aligns models with general preferences",
+      "CARTBench benchmarks complex agent tasks",
+      "TandemBench evaluates multi-agent systems",
+      "Efficient inference optimization advances"
+    ],
+    "ai-community": [
+      "AI agents fail silently—use sanity checks",
+      "Zero-trust sandbox prevents bash risks",
+      "Code hallucinations fool syntax tests",
+      "Dev.to: AI replaces work? Not yet.",
+      "Codra gains traction for code review",
+      "MemT-1.0-Nano offers persistent memory"
+    ]
+  }
+}
