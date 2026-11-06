@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 修复邮件泄露",
+      "OpenAI Codex 发布 v0.167.0",
+      "Gemini CLI 增加本地模式",
+      "GitHub Copilot CLI 支持会话",
+      "Pi 工具实现实时协作",
+      "Qwen Code 推出安全审计"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.1 修复 Mac 崩溃",
+      "OpenClaw 中更安全的 Tailscale 配置",
+      "Hermes Agent 支持 RAG",
+      "IronClaw 增加语音控制",
+      "QwenPaw 推出多智能体模式",
+      "ZeroClaw 提升记忆持久性"
+    ],
+    "ai-infra": [
+      "LiteLLM v1.108.1：安全修复",
+      "Unsloth 加速微调",
+      "llama.cpp 增加 Vulkan 支持补丁",
+      "vLLM 优化推测解码",
+      "SGLang 降低流式延迟",
+      "Ollama 增加模型版本管理"
+    ],
+    "ai-trending": [
+      "NVIDIA/auto-ontology：今日 2.6K 星标",
+      "vercel-labs/agent-desktop：Rust CLI",
+      "affaan-m/ECC：297K 星标，表现最佳",
+      "Graphify-Labs：下一代 RAG",
+      "gstack：23 工具 CEO 套件",
+      "基于 Rust 的 AI 工具兴起"
+    ],
+    "ai-web": [
+      "Claude 首次绘制原核生物储藏库",
+      "Anthropic 开启生命科学邀请",
+      "LTBT 信任框架更新",
+      "GPT-6 Cyber：即将发布？",
+      "澳大利亚高校迈向 AI 原生",
+      "细胞生物学新预印本发布"
+    ],
+    "ai-hn": [
+      "Claude 向网站发送邮件",
+      "GPT-6 Astra 安全表现不佳",
+      "马克·库班：Facebook 知晓深度伪造",
+      "纳斯达克因‘蓝色海啸’损失 2.5 万亿",
+      "腾讯 Hy4 模型受关注",
+      "DoorDash 报告代理采用率低"
+    ],
+    "ai-ph": [
+      "Wanaka Studio：无代码 3D 游戏引擎",
+      "Floot Payments：AI + 实际资金",
+      "OpenMail：AI 邮件身份",
+      "Hira：个人求职代理",
+      "TellPip：AI 销售助手",
+      "Render Sandboxes：代理开发环境"
+    ],
+    "ai-arxiv": [
+      "TriAttention：高效长上下文 LLM",
+      "Loopback Transformer：理论论文",
+      "HyFlash：设备端推测解码",
+      "Test-Time Self-Play：无需验证器",
+      "IMUDINO：惯性感知模型",
+      "太阳能预测校准不确定性"
+    ],
+    "ai-community": [
+      "一个 .md 文件可劫持 AI 代理",
+      "AI 代理虚假报告‘完成’",
+      "用出口容器运行代理",
+      "AGENTS.md 文件存在严重风险",
+      "权重空间编程兴起",
+      "细粒度代理版本化进行中"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code fixes email leaks",
+      "OpenAI Codex hits v0.167.0",
+      "Gemini CLI gains local mode",
+      "GitHub Copilot CLI now supports sessions",
+      "Pi tool adds real-time collaboration",
+      "Qwen Code rolls out security audit"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.1 fixes Mac crashes",
+      "Safer Tailscale config in OpenClaw",
+      "Hermes Agent now supports RAG",
+      "IronClaw adds voice control",
+      "QwenPaw launches multi-agent mode",
+      "ZeroClaw improves memory persistence"
+    ],
+    "ai-infra": [
+      "LiteLLM v1.108.1: security fix",
+      "Unsloth boosts fine-tuning speed",
+      "llama.cpp patch for Vulkan support",
+      "vLLM optimizes speculative decoding",
+      "SGLang enhances streaming latency",
+      "Ollama adds model versioning"
+    ],
+    "ai-trending": [
+      "NVIDIA/auto-ontology: 2.6K stars today",
+      "vercel-labs/agent-desktop: Rust CLI",
+      "affaan-m/ECC: 297K stars, top performer",
+      "Graphify-Labs: next-gen RAG",
+      "gstack: 23-tool CEO stack",
+      "Rust-based AI tools on the rise"
+    ],
+    "ai-web": [
+      "Claude maps first prokaryotic vault",
+      "Anthropic opens life sciences call",
+      "LTBT trust framework updated",
+      "GPT-6 Cyber: imminent launch?",
+      "Australian universities go AI-native",
+      "New preprint on cellular biology"
+    ],
+    "ai-hn": [
+      "Claude sends emails to websites",
+      "GPT-6 Astra safety underperforms",
+      "Mark Cuban: Facebook knew about deepfakes",
+      "Nasdaq loses $2.5T amid 'blue tsunami'",
+      "Tencent's Hy4 model gains traction",
+      "DoorDash reports low agent adoption"
+    ],
+    "ai-ph": [
+      "Wanaka Studio: no-code 3D game engine",
+      "Floot Payments: AI + real money",
+      "OpenMail: AI email identity",
+      "Hira: personal job search agent",
+      "TellPip: AI sales assistant",
+      "Render Sandboxes: agent dev env"
+    ],
+    "ai-arxiv": [
+      "TriAttention: efficient long-context LLM",
+      "Loopback Transformer: theory paper",
+      "HyFlash: on-device speculative decode",
+      "Test-Time Self-Play: no verifier needed",
+      "IMUDINO: inertial sensing model",
+      "Calibrated uncertainty in solar forecasts"
+    ],
+    "ai-community": [
+      "One .md file can hijack AI agents",
+      "AI agents report 'done' falsely",
+      "Run agents in containers with egress",
+      "AGENTS.md files pose serious risk",
+      "Weight-space programming emerging",
+      "Fine-grained agent versioning in progress"
+    ]
+  }
+}
