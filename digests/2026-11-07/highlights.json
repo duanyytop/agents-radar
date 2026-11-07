@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.319 版本发布，修复隐私漏洞",
+      "OpenAI Codex 更新：阿尔法版界面与安全修复",
+      "Gemini CLI 遇到代理挂起问题",
+      "GitHub Copilot CLI 提升会话稳定性",
+      "Qwen Code 新增多文件编辑支持",
+      "Pi CLI 增加本地模型缓存"
+    ],
+    "ai-agents": [
+      "OpenClaw：今日新增 365 个问题，500 个 PR",
+      "v2026.11.5-beta.1 可用",
+      "Hermes Agent 实现记忆持久化",
+      "IronClaw 提升插件安全性",
+      "QwenPaw 集成本地 LLM",
+      "ZeroClaw 添加角色任务路由"
+    ],
+    "ai-infra": [
+      "LiteLLM v1.108.2 LTS 发布，修复稳定性问题",
+      "Ollama v0.40.15 稳定版上线",
+      "Unsloth v0.1.916-beta 正式启用",
+      "vLLM：24 小时合并 9 个 PR",
+      "SGLang 增加推测解码支持",
+      "llama.cpp：更新无破坏性变更"
+    ],
+    "ai-trending": [
+      "NVIDIA/auto-ontology：今日 +2,015 星标",
+      "Graphify-Labs/graphify：143K 星标",
+      "affaan-m/ECC：298K 星标，JS 代理工具",
+      "Ollama：186K 星标，本地 LLM 运行器",
+      "自动本体论推动可解释 AI",
+      "RAG 与记忆系统快速成熟"
+    ],
+    "ai-web": [
+      "Anthropic 规范代理的“梦境”机制",
+      "Claude 内存：交互后反思",
+      "OpenAI 推出湿实验科学指标",
+      "代理内存框架受神经科学启发",
+      "现实世界 AI 代理势头上升",
+      "持久推理代理成为优先项"
+    ],
+    "ai-hn": [
+      "基于 Jev 的 LLM 判官使 Opus 成本降低 75%",
+      "Gemini Omni 1.2 Flash 因速度获赞",
+      "Memorilla：LLM 潜在语义记忆",
+      "AI 加速 AI 研究争议",
+      "Claude Code 通过 User-Agent 泄露邮件",
+      "ChatGPT 静默跨连接路由数据"
+    ],
+    "ai-ph": [
+      "Glasshand：377 票，逼真 iPhone/Mac 模拟",
+      "Rerun：具角色的 AI 团队成员",
+      "Easy-Peasy.AI 推出 AI 员工",
+      "Maritime：可扩展的 AI 计算平台",
+      "Living Brain：智能记忆层",
+      "邮件自动化工具受关注"
+    ],
+    "ai-arxiv": [
+      "用户嵌入揭示行为模式",
+      "MAEMs 实现完整残差流可解释性",
+      "Meta Access 提升代理元认知",
+      "FedReason：联邦推理框架",
+      "Terminal-Bench：动态评估系统",
+      "研究中识别出 AI4Math 标记"
+    ],
+    "ai-community": [
+      "Claude Code 在请求头泄露邮件",
+      "安全漏洞：用户邮箱暴露",
+      "Dev.to：'完成'对代理误导",
+      "ASL 识别模型开源",
+      "本地 AI VS Code 教程走红",
+      "设备端 TTS 部署受关注"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.319 released with privacy fix",
+      "OpenAI Codex updates: UI/security fixes in alpha",
+      "Gemini CLI faces agent hang issues",
+      "GitHub Copilot CLI gains session stability",
+      "Qwen Code now supports multi-file editing",
+      "Pi CLI adds local model caching"
+    ],
+    "ai-agents": [
+      "OpenClaw: 365 new issues, 500 PRs today",
+      "v2026.11.5-beta.1 available for OpenClaw",
+      "Hermes Agent gains memory persistence",
+      "IronClaw boosts plugin security",
+      "QwenPaw integrates with local LLMs",
+      "ZeroClaw adds role-based task routing"
+    ],
+    "ai-infra": [
+      "LiteLLM v1.108.2 LTS released with stability fixes",
+      "Ollama v0.40.15 stable release out",
+      "Unsloth v0.1.916-beta now live",
+      "vLLM: 9 PRs merged in 24h",
+      "SGLang adds speculative decoding support",
+      "llama.cpp: No breaking changes in update"
+    ],
+    "ai-trending": [
+      "NVIDIA/auto-ontology: +2,015 stars today",
+      "Graphify-Labs/graphify: 143K stars",
+      "affaan-m/ECC: 298K stars, JS agent tool",
+      "Ollama: 186K stars, local LLM runner",
+      "Auto Ontology enables explainable AI",
+      "RAG & memory systems mature fast"
+    ],
+    "ai-web": [
+      "Anthropic formalizes 'dreaming' in agents",
+      "Claude memory: post-interaction reflection",
+      "OpenAI launches wet-lab science metrics",
+      "Agent memory framework inspired by neuroscience",
+      "Real-world AI agents gain momentum",
+      "Persistent reasoning agents now a priority"
+    ],
+    "ai-hn": [
+      "Jev-based LLM judges cut Opus cost by 75%",
+      "Gemini Omni 1.2 Flash praised for speed",
+      "Memorilla: latent semantic memory for LLMs",
+      "AI accelerating AI research debate",
+      "Claude Code leaks emails via User-Agent",
+      "ChatGPT silently routes data between connectors"
+    ],
+    "ai-ph": [
+      "Glasshand: 377 votes, lifelike iPhone/Mac sim",
+      "Rerun: AI team members with roles",
+      "AI Employees by Easy-Peasy.AI launched",
+      "Maritime: scalable AI compute platform",
+      "Living Brain: intelligent memory layer",
+      "Email automation tools gain traction"
+    ],
+    "ai-arxiv": [
+      "User embeddings reveal behavioral modes",
+      "MAEMs enable full residual stream interpretability",
+      "Meta Access improves agent meta-awareness",
+      "FedReason: federated reasoning framework",
+      "Terminal-Bench: dynamic evaluation system",
+      "AI4Math signatures identified in research"
+    ],
+    "ai-community": [
+      "Claude Code leaked emails in headers",
+      "Security flaw: user emails exposed",
+      "Dev.to: 'Done' is misleading for agents",
+      "ASL recognition models go open source",
+      "Local AI in VS Code tutorials trend",
+      "On-device TTS deployment gains interest"
+    ]
+  }
+}
