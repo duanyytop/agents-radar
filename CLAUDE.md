@@ -23,7 +23,7 @@ export GITHUB_TOKEN=ghp_xxxxx
 export DIGEST_REPO=owner/repo   # omit to skip GitHub issue creation
 
 # LLM provider (default: anthropic)
-export LLM_PROVIDER=anthropic   # anthropic | openai | github-copilot | openrouter | deepseek | qwen
+export LLM_PROVIDER=anthropic   # anthropic | openai | github-copilot | openrouter | deepseek | qwen | cheaper-inference
 
 # Anthropic (default)
 export ANTHROPIC_API_KEY=sk-ant-xxxxx
@@ -41,6 +41,9 @@ export ANTHROPIC_API_KEY=sk-ant-xxxxx
 
 # Qwen (Alibaba Model Studio) — provider used by the GitHub Actions cron
 # export DASHSCOPE_API_KEY=sk-xxxxx
+
+# Cheaper Inference
+# export CHEAPER_INFERENCE_API_KEY=ci_live_xxxxx
 ```
 
 ## Architecture
@@ -84,6 +87,7 @@ Report bodies are generated **once in English** and translated to Chinese. Gener
 | `src/providers/openrouter.ts` | `OpenRouterProvider` — extends `OpenAICompatibleProvider` |
 | `src/providers/deepseek.ts` | `DeepSeekProvider` — extends `OpenAICompatibleProvider` |
 | `src/providers/qwen.ts` | `QwenProvider` — extends `OpenAICompatibleProvider`; Alibaba Model Studio |
+| `src/providers/cheaper-inference.ts` | `CheaperInferenceProvider` — extends `OpenAICompatibleProvider` |
 | `src/providers/index.ts` | `createProvider` factory + barrel re-exports |
 | `src/web.ts` | Sitemap-based web content fetching; state persisted to `digests/web-state.json` |
 | `src/trending.ts` | GitHub Trending HTML scraper + Search API topic queries |
@@ -131,7 +135,7 @@ Files written to `digests/YYYY-MM-DD/`:
 - Every LLM call site degrades gracefully (a failed summary becomes a fixed notice, a failed translation falls back to English), which is right per report and wrong for the run as a whole. `llmStats` in `src/report.ts` counts attempts and final failures across the run, and `assertLlmHealthy(stage)` throws when at least `LLM_MIN_SAMPLES` (5) calls have run and at least `LLM_ABORT_RATIO` (50%) of them failed. `main()` calls it at two gates — after the summary/translation phase and after the save phase — so a provider outage exits non-zero *before* anything is committed, no issues are opened and no Telegram/Feishu message is sent. A missing day is recoverable by `workflow_dispatch`; a published day of placeholders is not.
 - `reportLlmHealth()` logs the final tally and, when any call was lost, appends a warning to `$GITHUB_STEP_SUMMARY` so a partially degraded run is visible on the Actions run page without a log dive.
 - The concurrency limiter (`LLM_CONCURRENCY = 5`) prevents 429s when many parallel LLM calls fire. Do not bypass it by calling SDK clients directly.
-- LLM provider is selected via `LLM_PROVIDER` env var (default: `anthropic`). Valid values: `anthropic`, `openai`, `github-copilot`, `openrouter`, `deepseek`, `qwen`.
+- LLM provider is selected via `LLM_PROVIDER` env var (default: `anthropic`). Valid values: `anthropic`, `openai`, `github-copilot`, `openrouter`, `deepseek`, `qwen`, `cheaper-inference`.
 - The daily GitHub Actions run uses `qwen` (`qwen-flash`). It replaced `deepseek-v4-flash` in August 2026, after DeepSeek's 8/16 repricing pushed a run to ~¥3; qwen-flash is ~¥0.5. `qwen-flash` is tier-priced by single-request input length — every prompt here stays inside the cheapest 0–128K tier.
 - The daily workflow only ever produces one digest per CST day. Two mechanisms enforce it: a workflow-level `concurrency: daily-digest` group (`cancel-in-progress: false`) serializes overlapping runs, and a `guard` job skips **scheduled** runs whose `digests/YYYY-MM-DD` folder is already committed (checked via `gh api .../contents/...`, so no second checkout). `workflow_dispatch` always proceeds — that is the escape hatch for regenerating a day. This exists because GitHub delayed the 2026-08-26 scheduled run by 5h07m; the manual catch-up run and the late scheduled run both completed and opened 18 duplicate issues for 2026-08-27.
 - Provider implementations live in `src/providers/`. Each file implements the `LlmProvider` interface. The factory in `src/providers/index.ts` validates the provider name and logs only the provider name — never API keys or endpoint URLs.
