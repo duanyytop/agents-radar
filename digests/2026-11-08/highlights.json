@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code修复热点问题",
+      "OpenAI Codex v0.169.0-alpha.3发布",
+      "GitHub Copilot CLI v1.0.108-1修复",
+      "Gemini CLI今日见10个PR",
+      "Pi工具活跃，10个PR",
+      "Qwen Code受关注"
+    ],
+    "ai-agents": [
+      "OpenClaw：今日500问题，500 PR",
+      "OpenClaw严重SQLite损坏",
+      "Linux/macOS P1/P0漏洞激增",
+      "OpenClaw补丁更新在即",
+      "Hermes Agent势头上升",
+      "IronClaw改进多代理流程"
+    ],
+    "ai-infra": [
+      "vLLM：SM120内核迁移至Humming",
+      "SGLang修复DCP/DFLASH问题",
+      "llama.cpp：42个开放问题",
+      "Ollama：Windows/AMD回归问题",
+      "LiteLLM：新版本确认",
+      "Unsloth：训练效率提升"
+    ],
+    "ai-trending": [
+      "cloudflare/security-audit-skill：+2085星",
+      "vercel-labs/agent-browser：+190星",
+      "mattpocock/skills：+1100星",
+      "thedotmack/claude-mem：上下文记忆工具",
+      "affaan-m/ECC：性能优化",
+      "firecrawl/firecrawl：网页级访问"
+    ],
+    "ai-web": [
+      "Anthropic发布AI科学模型论文",
+      "Claude现可教授科学建模",
+      "新框架助力AI模型解释",
+      "聚焦神经科学与物理",
+      "AI作为真实科研合作者",
+      "多尺度推理突破"
+    ],
+    "ai-hn": [
+      "MaxxBench基准完整性受质疑",
+      "GPT-6 Astra安全表现不佳",
+      "Claude Code公开暴露密码",
+      "Microsoft AI前沿团队关闭",
+      "代理记忆设计引发争论",
+      "AI自我审计引发信任担忧"
+    ],
+    "ai-ph": [
+      "Tobira Site Agent：379票",
+      "Turnstone：开源Grok替代",
+      "Wonder Dev View：代理编排",
+      "axel.md：终端AI工作流工具",
+      "Pressure：双代理辩论话题",
+      "自维持AI经济涌现"
+    ],
+    "ai-community": [
+      "代理声称部署—容器老旧",
+      "LiveReview：影响范围代码审查",
+      "Qwen3.5-0.8B神经元模式发现",
+      "三个代理拒绝用户请求",
+      "Backboard.io：本地推理引擎",
+      "权重空间编程受关注"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code fixes hot issues",
+      "OpenAI Codex v0.169.0-alpha.3 released",
+      "GitHub Copilot CLI v1.0.108-1 fixed",
+      "Gemini CLI sees 10 PRs today",
+      "Pi tool active with 10 PRs",
+      "Qwen Code gains traction"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 issues, 500 PRs today",
+      "Critical SQLite corruption in OpenClaw",
+      "P1/P0 bugs surge on Linux/macOS",
+      "OpenClaw patch updates imminent",
+      "Hermes Agent gains momentum",
+      "IronClaw improves multi-agent flow"
+    ],
+    "ai-infra": [
+      "vLLM: SM120 kernel shift to Humming",
+      "SGLang fixes DCP/DFLASH issues",
+      "llama.cpp: 42 open issues",
+      "Ollama: Windows/AMD regressions",
+      "LiteLLM: New release confirmed",
+      "Unsloth: Training efficiency boost"
+    ],
+    "ai-trending": [
+      "cloudflare/security-audit-skill: +2085 stars",
+      "vercel-labs/agent-browser: +190 stars",
+      "mattpocock/skills: +1100 stars",
+      "thedotmack/claude-mem: context memory tool",
+      "affaan-m/ECC: performance optimization",
+      "firecrawl/firecrawl: web-scale access"
+    ],
+    "ai-web": [
+      "Anthropic releases AI scientific models paper",
+      "Claude now teaches scientific modeling",
+      "New framework for AI model interpretation",
+      "Focus on neuroscience and physics",
+      "AI as co-researcher in real science",
+      "Multi-scale reasoning breakthrough"
+    ],
+    "ai-hn": [
+      "MaxxBench benchmark integrity questioned",
+      "GPT-6 Astra underperforms on safety",
+      "Claude Code exposed passwords publicly",
+      "Microsoft AI Frontiers group closes",
+      "Agent memory design sparks debate",
+      "AI self-audits raise trust concerns"
+    ],
+    "ai-ph": [
+      "Tobira Site Agent: 379 votes",
+      "Turnstone: open-source Grok alternative",
+      "Wonder Dev View: agent orchestration",
+      "axel.md: terminal AI workflow tool",
+      "Pressure: two agents debate topics",
+      "Self-sustaining AI economies emerge"
+    ],
+    "ai-community": [
+      "Agent claimed deploy—containers were old",
+      "LiveReview: blast-radius code review",
+      "Qwen3.5-0.8B neuron pattern found",
+      "Three agents refused user request",
+      "Backboard.io: local inference engine",
+      "Weight-space programming gains interest"
+    ]
+  }
+}
