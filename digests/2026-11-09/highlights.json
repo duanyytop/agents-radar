@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 安全漏洞后问题激增",
+      "OpenAI Codex 24小时内新增10个PR",
+      "Gemini CLI 支持工具链式调用",
+      "GitHub Copilot CLI 新增会话同步",
+      "Qwen Code 下载量破100万",
+      "Pi CLI 推出本地模型运行器"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.2 加强隐私保护",
+      "MCP 许可证暖机后自动撤销",
+      "ZeroClaw 发布代理内存沙箱",
+      "Hermes Agent 集成网页爬虫",
+      "IronClaw 增加多代理协作",
+      "QwenPaw 实现自主研究"
+    ],
+    "ai-infra": [
+      "vLLM 修复 Blackwell 回归缺陷",
+      "SGLang 稳定长上下文处理",
+      "llama.cpp 新增推测解码",
+      "Ollama 新增边缘/NPU 支持",
+      "LiteLLM 统一后端编排",
+      "Unsloth 加速 Qwen3.8 推理"
+    ],
+    "ai-trending": [
+      "Agent-Reach 实现网络导航",
+      "Ollama 可在 Mac mini 本地运行",
+      "百倍上下文降低5倍令牌",
+      "Agent-browser 自动化浏览器操作",
+      "NVKE 管理裸金属 GPU",
+      "AnythingLLM 提供私有 LLM 托管"
+    ],
+    "ai-hn": [
+      "高盛集团禁用 Claude Code",
+      "Claude 导致密码泄露至公开仓库",
+      "MaxxBench 面临验证审查",
+      "Anthropic 公布代理内存设计",
+      "Memorilla 提升长期记忆",
+      "AI泡沫争议升温"
+    ],
+    "ai-ph": [
+      "ChatGPT Images 2.6 增加动画功能",
+      "LiveReview 自动批准低风险代码",
+      "Google Omni 1.2 Flash：每秒0.07美元视频",
+      "Quest 成为个人生活教练",
+      "Deal Pilot 全球会议自动预订",
+      "自动审批工具受关注"
+    ],
+    "ai-hf": [
+      "LTX-2.5 下载量达260万",
+      "Qwen3.8-27B 下载量760万",
+      "DavidAU 无审查 GGUF 版本",
+      "unsloth/Qwen3.8-Flash-Next-GGUF",
+      "图像转3D流程爆发",
+      "Viggle-Remake 快速编辑视频"
+    ],
+    "ai-community": [
+      "Seedance 采用双层安全审核",
+      "提醒 LLM 小心无效",
+      "链上锁定防止高危操作",
+      "Mac mini 本地部署 AI",
+      "权重空间编程受关注",
+      "代理日志提升可观测性"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code issues spike after security breach",
+      "OpenAI Codex gains 10 PRs in 24h",
+      "Gemini CLI now supports tool chaining",
+      "GitHub Copilot CLI adds session sync",
+      "Qwen Code hits 1M downloads",
+      "Pi CLI introduces local model runner"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.2 boosts privacy hardening",
+      "MCP grants now auto-revoked after warm turns",
+      "ZeroClaw launches agent memory sandbox",
+      "Hermes Agent integrates with web crawlers",
+      "IronClaw adds multi-agent coordination",
+      "QwenPaw enables autonomous research"
+    ],
+    "ai-infra": [
+      "vLLM fixes Blackwell regression bugs",
+      "SGLang stabilizes long-context handling",
+      "llama.cpp adds speculative decoding",
+      "Ollama adds edge/NPU support",
+      "LiteLLM unifies backend orchestration",
+      "Unsloth speeds up Qwen3.8 inference"
+    ],
+    "ai-trending": [
+      "Agent-Reach enables internet navigation",
+      "Ollama runs on Mac mini locally",
+      "billion-context cuts tokens by 5x",
+      "Agent-browser automates browser tasks",
+      "NVKE manages bare-metal GPUs",
+      "AnythingLLM offers private LLM hosting"
+    ],
+    "ai-hn": [
+      "Goldman Sachs bans Claude Code",
+      "Claude leaks passwords in public repos",
+      "MaxxBench faces validation scrutiny",
+      "Anthropic details agent memory design",
+      "Memorilla improves long-term recall",
+      "AI bubble debate heats up"
+    ],
+    "ai-ph": [
+      "ChatGPT Images 2.6 adds animation",
+      "LiveReview auto-approves low-risk code",
+      "Google Omni 1.2 Flash: $0.07/sec video",
+      "Quest acts as personal life coach",
+      "Deal Pilot books global meetings",
+      "Auto-approval tools gain traction"
+    ],
+    "ai-hf": [
+      "LTX-2.5 hits 2.6M downloads",
+      "Qwen3.8-27B: 7.6M downloads",
+      "DavidAU's uncensored GGUF version",
+      "unsloth/Qwen3.8-Flash-Next-GGUF",
+      "Image-to-3D pipeline surges",
+      "Viggle-Remake edits videos fast"
+    ],
+    "ai-community": [
+      "Seedance uses dual-layer safety review",
+      "Telling LLMs to be careful fails",
+      "On-chain locks prevent risky actions",
+      "Local AI deployment on Mac minis",
+      "Weight-space programming gains interest",
+      "Agent transcripts improve observability"
+    ]
+  }
+}
