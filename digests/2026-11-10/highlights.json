@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.322 今日发布",
+      "OpenAI Codex 修复严重数据丢失问题",
+      "Gemini CLI 支持代理编排",
+      "GitHub Copilot CLI 增加会话持久化",
+      "Qwen Code 实现多文件生成",
+      "Pi 工具支持语音编程"
+    ],
+    "ai-agents": [
+      "OpenClaw：24小时内新增500个问题",
+      "无新版本发布：OpenClaw 稳定性问题",
+      "P0 问题：会话状态完整性失败",
+      "SQLite 在 Linux 上崩溃",
+      "Windows 启动可靠性问题",
+      "插件生命周期管理修复合并"
+    ],
+    "ai-infra": [
+      "Ollama v0.40.16 修复版发布",
+      "LiteLLM v1.108.4 LTS 稳定版",
+      "llama.cpp b12238+ 更新上线",
+      "vLLM 领先支持 SM120/Blackwell",
+      "SGLang 增加实时音频支持",
+      "Unsloth 提升本地代理性能"
+    ],
+    "ai-trending": [
+      "firecrawl 星标达20万，病毒式增长",
+      "mem0ai/mem0 推动代理记忆趋势",
+      "Graphify 将代码转为可查询图谱",
+      "Caveman 降低 LLM 输入 65%",
+      "Codewhale：轻量级自托管代理",
+      "RAG 工具：ragflow、PageIndex、Cognee"
+    ],
+    "ai-web": [
+      "Claude Fable 5.2 设计完整原型",
+      "FlashProve 实现密码学证明",
+      "Anthropic 验证电子设计",
+      "Diode Computers 与 Anthropic 合作",
+      "Claude 可端到端生成固件",
+      "信任基础设施突破"
+    ],
+    "ai-hn": [
+      "Claude Fable 5.2 基准测试得分65",
+      "Google Gemini 隐私担忧飙升",
+      "高盛撤下交易员的 Claude Code",
+      "CoreWeave 债券收益率达16%",
+      "Meta Muse Ember 面向边缘设备",
+      "Fable 5.2 与真实应用价值之争"
+    ],
+    "ai-ph": [
+      "AXL：GTM 协作机器人含1200+动作",
+      "Agent Clan 通过手势控制代理",
+      "Sage2 转化实时对话",
+      "NoMac：拥有自己 Mac 的 AI 代理",
+      "NotchIsland：开源 Dynamic Island",
+      "Mac 为中心的 AI 工具流行度上升"
+    ],
+    "ai-community": [
+      "AI 减少开发页面加载时间75%",
+      "提示注入是授权漏洞",
+      "开发者质疑 AI 生产力提升",
+      "发现 VM 逃逸和 PDF 提示注入",
+      "后 AI 开发角色缺乏路线图",
+      "代理系统提升后端效率"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.322 released today",
+      "OpenAI Codex fixes critical data loss issue",
+      "Gemini CLI now supports agent orchestration",
+      "GitHub Copilot CLI adds session persistence",
+      "Qwen Code gains multi-file generation",
+      "Pi tool enables voice-controlled coding"
+    ],
+    "ai-agents": [
+      "OpenClaw: 500 new issues in 24h",
+      "No new releases: OpenClaw stability issues",
+      "P0 bugs: session state integrity failures",
+      "SQLite reclamation crashes on Linux",
+      "Windows startup reliability problems",
+      "Plugin lifecycle management fix merged"
+    ],
+    "ai-infra": [
+      "Ollama v0.40.16 released with fixes",
+      "LiteLLM v1.108.4 LTS stable",
+      "llama.cpp b12238+ update live",
+      "vLLM leads in SM120/Blackwell support",
+      "SGLang adds real-time audio support",
+      "Unsloth boosts local agent performance"
+    ],
+    "ai-trending": [
+      "firecrawl hits 200K stars, viral growth",
+      "mem0ai/mem0 drives agent memory trend",
+      "Graphify turns code into queryable graphs",
+      "Caveman reduces LLM input by 65%",
+      "Codewhale: lightweight self-hosted agent",
+      "RAG tools: ragflow, PageIndex, Cognee"
+    ],
+    "ai-web": [
+      "Claude Fable 5.2 designs full prototypes",
+      "FlashProve enables cryptographic proofs",
+      "Anthropic validates electronic design",
+      "Diode Computers partners with Anthropic",
+      "Claude can generate firmware end-to-end",
+      "Trust infrastructure breakthrough"
+    ],
+    "ai-hn": [
+      "Claude Fable 5.2 scores 65 on benchmarks",
+      "Google Gemini privacy concerns spike",
+      "Goldman Sachs pulls Claude Code from traders",
+      "CoreWeave bond yield hits 16%",
+      "Meta's Muse Ember targets edge devices",
+      "Fable 5.2 vs. real-world utility debate"
+    ],
+    "ai-ph": [
+      "AXL: GTM copilot with 1,200+ actions",
+      "Agent Clan controls agents via gestures",
+      "Sage2 transforms live conversations",
+      "NoMac: AI agent with its own Mac",
+      "NotchIsland: open-source Dynamic Island",
+      "Mac-centric AI tools surge in popularity"
+    ],
+    "ai-community": [
+      "AI cuts dev page load time by 75%",
+      "Prompt injection is an authorization flaw",
+      "AI productivity gains questioned by devs",
+      "VM escapes and PDF prompt injections found",
+      "No roadmap for post-AI developer roles",
+      "Agentic systems improve backend efficiency"
+    ]
+  }
+}
