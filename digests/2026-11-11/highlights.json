@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.322 发布，修复稳定性问题",
+      "OpenAI Codex 24小时内提交10个PR，活跃度高",
+      "Gemini CLI v0.6 稳定上线，用户参与度高",
+      "GitHub Copilot CLI 在企业中获得关注",
+      "Qwen Code GitHub 星标突破500",
+      "Pi CLI 新增实时调试支持"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.3：私有任务结果更安全",
+      "OpenClaw 子任务交接问题已修复",
+      "OpenClaw 推出仅网关扩展稳定版",
+      "Hermes Agent 新增访问控制功能",
+      "IronClaw 引入模型降级逻辑",
+      "ZeroClaw 为代理增加会话持久化"
+    ],
+    "ai-infra": [
+      "Ollama v0.40.17-rc0 稳定可用，可投入生产",
+      "vLLM 12个问题，聚焦高性能",
+      "SGLang 提升MoE推理优化",
+      "LiteLLM 新增成本可观测工具",
+      "Unsloth 优化代理微调体验",
+      "llama.cpp 扩展多模态支持"
+    ],
+    "ai-trending": [
+      "anthropics/skills 星标超500",
+      "agent-browser (Rust) 24小时达780星",
+      "billion-context 插件支持月级会话",
+      "homeassistant-ai/ha-mcp 将AI融入智能家居",
+      "career-ops-hq/career-ops 上线求职代理工具",
+      "sherlock-project/sherlock 因AI侦察走红"
+    ],
+    "ai-web": [
+      "Anthropic IPO路演估值577.5亿美元",
+      "OpenAI 发布8个企业学习页面",
+      "Claude 快速入门今日星标+531",
+      "Agent-browser (Rust) 快速获关注",
+      "billion-context 插件支持百亿token会话",
+      "OpenAI 最新文章无全文——预示新功能发布"
+    ],
+    "ai-hn": [
+      "Claude Fable 5.2 人工分析得分65",
+      "Meta Muse Ember：最小高效模型",
+      "Glasswing审计质疑AI安全性",
+      "代码易脆且难维护",
+      "Strands Decider 助亚马逊降本",
+      "训练后权重剪枝提升大模型性能"
+    ],
+    "ai-ph": [
+      "Product Hunt MCP 获437票领先",
+      "Voyager AI代理自主导航文件系统",
+      "Arcjet AI 专注提示处理安全",
+      "Egoist AI护照保护用户隐私",
+      "Higgsfield Miracle 实现精准视频编辑",
+      "Cardboard AI 轻松生成电影内容"
+    ],
+    "ai-arxiv": [
+      "新论文：权重删除提升大模型表现",
+      "LUCQUE数据集聚焦肺癌筛查",
+      "WorkflowArena评测多智能体编排",
+      "柏拉图表征假说受挑战",
+      "人格泛化呈现可预测模式",
+      "通过部分可观测游戏缓解欺骗"
+    ],
+    "ai-community": [
+      "代理配置漂移破坏流程——视同代码",
+      "用Strands+Gemini检测不稳定测试",
+      "Rust重新评估大模型时代安全需求",
+      "生产环境提示注入风险上升",
+      "AI流水线报告虚拟机逃逸",
+      "'我不知道'误行为引发幻觉"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.322 released with stability fixes",
+      "OpenAI Codex sees 10 PRs in 24h, strong activity",
+      "Gemini CLI v0.6 now stable, high engagement",
+      "GitHub Copilot CLI gains traction in enterprise",
+      "Qwen Code hits 500+ stars on GitHub",
+      "Pi CLI adds real-time debugging support"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.3: private task results now secure",
+      "Reliable child-task handoffs fixed in OpenClaw",
+      "OpenClaw releases gateway-only extended-stable",
+      "Hermes Agent gains new access control features",
+      "IronClaw introduces model fallback logic",
+      "ZeroClaw adds session persistence for agents"
+    ],
+    "ai-infra": [
+      "Ollama v0.40.17-rc0 now stable, production-ready",
+      "vLLM sees 12 issues, high performance focus",
+      "SGLang boosts MoE optimization for inference",
+      "LiteLLM adds cost observability tools",
+      "Unsloth refines fine-tuning UX for agents",
+      "llama.cpp expands multimodal support"
+    ],
+    "ai-trending": [
+      "anthropics/skills surges with 500+ stars",
+      "agent-browser (Rust) hits 780 stars in 24h",
+      "billion-context plugin enables month-long sessions",
+      "homeassistant-ai/ha-mcp integrates AI into smart homes",
+      "career-ops-hq/career-ops launches job agent tool",
+      "sherlock-project/sherlock goes viral for AI recon"
+    ],
+    "ai-web": [
+      "Anthropic IPO roadshow launched at $57.75B valuation",
+      "OpenAI releases 8 new enterprise learning pages",
+      "Claude Quickstarts see +531 stars today",
+      "Agent-browser (Rust) gains traction fast",
+      "Billion-context plugin supports billion-token sessions",
+      "No full text in OpenAI’s latest articles—signals upcoming launch"
+    ],
+    "ai-hn": [
+      "Claude Fable 5.2 scores 65 on Artificial Analysis",
+      "Meta’s Muse Ember: smallest efficient model yet",
+      "Glasswing audit questions AI safety efficacy",
+      "AI code seen as fragile and hard to maintain",
+      "Strands Decider drives Amazon cost savings",
+      "Weight pruning post-training improves LLMs"
+    ],
+    "ai-ph": [
+      "Product Hunt MCP leads with 437 votes",
+      "Voyager AI agent navigates file systems autonomously",
+      "Arcjet AI focuses on security in prompt handling",
+      "Egoist AI Passport protects user data privacy",
+      "Higgsfield Miracle enables precise video edits",
+      "Cardboard AI creates cinematic content with ease"
+    ],
+    "ai-arxiv": [
+      "New paper: Deletion of weights boosts LLM performance",
+      "LUCQUE dataset targets lung cancer screening",
+      "WorkflowArena benchmarks multi-agent orchestration",
+      "Platonic representation hypothesis challenged",
+      "Persona generalization shows predictable patterns",
+      "Mitigating deception via partially observable games"
+    ],
+    "ai-community": [
+      "Agent config drift breaks workflows—treat like code",
+      "Flaky test detection with Strands + Gemini",
+      "Rust re-evaluated for LLM-era security needs",
+      "Prompt injection risks rising in production",
+      "VM escapes reported in AI pipelines",
+      "AI hallucinations from 'I don't know' misbehavior"
+    ]
+  }
+}
