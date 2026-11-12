@@ -1,6 +1,6 @@
 {
   "anthropic": {
-    "lastChecked": "2026-11-11T02:12:40.789Z",
+    "lastChecked": "2026-11-12T03:18:20.684Z",
     "seenUrls": {
       "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-10-19T23:06:18.000Z",
       "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-09-09T21:14:42.000Z",
@@ -558,7 +558,7 @@
     }
   },
   "openai": {
-    "lastChecked": "2026-11-11T02:12:41.856Z",
+    "lastChecked": "2026-11-12T03:18:22.303Z",
     "seenUrls": {
       "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-11-03T13:34:40.079Z",
       "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-11-10T09:52:35.698Z",
@@ -1484,30 +1484,31 @@
       "https://openai.com/index/fair-use-benefits-everyone/": "2026-11-10T21:21:48.143Z",
       "https://openai.com/index/helping-websites-express-ai-training-preferences/": "2026-11-10T21:21:31.296Z",
       "https://openai.com/index/community-safety-report-and-new-protections-for-teens/": "2026-11-10T21:21:42.911Z",
-      "https://openai.com/index/scaling-git-at-openai/": "2026-11-10T21:21:33.624Z",
-      "https://openai.com/index/lifeval/": "2026-11-10T21:53:32.771Z",
+      "https://openai.com/index/scaling-git-at-openai/": "2026-11-11T07:09:35.198Z",
+      "https://openai.com/index/lifeval/": "2026-11-11T16:07:31.513Z",
       "https://openai.com/index/dan-driscoll-joins-openai/": "2026-11-10T21:21:25.041Z",
       "https://openai.com/index/grid-protectors-program/": "2026-11-10T21:21:47.771Z",
       "https://openai.com/index/forward-deployed-engineering-means/": "2026-11-10T21:21:34.512Z",
       "https://openai.com/index/accelerating-engineering-for-the-physical-world/": "2026-11-10T18:04:42.427Z",
       "https://openai.com/index/jill-hazelbaker-chief-corporate-affairs-officer/": "2026-11-10T21:21:30.631Z",
-      "https://openai.com/index/a-thousand-fewer-paths-to-root/": "2026-11-10T21:21:46.104Z",
+      "https://openai.com/index/a-thousand-fewer-paths-to-root/": "2026-11-11T14:15:04.454Z",
       "https://openai.com/index/introducing-images-2-6/": "2026-11-10T21:21:32.272Z",
       "https://openai.com/index/daybreak-red-aws-govcloud/": "2026-11-10T21:21:27.436Z",
       "https://openai.com/index/openai-to-acquire-pierre/": "2026-11-10T21:21:32.110Z",
-      "https://openai.com/index/australian-universities-ai-native-graduates/": "2026-11-10T21:21:26.968Z",
+      "https://openai.com/index/australian-universities-ai-native-graduates/": "2026-11-11T19:13:55.756Z",
       "https://openai.com/index/introducing-gpt-6-cyber/": "2026-11-11T02:03:47.315Z",
       "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/": "2026-11-10T21:21:50.084Z",
-      "https://openai.com/index/control-room/": "2026-11-11T01:16:50.994Z",
+      "https://openai.com/index/control-room/": "2026-11-11T18:34:23.892Z",
       "https://openai.com/index/chatgpt-enterprise-aws-marketplace/": "2026-11-10T21:21:27.420Z",
-      "https://openai.com/index/ai-effect-on-freelance-work/": "2026-11-11T02:07:42.747Z",
-      "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life/": "2026-11-11T01:35:10.121Z",
-      "https://openai.com/index/introducing-businesses-chatgpt/": "2026-11-11T01:02:44.064Z",
+      "https://openai.com/index/ai-effect-on-freelance-work/": "2026-11-12T02:48:24.796Z",
+      "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life/": "2026-11-11T23:30:12.560Z",
+      "https://openai.com/index/introducing-businesses-chatgpt/": "2026-11-11T23:09:36.847Z",
       "https://openai.com/index/closing-ai-guidance-gap-education/": "2026-11-10T22:04:58.188Z",
       "https://openai.com/business/learn/enabling-a-data-driven-workforce-webinar/": "2026-11-10T21:25:43.585Z",
       "https://openai.com/business/learn/identifying-and-scaling-ai-use-cases/": "2026-11-10T21:24:23.149Z",
       "https://openai.com/business/learn/how-openai-uses-codex/": "2026-11-10T21:24:20.344Z",
-      "https://openai.com/business/learn/fine-tuning-gpt-4o-webinar/": "2026-11-10T21:09:49.430Z"
+      "https://openai.com/business/learn/fine-tuning-gpt-4o-webinar/": "2026-11-10T21:09:49.430Z",
+      "https://openai.com/index/chatgpt-plus-for-veterans/": "2026-11-11T21:32:04.898Z"
     }
   }
 }

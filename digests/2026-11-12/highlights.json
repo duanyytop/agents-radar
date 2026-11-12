@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code新增技能API以支持代理工作流",
+      "OpenAI Codex发布v0.169.0-alpha.11.1",
+      "Gemini CLI现支持多工具编排",
+      "GitHub Copilot CLI更新至v1.0.110-3",
+      "Qwen Code新增实时调试支持",
+      "Pi工具实现IDE集成编码代理"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.5-beta.2修复崩溃循环",
+      "macOS密钥持久化在OpenClaw中稳定",
+      "Hermes Agent通过自改进逻辑进化",
+      "IronClaw引入安全内存隔离",
+      "QwenPaw新增可扩展个人助理模块",
+      "ZeroClaw增强代理间通信"
+    ],
+    "ai-infra": [
+      "vLLM 24小时内合并15个PR提升性能",
+      "SGLang v0.5.23发布关键修复",
+      "LiteLLM v1.110.0-rc.2进入候选版本",
+      "Unsloth优化Blackwell GPU推理",
+      "llama.cpp新增AMD ROCm本地支持",
+      "Ollama集成分布式预填充"
+    ],
+    "ai-trending": [
+      "Hermes Agent：自我演进的个人AI",
+      "Agent-Reach接入推特、Reddit、GitHub",
+      "Career-Ops：优化ATS的求职代理",
+      "PPT-Master自动生成动画演示",
+      "CowAgent：多模型多通道AI",
+      "DeepSeek-Reasonix擅长复杂编码任务"
+    ],
+    "ai-web": [
+      "ChatGPT Plus今日面向退伍军人推出",
+      "OpenAI针对美国退伍军人推出新计划",
+      "Anthropic对新内容保持沉默",
+      "退伍军人订阅暗示合规系统",
+      "选举前推进政策驱动的AI outreach",
+      "Anthropic本周无新研究发布"
+    ],
+    "ai-hn": [
+      "Claude Fable 5.2获HN用户青睐",
+      "Mythos 5.2展现高级推理能力",
+      "AI代理宣称发现古代玛雅遗址",
+      "联合航空禁止使用AI订票代理",
+      "苹果本地AI Mac应用即将发布",
+      "谷歌推出Modern Web Guidance工具"
+    ],
+    "ai-ph": [
+      "Alsona自动化企业销售通话预约",
+      "Maxma自主提升广告表现",
+      "ForAgent提供私有代理电话号码",
+      "Seldon模拟真实用户行为用于测试",
+      "Latch.ai处理受监管会计任务",
+      "Almanzor简化复杂文档编制"
+    ],
+    "ai-arxiv": [
+      "Bonbon模型预测分子相互作用",
+      "蛋白质-配体AI中发现涌现生物学",
+      "DnNP提升不确定性感知模型评估",
+      "对比发现推动科学AI发展",
+      "按需精准解码高效实现",
+      "Earlybird实现轻量级语音识别"
+    ],
+    "ai-community": [
+      "AI QA工作流因工具误用失败",
+      "代理会话存储未管理敏感数据",
+      "虚假烟雾警报几乎导致数据中心崩溃",
+      "PDF中暴露提示注入风险",
+      "AI测试与CI/CD集成增长",
+      "AI代码溯源忽略系统性问题"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code gains Skills API for agent workflows",
+      "OpenAI Codex releases v0.169.0-alpha.11.1",
+      "Gemini CLI now supports multi-tool orchestration",
+      "GitHub Copilot CLI updates to v1.0.110-3",
+      "Qwen Code adds real-time debugging support",
+      "Pi tool enables IDE-integrated coding agents"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.5-beta.2 fixes crash loops",
+      "macOS secret persistence now stable in OpenClaw",
+      "Hermes Agent evolves with self-improving logic",
+      "IronClaw introduces secure memory isolation",
+      "QwenPaw adds extensible personal assistant modules",
+      "ZeroClaw enhances agent-to-agent communication"
+    ],
+    "ai-infra": [
+      "vLLM merges 15 PRs in 24h for performance boost",
+      "SGLang v0.5.23 released with critical fix",
+      "LiteLLM v1.110.0-rc.2 now in release candidate",
+      "Unsloth optimizes Blackwell GPU inference",
+      "llama.cpp adds AMD ROCm support for local runs",
+      "Ollama integrates with distributed prefill"
+    ],
+    "ai-trending": [
+      "Hermes Agent: self-evolving personal AI",
+      "Agent-Reach accesses Twitter, Reddit, GitHub",
+      "Career-Ops: job search agent with ATS optimization",
+      "PPT-Master auto-generates animated presentations",
+      "CowAgent: multi-model, multi-channel AI",
+      "DeepSeek-Reasonix excels in complex coding tasks"
+    ],
+    "ai-web": [
+      "ChatGPT Plus for Veterans launched today",
+      "OpenAI targets U.S. military veterans with new plan",
+      "Anthropic stays silent on new content",
+      "Veterans' subscription hints at compliance systems",
+      "Policy-driven AI outreach ahead of election",
+      "No new research from Anthropic this week"
+    ],
+    "ai-hn": [
+      "Claude Fable 5.2 impresses HN users",
+      "Mythos 5.2 shows advanced reasoning skills",
+      "AI agents claim to find ancient Maya site",
+      "United Airlines bans AI flight booking agents",
+      "Apple’s local AI Mac app teased for launch",
+      "Google launches Modern Web Guidance tools"
+    ],
+    "ai-ph": [
+      "Alsona automates B2B sales call bookings",
+      "Maxma scales ad performance autonomously",
+      "ForAgent offers private agent phone numbers",
+      "Seldon simulates real user behavior for QA",
+      "Latch.ai handles regulated accounting tasks",
+      "Almanzor simplifies complex documentation"
+    ],
+    "ai-arxiv": [
+      "Bonbon model predicts molecular interactions",
+      "Emergent biology found in protein-ligand AI",
+      "DnNP improves uncertainty-aware model eval",
+      "Contrastive Discovery advances science AI",
+      "Precision on Demand decodes efficiently",
+      "Earlybird enables lightweight speech recognition"
+    ],
+    "ai-community": [
+      "AI QA workflows fail due to tool misuse",
+      "Agent sessions store unmanaged sensitive data",
+      "False smoke alarm nearly crashes datacenter",
+      "Prompt injection risks in PDFs exposed",
+      "CI/CD integration with AI testing grows",
+      "AI code blame ignores systemic issues"
+    ]
+  }
+}
