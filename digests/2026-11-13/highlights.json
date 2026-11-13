@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.323 发布代码模式测试版",
+      "OpenAI Codex 进入alpha阶段，版本 rust-v0.170.0",
+      "Qwen Code 推出统一代理循环内核",
+      "Gemini CLI 发现10个问题，无新版本发布",
+      "GitHub Copilot CLI 稳定版 v1.0.111-0",
+      "Pi CLI 在开发者社区获得关注"
+    ],
+    "ai-agents": [
+      "OpenClaw 24小时内合并210个PR",
+      "v2026.11.5-beta.2 可供测试",
+      "PR #197801 修复网关内存压力",
+      "PR #197975 将运行时检查移至独立线程",
+      "PR #197953 预加载沙箱依赖模板",
+      "无新版本发布；专注会话状态完整性"
+    ],
+    "ai-infra": [
+      "SGLang v0.5.23 发布，存在性能问题",
+      "llama.cpp 修复高危安全漏洞",
+      "Ollama 存在AMD显存检测缺陷",
+      "LiteLLM v1.110.0-rc.2 搭载Rust核心发布",
+      "vLLM v0.24.0 出现关键Blackwell回归问题",
+      "Unsloth 提升本地推理效率"
+    ],
+    "ai-trending": [
+      "Claude 4 发布工具使用测试版",
+      "Meta的Astryx 成为代理枢纽并加速发展",
+      "Qwen Code 成为开源代理平台",
+      "free-claude-code 和 ECC 推动开放生态",
+      "OpenAI Codex Security CLI 流行度飙升",
+      "多框架代理兴起以应对厂商锁定"
+    ],
+    "ai-web": [
+      "Anthropic 向纳斯达克提交S-1文件，股票代码ANT",
+      "Claude Opus 4 发布，全球最佳编程模型",
+      "Claude Sonnet 4 首发，支持扩展思考",
+      "Claude 4 引入动态工具使用（测试版）",
+      "Claude Fable 5.2 突破代理规划极限",
+      "Mythos 5.2 增强叙事连贯性"
+    ],
+    "ai-hn": [
+      "Gemini 4 Hydrogen：实时推理升级",
+      "Edge0-145B 实现本地设备前沿AI",
+      "Apple 加强AI生成内容应用审核",
+      "联合航空禁止使用AI订票代理",
+      "Hacker News 讨论Anthropic IPO估值",
+      "smolmaxxing 推动开源推理增长"
+    ],
+    "ai-ph": [
+      "Nod by n8n：自托管个人代理",
+      "CALL-E 通过AI代理自动拨打电话",
+      "ScroogeFrog AI 实时检测广告欺诈",
+      "ElevenLabs Scribe v3 支持90+语言",
+      "Muse Ember 面向高频率自动化",
+      "Product Hunt 推荐低成本AI工具"
+    ],
+    "ai-arxiv": [
+      "Mask-Pattern Position Augmentation 扩展上下文",
+      "奖励劫持与'表现不佳'激活相关联",
+      "校准，而非重训练：对齐框架",
+      "AROMA 改进任务自适应表示",
+      "EASTAR 实现语义基础学习",
+      "自适应控制提升多模态VLM性能"
+    ],
+    "ai-community": [
+      "MCP服务器悄然耗尽上下文窗口",
+      "小型TypeScript微工具受青睐",
+      "检测到LLM流水线无声退化",
+      "本地模型嵌入浏览器趋势上升",
+      "发现PDF及旧系统中的提示注入",
+      "Dev.to 警告AI无声失败风险"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.323 released with Code Mode beta",
+      "OpenAI Codex enters alpha with rust-v0.170.0",
+      "Qwen Code launches unified agent loop kernel",
+      "Gemini CLI sees 10 issues, no new release",
+      "GitHub Copilot CLI stable at v1.0.111-0",
+      "Pi CLI gains traction in dev communities"
+    ],
+    "ai-agents": [
+      "OpenClaw merges 210 PRs in 24h",
+      "v2026.11.5-beta.2 now available for testing",
+      "PR #197801 fixes Gateway memory pressure",
+      "PR #197975 moves runtime checks off main thread",
+      "PR #197953 prewarms sandbox dependency template",
+      "No new releases; focus on session state integrity"
+    ],
+    "ai-infra": [
+      "SGLang v0.5.23 released with performance issues",
+      "llama.cpp patches high-severity security flaws",
+      "Ollama faces AMD VRAM detection bug",
+      "LiteLLM v1.110.0-rc.2 launches with Rust core",
+      "vLLM v0.24.0 has critical Blackwell regression",
+      "Unsloth boosts local inference efficiency"
+    ],
+    "ai-trending": [
+      "Claude 4 launches with tool-use beta",
+      "Meta’s Astryx gains momentum as agent hub",
+      "Qwen Code emerges as open agent platform",
+      "free-claude-code and ECC drive open ecosystems",
+      "OpenAI Codex Security CLI surges in popularity",
+      "Multi-harness agents rise to challenge vendor lock-in"
+    ],
+    "ai-web": [
+      "Anthropic files S-1 for Nasdaq IPO under ANT",
+      "Claude Opus 4 launched as world’s best coding model",
+      "Claude Sonnet 4 debuts with extended thinking",
+      "Claude 4 introduces dynamic tool use (beta)",
+      "Claude Fable 5.2 pushes agent planning limits",
+      "Mythos 5.2 enhances narrative coherence"
+    ],
+    "ai-hn": [
+      "Gemini 4 Hydrogen: real-time reasoning upgrade",
+      "Edge0-145B enables frontier AI on local devices",
+      "Apple tightens app review for AI-generated content",
+      "United Airlines bans AI booking agents",
+      "Hacker News debates Anthropic's IPO valuation",
+      "smolmaxxing drives open-source inference growth"
+    ],
+    "ai-ph": [
+      "Nod by n8n: self-hosted personal agent",
+      "CALL-E automates phone calls via AI agents",
+      "ScroogeFrog AI detects ad fraud in real time",
+      "ElevenLabs Scribe v3 supports 90+ languages",
+      "Muse Ember targets high-volume automation",
+      "Product Hunt highlights low-cost AI tools"
+    ],
+    "ai-arxiv": [
+      "Mask-Pattern Position Augmentation extends context",
+      "Reward hacking linked to 'going badly' activations",
+      "Calibrate, Don't Retrain: alignment framework",
+      "AROMA improves task-adaptive representation",
+      "EASTAR enables semantically grounded learning",
+      "Adaptive control boosts multimodal VLMs"
+    ],
+    "ai-community": [
+      "MCP servers silently drain context windows",
+      "Small TypeScript micro-tools gain favor",
+      "Silent degradation in LLM pipelines detected",
+      "Local models embedded into browsers gaining traction",
+      "Prompt injections found in PDFs and legacy systems",
+      "Dev.to warns of AI’s silent failure risks"
+    ]
+  }
+}
