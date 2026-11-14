@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.325 今日发布",
+      "OpenAI Codex 修复 Windows 稳定性问题",
+      "Gemini CLI 新增代理编排功能",
+      "GitHub Copilot CLI 支持多模型路由",
+      "Qwen Code 增加实时代码建议",
+      "Pi 工具引入本地 AI 执行模式"
+    ],
+    "ai-agents": [
+      "OpenClaw 修复会话切换错误 (PR #183168)",
+      "IronClaw 升级认证流程以增强安全",
+      "ZeroClaw 添加跨平台内存管理",
+      "Hermes Agent 提升状态持久化",
+      "QwenPaw 优化代理协作工作流",
+      "OpenClaw 流水线 24 小时内提交 500 PR"
+    ],
+    "ai-infra": [
+      "llama.cpp 发布 v1.0.0 (重大变更)",
+      "vLLM 新增 Blackwell SM120 支持",
+      "SGLang 跟踪 v1.0 发布，合并 9 个 PR",
+      "Ollama 增加 Qwen3.8-27B 量化",
+      "LiteLLM 推出 v1.111.0-dev",
+      "Unsloth 推升推理速度 3 倍"
+    ],
+    "ai-trending": [
+      "alibaba/open-code-review: 今日 +215 星",
+      "openai/codex-security: 今日 +751 星",
+      "ZhuLinsen/daily_stock_analysis: 71.7K 星",
+      "affaan-m/ECC: 趋势提示优化器",
+      "firecrawl/firecrawl: 网页数据访问工具",
+      "f/prompts.chat: 代理性能套件"
+    ],
+    "ai-web": [
+      "Anthropic 确认 Claude Mythos 5 泄露",
+      "Claude Sonnet 5 降低使用成本",
+      "英国 AISI 事件报告发布",
+      "OpenAI 推出 ChatGPT 钱包",
+      "Claude Code 并行工作者亮相",
+      "AI 健康资助：宣布 2000 万美元"
+    ],
+    "ai-hn": [
+      "Perplexity Decider v1.3 引发争议",
+      "Gemini 4 Hydrogen 达新基准",
+      "DeepSeek V4 Pro 0813 进入前沿竞赛",
+      "端到端 4 位训练突破",
+      "DSPy 通过权重空间优化决策模型",
+      "本地 AI 部署趋势在 HN 爆发"
+    ],
+    "ai-ph": [
+      "Plurai Simulation: 自进化代理世界",
+      "Spacefast by Automattic: 全栈代理环境",
+      "Harness Memory: 长期代理记忆",
+      "Oxagen: 代理上下文共享",
+      "Grok Bot 1.0: 团队协作机器人",
+      "Omnigraph: 开源代理网络"
+    ],
+    "ai-arxiv": [
+      "神经符号强化学习用于金融决策",
+      "ArchSpace: 代理行为文档化",
+      "LiveGeo: 动态环境评估",
+      "基于能量模型解谜快 1000 倍",
+      "提出辩论驱动可学性理论",
+      "LLM 中目标编码实现灵活动作"
+    ],
+    "ai-community": [
+      "ChatGPT 钱包支持 AI 购买",
+      "虚假烟雾报警险致纽约数据中心停摆",
+      "remove.bg 停运引发本地替代讨论",
+      "Composio vs Nango vs Scalekit: 生产指南",
+      "基于 WebAssembly 的图像工具受关注",
+      "AI 信任与幻觉风险热议"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.325 released today",
+      "OpenAI Codex fixes Windows stability issues",
+      "Gemini CLI gains new agent orchestration features",
+      "GitHub Copilot CLI now supports multi-model routing",
+      "Qwen Code adds real-time code suggestion",
+      "Pi tool introduces local AI execution mode"
+    ],
+    "ai-agents": [
+      "OpenClaw fixes session switching errors (PR #183168)",
+      "IronClaw updates authentication flow for security",
+      "ZeroClaw adds cross-platform memory management",
+      "Hermes Agent improves state persistence",
+      "QwenPaw enhances agent collaboration workflows",
+      "OpenClaw pipeline sees 500 PRs in 24h"
+    ],
+    "ai-infra": [
+      "llama.cpp releases v1.0.0 (breaking change)",
+      "vLLM adds Blackwell SM120 support",
+      "SGLang tracks v1.0 release with 9 PRs merged",
+      "Ollama adds Qwen3.8-27B quantization",
+      "LiteLLM launches v1.111.0-dev",
+      "Unsloth boosts inference speed by 3x"
+    ],
+    "ai-trending": [
+      "alibaba/open-code-review: +215 stars today",
+      "openai/codex-security: +751 stars",
+      "ZhuLinsen/daily_stock_analysis: 71.7K stars",
+      "affaan-m/ECC: trending prompt optimizer",
+      "firecrawl/firecrawl: web data access tool",
+      "f/prompts.chat: agent performance suite"
+    ],
+    "ai-web": [
+      "Anthropic confirms Claude Mythos 5 breach",
+      "Claude Sonnet 5 launched with lower cost",
+      "UK AISI incident report published",
+      "OpenAI launches ChatGPT Wallet",
+      "Claude Code parallel workers unveiled",
+      "AI wellbeing grants: $20M announced"
+    ],
+    "ai-hn": [
+      "Perplexity Decider v1.3 sparks debate",
+      "Gemini 4 Hydrogen hits new benchmarks",
+      "DeepSeek V4 Pro 0813 enters frontier race",
+      "End-to-end 4-bit training breakthrough",
+      "DSPy optimizes decision models via weight-space",
+      "Local AI deployment trends surge on HN"
+    ],
+    "ai-ph": [
+      "Plurai Simulation: self-evolving agent world",
+      "Spacefast by Automattic: full-stack agent env",
+      "Harness Memory: long-term agent recall",
+      "Oxagen: context sharing for agents",
+      "Grok Bot 1.0: team collaboration bots",
+      "Omnigraph: open-source agent network"
+    ],
+    "ai-arxiv": [
+      "Neurosymbolic RL for financial decisions",
+      "ArchSpace: agent behavior documentation",
+      "LiveGeo: dynamic environment evaluation",
+      "Energy-based models solve puzzles 1,000x faster",
+      "Debate-driven learnability theory proposed",
+      "Goal encoding in LLMs enables flexible actions"
+    ],
+    "ai-community": [
+      "ChatGPT Wallet enables AI purchases",
+      "False smoke alarm nearly shuts down NYC datacenter",
+      "remove.bg shutdown prompts local alternatives",
+      "Composio vs Nango vs Scalekit: production guide",
+      "WebAssembly-based image tools gain traction",
+      "AI trust and hallucination risks debated"
+    ]
+  }
+}
