@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code新增技能API",
+      "OpenAI Codex更新工具集成",
+      "Gemini CLI支持多平台",
+      "GitHub Copilot CLI达稳定里程碑",
+      "Qwen Code现支持RAG工作流",
+      "Pi CLI引入代理内存优化"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.5-beta.3发布",
+      "大会话可靠性提升",
+      "代理内存压力降低",
+      "水合负载可配置",
+      "代理生命周期管理修复",
+      "建议持久会话验证"
+    ],
+    "ai-infra": [
+      "vLLM：重大变更将至",
+      "SGLang：v1.0路线图启动",
+      "llama.cpp：弃用警告发布",
+      "Ollama：社区集成主导",
+      "LiteLLM：安全聚焦版rc3发布",
+      "Unsloth：Qwen量化受关注"
+    ],
+    "ai-trending": [
+      "ECC与claude-mem火爆出圈",
+      "Open-code-review获企业青睐",
+      "RAG与向量数据库需求激增",
+      "Ollama获186K星标",
+      "Firecrawl实现实时网页数据",
+      "Caveman：病毒式Go AI工具"
+    ],
+    "ai-hn": [
+      "AI发现哥德尔遗失定理",
+      "Edge0-145B可在消费级硬件运行",
+      "Nvidia GPU短缺传闻爆发",
+      "非英语AI可持续性受争议",
+      "Unsloth的Qwen量化受关注",
+      "文学诈骗暴露AI信任危机"
+    ],
+    "ai-ph": [
+      "Claude Meetings：实时待办事项",
+      "qorqbot：主动型商业代理",
+      "Filament：开源数据迁移器",
+      "Burnstate：API使用监控器",
+      "Trainn MCP：AI内容生成器",
+      "GAtrends：关键词分析工具"
+    ],
+    "ai-community": [
+      "10行代码保护编码代理",
+      "AI摘要隐藏关键遗漏",
+      "KV缓存修复提升推理速度",
+      "Swizzle Runtime达209 tok/s",
+      "remove.bg将于12月1日关停",
+      "提示注入安全争论升温"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code adds new Skills API",
+      "OpenAI Codex updates tool integration",
+      "Gemini CLI gains multi-platform support",
+      "GitHub Copilot CLI hits stability milestone",
+      "Qwen Code now supports RAG workflows",
+      "Pi CLI introduces agent memory optimization"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.5-beta.3 released",
+      "Large-session reliability improved",
+      "Memory pressure reduced in agents",
+      "Hydration payloads now configurable",
+      "Agent lifecycle management fixes",
+      "Persistent session validation advised"
+    ],
+    "ai-infra": [
+      "vLLM: breaking changes imminent",
+      "SGLang: v1.0 roadmap active",
+      "llama.cpp: deprecation warning issued",
+      "Ollama: community integrations dominate",
+      "LiteLLM: security-focused rc3 released",
+      "Unsloth: Qwen quantizations gain traction"
+    ],
+    "ai-trending": [
+      "ECC and claude-mem go viral",
+      "Open-code-review gains enterprise traction",
+      "RAG and vector DB demand surges",
+      "Ollama hits 186K stars",
+      "Firecrawl enables real-time web data",
+      "Caveman: viral Go AI tool"
+    ],
+    "ai-hn": [
+      "AI uncovers Gödel's lost theorems",
+      "Edge0-145B runs on consumer hardware",
+      "Nvidia GPU scarcity allegations explode",
+      "Sustainability of non-English AI debated",
+      "Unsloth's Qwen quantizations gain traction",
+      "Literary scams expose AI trust issues"
+    ],
+    "ai-ph": [
+      "Claude Meetings: real-time action items",
+      "qorqbot: proactive business agent",
+      "Filament: open-source data mover",
+      "Burnstate: API usage monitor",
+      "Trainn MCP: AI content creator",
+      "GAtrends: keyword analytics tool"
+    ],
+    "ai-community": [
+      "10 lines to secure your coding agent",
+      "AI summaries hide critical omissions",
+      "KV cache fix boosts inference speed",
+      "Swizzle Runtime hits 209 tok/s",
+      "remove.bg shuts down Dec 1st",
+      "Prompt injection safety debate heats up"
+    ]
+  }
+}
