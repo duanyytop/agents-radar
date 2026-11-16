@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code今日斩获10个热门议题",
+      "OpenAI Codex发布rust-v0.171.0-alpha.7",
+      "Gemini CLI 24小时内新增10个PR",
+      "GitHub Copilot CLI活跃，10个议题待处理",
+      "Qwen Code发布v1.0.0-preview",
+      "Pi工具新增10个讨论"
+    ],
+    "ai-agents": [
+      "OpenClaw修复PR #199626中的失效链接",
+      "Hermes Agent提升插件响应速度",
+      "IronClaw修复会话管理缺陷",
+      "QwenPaw扩展多智能体支持",
+      "ZeroClaw稳定Windows启动流程",
+      "OpenClaw生态合并500个PR"
+    ],
+    "ai-infra": [
+      "vLLM合并12个优化推理速度的PR",
+      "SGLang更新含破坏性变更",
+      "llama.cpp回滚Jinja相关修改",
+      "Ollama今日新增6个PR",
+      "LiteLLM实现跨提供商路由",
+      "Unsloth推进MoE微调进展"
+    ],
+    "ai-trending": [
+      "stitch-skills：247颗星，编码技能标准",
+      "AG-UI：355颗星，智能体用户协议",
+      "Chrome DevTools MCP：717颗星，调试智能体",
+      "Google SkillEvaluator推动评估标准",
+      "阿里巴巴开源代码审查自动化QA",
+      "腾讯LoopForge扩展CI/CD流水线"
+    ],
+    "ai-hn": [
+      "Claude Code逆向工程1994款吉普ECU",
+      "AI发展背景下职位招聘降至12年低点",
+      "1096分HN帖子呼吁开源AI代码",
+      "中国模型使用美国出口GPU训练",
+      "位置嵌入深入解析引发热议",
+      "非英语模型能效问题被曝光"
+    ],
+    "ai-ph": [
+      "HiringNow AI抢先申请职位",
+      "ChatGPT助力企业品牌曝光",
+      "Gemini Robotics 2.5投入真实场景",
+      "Google Labs桌面对话协作",
+      "Antelog保障AI编程环境安全",
+      "CaptureFlow与Kokonut UI受关注"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B：650万下载，顶尖模型",
+      "unsloth/Qwen3.8-27B-GGUF：650万下载",
+      "xtools-at无审核DeepSeek变体走红",
+      "MiniMax-H3系列主导图像生成",
+      "SAM3与DINOv3持续吸引视觉模型关注",
+      "GGUF量化Qwen模型本地爆火"
+    ],
+    "ai-community": [
+      "AI智能体重启旧版NASA太空技术",
+      "Jira验证机器人捕获合并前漏洞",
+      "闭环内核开发成为可能",
+      "多智能体编排势头强劲",
+      "LiteLLM网关简化API路由",
+      "上下文窗口中毒仍存风险"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code gains 10 hot issues today",
+      "OpenAI Codex releases rust-v0.171.0-alpha.7",
+      "Gemini CLI sees 10 new PRs in 24h",
+      "GitHub Copilot CLI active with 10 issues",
+      "Qwen Code launches v1.0.0-preview",
+      "Pi tool hits 10 new discussions"
+    ],
+    "ai-agents": [
+      "OpenClaw fixes broken wiki links in PR #199626",
+      "Hermes Agent boosts plugin responsiveness",
+      "IronClaw tackles session management bugs",
+      "QwenPaw expands multi-agent support",
+      "ZeroClaw stabilizes Windows startup",
+      "500 PRs merged in OpenClaw ecosystem"
+    ],
+    "ai-infra": [
+      "vLLM merges 12 PRs for inference speed",
+      "SGLang updates with breaking changes",
+      "llama.cpp reverts Jinja-related changes",
+      "Ollama sees 6 new PRs today",
+      "LiteLLM enables cross-provider routing",
+      "Unsloth advances MoE fine-tuning"
+    ],
+    "ai-trending": [
+      "stitch-skills: 247 new stars, coding skills standard",
+      "AG-UI: 355 new stars, agent-user protocol",
+      "Chrome DevTools MCP: 717 stars, debug agents",
+      "Google’s SkillEvaluator drives eval standards",
+      "Alibaba’s open-code-review automates QA",
+      "Tencent’s LoopForge scales CI/CD pipelines"
+    ],
+    "ai-hn": [
+      "Claude Code reverse-engineers 1994 Jeep ECU",
+      "Job posts hit 12-year lows amid AI growth",
+      "1096-score HN post on open-sourcing AI code",
+      "Chinese models trained on U.S. export GPUs",
+      "Positional embeddings deep dive goes viral",
+      "Energy inefficiency in non-English models exposed"
+    ],
+    "ai-ph": [
+      "HiringNow AI applies for jobs before humans",
+      "Businesses in ChatGPT helps brands appear",
+      "Gemini Robotics 2.5 launches for real-world use",
+      "Tabletop by Google Labs enables collaboration",
+      "Antelog secures AI coding environments",
+      "CaptureFlow and Kokonut UI gain traction"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B: 6.5M downloads, top model",
+      "unsloth/Qwen3.8-27B-GGUF: 6.5M downloads",
+      "xtools-at's uncensored DeepSeek variant trends",
+      "MiniMax-H3 series dominates image generation",
+      "SAM3 and DINOv3 sustain vision model interest",
+      "GGUF quantized Qwen models go viral locally"
+    ],
+    "ai-community": [
+      "AI agents now revive old NASA space tech",
+      "Jira validation bot catches pre-merge bugs",
+      "Closed-loop kernel development becomes viable",
+      "Multi-agent orchestration gains momentum",
+      "LiteLLM gateways simplify API routing",
+      "Context window poisoning remains a risk"
+    ]
+  }
+}
