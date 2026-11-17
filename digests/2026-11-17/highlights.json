@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.326 发布",
+      "GitHub Copilot CLI v1.0.113-1 上线",
+      "OpenCode @opencode/pty@0.6.0 发布",
+      "Qwen Code 社区活跃",
+      "Gemini CLI 无新版本",
+      "Pi 近期有10个PR"
+    ],
+    "ai-agents": [
+      "OpenClaw 测试版构建运行中",
+      "今日无 OpenClaw 版本发布",
+      "会话状态存在严重漏洞",
+      "Hermes Agent 受关注",
+      "QwenPaw 集成代理功能",
+      "ZeroClaw 推出新功能"
+    ],
+    "ai-infra": [
+      "vLLM v0.34.0 稳定版上线",
+      "SGLang 无新版本",
+      "llama.cpp 构建 b12453–b12441",
+      "Ollama 无更新",
+      "LiteLLM v1.108.10 补丁",
+      "Unsloth 合并48个PR"
+    ],
+    "ai-trending": [
+      "NVIDIA/SkillEvaluator: 873星",
+      "Google's stitch-skills: 529星",
+      "Alibaba open-code-review: 951星",
+      "Chrome DevTools MCP: 841星",
+      "Claude-BugHunter 突起",
+      "Claude-trading-skills 爆火"
+    ],
+    "ai-web": [
+      "Anthropic 1亿美元学院启动",
+      "加拿大AI研究：1000万投资",
+      "新加坡办公室签署谅解备忘录",
+      "500万资助福祉评估",
+      "OpenAI 仅发布元数据",
+      "Anthropic 新闻聚焦人才"
+    ],
+    "ai-hn": [
+      "Qwen4-Max 引发热议",
+      "Claude Mythos 重写GPU内核",
+      "Windows遥测担忧上升",
+      "AI软件移植至AMD",
+      "儿童剥削伦理警报",
+      "财务不稳定担忧加剧"
+    ],
+    "ai-ph": [
+      "Rakazo: 401票，自托管",
+      "Frevana 多人游戏: 304票",
+      "Spiik: AI会议记录工具",
+      "ByteAsk 云代理：代理导航",
+      "Perit 市场：人机市场",
+      "Transformer.gg: 影响者自动化"
+    ],
+    "ai-arxiv": [
+      "GEM-MM 降低VLM幻觉",
+      "临床数据提取研究",
+      "开源权重大模型可复现论文",
+      "工具型代理鲁棒记忆",
+      "可扩展编码代理基准",
+      "本地推理进展"
+    ],
+    "ai-community": [
+      "AI代理重试导致重复扣费",
+      "提示中99.6%上下文浪费",
+      "推荐使用Secret-broker模式",
+      "高思考模式成本高4.8倍",
+      "误报烟雾警差点毁数据中心",
+      "重试安全执行指南流行"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.326 released",
+      "GitHub Copilot CLI v1.0.113-1 out",
+      "OpenCode @opencode/pty@0.6.0 launched",
+      "Qwen Code active in community",
+      "Gemini CLI no new release",
+      "Pi has 10 recent PRs"
+    ],
+    "ai-agents": [
+      "OpenClaw beta builds live",
+      "No OpenClaw release today",
+      "Critical bugs in session state",
+      "Hermes Agent gaining traction",
+      "QwenPaw integrates with agents",
+      "ZeroClaw launches new features"
+    ],
+    "ai-infra": [
+      "vLLM v0.34.0 stable now",
+      "SGLang no new release",
+      "llama.cpp builds b12453–b12441",
+      "Ollama no update",
+      "LiteLLM v1.108.10 patch",
+      "Unsloth merges 48 PRs"
+    ],
+    "ai-trending": [
+      "NVIDIA/SkillEvaluator: 873 stars",
+      "Google's stitch-skills: 529 stars",
+      "Alibaba open-code-review: 951 stars",
+      "Chrome DevTools MCP: 841 stars",
+      "Claude-BugHunter surges",
+      "Claude-trading-skills viral"
+    ],
+    "ai-web": [
+      "Anthropic $100M academy launch",
+      "Canada AI research: $10M investment",
+      "Singapore office with MOU",
+      "$5M grant for wellbeing evals",
+      "OpenAI releases metadata only",
+      "Anthropic news on talent focus"
+    ],
+    "ai-hn": [
+      "Qwen4-Max sparks debate",
+      "Claude Mythos rewrites GPU kernels",
+      "Windows telemetry concerns rise",
+      "AI porting software to AMD",
+      "Ethical alarms over child exploitation",
+      "Financial instability fears grow"
+    ],
+    "ai-ph": [
+      "Rakazo: 401 votes, self-hosted",
+      "Frevana Multiplayer: 304 votes",
+      "Spiik: AI meeting note-taker",
+      "ByteAsk Cloud Agents: agent navigation",
+      "Perit Marketplace: human-AI market",
+      "Transformer.gg: influencer automation"
+    ],
+    "ai-arxiv": [
+      "GEM-MM reduces VLM hallucination",
+      "Clinical data extraction study",
+      "Open-weight LLM reproducibility paper",
+      "Robust memory for tool-using agents",
+      "Scalable coding agent benchmarks",
+      "On-device inference advances"
+    ],
+    "ai-community": [
+      "AI agent retries cause duplicate charges",
+      "99.6% of context wasted in prompts",
+      "Secret-broker pattern recommended",
+      "High-thinking mode costs 4.8× more",
+      "False smoke alarm nearly cripples DC",
+      "Retry-safe execution guides trending"
+    ]
+  }
+}
