@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.327 稳定性修复版发布",
+      "OpenAI Codex 更新至 rust-v0.170.0 版本",
+      "Gemini CLI 企业工作流中受关注",
+      "Qwen Code 推出事件驱动内核创新",
+      "GitHub Copilot CLI 发布 v1.0.114-0 稳定版",
+      "新 OpenCode 插件模型支持扩展"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.5：安全重启对话已上线",
+      "报告关键会话状态损坏漏洞",
+      "失败自动回滚保障更新安全",
+      "Hermes Agent 达 264K 星标，自进化 AI 成功",
+      "Career-ops 实现本地运行的求职自动化",
+      "CowAgent 成为轻量级多模型助手"
+    ],
+    "ai-infra": [
+      "SGLang v0.5.23 发布修复回归问题",
+      "LiteLLM v1.111.0-rc.1：安全补丁已发布",
+      "vLLM 近24小时新增9个问题",
+      "Unsloth 新增基于 Rust 的后端支持",
+      "llama.cpp 仅提交未发布新版本",
+      "Ollama 保持稳定，活动低"
+    ],
+    "ai-trending": [
+      "obra/superpowers 一夜斩获 1,917 星标",
+      "Claude-BugHunter 因红队测试获超 1K 星标",
+      "Google stitch-skills 标准化代理技能",
+      "CopilotKit 推动 AG-UI 协议普及",
+      "Elementalsouls 技能包走红",
+      "开源代理霸榜趋势"
+    ],
+    "ai-web": [
+      "Claude for Excel 测试版进入研究预览",
+      "Anthropic 发布正式软件验证论文",
+      "GPT-6.2 Astra Sol 暗示重大 OpenAI 更新",
+      "Astra Law 6.2 表明合规推进",
+      "Claude 增加实时市场数据功能",
+      "Anthropic 公布安全评估框架"
+    ],
+    "ai-hn": [
+      "GPT-6.2 Astra Sol 在 HN 引发 721 条评论",
+      "OpenAI 更新因行为退化遭抵制",
+      "谷歌称 AI 搜索使 SEO 流量下降 40%",
+      "哈佛研究发现代理转移瓶颈至代码审查",
+      "Windows 11  telemetry 跟踪开发工具",
+      "StarSling 与 Tokendoctor 因效率受审"
+    ],
+    "ai-ph": [
+      "Boost.space AgentOS Product Hunt 获 284 票",
+      "Zoom Slides 将字幕转为精美幻灯片",
+      "Cookie Away 阻止侵入式 Cookie 通知",
+      "OpenFrame 实现人工审核的 AI 修复",
+      "OpenBot 提供可定制自托管 AI",
+      "Punchcutter 成为开源替代品"
+    ],
+    "ai-arxiv": [
+      "Worldviews 论文重新定义 LLM 对齐",
+      "FLEX 准确解释多标签预测",
+      "PACD 缓解跨模态幻觉",
+      "SciWorkBench 基准测试科学推理",
+      "RehearsalBench 提升代理一致性",
+      "高效世界建模研究势头上升"
+    ],
+    "ai-community": [
+      "AI 代理强制清理密钥导致混乱",
+      "开发者构建拒谎言 PR 的门禁",
+      "AI 代理每月提交 1700 万 PR，警报升级",
+      "Dev.to：AI 威胁基础编码能力",
+      "能力错觉引发信任危机",
+      "确定性门禁现为代理工作流关键"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.327 released with stability fixes",
+      "OpenAI Codex updates with rust-v0.170.0 release",
+      "Gemini CLI gains traction in enterprise workflows",
+      "Qwen Code introduces event-driven kernel innovation",
+      "GitHub Copilot CLI hits v1.0.114-0 stable",
+      "New OpenCode plugin model enables extensibility"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.5: restart-safe conversations now live",
+      "Critical session state corruption bugs reported",
+      "Safer updates with automatic rollback on failure",
+      "Hermes Agent hits 264K stars for self-evolving AI",
+      "Career-ops automates job search with local run",
+      "CowAgent emerges as lightweight multi-model assistant"
+    ],
+    "ai-infra": [
+      "SGLang v0.5.23 released with regression fix",
+      "LiteLLM v1.111.0-rc.1: security patch out",
+      "vLLM sees 9 new issues in last 24h",
+      "Unsloth adds Rust-based backend support",
+      "llama.cpp commits only, no release yet",
+      "Ollama remains stable with low activity"
+    ],
+    "ai-trending": [
+      "obra/superpowers hits 1,917 stars overnight",
+      "Claude-BugHunter gains 1K+ stars for red teaming",
+      "Google's stitch-skills standardizes agent skills",
+      "CopilotKit boosts AG-UI Protocol adoption",
+      "Elementalsouls' skill bundle goes viral",
+      "Open-source agents dominate trending list"
+    ],
+    "ai-web": [
+      "Claude for Excel beta now in research preview",
+      "Anthropic releases formal software verification paper",
+      "GPT-6.2 Astra Sol hints at major OpenAI update",
+      "Astra Law 6.2 signals legal compliance push",
+      "Claude expands with real-time market data",
+      "Safety evaluation framework unveiled by Anthropic"
+    ],
+    "ai-hn": [
+      "GPT-6.2 Astra Sol sparks 721 comments on HN",
+      "OpenAI update faces backlash over behavioral regressions",
+      "Google claims AI search reduces SEO traffic by 40%",
+      "Harvard study finds agents shift bottlenecks to code review",
+      "Windows 11 telemetry tracking developer tools",
+      "StarSling and Tokendoctor face scrutiny on efficiency"
+    ],
+    "ai-ph": [
+      "Boost.space AgentOS wins 284 votes on Product Hunt",
+      "Zoom Slides turns transcripts into polished decks",
+      "Cookie Away blocks intrusive cookie banners",
+      "OpenFrame enables human-approved AI IT fixes",
+      "OpenBot offers customizable self-hosted AI",
+      "Punchcutter gains traction as open-source alternative"
+    ],
+    "ai-arxiv": [
+      "Worldviews paper redefines LLM alignment",
+      "FLEX explains multi-label predictions accurately",
+      "PACD mitigates cross-modal hallucinations",
+      "SciWorkBench benchmark tests scientific reasoning",
+      "RehearsalBench pushes agent consistency",
+      "Efficient world modeling gains research momentum"
+    ],
+    "ai-community": [
+      "AI agent force-pushed API key scrubbing—chaos ensued",
+      "Developer builds gate to reject lying PRs",
+      "17M PRs/month opened by AI agents—alarm grows",
+      "Dev.to: AI threatens foundational coding skills",
+      "Illusion of competence leads to trust issues",
+      "Deterministic gates now critical in agent workflows"
+    ]
+  }
+}
