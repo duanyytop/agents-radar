@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.328 发布安全修复版",
+      "OpenAI Codex 以 rust-v0.172.0 进入测试阶段",
+      "Gemini CLI v0.70.0 预览版现已上线",
+      "GitHub Copilot CLI v1.0.114 补丁发布",
+      "OpenCode 和 Pi 在开源领域获得关注",
+      "Qwen Code 加入 AI CLI 生态"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.33 发布为长期支持版本",
+      "OpenClaw 中关键会话状态漏洞仍存在",
+      "OpenClaw 转录搜索性能提升",
+      "Hermes Agent 在代理网络中加速发展",
+      "IronClaw 拓展 MCP 集成能力",
+      "QwenPaw 实现多代理协作"
+    ],
+    "ai-infra": [
+      "vLLM 保持稳定并持续实验新功能",
+      "SGLang 面临 ROCm/CUDA 不稳定问题",
+      "llama.cpp 性能提升但稳定性存风险",
+      "Ollama 遇 UI/内存回归问题",
+      "LiteLLM v1.109.2：安全加固版发布",
+      "Unsloth 领先 AMD ROCm 优化"
+    ],
+    "ai-trending": [
+      "ECC 和 SkillEvaluator 引领代理技能趋势",
+      "Google 的 stitch-skills 库获 +365 星标",
+      "NVIDIA 的 SkillEvaluator 实现 AI 质量控制",
+      "CLI-Anything 力争让所有软件原生代理化",
+      "Cursor 插件系统发布获 +314 星标",
+      "多代理论文写作实现自主化"
+    ],
+    "ai-web": [
+      "Anthropic IPO 定价每股 83.00 美元",
+      "Claude Fable 5.2 解决量子引力难题",
+      "Cyber 验证计划新增 3 个访问层级",
+      "OpenAI 推动芯片设计与风险治理",
+      "Gemini 4 Neon 被誉为 Opus 5.5 竞品",
+      "KPMG 审计师称引发 AI 与人类辩论"
+    ],
+    "ai-hn": [
+      "Gemini 4 Neon 引发基准颠覆热潮",
+      "Claude 大规模训练于蛋白质序列",
+      "AI 错认玉米片袋为枪支——诉讼启动",
+      "Microsoft 在 Ignite 2026 扩大规模模型",
+      "探索通过令牌预测重构提示",
+      "社区热议 AI 在专业服务中的角色"
+    ],
+    "ai-ph": [
+      "VINC 以叙事保真度赋能影视创作",
+      "Pinecall：开源语音代理发布",
+      "Appxiom 为代理添加上下文感知调试",
+      "EkLine 集成开发者优先的 AI SEO",
+      "Recall.ai 的 Agents API 支持协同工作流程",
+      "seshka 推动开源 AI 基础设施发展"
+    ],
+    "ai-arxiv": [
+      "MoE-Context 模拟人类记忆提升效率",
+      "LoopCache 实现快速自推测解码",
+      "AutoPI 提升对抗提示注入的鲁棒性",
+      "Tell Me How Sure You Are 量化模型不确定性",
+      "RSIBench-Infra 测试递归自我改进",
+      "LLM 辅助贝叶斯优化降低研发成本"
+    ],
+    "ai-community": [
+      "AI 代理通过测试但误改文件",
+      "避免在 LLM 思考时持有数据库事务",
+      "真实基准质疑 AI 编码成本",
+      "代理编排复杂性迅速增长",
+      "令牌成本仍是主要工作流障碍",
+      "基于能源的推理受研究关注"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.328 released with security fixes",
+      "OpenAI Codex enters alpha with rust-v0.172.0",
+      "Gemini CLI v0.70.0-preview now live",
+      "GitHub Copilot CLI v1.0.114 patch released",
+      "OpenCode and Pi gain traction in open-source",
+      "Qwen Code joins AI CLI ecosystem"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.10.33 released as LTS-equivalent",
+      "Critical session state bugs still active in OpenClaw",
+      "Perf boost for transcript search in OpenClaw",
+      "Hermes Agent gains momentum in agent network",
+      "IronClaw expands on MCP integration",
+      "QwenPaw enables multi-agent collaboration"
+    ],
+    "ai-infra": [
+      "vLLM remains stable with active experimental features",
+      "SGLang faces ROCm/CUDA instability issues",
+      "llama.cpp sees performance gains but stability risks",
+      "Ollama struggles with UI/memory regressions",
+      "LiteLLM v1.109.2: security-hardened release",
+      "Unsloth leads AMD ROCm optimization efforts"
+    ],
+    "ai-trending": [
+      "ECC and SkillEvaluator lead agent skill trend",
+      "Google’s stitch-skills library hits +365 stars",
+      "NVIDIA's SkillEvaluator enables AI quality control",
+      "CLI-Anything aims to make all software agent-native",
+      "Cursor plugins system launches with +314 stars",
+      "Multi-agent paper writing now autonomous"
+    ],
+    "ai-web": [
+      "Anthropic prices IPO at $83.00 per share",
+      "Claude Fable 5.2 solves quantum gravity problems",
+      "Cyber Verification Program adds 3 access tiers",
+      "OpenAI pushes chip design and risk governance",
+      "Gemini 4 Neon hailed as Opus 5.5 rival",
+      "KPMG auditor claims spark AI vs human debate"
+    ],
+    "ai-hn": [
+      "Gemini 4 Neon sparks benchmark-shifting hype",
+      "Claude trained on protein sequences at scale",
+      "AI misidentified Doritos bag as gun — lawsuit",
+      "Microsoft scales models at Ignite 2026",
+      "Prompt reconstruction via token prediction explored",
+      "Community debates AI's role in professional services"
+    ],
+    "ai-ph": [
+      "VINC brings AI to filmmaking with narrative fidelity",
+      "Pinecall: open-source voice AI agents launched",
+      "Appxiom adds context-aware debugging for agents",
+      "EkLine integrates AI SEO for developer-first firms",
+      "Agents API by Recall.ai enables co-worker workflows",
+      "seshka boosts open-source AI infrastructure momentum"
+    ],
+    "ai-arxiv": [
+      "MoE-Context mimics human memory for efficiency",
+      "LoopCache enables fast self-speculative decoding",
+      "AutoPI improves robustness against prompt injection",
+      "Tell Me How Sure You Are quantifies model uncertainty",
+      "RSIBench-Infra tests recursive self-improvement",
+      "LLM-assisted Bayesian optimization reduces R&D costs"
+    ],
+    "ai-community": [
+      "AI agents pass tests but edit unintended files",
+      "Don’t hold DB transactions during LLM thinking",
+      "Real-world benchmarks question AI coding cost",
+      "Agent orchestration complexity grows rapidly",
+      "Token costs remain a major workflow hurdle",
+      "Energy-based reasoning gains research interest"
+    ]
+  }
+}
