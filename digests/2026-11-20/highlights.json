@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.329 版本修复发布",
+      "OpenAI Codex 更新至 rust-v0.173.0-alpha.1",
+      "Gemini CLI v0.71.0-nightly.20261120 上线",
+      "OpenCode 在开源生态中崭露头角",
+      "Pi 工具支持多代理工作流",
+      "Qwen Code 集成 GitHub Copilot"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.10-beta.1 发布",
+      "代理模板现通过 ClawHub 验证",
+      "OpenClaw ID 实现安全节点链接",
+      "Windows 用户升级更顺畅",
+      "v2026.11.6 对话更稳定",
+      "v2026.11.5 存在迁移冲突"
+    ],
+    "ai-infra": [
+      "vLLM v0.33.0 稳定版，无新发布",
+      "SGLang RFC v1.0 进行中",
+      "llama.cpp 关键修复已合并",
+      "Ollama v0.40.16 稳定版，无变更",
+      "LiteLLM v1.112.0-dev.1 可用",
+      "Unsloth 社区活跃度上升"
+    ],
+    "ai-trending": [
+      "Claude-BugHunter 今日增 1,349 星",
+      "firecrawl/firecrawl 增 825 星",
+      "CLI-Anything 上线即获 898 星",
+      "minimind 2 小时训练 64M LLM",
+      "affaan-m/ECC 提升轻量代理",
+      "caveman 优化令牌使用"
+    ],
+    "ai-web": [
+      "Anthropic 证明 LLM 可验证代码",
+      "Claude 生成 RISC-V 证明",
+      "OpenAI 更新索引与商业页面",
+      "Daybreak Red 暗示安全计划",
+      "形式化验证论文发表",
+      "定理协作关系披露"
+    ],
+    "ai-hn": [
+      "Gemini 4 Neon 登顶模型工程指数",
+      "Claude 解决两个黑洞问题",
+      "Anthropic 纳斯达克上市引发争议",
+      "法院阻止 AI 生成合理怀疑",
+      "Opus 5.5 遭 Gemini 4 Neon 挑战",
+      "社区分裂于 AI 伦理"
+    ],
+    "ai-ph": [
+      "S.Space 以 380 票领先",
+      "Toone 集成 n8n 工作流",
+      "Dippr 加入 Zapier 自动化栈",
+      "Waldo by Wherobots 提升空间推理",
+      "Mermaid Flow 改善可视化工作流",
+      "Tencent Hy4 输入成本仅 $0.07/M"
+    ],
+    "ai-arxiv": [
+      "医疗 LLM 可验证逻辑获评",
+      "搜索顺序影响默认答案",
+      "Anchor 和 Check 实现可审计决策",
+      "医学需神经符号基础",
+      "多种解法暴露单一答案偏见",
+      "跨模型协调框架提出"
+    ],
+    "ai-community": [
+      "停止用 LLM 处理简单 if 语句",
+      "普通表格可劫持 AI 代理",
+      "AI 自评作业成绩",
+      "本地优先代理框架受关注",
+      "查询重写提升 RAG 效果",
+      "iFixAi 开源审计工具上线"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.329 released with fixes",
+      "OpenAI Codex updates with rust-v0.173.0-alpha.1",
+      "Gemini CLI v0.71.0-nightly.20261120 live",
+      "OpenCode gains traction in open ecosystem",
+      "Pi tool now supports multi-agent workflows",
+      "Qwen Code integrates with GitHub Copilot"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.10-beta.1 launched",
+      "Agent templates now verified via ClawHub",
+      "OpenClaw ID enables secure node linking",
+      "Smoother upgrades fixed for Windows users",
+      "Resilient conversations improved in v2026.11.6",
+      "Migration conflicts noted for v2026.11.5"
+    ],
+    "ai-infra": [
+      "vLLM v0.33.0 stable, no new release",
+      "SGLang RFC for v1.0 underway",
+      "llama.cpp critical fixes merged",
+      "Ollama v0.40.16 stable, no changes",
+      "LiteLLM v1.112.0-dev.1 available",
+      "Unsloth sees rising community activity"
+    ],
+    "ai-trending": [
+      "Claude-BugHunter +1,349 stars today",
+      "firecrawl/firecrawl +825 stars",
+      "CLI-Anything launches with +898 stars",
+      "minimind trains 64M LLM in 2 hours",
+      "affaan-m/ECC boosts lightweight agents",
+      "caveman optimizes token usage"
+    ],
+    "ai-web": [
+      "Anthropic proves LLMs can verify code",
+      "Claude generates proofs for RISC-V",
+      "OpenAI updates index & business pages",
+      "Daybreak Red hints at safety initiative",
+      "Formal verification paper published",
+      "Theorem collaboration revealed"
+    ],
+    "ai-hn": [
+      "Gemini 4 Neon tops Models Engineering Index",
+      "Claude solves two black hole problems",
+      "Anthropic's Nasdaq debut sparks debate",
+      "Court blocks AI-generated probable cause",
+      "Opus 5.5 challenged by Gemini 4 Neon",
+      "Community splits on AI ethics"
+    ],
+    "ai-ph": [
+      "S.Space leads with 380 votes",
+      "Toone integrates with n8n workflow",
+      "Dippr joins Zapier automation stack",
+      "Waldo by Wherobots enhances spatial reasoning",
+      "Mermaid Flow improves visual workflows",
+      "Tencent’s Hy4 flash costs $0.07/M input"
+    ],
+    "ai-arxiv": [
+      "Verifiable logic in medical LLMs reviewed",
+      "Search order shapes default LLM answers",
+      "Anchor and Check for auditable decisions",
+      "Neuro-symbolic grounding needed in medicine",
+      "Many solutions, one answer bias exposed",
+      "Cross-model reconciliation framework"
+    ],
+    "ai-community": [
+      "Stop using LLMs for simple if statements",
+      "Plain tables can hijack AI agents",
+      "AI tests grade their own homework",
+      "Local-first agent frameworks gain traction",
+      "RAG improvements with query rewriting",
+      "iFixAi opensource auditing tool launched"
+    ]
+  }
+}
