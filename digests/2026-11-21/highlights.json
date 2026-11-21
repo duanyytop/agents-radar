@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.330：企业聚焦",
+      "Pi v1.6.0 默认使用 GPT-6.2",
+      "Qwen Code v0.28.3：CI 就绪版本",
+      "OpenAI Codex 进入预发布阶段",
+      "GitHub Copilot CLI v1.0.115-4：安全修复",
+      "Gemini CLI 夜间构建发布"
+    ],
+    "ai-agents": [
+      "OpenClaw：339 个开放问题，今日 500 个 PR",
+      "无新 OpenClaw 版本；β 验证中",
+      "PR #202878 修复 Chrome 背景标签",
+      "PR #202865 清理环境桩泄漏",
+      "PR #202735 改进 Git 更新验证",
+      "网关稳定性仍为最高优先级漏洞"
+    ],
+    "ai-infra": [
+      "vLLM 稳定版：v0.30.0+ 无破坏性变更",
+      "SGLang：SSRF 修复合并，暂无发布",
+      "llama.cpp b12600 发布并弃用",
+      "Ollama：预览通道在 PR 流程中",
+      "LiteLLM v1.111.0-rc.3 及 LTS 发布",
+      "Unsloth v0.1.922-beta：稳定性存疑"
+    ],
+    "ai-trending": [
+      "firecrawl/firecrawl：今日 +1,241 星",
+      "HKUDS/CLI-Anything：+773 星，原生代理",
+      "affaan-m/ECC：307k 星，代理引擎",
+      "jingyaogong/minimind：新增 847 星",
+      "mem0ai/mem0：代理记忆突破",
+      "thedotmack/claude-mem：上下文持久化"
+    ],
+    "ai-web": [
+      "Claude 在 RISC-V 代码中证明安全性",
+      "Anthropic IPO 募集 935 亿美元——史上最大",
+      "OpenAI 推出 Medchembench 助力药物发现",
+      "Anthropic 在纳斯达克以 ‘ANT’ 交易",
+      "大模型现可大规模生成形式化证明",
+      "OpenAI 扩展至医药化学 AI 领域"
+    ],
+    "ai-community": [
+      "AI 代理：'循环在风衣里'？",
+      "代理工程：智能家居节能演示",
+      "冲突解决：AGENTS.md 与 CLAUDE.md",
+      "RAG 与 GraphRAG 面临可扩展性审查",
+      "企业 AI 转向自定义 GitHub 平台",
+      "诈骗检测工具在开发圈受关注"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.330: Enterprise focus",
+      "Pi v1.6.0 defaults to GPT-6.2",
+      "Qwen Code v0.28.3: CI-ready release",
+      "OpenAI Codex enters alpha stage",
+      "GitHub Copilot CLI v1.0.115-4: Security fix",
+      "Gemini CLI nightly build released"
+    ],
+    "ai-agents": [
+      "OpenClaw: 339 open issues, 500 PRs today",
+      "No new OpenClaw release; beta in validation",
+      "PR #202878 fixes Chrome background tabs",
+      "PR #202865 cleans environment stub leakage",
+      "PR #202735 improves Git update verification",
+      "Gateway stability remains a top bug priority"
+    ],
+    "ai-infra": [
+      "vLLM stable: v0.30.0+ with no breaking changes",
+      "SGLang: SSRF fix merged, no release",
+      "llama.cpp b12600 released with deprecation",
+      "Ollama: preview channel in PR pipeline",
+      "LiteLLM v1.111.0-rc.3 & LTS released",
+      "Unsloth v0.1.922-beta: stability concerns"
+    ],
+    "ai-trending": [
+      "firecrawl/firecrawl: +1,241 stars today",
+      "HKUDS/CLI-Anything: +773 stars, agent-native",
+      "affaan-m/ECC: 307k stars, agent harness",
+      "jingyaogong/minimind: 847 new stars",
+      "mem0ai/mem0: agent memory breakthrough",
+      "thedotmack/claude-mem: context persistence"
+    ],
+    "ai-web": [
+      "Claude proves security in RISC-V code",
+      "Anthropic IPO raises $93.5B—largest ever",
+      "OpenAI launches Medchembench for drug discovery",
+      "Anthropic trades under ticker ‘ANT’ on Nasdaq",
+      "LLMs now generate formal proofs at scale",
+      "OpenAI expands into medicinal chemistry AI"
+    ],
+    "ai-community": [
+      "AI agents: 'while loops in a trench coat'?",
+      "Agentic engineering: smart home energy demo",
+      "Conflict resolution: AGENTS.md vs CLAUDE.md",
+      "RAG and GraphRAG face scalability scrutiny",
+      "Enterprise AI shifts to custom GitHub platforms",
+      "Scam detection tools gain traction in dev circles"
+    ]
+  }
+}
