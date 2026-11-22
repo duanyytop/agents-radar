@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code 今日新增10个热门问题",
+      "Gemini CLI 发布夜间构建 v0.71.0",
+      "OpenAI Codex 24小时内合并10个PR",
+      "Qwen Code 集成DevOps流水线",
+      "Pi工具支持代理原生CLI工作流",
+      "GitHub Copilot CLI 新增多账号支持"
+    ],
+    "ai-agents": [
+      "OpenClaw：今日开放108个问题，500个PR",
+      "无新OpenClaw发布；测试版仍在验证",
+      "PR #203369 修复OpenClaw游客提交问题",
+      "控制UI本地化更新防偏差",
+      "Linux/Windows窗口控制重叠已修复",
+      "更新后恢复仍是首要任务"
+    ],
+    "ai-infra": [
+      "Ollama 开启1,114个开放问题",
+      "SGLang活跃：24小时合并12个PR",
+      "LiteLLM 发布安全开发版 v1.112.0-dev.2",
+      "vLLM 拥有872个开放问题",
+      "llama.cpp修复合并，无破坏性变更",
+      "Ollama待处理--no-animation和GGUF拆分"
+    ],
+    "ai-trending": [
+      "Claude-BugHunter 今日增长1,803颗星",
+      "Firecrawl与ECC 成知识基础设施新宠",
+      "NanoBot、QwenPaw、Codewhale受关注",
+      "Mem0与claude-mem推动内存层兴趣",
+      "CLI-Anything让所有工具代理原生",
+      "Stitch-Skills统一代理技能设计"
+    ],
+    "ai-hn": [
+      "Anthropic纳斯达克上市引发抛售",
+      "Gemini 4 Neon与Inkling 2 Mini发布",
+      "大模型可自改权重——论文爆火",
+      "Frostbite：AI设计CPU获AI验证",
+      "Claude解决两个黑洞物理难题",
+      "Upload2Shell（CVE-2026-125396）触发安全警报"
+    ],
+    "ai-ph": [
+      "Tripmojo以305票胜出菲律宾比赛",
+      "Tamekoshi融合塔玛吉奇与效率",
+      "Memanto Cloud提供持久代理记忆",
+      "Currents提升Claude与Codex曝光",
+      "Kuc-kuc 实时天气预警",
+      "Compass OS用AI助力职业准备"
+    ],
+    "ai-community": [
+      "VS Code插件将聊天机器人转为代理",
+      "RAG管道安全风险成热议焦点",
+      "Pass@k与judge模型受追捧",
+      "Mingle：自托管代理集成趋势",
+      "AlloyDB与SCaNN实现亚20毫秒欺诈检测",
+      "扫描22万MCP工具防提示注入"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code gains 10 hot issues today",
+      "Gemini CLI releases nightly build v0.71.0",
+      "OpenAI Codex sees 10 PRs merged in 24h",
+      "Qwen Code integrates with DevOps pipelines",
+      "Pi tool enables agent-native CLI workflows",
+      "GitHub Copilot CLI adds multi-account support"
+    ],
+    "ai-agents": [
+      "OpenClaw: 412 open issues, 500 PRs today",
+      "No new OpenClaw release; beta still testing",
+      "PR #203369 fixes guest issue filing in OpenClaw",
+      "Control UI locales refreshed to prevent drift",
+      "Window control overlap fixed on Linux/Windows",
+      "Post-update recovery remains a top priority"
+    ],
+    "ai-infra": [
+      "Ollama leads with 1,114 open issues",
+      "SGLang active: 12 PRs merged in 24h",
+      "LiteLLM launches secure dev release v1.112.0-dev.2",
+      "vLLM hits 872 open issues",
+      "llama.cpp fixes merged, no breaking changes",
+      "Ollama pending --no-animation and GGUF split"
+    ],
+    "ai-trending": [
+      "Claude-BugHunter gains +1,803 stars today",
+      "Firecrawl & ECC rise as knowledge infra tools",
+      "NanoBot, QwenPaw, Codewhale gain traction",
+      "Mem0 and claude-mem drive memory layer interest",
+      "CLI-Anything makes all tools agent-native",
+      "Stitch-Skills standardizes agent skill design"
+    ],
+    "ai-hn": [
+      "Anthropic’s Nasdaq debut sparks sell-off",
+      "Gemini 4 Neon & Inkling 2 Mini launch",
+      "LLMs can rewrite their own weights – paper viral",
+      "Frostbite: AI-designed CPU verified by AI",
+      "Claude solves two black hole physics problems",
+      "Upload2Shell (CVE-2026-125396) raises security alarm"
+    ],
+    "ai-ph": [
+      "Tripmojo wins PH with 305 votes",
+      "Tamekoshi blends Tamagotchi with productivity",
+      "Memanto Cloud offers persistent agent memory",
+      "Currents boosts visibility for Claude & Codex",
+      "Kuc-kuc delivers real-time weather alerts",
+      "Compass OS aids career prep with AI"
+    ],
+    "ai-community": [
+      "VS Code extension turns chatbots into agents",
+      "RAG pipeline security risks dominate discussion",
+      "Pass@k and judge models gain traction",
+      "Mingle: self-hosted agent integration trend",
+      "Sub-20ms fraud detection with AlloyDB & SCaNN",
+      "220K MCP tools scanned for prompt injection"
+    ]
+  }
+}
