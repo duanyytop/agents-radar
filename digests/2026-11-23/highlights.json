@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude代码稳定性问题持续存在",
+      "OpenAI Codex新增10个PR",
+      "Gemini CLI发布每日构建版",
+      "GitHub Copilot CLI更新至v1.0.115-7",
+      "Qwen代码在社区获关注",
+      "Pi工具新增AI编程功能"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.7修复崩溃恢复",
+      "OpenClaw对话恢复现已稳定",
+      "自动化任务重启后仍可运行",
+      "插件迁移冲突已解决",
+      "安装后状态损坏已修复",
+      "建议使用doctor --fix升级"
+    ],
+    "ai-infra": [
+      "vLLM聚焦内核统一",
+      "SGLang因回归问题暂停CI",
+      "llama.cpp修复音频与MoE缺陷",
+      "Ollama 0.40.17优化Apple Silicon支持",
+      "LiteLLM新增提供者抽象",
+      "Unsloth增强GGUF边缘支持"
+    ],
+    "ai-trending": [
+      "Claude-BugHunter引爆网络",
+      "FireCrawl集成实时数据",
+      "CLI-Anything实现通用访问",
+      "Minimind两小时训练64M LLM",
+      "Qdrant领跑RAG向量库",
+      "Hermes Agent受关注"
+    ],
+    "ai-web": [
+      "OpenAI发布'困惑度与智能'",
+      "标题暗示新智能指标",
+      "Anthropic对重大更新保持沉默",
+      "Claude破解黑洞物理难题",
+      "自修改模型引发热议",
+      "Inkling 2 Mini获边缘部署青睐"
+    ],
+    "ai-hn": [
+      "Claude破解物理难题",
+      "模型可重写自身权重",
+      "Inkling 2 Mini效率获赞",
+      "Anthropic87%电力来自化石燃料",
+      "Frostbite CPU架构亮相",
+      "社区分歧：AI安全与进步"
+    ],
+    "ai-ph": [
+      "AlterContacts获316票领先",
+      "OpenVorld实现持久代理记忆",
+      "AI Context Flow MCP上线",
+      "Codemany加速GitHub Actions",
+      "gitroots提供路径级Git访问",
+      "Prompt Puncher将提示转为游戏"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B下载量达630万",
+      "unsloth/Qwen3.8-27B-GGUF: 下载760万",
+      "DavidAU无审查变体激增",
+      "LTX-2.5引领图文视频趋势",
+      "Heretic模型获3500点赞",
+      "Defiant变体下载220万"
+    ],
+    "ai-community": [
+      "RAG安全影响负载性能",
+      "本地AI代码审查防泄漏",
+      "Waymark v0.4实现安全Claude使用",
+      "PagedAttention提升本地LLM速度",
+      "量化基准受追捧",
+      "AI工具用于求职申请"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code stability issues persist",
+      "OpenAI Codex sees 10 new PRs",
+      "Gemini CLI releases nightly build",
+      "GitHub Copilot CLI updates to v1.0.115-7",
+      "Qwen Code gains traction in community",
+      "Pi tool adds new AI coding features"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.7 fixes crash recovery",
+      "Conversation recovery now stable in OpenClaw",
+      "Automations now survive restarts",
+      "Plugin migration conflicts resolved",
+      "Post-install state corruption fixed",
+      "Upgrade with doctor --fix recommended"
+    ],
+    "ai-infra": [
+      "vLLM focuses on kernel unification",
+      "SGLang CI paused due to regressions",
+      "llama.cpp fixes audio & MoE bugs",
+      "Ollama 0.40.17 optimizes Apple Silicon",
+      "LiteLLM adds provider abstraction",
+      "Unsloth enhances GGUF edge support"
+    ],
+    "ai-trending": [
+      "Claude-BugHunter goes viral",
+      "FireCrawl integrates real-time data",
+      "CLI-Anything enables universal access",
+      "Minimind trains 64M LLM in 2 hours",
+      "Qdrant leads RAG vector databases",
+      "Hermes Agent gains traction"
+    ],
+    "ai-web": [
+      "OpenAI publishes 'Perplexity And Intelligence'",
+      "Title hints at new intelligence metrics",
+      "Anthropic silent on major updates",
+      "Claude solves black hole physics puzzles",
+      "Self-modifying models spark debate",
+      "Inkling 2 Mini gains edge deployment interest"
+    ],
+    "ai-hn": [
+      "Claude cracks open physics problems",
+      "Models can rewrite their own weights",
+      "Inkling 2 Mini praised for efficiency",
+      "87% of Anthropic's power from fossil fuels",
+      "Frostbite CPU architecture unveiled",
+      "Community splits on AI safety vs. progress"
+    ],
+    "ai-ph": [
+      "AlterContacts leads with 316 votes",
+      "OpenVorld enables persistent agent memory",
+      "AI Context Flow MCP launches",
+      "Codemany accelerates GitHub Actions",
+      "gitroots offers path-level Git access",
+      "Prompt Puncher turns prompts into games"
+    ],
+    "ai-hf": [
+      "Qwen3.8-27B hits 6.3M downloads",
+      "unsloth/Qwen3.8-27B-GGUF: 7.6M DLs",
+      "DavidAU's uncensored variants surge",
+      "LTX-2.5 leads image-to-video trend",
+      "Heretic model gains 3.5K likes",
+      "Defiant variant hits 2.2M downloads"
+    ],
+    "ai-community": [
+      "RAG safety hurts performance under load",
+      "Local AI code review prevents leaks",
+      "Waymark v0.4 enables secure Claude use",
+      "PagedAttention boosts local LLM speed",
+      "Quantization benchmarks gain popularity",
+      "AI tools now used for job applications"
+    ]
+  }
+}

@@ -1,6 +1,6 @@
 {
   "anthropic": {
-    "lastChecked": "2026-11-22T02:37:07.092Z",
+    "lastChecked": "2026-11-23T03:03:29.353Z",
     "seenUrls": {
       "https://www.anthropic.com/news/responsible-scaling-policy-v3": "2026-11-13T22:37:05.591Z",
       "https://www.anthropic.com/research/deprecation-updates-opus-3": "2026-09-09T21:14:42.000Z",
@@ -563,7 +563,7 @@
     }
   },
   "openai": {
-    "lastChecked": "2026-11-22T02:37:08.882Z",
+    "lastChecked": "2026-11-23T03:03:30.776Z",
     "seenUrls": {
       "https://openai.com/index/arvind-kc-chief-people-officer/": "2026-11-03T13:34:40.079Z",
       "https://openai.com/index/put-ai-to-work-for-your-product-team/": "2026-11-10T09:52:35.698Z",
@@ -1501,7 +1501,7 @@
       "https://openai.com/index/daybreak-red-aws-govcloud/": "2026-11-18T19:25:23.085Z",
       "https://openai.com/index/openai-to-acquire-pierre/": "2026-11-18T13:50:33.866Z",
       "https://openai.com/index/australian-universities-ai-native-graduates/": "2026-11-18T13:50:27.448Z",
-      "https://openai.com/index/introducing-gpt-6-cyber/": "2026-11-19T00:11:21.273Z",
+      "https://openai.com/index/introducing-gpt-6-cyber/": "2026-11-22T19:57:58.372Z",
       "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science/": "2026-11-19T18:03:17.774Z",
       "https://openai.com/index/control-room/": "2026-11-18T13:50:29.278Z",
       "https://openai.com/index/chatgpt-enterprise-aws-marketplace/": "2026-11-19T18:32:22.859Z",
@@ -1515,24 +1515,25 @@
       "https://openai.com/business/learn/fine-tuning-gpt-4o-webinar/": "2026-11-10T21:09:49.430Z",
       "https://openai.com/index/chatgpt-plus-for-veterans/": "2026-11-18T13:50:28.743Z",
       "https://openai.com/index/introducing-chatgpt-wallet/": "2026-11-20T00:20:46.705Z",
-      "https://openai.com/index/advancing-computer-use-for-healthcare-teams/": "2026-11-20T23:00:23.640Z",
+      "https://openai.com/index/advancing-computer-use-for-healthcare-teams/": "2026-11-22T19:52:49.418Z",
       "https://openai.com/index/science-at-the-frontier/": "2026-11-20T21:31:49.629Z",
-      "https://openai.com/index/strengthening-online-child-safety/": "2026-11-21T19:03:17.887Z",
+      "https://openai.com/index/strengthening-online-child-safety/": "2026-11-22T13:58:09.168Z",
       "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare/": "2026-11-21T15:01:13.452Z",
       "https://openai.com/index/expanding-chatgpt-for-academic-researchers/": "2026-11-19T14:30:24.721Z",
-      "https://openai.com/index/our-first-phase-of-embedded-assessments/": "2026-11-20T09:04:47.621Z",
+      "https://openai.com/index/our-first-phase-of-embedded-assessments/": "2026-11-22T08:31:02.816Z",
       "https://openai.com/index/lvmh-media-division-partnership/": "2026-11-18T23:09:11.679Z",
-      "https://openai.com/index/introducing-chatgpt-for-sales/": "2026-11-21T17:07:34.697Z",
+      "https://openai.com/index/introducing-chatgpt-for-sales/": "2026-11-22T13:13:33.200Z",
       "https://openai.com/index/astra-law-6-2/": "2026-11-20T01:34:05.136Z",
       "https://openai.com/index/introducing-gpt-6-2-astra-sol/": "seen",
-      "https://openai.com/index/advancing-chip-design-with-our-models/": "2026-11-21T13:16:26.766Z",
-      "https://openai.com/index/managing-frontier-ai-risk/": "2026-11-21T21:15:35.374Z",
+      "https://openai.com/index/advancing-chip-design-with-our-models/": "2026-11-22T15:01:52.920Z",
+      "https://openai.com/index/managing-frontier-ai-risk/": "2026-11-22T15:57:08.705Z",
       "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership/": "2026-11-20T00:59:42.000Z",
       "https://openai.com/index/inside-the-codex-sandbox/": "2026-11-21T12:38:02.824Z",
       "https://openai.com/index/research-acceleration-jagged-frontier/": "seen",
       "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/": "2026-11-21T20:57:30.470Z",
       "https://openai.com/business/learn/deploying-daybreak-red/": "2026-11-21T20:57:49.058Z",
-      "https://openai.com/index/introducing-medchembench/": "2026-11-21T21:20:47.293Z"
+      "https://openai.com/index/introducing-medchembench/": "2026-11-23T01:10:57.443Z",
+      "https://openai.com/index/perplexity-and-intelligence/": "2026-11-22T17:01:28.688Z"
     }
   }
 }
