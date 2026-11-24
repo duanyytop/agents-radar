@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.331 adds session lifecycle control",
+      "OpenAI Codex releases v0.172.0 with agent upgrades",
+      "Gemini CLI v0.72.0-preview now in beta",
+      "GitHub Copilot CLI v1.0.115-8 fixes security issues",
+      "Pi gains local execution focus for privacy",
+      "Qwen Code supports multi-cloud agent workflows"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.10-beta.3 boosts update recovery",
+      "Two new OpenClaw betas improve crash resilience",
+      "OpenClaw fixes session state and plugin integrity",
+      "Hermes Agent gains multi-agent coordination",
+      "IronClaw enhances secure agent deployment",
+      "QwenPaw integrates with Qwen model ecosystem"
+    ],
+    "ai-infra": [
+      "vLLM: 12 open issues, 4 critical, stable nightly builds",
+      "SGLang pre-v1.0 stabilization with 10 PRs",
+      "llama.cpp struggles with legacy GPU instability",
+      "Ollama hits 187K stars, dominates Apple Silicon",
+      "LiteLLM remains top gateway for multi-provider use",
+      "Unsloth accelerates real-time fine-tuning via kernels"
+    ],
+    "ai-trending": [
+      "firecrawl/firecrawl surges with 924 new stars",
+      "jingyaogong/minimind trains tiny LLMs in <2h",
+      "affaan-m/ECC focuses on AI agent red-teaming",
+      "elementalsouls/Claude-BugHunter targets security",
+      "CLI-Anything turns all CLIs into agents",
+      "Graphify-Labs/g triggers agent-native workflow trend"
+    ],
+    "ai-web": [
+      "Anthropic releases 'Working with AI' research paper",
+      "Claude Enterprise drives productivity, not layoffs",
+      "Enterprise adoption shows AI as innovation enabler",
+      "AI enables non-tech staff to code autonomously",
+      "Human-AI collaboration shifts narrative positively",
+      "Report confirms AI augments, not replaces, labor"
+    ],
+    "ai-hn": [
+      "GLM-5.4 introduces loop transformer for coding",
+      "VP ≠ VNP proof effort using AI-assisted reasoning",
+      "Latent introspection detects concept injections",
+      "Anthropic's fossil fuel reliance sparks debate",
+      "Declare, Shirudo, Inkling 2 Mini gain traction",
+      "Community pushes for sustainable AI development"
+    ],
+    "ai-ph": [
+      "Yoroll leads with 362 votes for AI storytelling",
+      "oovi brings persistent desktop AI agents",
+      "Rankhog automates Reddit-based customer acquisition",
+      "Webless Agents bypass traditional marketing funnels",
+      "Resurf, Zapyso, Copy Haste target Mac users",
+      "Omi CLI enables autonomous coding when devs leave"
+    ],
+    "ai-arxiv": [
+      "AutoClip-DPZO optimizes private LLM fine-tuning",
+      "Bayesian attention analysis improves interpretability",
+      "VADE evaluates agent safety in legal domains",
+      "PseuDRAGON enhances agent robustness in finance",
+      "Temporal leakage audits detect data contamination",
+      "Self-speculative decoding boosts inference efficiency"
+    ],
+    "ai-community": [
+      "Agents now coordinate across teams like sociologists",
+      "Tool registries treated as APIs, not config files",
+      "Can agents cheat test results? Audit independently",
+      "MCP gateways enable scalable agent infrastructure",
+      "Program-as-Weights offers smarter knowledge retention",
+      "Sleep Framework prevents LLM forgetting during learning"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.331 adds session lifecycle control",
+      "OpenAI Codex releases v0.172.0 with agent upgrades",
+      "Gemini CLI v0.72.0-preview now in beta",
+      "GitHub Copilot CLI v1.0.115-8 fixes security issues",
+      "Pi gains local execution focus for privacy",
+      "Qwen Code supports multi-cloud agent workflows"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.10-beta.3 boosts update recovery",
+      "Two new OpenClaw betas improve crash resilience",
+      "OpenClaw fixes session state and plugin integrity",
+      "Hermes Agent gains multi-agent coordination",
+      "IronClaw enhances secure agent deployment",
+      "QwenPaw integrates with Qwen model ecosystem"
+    ],
+    "ai-infra": [
+      "vLLM: 12 open issues, 4 critical, stable nightly builds",
+      "SGLang pre-v1.0 stabilization with 10 PRs",
+      "llama.cpp struggles with legacy GPU instability",
+      "Ollama hits 187K stars, dominates Apple Silicon",
+      "LiteLLM remains top gateway for multi-provider use",
+      "Unsloth accelerates real-time fine-tuning via kernels"
+    ],
+    "ai-trending": [
+      "firecrawl/firecrawl surges with 924 new stars",
+      "jingyaogong/minimind trains tiny LLMs in <2h",
+      "affaan-m/ECC focuses on AI agent red-teaming",
+      "elementalsouls/Claude-BugHunter targets security",
+      "CLI-Anything turns all CLIs into agents",
+      "Graphify-Labs/g triggers agent-native workflow trend"
+    ],
+    "ai-web": [
+      "Anthropic releases 'Working with AI' research paper",
+      "Claude Enterprise drives productivity, not layoffs",
+      "Enterprise adoption shows AI as innovation enabler",
+      "AI enables non-tech staff to code autonomously",
+      "Human-AI collaboration shifts narrative positively",
+      "Report confirms AI augments, not replaces, labor"
+    ],
+    "ai-hn": [
+      "GLM-5.4 introduces loop transformer for coding",
+      "VP ≠ VNP proof effort using AI-assisted reasoning",
+      "Latent introspection detects concept injections",
+      "Anthropic's fossil fuel reliance sparks debate",
+      "Declare, Shirudo, Inkling 2 Mini gain traction",
+      "Community pushes for sustainable AI development"
+    ],
+    "ai-ph": [
+      "Yoroll leads with 362 votes for AI storytelling",
+      "oovi brings persistent desktop AI agents",
+      "Rankhog automates Reddit-based customer acquisition",
+      "Webless Agents bypass traditional marketing funnels",
+      "Resurf, Zapyso, Copy Haste target Mac users",
+      "Omi CLI enables autonomous coding when devs leave"
+    ],
+    "ai-arxiv": [
+      "AutoClip-DPZO optimizes private LLM fine-tuning",
+      "Bayesian attention analysis improves interpretability",
+      "VADE evaluates agent safety in legal domains",
+      "PseuDRAGON enhances agent robustness in finance",
+      "Temporal leakage audits detect data contamination",
+      "Self-speculative decoding boosts inference efficiency"
+    ],
+    "ai-community": [
+      "Agents now coordinate across teams like sociologists",
+      "Tool registries treated as APIs, not config files",
+      "Can agents cheat test results? Audit independently",
+      "MCP gateways enable scalable agent infrastructure",
+      "Program-as-Weights offers smarter knowledge retention",
+      "Sleep Framework prevents LLM forgetting during learning"
+    ]
+  }
+}
