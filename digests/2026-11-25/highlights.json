@@ -1,0 +1,150 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code v2.1.332 新增MCP与PreSkillShellCommand",
+      "OpenAI Codex 首次内测，版本rust-v0.174.0",
+      "Gemini CLI 24小时内提交10个PR",
+      "GitHub Copilot CLI 今日合并修复",
+      "Pi工具在CLI领域崭露头角",
+      "Qwen Code 现支持高级推理"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.9 修复插件延迟",
+      "v2026.11.8 优化会话状态管理",
+      "过去24小时处理500个问题与PR",
+      "网关关键P0缺陷仍开放",
+      "Hermes Agent 获社区关注",
+      "ZeroClaw 推出新代理沙箱"
+    ],
+    "ai-infra": [
+      "vLLM 将弃用Marlin支持",
+      "SGLang v1.0 专注稳定性",
+      "llama.cpp 优化ARM SVE与Metal",
+      "Ollama 今日合并5个PR",
+      "LiteLLM 实现多提供商路由",
+      "Unsloth 领先高效微调"
+    ],
+    "ai-trending": [
+      "Claude-BugHunter 收获1826颗星",
+      "FireCrawl：550+数据源API",
+      "CLI-Anything 让所有软件原生支持代理",
+      "minimind 支持自托管LLM训练",
+      "Zilliztech/claude-context 快速增长",
+      "affaan-m/ECC 提升代理内存"
+    ],
+    "ai-web": [
+      "Anthropic 公布Claude全球工作区",
+      "新论文：自然语言自编码器",
+      "GPT-6 展现内在蛋白设计能力",
+      "Claude桌面应用正式发布",
+      "对齐团队更新安全框架",
+      "OpenAI 暗示生物突破"
+    ],
+    "ai-hn": [
+      "矩阵乘法降至O(n².²⁵)重定义AI速度",
+      "GPT-6 无需调参即可设计蛋白",
+      "Michael Harley：代理服务企业",
+      "Anthropic股价跌破IPO价",
+      "Gemini拒绝背诵儿歌",
+      "Claude桌面应用引发热议"
+    ],
+    "ai-ph": [
+      "Gauth个人学习代理：311票",
+      "Omi Work 找到你未来100个客户",
+      "Ashwa：永不遗忘的AI伙伴",
+      "Motionflare 将网站转为视频",
+      "Hydrilla 即时生成3D资产",
+      "Inkling 2 Mini：轻量开源模型"
+    ],
+    "ai-arxiv": [
+      "MXFP4 实现低精度LLM推理",
+      "HiF4校准提升边缘部署",
+      "UDV-Rebalance稳定Transformer训练",
+      "大规模激活关联对抗风险",
+      "探索LLMs中的量子误差缓解",
+      "不确定性量化受关注"
+    ],
+    "ai-community": [
+      "AI发布说明虚构变更原因",
+      "Claude Code 配置AWS并设防护",
+      "规则若不执行则失效",
+      "AI代理移动端清单",
+      "Sleep框架提升LLM留存",
+      "矩阵乘法突破激发研究热情"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code v2.1.332 adds MCP & PreSkillShellCommand",
+      "OpenAI Codex in alpha with rust-v0.174.0",
+      "Gemini CLI sees 10 PRs in 24h",
+      "GitHub Copilot CLI fixes merged today",
+      "Pi tool gains traction in CLI space",
+      "Qwen Code now supports advanced reasoning"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.9 fixes plugin latency",
+      "v2026.11.8 improves session state management",
+      "500 issues and PRs in last 24h",
+      "Critical P0 bugs still open for gateway",
+      "Hermes Agent gains community momentum",
+      "ZeroClaw introduces new agent sandbox"
+    ],
+    "ai-infra": [
+      "vLLM deprecating Marlin support",
+      "SGLang v1.0 tracking stability focus",
+      "llama.cpp optimizing ARM SVE & Metal",
+      "Ollama sees 5 PRs merged today",
+      "LiteLLM enables multi-provider routing",
+      "Unsloth leads efficient fine-tuning"
+    ],
+    "ai-trending": [
+      "Claude-BugHunter hits 1826 stars",
+      "FireCrawl: 550+ data providers API",
+      "CLI-Anything makes all software agent-native",
+      "minimind enables self-hosted LLM training",
+      "Zilliztech/claude-context grows fast",
+      "affaan-m/ECC boosts agent memory"
+    ],
+    "ai-web": [
+      "Anthropic reveals 'global workspace' in Claude",
+      "New paper: Natural Language Autoencoders",
+      "GPT-6 shows intrinsic protein design",
+      "Claude’s desktop app rolls out",
+      "Alignment team updates safety frameworks",
+      "OpenAI hints at biological breakthrough"
+    ],
+    "ai-hn": [
+      "Matrix mult in O(n².²⁵) redefines AI speed",
+      "GPT-6 designs proteins without tuning",
+      "Michael Harley: Agents serve companies",
+      "Anthropic stock drops below IPO price",
+      "Gemini refuses to recite nursery rhymes",
+      "Claude desktop app sparks excitement"
+    ],
+    "ai-ph": [
+      "Gauth Personal Study Agent: 311 votes",
+      "Omi Work finds your next 100 customers",
+      "Ashwa: AI companion that never forgets",
+      "Motionflare turns websites into videos",
+      "Hydrilla generates 3D assets instantly",
+      "Inkling 2 Mini: lightweight open-source model"
+    ],
+    "ai-arxiv": [
+      "MXFP4 enables low-precision LLM inference",
+      "HiF4 calibration improves edge deployment",
+      "UDV-Rebalance stabilizes Transformer training",
+      "Massive activations linked to adversarial risk",
+      "Quantum error mitigation in LLMs explored",
+      "Uncertainty quantification gains traction"
+    ],
+    "ai-community": [
+      "AI release notes hallucinate 'why' behind changes",
+      "Claude Code provisioned AWS with guardrails",
+      "Rules fail if not enforced in system",
+      "Mobile app checklist for AI agents",
+      "Sleep Framework improves LLM retention",
+      "Matrix mult breakthrough excites researchers"
+    ]
+  }
+}
