@@ -1,0 +1,86 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code新增技能支持",
+      "OpenAI Codex发布rust-v0.174.0-alpha.6",
+      "Pi CLI扩展代理工作流控制",
+      "Qwen Code提升开源性能",
+      "Gemini CLI通过关键修复稳定",
+      "GitHub Copilot CLI无新动态"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.10发布安全修复",
+      "OpenClaw关键内存泄漏已修复",
+      "v2026.11.10解决WAL检查点阻塞",
+      "新增模型提供方XingChen-AGI",
+      "插件回滚安全增强",
+      "需迁移旧配置"
+    ],
+    "ai-infra": [
+      "Qwen3.8启动ROCm优化",
+      "Muse Spark模型获AMD GPU加速",
+      "Inkling 2正在开发Intel XPU支持",
+      "MXFP4/MXFP8 MoE优化进行中",
+      "Rust前端将于2027默认启用",
+      "Octave KV (3-bit)现已支持"
+    ],
+    "ai-trending": [
+      "FireCrawl今日新增1,135颗星",
+      "CLI-Anything新增1,106颗星",
+      "Claude-BugHunter人气飙升",
+      "zilliztech/claude-context快速成长",
+      "minimind与TinyLLM受关注",
+      "RAG工具持续主导趋势"
+    ],
+    "ai-web": [
+      "Anthropic将Messages API迁移至Rust",
+      "Rust迁移提升代码可验证性",
+      "重点转向可验证意识AI",
+      "边缘情况挑战AI测试",
+      "OpenAI对新内容保持沉默",
+      "优先推进企业级AI工作流"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code gains new Skills support",
+      "OpenAI Codex releases rust-v0.174.0-alpha.6",
+      "Pi CLI expands agent workflow control",
+      "Qwen Code boosts open-source performance",
+      "Gemini CLI stabilizes with key fixes",
+      "GitHub Copilot CLI sees no new activity"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.11.10 released with security fixes",
+      "Critical memory leak fixed in OpenClaw",
+      "WAL checkpoint blocking resolved in v2026.11.10",
+      "New model provider XingChen-AGI added",
+      "Plugin rollback safety enhanced",
+      "Legacy config migration required"
+    ],
+    "ai-infra": [
+      "ROCm optimization for Qwen3.8 launched",
+      "Muse Spark models get AMD GPU boost",
+      "Intel XPU support for Inkling 2 underway",
+      "MXFP4/MXFP8 MoE refinements in progress",
+      "Rust frontend set for default in 2027",
+      "Octave KV (3-bit) now supported"
+    ],
+    "ai-trending": [
+      "FireCrawl gains 1,135 stars today",
+      "CLI-Anything hits 1,106 new stars",
+      "Claude-BugHunter surges in popularity",
+      "zilliztech/claude-context grows fast",
+      "minimind and TinyLLM gain traction",
+      "RAG tools remain dominant trend"
+    ],
+    "ai-web": [
+      "Anthropic migrates Messages API to Rust",
+      "Rust migration improves code verifiability",
+      "Focus shifts to verification-aware AI",
+      "Edge cases challenge AI testing",
+      "OpenAI silent on new content",
+      "Enterprise-grade AI workflows prioritized"
+    ]
+  }
+}
