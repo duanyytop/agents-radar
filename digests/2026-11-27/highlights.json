@@ -1,0 +1,134 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code修复关键会话锁",
+      "OpenAI Codex发现10个严重漏洞",
+      "Gemini CLI新增PowerShell支持",
+      "GitHub Copilot CLI提升稳定性",
+      "Qwen Code新增多文件生成",
+      "Pi工具支持代理工作流"
+    ],
+    "ai-agents": [
+      "OpenClaw：24小时内修复367个问题",
+      "修复OpenClaw持续聊天锁",
+      "OpenClaw降低Codex关闭开销",
+      "OpenClaw整合模型切换提醒",
+      "暂无新版本，但合并500个PR",
+      "OpenClaw专注ARM64内存修复"
+    ],
+    "ai-infra": [
+      "vLLM：89个开放问题，暂无新版本",
+      "SGLang发布v0.5.23（预1.0）",
+      "llama.cpp v1.1.0含破坏性变更",
+      "Ollama：v0.40.19-rc0进入测试",
+      "LiteLLM：开发版v1.113.0上线",
+      "Unsloth：57个开放问题，开发活跃"
+    ],
+    "ai-trending": [
+      "FireCrawl：211K星标，今日+1K",
+      "Claude-BugHunter热度飙升",
+      "minimind 2小时训练64M模型",
+      "ECC：311K星标，聚焦代理框架",
+      "zilliztech/claude-context实现代码库记忆",
+      "Diagram-design：955星标，今日+955"
+    ],
+    "ai-hn": [
+      "矩阵乘幂指数已证明为9/4",
+      "多项式希耳斯猜想被推翻",
+      "Anthropic缩短GRH证明验证时间",
+      "Google MCP服务器集成引发争议",
+      "OpenAI成本控制受关注",
+      "AI泡沫破裂警告病毒式传播"
+    ],
+    "ai-ph": [
+      "MyClaw 3.0以共享内存领先",
+      "Airbot主动拨打电话",
+      "Hai AI自主发起行动",
+      "VibeCode.surf让代理构建代码",
+      "Tendeck实现全自主测试",
+      "Hiring Right Now用AI匹配职位"
+    ],
+    "ai-arxiv": [
+      "分词不在APX中：重大成果",
+      "修复蒸馏LLM可信度",
+      "一模型多模式：系统演进",
+      "用代码求解视觉表现优于视频",
+      "DFly2通过稀疏性降低计算",
+      "只关注重要事项：效率提升"
+    ],
+    "ai-community": [
+      "手动测试在边缘场景更优",
+      "静默模型升级破坏提示",
+      "对AI代理信任度下降",
+      "Dev.to上自托管趋势上升",
+      "社区称AI基准不可靠",
+      "暂停有助于开发者保持领先"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code fixes critical session locks",
+      "OpenAI Codex hits 10 critical bugs",
+      "Gemini CLI gains PowerShell support",
+      "GitHub Copilot CLI updates stability",
+      "Qwen Code adds multi-file generation",
+      "Pi tool now supports agent workflows"
+    ],
+    "ai-agents": [
+      "OpenClaw: 367 issues in 24 hours",
+      "Fixes persistent chat lock in OpenClaw",
+      "OpenClaw reduces Codex shutdown overhead",
+      "OpenClaw consolidates model switch alerts",
+      "No new release, but 500 PRs merged",
+      "OpenClaw focused on ARM64 memory fixes"
+    ],
+    "ai-infra": [
+      "vLLM: 89 open issues, no new release",
+      "SGLang releases v0.5.23 (pre-1.0)",
+      "llama.cpp v1.1.0 with breaking changes",
+      "Ollama: v0.40.19-rc0 now in testing",
+      "LiteLLM: dev version v1.113.0 live",
+      "Unsloth: 57 open issues, active dev"
+    ],
+    "ai-trending": [
+      "FireCrawl: 211K stars, +1K today",
+      "Claude-BugHunter trends explosively",
+      "minimind trains 64M model in 2h",
+      "ECC: 311K stars, agent harness focus",
+      "zilliztech/claude-context enables codebase memory",
+      "Diagram-design: 955 stars, +955 today"
+    ],
+    "ai-hn": [
+      "Matrix mult exponent proven at 9/4",
+      "Polynomial Hirsch conjecture falsified",
+      "Anthropic shortens GRH proof verification",
+      "Google MCP server integration sparks debate",
+      "OpenAI cost controls under scrutiny",
+      "AI bubble burst warning goes viral"
+    ],
+    "ai-ph": [
+      "MyClaw 3.0 leads with shared memory",
+      "Airbot proactively makes phone calls",
+      "Hai AI initiates actions autonomously",
+      "VibeCode.surf lets agents build code",
+      "Tendeck enables full autonomous testing",
+      "Hiring Right Now uses AI for job matching"
+    ],
+    "ai-arxiv": [
+      "Tokenisation not in APX: major result",
+      "Repairing distilled LLM trustworthiness",
+      "One Model, Many Modes: system evolution",
+      "Solve Vision with Code outperforms video",
+      "DFly2 cuts compute with sparsity",
+      "Focus Only on What's Important: efficiency"
+    ],
+    "ai-community": [
+      "Manual testing beats AI in edge cases",
+      "Silent model upgrades break prompts",
+      "Trust in AI agents is declining",
+      "Self-hosting trend rising on Dev.to",
+      "AI benchmarks unreliable, says community",
+      "Pausing helps developers stay ahead"
+    ]
+  }
+}
