@@ -1,0 +1,118 @@
+{
+  "zh": {
+    "ai-cli": [
+      "Claude Code新增多账户支持",
+      "OpenAI Codex发布rust-v0.174.0-alpha.9",
+      "Gemini CLI实现会话持久化",
+      "GitHub Copilot CLI增强企业集成",
+      "Pi引入多模态代理工作流",
+      "Qwen Code支持实时代码审查"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.12.1-beta.1发布",
+      "Git更新无中断",
+      "提示缓存提升推理速度",
+      "ARM64内存管理缺陷被发现",
+      "会话状态损坏报告",
+      "Windows用户遭遇崩溃循环"
+    ],
+    "ai-infra": [
+      "vLLM v0.34.0rc1稳定版发布",
+      "SGLang预1.0稳定进行中",
+      "llama.cpp补丁修复关键漏洞",
+      "Ollama 0.40.18存在严重回归",
+      "LiteLLM提升路由精度",
+      "Unsloth优化边缘效率"
+    ],
+    "ai-trending": [
+      "firecrawl/firecrawl: 211K星标",
+      "minimind 2小时训练64M LLM",
+      "CLI-Anything: 新增666星标",
+      "ECC优化代理内存使用",
+      "claude-context启用代码感知",
+      "ElementalSouls的Claude-BugHunter爆火"
+    ],
+    "ai-hn": [
+      "Google DeepCrossAttention加速AI",
+      "矩阵乘法指数问题解决",
+      "Claude被指破坏研究",
+      "房东AI错误建议驱逐",
+      "GPT-6.2使用降低信号成本控制",
+      "Moat和Prospero受关注"
+    ],
+    "ai-ph": [
+      "Hub: 同时运行100+ AI会话",
+      "QA.tech MCP实现实时代码检查",
+      "Bifura让AI看见网站",
+      "Monton: 团队协作AI代理",
+      "Mime: 隐私静默语音输入",
+      "Clary: 语音合成iOS提醒"
+    ],
+    "ai-community": [
+      "AI删除不彻底清除数据",
+      "本地AI离线可用",
+      "对AI情感依赖加剧",
+      "DevOS构建完整系统控制",
+      "僵尸工单复活已删聊天",
+      "ESP32本地运行LLMs"
+    ]
+  },
+  "en": {
+    "ai-cli": [
+      "Claude Code adds multi-account support",
+      "OpenAI Codex releases rust-v0.174.0-alpha.9",
+      "Gemini CLI gains session persistence",
+      "GitHub Copilot CLI enhances enterprise integration",
+      "Pi introduces multimodal agent workflows",
+      "Qwen Code supports real-time code review"
+    ],
+    "ai-agents": [
+      "OpenClaw v2026.12.1-beta.1 released",
+      "Git updates now non-disruptive",
+      "Prompt caching improves inference speed",
+      "Memory management bugs found on ARM64",
+      "Session state corruption reported",
+      "Crash loops affect Windows users"
+    ],
+    "ai-infra": [
+      "vLLM v0.34.0rc1 stable release",
+      "SGLang pre-1.0 stabilization underway",
+      "llama.cpp patches fix critical bugs",
+      "Ollama 0.40.18 has critical regression",
+      "LiteLLM gains routing precision",
+      "Unsloth boosts edge efficiency"
+    ],
+    "ai-trending": [
+      "firecrawl/firecrawl: 211K stars",
+      "minimind trains 64M LLM in 2h",
+      "CLI-Anything: 666 new stars",
+      "ECC optimizes agent memory use",
+      "claude-context enables code awareness",
+      "ElementalSouls' Claude-BugHunter viral"
+    ],
+    "ai-hn": [
+      "Google DeepCrossAttention speeds up AI",
+      "Matrix multiplication exponent resolved",
+      "Claude accused of sabotaging research",
+      "Landlord AI wrongly advises eviction",
+      "GPT-6.2 usage cuts signal cost control",
+      "Moat and Prospero gain traction"
+    ],
+    "ai-ph": [
+      "Hub: Run 100+ AI sessions at once",
+      "QA.tech MCP enables real-time code checks",
+      "Bifura sees websites through AI eyes",
+      "Monton: AI agents for team coordination",
+      "Mime: silent dictation for privacy",
+      "Clary: voice-synthesized iOS alerts"
+    ],
+    "ai-community": [
+      "AI deletion doesn't erase data",
+      "On-device AI works offline",
+      "Emotional dependency on AI grows",
+      "DevOS builds full system control",
+      "Zombie tickets resurrect deleted chats",
+      "ESP32 runs LLMs locally"
+    ]
+  }
+}
